@@ -1,5 +1,4 @@
-package com.mycompany.goodsmatrixparser;
-/*
+package com.mycompany.goodsmatrixparser;/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -22,10 +21,10 @@ import java.io.PrintWriter;
 public class ParsList {
     private static Model model;
     private static FileWriter out;
+    static long count = 1700;
+    static long current = 0;
 
     public static void main(String[] args) throws IOException {
-        //     ShutdownHook shutdownHook = new ShutdownHook(out);
-        //   Runtime.getRuntime().addShutdownHook(shutdownHook);
         System.out.println("Начало работы");
         model = ModelFactory.createDefaultModel();
         //model = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
@@ -33,6 +32,8 @@ public class ParsList {
         model.setNsPrefix("food", ProdProps.FOOD);
         model.setNsPrefix("gr", ProdProps.GR);
         out = new FileWriter("D:\\goods.dat");
+//        AddShutdownHookSample sample = new AddShutdownHookSample();
+//        sample.attachShutDownHook(model, out);
         goPars("http://www.goodsmatrix.ru/goods-catalogue/Goods/Foodstuffs.html");//"http://www.goodsmatrix.ru/goods-catalogue/Foodstuffs/Groceries.html");//http://goodsmatrix.ru/goods-catalogue/Goods/Foodstuffs.html");
     }
 
@@ -115,8 +116,14 @@ public class ParsList {
                                     "" : doc.select("span#ctl00_ContentPH_PackingType").get(0).text());
 
                     // Print RDF/XML of model to system output
-                    model.write(new PrintWriter(out), "TURTLE");
-
+                    current++;
+                    System.out.println("Product: " + current + " out of " + count);
+                    if (current >= count) {
+                        model.write(new PrintWriter(out), "TURTLE");
+                        out.flush();
+                        out.close();
+                        System.exit(0);
+                    }
                 } catch (Exception e) {
                     System.out.println("Failed: " + e);
                 }
@@ -132,119 +139,23 @@ public class ParsList {
         Elements realURL = Jsoup.connect(url).get().select("a[id=ctl00_ContentPH_SGDG_ctl02_A6]");
         return realURL.get(0).attr("href");
     }
-
-    public static Product parseProduct(String url) throws IOException {
-        Product p = new Product();
-        Document doc = Jsoup.connect(url).get();
-        if (doc.select("span#ctl00_ContentPH_GoodsName").isEmpty()) {
-            p.setGoodsName("");
-            System.out.println("");
-        } else {
-            Elements goodsName = doc.select("span#ctl00_ContentPH_GoodsName");//Название
-            p.setGoodsName(goodsName.get(0).text());
-            System.out.println(goodsName.get(0).text());
-        }
-
-        if (doc.select("span#ctl00_ContentPH_BarCodeL").isEmpty()) {
-            p.setGoodsName("");
-            System.out.println("");
-        } else {
-            Elements barCodeL = doc.select("span#ctl00_ContentPH_BarCodeL");//Штрих код
-            p.setBarCodeL(barCodeL.get(0).text());
-            System.out.println(barCodeL.get(0).text());
-        }
-
-        if (doc.select("span#ctl00_ContentPH_Composition").isEmpty()) {
-            p.setGoodsName("");
-            System.out.println("");
-        } else {
-            Elements composition = doc.select("span#ctl00_ContentPH_Composition");//Состав
-            p.setComposition(composition.text());
-            System.out.println(composition.get(0).text());
-        }
-
-        if (doc.select("span#ctl00_ContentPH_Comment").isEmpty()) {
-            p.setGoodsName("");
-            System.out.println("");
-        } else {
-            Elements comment = doc.select("span#ctl00_ContentPH_Comment");//Описание
-            p.setComment(comment.get(0).text());
-            System.out.println(comment.get(0).text());
-        }
-
-        if (doc.select("span#ctl00_ContentPH_Gost").isEmpty()) {
-            p.setGoodsName("");
-            System.out.println("");
-        } else {
-            Elements gost = doc.select("span#ctl00_ContentPH_Gost");//Гост
-            p.setGost(gost.get(0).text());
-            System.out.println(gost.get(0).text());
-        }
-
-        if (doc.select("span#ctl00_ContentPH_Net").isEmpty()) {
-            p.setGoodsName("");
-            System.out.println("");
-        } else {
-            Elements netto = doc.select("span#ctl00_ContentPH_Net");//Масса нетто
-            p.setNetto(netto.get(0).text());
-            System.out.println(netto.get(0).text());
-        }
-
-        if (doc.select("span#ctl00_ContentPH_KeepingTime").isEmpty()) {
-            p.setGoodsName("");
-            System.out.println("");
-        } else {
-            Elements keepingTime = doc.select("span#ctl00_ContentPH_KeepingTime");//Срок годности
-            p.setKeepingTime(keepingTime.get(0).text());
-            System.out.println(keepingTime.get(0).text());
-        }
-
-        if (doc.select("span#ctl00_ContentPH_StoreCond").isEmpty()) {
-            p.setGoodsName("");
-            System.out.println("");
-        } else {
-            Elements storeCond = doc.select("span#ctl00_ContentPH_StoreCond");//Условия хранения
-            p.setStoreCond(storeCond.get(0).text());
-            System.out.println(storeCond.get(0).text());
-        }
-
-
-        if (doc.select("span#ctl00_ContentPH_ESL").isEmpty()) {
-            p.setGoodsName("");
-            System.out.println("");
-        } else {
-            Elements esl = doc.select("span#ctl00_ContentPH_ESL");//Энергетическая ценность
-            p.setEsl(esl.get(0).text());
-            System.out.println(esl.get(0).text());
-        }
-
-        if (doc.select("span#ctl00_ContentPH_PackingType").isEmpty()) {
-            p.setGoodsName("");
-            System.out.println("");
-        } else {
-            Elements packingType = doc.select("span#ctl00_ContentPH_PackingType");//Упаковка
-            p.setPackingType(packingType.get(0).text());
-            System.out.println(packingType.get(0).text());
-        }
-
-
-        return p;
-    }
 }
 
-class ShutdownHook extends Thread {
-    private static FileWriter out;
-
-    public ShutdownHook(FileWriter out) {
-        this.out = out;
-    }
-
-    public void run() {
-        try {
-            out.close();
-            System.out.println("Shutting down");
-        } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
+class AddShutdownHookSample {
+    public void attachShutDownHook(final Model model, final FileWriter out) {
+        Runtime.getRuntime().addShutdownHook(new Thread() {
+            @Override
+            public void run() {
+                model.write(new PrintWriter(out), "TURTLE");
+                try {
+                    out.flush();
+                    out.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("Inside Add Shutdown Hook");
+            }
+        });
+        System.out.println("Shut Down Hook Attached.");
     }
 }
