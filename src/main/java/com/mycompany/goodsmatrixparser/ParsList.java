@@ -7,6 +7,7 @@ package com.mycompany.goodsmatrixparser;/*
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.vocabulary.RDF;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
@@ -21,8 +22,9 @@ import java.io.PrintWriter;
 public class ParsList {
     private static Model model;
     private static FileWriter out;
-    static long count = 1700;
+    static long count = 10000;
     static long current = 0;
+    static Resource rc;
 
     public static void main(String[] args) throws IOException {
         System.out.println("Начало работы");
@@ -31,6 +33,8 @@ public class ParsList {
         model.setNsPrefix("rdf", ProdProps.RDF);
         model.setNsPrefix("food", ProdProps.FOOD);
         model.setNsPrefix("gr", ProdProps.GR);
+        model.setNsPrefix("todo", ProdProps.TODO);
+        rc = model.createResource("http://purl.org/foodontology#Food");
         out = new FileWriter("D:\\goods.dat");
 //        AddShutdownHookSample sample = new AddShutdownHookSample();
 //        sample.attachShutDownHook(model, out);
@@ -93,7 +97,7 @@ public class ParsList {
                     Document doc = Jsoup.connect(realURL).get();
                     Resource goods
                             = model.createResource(realURL)
-                            .addProperty(ProdProps.type, "food:Food")
+                            .addProperty(RDF.type, rc)
                             .addProperty(ProdProps.goodsName, doc.select("span#ctl00_ContentPH_GoodsName").isEmpty() ?
                                     "" : doc.select("span#ctl00_ContentPH_GoodsName").get(0).text())
                             .addProperty(ProdProps.barCode, doc.select("span#ctl00_ContentPH_BarCodeL").isEmpty() ?
@@ -114,7 +118,6 @@ public class ParsList {
                                     "" : doc.select("span#ctl00_ContentPH_ESL").get(0).text())
                             .addProperty(ProdProps.packType, doc.select("span#ctl00_ContentPH_PackingType").isEmpty() ?
                                     "" : doc.select("span#ctl00_ContentPH_PackingType").get(0).text());
-
                     // Print RDF/XML of model to system output
                     current++;
                     System.out.println("Product: " + current + " out of " + count);

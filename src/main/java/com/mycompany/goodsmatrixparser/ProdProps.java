@@ -7,8 +7,9 @@ public class ProdProps extends Object {
 
     // URI for vocabulary elements
     protected static final String RDF = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
-    protected static final String GR = "http://www.heppnetz.de/ontologies/goodrelations/v1#";
-    protected static final String FOOD = "https://raw.githubusercontent.com/ailabitmo/food-ontology/master/food.owl#";
+    protected static final String GR = "http://purl.org/goodrelations/v1#";
+    protected static final String FOOD = "http://purl.org/foodontology#";
+    protected static final String TODO = "http://purl.org/todo#";
 
     // Return URI for vocabulary elements
     public static String getURI() {
@@ -16,14 +17,15 @@ public class ProdProps extends Object {
     }
 
     // Define the property labels and objects
-    static final String nType = "type";
-    public static Property type = null;
+    //OK
     static final String nGoodsName = "name";
     public static Property goodsName = null;
+    //OK
     static final String nBarCode = "hasEAN_UCC-13";
     public static Property barCode = null;
     static final String nIngredients = "ingredientsListAsText";
     public static Property ingredients = null;
+    //OK
     static final String nComment = "comment";
     public static Property comment = null;
     static final String nStandart = "standart";
@@ -44,17 +46,16 @@ public class ProdProps extends Object {
     static {
         try {
             // Instantiate the properties
-            type = new PropertyImpl(RDF, nType);
             goodsName = new PropertyImpl(GR, nGoodsName);
             barCode = new PropertyImpl(GR, nBarCode);
             ingredients = new PropertyImpl(FOOD, nIngredients);
             comment = new PropertyImpl(GR, nComment);
-            storeConditions = new PropertyImpl(GR, nStoreConditions);
-            ESL = new PropertyImpl(GR, nESL);
-            packType = new PropertyImpl(GR, nPackType);
-            standart = new PropertyImpl(GR, nStandart);
-            nettoWeight = new PropertyImpl(GR, nNettoWeight);
-            bestBefore = new PropertyImpl(GR, nBestBefore);
+            storeConditions = new PropertyImpl(TODO, nStoreConditions);
+            ESL = new PropertyImpl(TODO, nESL);
+            packType = new PropertyImpl(TODO, nPackType);
+            standart = new PropertyImpl(TODO, nStandart);
+            nettoWeight = new PropertyImpl(TODO, nNettoWeight);
+            bestBefore = new PropertyImpl(TODO, nBestBefore);
         } catch (Throwable e) {
             System.out.println("Error: " + e.getMessage());
         }
