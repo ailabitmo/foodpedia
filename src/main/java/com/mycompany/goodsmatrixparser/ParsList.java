@@ -97,27 +97,37 @@ public class ParsList {
                     Document doc = Jsoup.connect(realURL).get();
                     Resource goods
                             = model.createResource(realURL)
-                            .addProperty(RDF.type, rc)
-                            .addProperty(ProdProps.goodsName, doc.select("span#ctl00_ContentPH_GoodsName").isEmpty() ?
-                                    "" : doc.select("span#ctl00_ContentPH_GoodsName").get(0).text())
-                            .addProperty(ProdProps.barCode, doc.select("span#ctl00_ContentPH_BarCodeL").isEmpty() ?
-                                    "" : doc.select("span#ctl00_ContentPH_BarCodeL").get(0).text())
-                            .addProperty(ProdProps.bestBefore, doc.select("span#ctl00_ContentPH_KeepingTime").isEmpty() ?
-                                    "" : doc.select("span#ctl00_ContentPH_KeepingTime").get(0).text())
-                            .addProperty(ProdProps.comment, doc.select("span#ctl00_ContentPH_Comment").isEmpty() ?
-                                    "" : doc.select("span#ctl00_ContentPH_Comment").get(0).text())
-                            .addProperty(ProdProps.ingredients, doc.select("span#ctl00_ContentPH_Composition").isEmpty() ?
-                                    "" : doc.select("span#ctl00_ContentPH_Composition").get(0).text())
-                            .addProperty(ProdProps.nettoWeight, doc.select("span#ctl00_ContentPH_Net").isEmpty() ?
-                                    "" : doc.select("span#ctl00_ContentPH_Net").get(0).text())
-                            .addProperty(ProdProps.standart, doc.select("span#ctl00_ContentPH_Gost").isEmpty() ?
-                                    "" : doc.select("span#ctl00_ContentPH_Gost").get(0).text())
-                            .addProperty(ProdProps.storeConditions, doc.select("span#ctl00_ContentPH_StoreCond").isEmpty() ?
-                                    "" : doc.select("span#ctl00_ContentPH_StoreCond").get(0).text())
-                            .addProperty(ProdProps.ESL, doc.select("span#ctl00_ContentPH_ESL").isEmpty() ?
-                                    "" : doc.select("span#ctl00_ContentPH_ESL").get(0).text())
-                            .addProperty(ProdProps.packType, doc.select("span#ctl00_ContentPH_PackingType").isEmpty() ?
-                                    "" : doc.select("span#ctl00_ContentPH_PackingType").get(0).text());
+                            .addProperty(RDF.type, rc);
+                    if (containsData(doc.select("span#ctl00_ContentPH_GoodsName"))) {
+                        goods.addProperty(ProdProps.goodsName, doc.select("span#ctl00_ContentPH_GoodsName").get(0).text().replace('"', '\"'));
+                    }
+                    if (containsData(doc.select("span#ctl00_ContentPH_BarCodeL"))) {
+                        goods.addProperty(ProdProps.barCode, doc.select("span#ctl00_ContentPH_BarCodeL").get(0).text().replace('"', '\"'));
+                    }
+                    if (containsData(doc.select("span#ctl00_ContentPH_KeepingTime"))) {
+                        goods.addProperty(ProdProps.bestBefore, doc.select("span#ctl00_ContentPH_KeepingTime").get(0).text().replace('"', '\"'));
+                    }
+                    if (containsData(doc.select("span#ctl00_ContentPH_Comment"))) {
+                        goods.addProperty(ProdProps.comment, doc.select("span#ctl00_ContentPH_Comment").get(0).text().replace('"', '\"'));
+                    }
+                    if (containsData(doc.select("span#ctl00_ContentPH_Composition"))) {
+                        goods.addProperty(ProdProps.ingredients, doc.select("span#ctl00_ContentPH_Composition").get(0).text().replace('"', '\"'));
+                    }
+                    if (containsData(doc.select("span#ctl00_ContentPH_Net"))) {
+                        goods.addProperty(ProdProps.nettoWeight, doc.select("span#ctl00_ContentPH_Net").get(0).text().replace('"', '\"'));
+                    }
+                    if (containsData(doc.select("span#ctl00_ContentPH_Gost"))) {
+                        goods.addProperty(ProdProps.standart, doc.select("span#ctl00_ContentPH_Gost").get(0).text().replace('"', '\"'));
+                    }
+                    if (containsData(doc.select("span#ctl00_ContentPH_StoreCond"))) {
+                        goods.addProperty(ProdProps.storeConditions, doc.select("span#ctl00_ContentPH_StoreCond").get(0).text().replace('"', '\"'));
+                    }
+                    if (containsData(doc.select("span#ctl00_ContentPH_ESL"))) {
+                        goods.addProperty(ProdProps.ESL, doc.select("span#ctl00_ContentPH_ESL").get(0).text().replace('"', '\"'));
+                    }
+                    if (containsData(doc.select("span#ctl00_ContentPH_PackingType"))) {
+                        goods.addProperty(ProdProps.packType, doc.select("span#ctl00_ContentPH_PackingType").get(0).text().replace('"', '\"'));
+                    }
                     // Print RDF/XML of model to system output
                     current++;
                     System.out.println("Product: " + current + " out of " + count);
@@ -135,6 +145,10 @@ public class ParsList {
             System.out.println("ОШИБКА  " + url + "   parsList");
             parsList(url);
         }
+    }
+
+    public static boolean containsData(Elements elements){
+        return !(elements.isEmpty() || elements.get(0).text().equals(""));
     }
 
     public static String realURL(String url) throws IOException // Возвращает страницу продукта (предыдущая страница альтернативные продукты)
