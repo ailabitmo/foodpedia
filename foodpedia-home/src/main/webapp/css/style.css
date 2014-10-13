@@ -1,0 +1,23 @@
+.logo {
+    margin: 8em;
+}
+
+.logo h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 500%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.search-results {
+    margin-top: 5em;
+}
+
+.search-results h2 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.product-list {
+    margin-top: 2em;
+    list-style-type: none;
+}
