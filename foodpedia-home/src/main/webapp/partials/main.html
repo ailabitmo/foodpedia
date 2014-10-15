@@ -8,10 +8,11 @@
                 <div class="input-group">
                     <input type="text" class="form-control" 
                            placeholder='"4607081352675" или "макаронные изделия"'
-                           ng-model="search">
+                           ng-model="search" ng-disabled="loading">
                     <span class="input-group-btn">
                         <button class="btn btn-default" 
-                                type="button" ng-click="send()">Поиск</button>
+                                type="button" ng-click="send()"
+                                ng-disabled="loading">Поиск</button>
                     </span>
                 </div>
             </form>

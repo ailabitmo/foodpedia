@@ -11,6 +11,11 @@ app.config(['$routeProvider', function($routeProvider) {
         .otherwise({redirectTo: '/'});
 }]);
 
+app.config(function(ngProgressProvider) {
+    ngProgressProvider.setColor('#6aa84f');
+    ngProgressProvider.setHeight('2px');
+});
+
 var sparqlConfig = angular.module('ngSPARQL.config', []);
     sparqlConfig.constant(
         'SPARQL_CONFIG', {
