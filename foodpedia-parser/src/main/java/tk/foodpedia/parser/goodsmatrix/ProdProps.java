@@ -1,4 +1,4 @@
-package tk.foodpedia.parser.goodsmatrix;
+package com.mycompany.goodsmatrixparser;
 
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.impl.PropertyImpl;
@@ -9,7 +9,7 @@ public class ProdProps extends Object {
     protected static final String RDF = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
     protected static final String GR = "http://purl.org/goodrelations/v1#";
     protected static final String FOOD = "http://purl.org/foodontology#";
-    protected static final String TODO = "http://purl.org/todo#";
+    protected static final String TODO = "http://foodpedia.tk/ontology#";
 
     // Return URI for vocabulary elements
     public static String getURI() {
@@ -26,7 +26,7 @@ public class ProdProps extends Object {
     static final String nIngredients = "ingredientsListAsText";
     public static Property ingredients = null;
     //OK
-    static final String nComment = "comment";
+    static final String nComment = "description";
     public static Property comment = null;
     static final String nStandart = "standart";
     public static Property standart = null;

@@ -1,4 +1,4 @@
-package tk.foodpedia.parser.goodsmatrix;/*
+package com.mycompany.goodsmatrixparser;/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -22,7 +22,7 @@ import java.io.PrintWriter;
 public class ParsList {
     private static Model model;
     private static FileWriter out;
-    static long count = 10000;
+    static long count = 100;
     static long current = 0;
     static Resource rc;
 
@@ -33,12 +33,16 @@ public class ParsList {
         model.setNsPrefix("rdf", ProdProps.RDF);
         model.setNsPrefix("food", ProdProps.FOOD);
         model.setNsPrefix("gr", ProdProps.GR);
-        model.setNsPrefix("todo", ProdProps.TODO);
+        model.setNsPrefix("foodpedia-owl", ProdProps.TODO);
         rc = model.createResource("http://purl.org/foodontology#Food");
-        out = new FileWriter("D:\\goods.dat");
+        out = new FileWriter("D:\\confectionary.dat");
 //        AddShutdownHookSample sample = new AddShutdownHookSample();
 //        sample.attachShutDownHook(model, out);
-        goPars("http://www.goodsmatrix.ru/goods-catalogue/Goods/Foodstuffs.html");//"http://www.goodsmatrix.ru/goods-catalogue/Foodstuffs/Groceries.html");//http://goodsmatrix.ru/goods-catalogue/Goods/Foodstuffs.html");
+        //goPars("http://www.goodsmatrix.ru/goods-catalogue/Mustard/Dijon-mustard.html");
+        goPars("http://www.goodsmatrix.ru/goods-catalogue/Foodstuffs/Confectionary.html");//"http://www.goodsmatrix.ru/goods-catalogue/Foodstuffs/Groceries.html");//http://goodsmatrix.ru/goods-catalogue/Goods/Foodstuffs.html");
+        model.write(new PrintWriter(out), "TURTLE");
+        out.flush();
+        out.close();
     }
 
 
@@ -65,7 +69,7 @@ public class ParsList {
             return;
         } catch (IOException ex) {
             System.out.println("ОШИБКА  " + url + "  goPars");
-            goPars(url);
+            //goPars(url);
         }
     }
 
@@ -96,7 +100,7 @@ public class ParsList {
                 try {
                     Document doc = Jsoup.connect(realURL).get();
                     Resource goods
-                            = model.createResource(realURL)
+                            = model.createResource(realURL.replace("www.goodsmatrix.ru/goods","foodpedia.tk/resource").replace(".html",""))
                             .addProperty(RDF.type, rc);
                     if (containsData(doc.select("span#ctl00_ContentPH_GoodsName"))) {
                         goods.addProperty(ProdProps.goodsName, doc.select("span#ctl00_ContentPH_GoodsName").get(0).text().replace('"', '\"'));
@@ -132,10 +136,11 @@ public class ParsList {
                     current++;
                     System.out.println("Product: " + current + " out of " + count);
                     if (current >= count) {
-                        model.write(new PrintWriter(out), "TURTLE");
-                        out.flush();
-                        out.close();
-                        System.exit(0);
+//                        System.out.println("LAST: " + url);
+//                        model.write(new PrintWriter(out), "TURTLE");
+//                        out.flush();
+//                        out.close();
+//                        System.exit(0);
                     }
                 } catch (Exception e) {
                     System.out.println("Failed: " + e);
@@ -147,7 +152,7 @@ public class ParsList {
         }
     }
 
-    public static boolean containsData(Elements elements){
+    public static boolean containsData(Elements elements) {
         return !(elements.isEmpty() || elements.get(0).text().equals(""));
     }
 
