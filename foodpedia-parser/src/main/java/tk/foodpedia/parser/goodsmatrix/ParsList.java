@@ -35,7 +35,7 @@ public class ParsList {
         model.setNsPrefix("gr", ProdProps.GR);
         model.setNsPrefix("foodpedia-owl", ProdProps.TODO);
         rc = model.createResource("http://purl.org/foodontology#Food");
-        out = new FileWriter("D:\\confectionary.dat");
+        out = new FileWriter("confectionary.dat");
 //        AddShutdownHookSample sample = new AddShutdownHookSample();
 //        sample.attachShutDownHook(model, out);
         //goPars("http://www.goodsmatrix.ru/goods-catalogue/Mustard/Dijon-mustard.html");
