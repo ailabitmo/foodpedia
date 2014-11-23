@@ -70,7 +70,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.mycompany.goodsmatrixparser.ParsList</mainClass>
+                            <mainClass>tk.foodpedia.goodsmatrixparser.ParsList</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

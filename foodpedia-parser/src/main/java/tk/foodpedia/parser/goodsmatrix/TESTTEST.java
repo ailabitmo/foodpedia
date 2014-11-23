@@ -1,4 +1,4 @@
-package com.mycompany.goodsmatrixparser;
+package tk.foodpedia.goodsmatrixparser;
 
 import java.io.*;
 /**
