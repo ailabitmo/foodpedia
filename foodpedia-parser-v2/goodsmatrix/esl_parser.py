@@ -1,11 +1,21 @@
+# -*- coding: utf-8 -*-
 import re
 
 
-LIST_OF_POSSIBLE_ESL = ['Белки']
+LIST_OF_POSSIBLE_ESL = {
+        'proteins': u'Белки',
+        'fats': u'Жиры',
+        'carbohydrates': u'Углеводы',
+        'calories': u'Энергетическая ценность'}
+
+
 def parse_esl(string):
-    for pattern in LIST_OF_POSSIBLE_ESL:
-        m = re.search("{0}\s*:\s*([-+]?[0-9]*\,?[0-9]+)\s*г?".format(pattern), string)
+    parsed_dict = dict()
+    for key in LIST_OF_POSSIBLE_ESL:
+        m = re.search(ur"{0}\s*:\s*(\d*[,|\.]?\d+)\s*г?".format(LIST_OF_POSSIBLE_ESL[key]),
+                      string,
+                      flags=re.IGNORECASE)
         if m:
-            return({"proteins": m.group()})
-        else:
-            return dict()
+            number = float(m.group(1).replace(',', '.'))
+            parsed_dict[key] = number
+    return parsed_dict

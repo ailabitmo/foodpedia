@@ -32,6 +32,6 @@ class GoodsMatrixSpider(CrawlSpider):
 
     def parse_good(self, response):
         good = GoodItem(xpath_extractor.extract_goods_properties_dict(response))
-        good['esl'] = scrapy.Field(parse_esl(good['esl']))
+        good['esl'] = parse_esl(good['esl'])
         good['url'] = response.url
         return good
