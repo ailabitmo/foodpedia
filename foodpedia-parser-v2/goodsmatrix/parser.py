@@ -5,6 +5,7 @@ from scrapy.contrib.spiders import CrawlSpider
 from goodsmatrix.url_transformer import transform_catalog_node_url_to_url_with_goods
 from goodsmatrix import xpath_extractor
 from goodsmatrix.good_item import GoodItem
+from goodsmatrix.esl_parser import parse_esl
 
 
 class GoodsMatrixSpider(CrawlSpider):
@@ -31,5 +32,6 @@ class GoodsMatrixSpider(CrawlSpider):
 
     def parse_good(self, response):
         good = GoodItem(xpath_extractor.extract_goods_properties_dict(response))
+        good['esl'] = scrapy.Field(parse_esl(good['esl']))
         good['url'] = response.url
         return good
