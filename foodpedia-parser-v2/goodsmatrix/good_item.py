@@ -3,7 +3,6 @@ import scrapy
 class GoodItem(scrapy.Item):
     url = scrapy.Field()
     name = scrapy.Field()
-    name = scrapy.Field()
     barcode = scrapy.Field()
     best_before = scrapy.Field()
     comment = scrapy.Field()
