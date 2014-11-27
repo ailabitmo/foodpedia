@@ -16,7 +16,7 @@ class TestEslParser(unittest.TestCase):
         self.assertEqual(parse_esl(u"Белки: 7,90"), {'proteins': 7.90})
 
     def test_protein_no_spaces(self):
-        self.assertEqual(parse_esl(u"Белки:7,90 г"), {'proteins': 7.90})
+        self.assertEqual(parse_esl(u"Белки:7,90г"), {'proteins': 7.90})
 
     def test_protein_doubled_spaces(self):
         self.assertEqual(parse_esl(u"Белки  :  7,90  г"), {'proteins': 7.90})
