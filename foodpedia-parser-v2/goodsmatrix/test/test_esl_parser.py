@@ -10,13 +10,13 @@ class TestEslParser(unittest.TestCase):
         actual_esl_dict = parse_esl(u"Белки: 7,90 г")
         self.assertEqual({'proteins': 7.90}, actual_esl_dict)
 
-    #def test_protein_in_lower_case(self):
-        #actual_esl_dict = parse_esl("белки: 7,90 г")
-        #self.assertEqual({'proteins': 7.90}, actual_esl_dict)
+    def test_protein_in_lower_case(self):
+        actual_esl_dict = parse_esl(u"белки: 7,90 г")
+        self.assertEqual({'proteins': 7.90}, actual_esl_dict)
 
-    #def test_protein_no_measuarment(self):
-        #actual_esl_dict = parse_esl("Белки: 7,90")
-        #self.assertEqual({'proteins': 7.90}, actual_esl_dict)
+    def test_protein_no_measuarment(self):
+        actual_esl_dict = parse_esl(u"Белки: 7,90")
+        self.assertEqual({'proteins': 7.90}, actual_esl_dict)
 
     def test_protein_no_spaces(self):
         actual_esl_dict = parse_esl(u"Белки:7,90 г")
