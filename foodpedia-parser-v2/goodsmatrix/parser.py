@@ -1,7 +1,6 @@
 import scrapy
 from scrapy.contrib.spiders import CrawlSpider
 
-#from goodsmatrix.url_transformer import transform_catalog_node_url_to_url_with_goods
 from goodsmatrix.url_transformer import transform_catalog_node_url_to_url_with_goods
 from goodsmatrix import xpath_extractor
 from goodsmatrix.good_item import GoodItem
