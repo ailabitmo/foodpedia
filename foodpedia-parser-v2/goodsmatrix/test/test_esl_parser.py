@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import unittest
 
+
 from goodsmatrix.esl_parser import parse_esl
 
 
