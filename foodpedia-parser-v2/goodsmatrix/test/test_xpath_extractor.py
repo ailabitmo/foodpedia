@@ -73,7 +73,7 @@ class TestExtractGoodsAnaloguesURLsFromListOfGood(unittest.TestCase):
                 r"</body>"
                 r"</html>"))
         self.assertEqual(
-                xpath_extractor.extract_goods_analogues_urls_from_list_of_goods(stub_response),
+                xpath_extractor.extract_goods_analogues_urls(stub_response),
                 ['http://goodsmatrix.ru/goods-analogue/4607055680193.html'])
 
     def test_two_good_analogues(self):
@@ -87,7 +87,7 @@ class TestExtractGoodsAnaloguesURLsFromListOfGood(unittest.TestCase):
                 r"</body>"
                 r"</html>"))
         self.assertEqual(
-                xpath_extractor.extract_goods_analogues_urls_from_list_of_goods(stub_response),
+                xpath_extractor.extract_goods_analogues_urls(stub_response),
                 ['http://test.com/1.html',
                  'http://test.com/2.html'])
 
@@ -102,7 +102,7 @@ class TestExtractGoodsAnaloguesURLsFromListOfGood(unittest.TestCase):
                 r"</body>"
                 r"</html>"))
         self.assertEqual(
-                xpath_extractor.extract_goods_analogues_urls_from_list_of_goods(stub_response),
+                xpath_extractor.extract_goods_analogues_urls(stub_response),
                 [])
 
     def test_corrupted_ids(self):
@@ -116,24 +116,8 @@ class TestExtractGoodsAnaloguesURLsFromListOfGood(unittest.TestCase):
                 r"</body>"
                 r"</html>"))
         self.assertEqual(
-                xpath_extractor.extract_goods_analogues_urls_from_list_of_goods(stub_response),
+                xpath_extractor.extract_goods_analogues_urls(stub_response),
                 [])
-
-
-class TestExctractGoodsURLsFromListOfGoods(unittest.TestCase):
-    def test_one_good(self):
-        stub_response = HtmlResponse(
-            url="",
-            body=(
-                r"<html>"
-                r"<body>"
-                r"<a href='http://goodsmatrix.ru/goods-analogue/4607055680193.html'"
-                r"id='ctl00_ContentPH_GoodsDG_ctl03_A2'>4607055680193</a>"
-                r"</body>"
-                r"</html>"))
-        self.assertEqual(
-                list(xpath_extractor.extract_goods_url_from_list_of_goods(stub_response)),
-                ['http://goodsmatrix.ru/goods/4607055680193.html'])
 
 
 class TestExtractGoodsProperties(unittest.TestCase):
