@@ -10,7 +10,7 @@ from goodsmatrix import esl_parser
 class GoodsMatrixSpider(CrawlSpider):
     name = 'goodsmatrix'
     allowed_domains = ['goodsmatrix.ru']
-    start_urls = ['http://www.goodsmatrix.ru/goods-catalogue/Goods/Bakeries-products/Bread-sticks.html']
+    start_urls = ['http://www.goodsmatrix.ru/goods-catalogue/Sparkling-drinking-water.html']
     #start_urls = ['http://www.goodsmatrix.ru/goods-catalogue/Goods/Foodstuffs.html']
 
     def parse(self, response):

@@ -15,10 +15,8 @@ def main():
     dispatcher.connect(stop_reactor, signal=signals.spider_closed)
     spider = goodsmatrix.parser.GoodsMatrixSpider()
     settings = get_project_settings()
-    #settings.set("FEED_FORMAT", "json")
-    #settings.set("FEED_URI", "result.json")
     settings.set("ITEM_PIPELINES", {
-        "goodsmatrix.pipelines.JsonWithEncodingPipeline": 0
+        "goodsmatrix.pipelines.RDFPipeline": 0
     })
 
     crawler = Crawler(settings)
