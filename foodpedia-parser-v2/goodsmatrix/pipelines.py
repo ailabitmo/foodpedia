@@ -21,10 +21,12 @@ class JsonWithEncodingPipeline(object):
 
 class RDFPipeline(object):
     FOOD = Namespace("http://purl.org/foodontology#")
+    FOOD_NOT_IMPLEMENTED = Namespace("http://purl.org/foodontology/extention#")
     GOODRELATIONS = Namespace("http://purl.org/goodrelations/v1#")
     def __init__(self):
         self.graph = Graph(store='default')
         self.graph.bind('food', self.FOOD)
+        self.graph.bind('food_not_implemented', self.FOOD_NOT_IMPLEMENTED)
         self.graph.bind('gr', self.GOODRELATIONS)
         self.current_item = None
 
@@ -36,14 +38,14 @@ class RDFPipeline(object):
         self.graph.add((self._get_current_items_resource_url(), RDF.type, self.FOOD.Food))
         self._add_current_items_property_as_predicate(self.GOODRELATIONS.name, 'name')
         self._add_current_items_property_as_predicate(self.GOODRELATIONS['hasEAN_UCC-13'], 'barcode')
-        self._add_current_items_property_as_predicate(self.FOOD.best_before, 'best_before')
+        self._add_current_items_property_as_predicate(self.FOOD_NOT_IMPLEMENTED.best_before, 'best_before')
         self._add_current_items_property_as_predicate(self.GOODRELATIONS.description, 'comment')
         self._add_current_items_property_as_predicate(self.FOOD.ingredientsListAsText, 'ingredients')
-        self._add_current_items_property_as_predicate(self.FOOD.netto_mass, 'netto_weight')
-        self._add_current_items_property_as_predicate(self.FOOD.standart, 'standart')
-        self._add_current_items_property_as_predicate(self.FOOD.store_cond, 'store_conditions')
-        self._add_current_items_property_as_predicate(self.FOOD.esl, 'esl')
-        self._add_current_items_property_as_predicate(self.FOOD.pack_type, 'pack_type')
+        self._add_current_items_property_as_predicate(self.FOOD_NOT_IMPLEMENTED.netto_mass, 'netto_weight')
+        self._add_current_items_property_as_predicate(self.FOOD_NOT_IMPLEMENTED.standart, 'standart')
+        self._add_current_items_property_as_predicate(self.FOOD_NOT_IMPLEMENTED.store_cond, 'store_conditions')
+        self._add_current_items_property_as_predicate(self.FOOD_NOT_IMPLEMENTED.esl, 'esl')
+        self._add_current_items_property_as_predicate(self.FOOD_NOT_IMPLEMENTED.pack_type, 'pack_type')
 
     def _get_current_items_resource_url(self):
         return URIRef(self.current_item['url'])
