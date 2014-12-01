@@ -12,7 +12,11 @@ def extract_goods_properties_dict(response):
             in GOODS_PROPERTIES_MAP_ON_XPATH_IDS.iteritems()}
 
 def _extract_goods_property(response, xpath_id):
-    return ' '.join(response.xpath("//span[@id='{0}']/text()".format(xpath_id)).extract()).strip()
+    return ' '.join(
+                line.strip()
+                for line
+                in response.xpath("//span[@id='{0}']/text()".format(xpath_id)).extract()
+                )
 
 GOODS_PROPERTIES_MAP_ON_XPATH_IDS = {
         'name': 'ctl00_ContentPH_GoodsName',
