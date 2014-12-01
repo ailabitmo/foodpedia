@@ -6,1235 +6,334 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.goodsmatrix.ru/goods/1053372622508.html> a food:Food ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-003-00341089-06"@ru ;
-    gr:hasEAN_UCC-13 "1053372622508"@ru ;
-    gr:name "ВОДА «ЕЛИСЕЕВСКАЯ-1» ПРИРОДНАЯ ПИТЬЕВАЯ  ГАЗИРОВАННАЯ  1,5Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/1053372642056.html> a food:Food ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-003-00341089-06"@ru ;
-    gr:hasEAN_UCC-13 "1053372642056"@ru ;
-    gr:name "ВОДА «ЕЛИСЕЕВСКАЯ-1» ПРИРОДНАЯ ПИТЬЕВАЯ  ГАЗИРОВАННАЯ    0,5Л. ПЭТ"@ru .
-
-<http://www.goodsmatrix.ru/goods/1053372650037.html> a food:Food ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка стеклянная"@ru ;
-    food_not_implemented:standart "ТУ 0131-003-00341089-06"@ru ;
-    gr:hasEAN_UCC-13 "1053372650037"@ru ;
-    gr:name "ВОДА «ЕЛИСЕЕВСКАЯ-1» ПРИРОДНАЯ ПИТЬЕВАЯ  ГАЗИРОВАННАЯ     0,5Л. СТЕКЛО"@ru .
-
-<http://www.goodsmatrix.ru/goods/3179730110819.html> a food:Food ;
-    food:ingredientsListAsText "Минерализацию, состав и условия хранения см. на обороте этикетки"@ru ;
-    food_not_implemented:netto_mass "75,00 л"@ru ;
-    food_not_implemented:pack_type "Бутылка стеклянная"@ru ;
-    food_not_implemented:standart "32105874 СРС"@ru ;
-    gr:hasEAN_UCC-13 "3179730110819"@ru ;
-    gr:name "PERRIER, ПРИРОДНАЯ, СТОЛОВАЯ, ГАЗИРОВАННАЯ МИНЕРАЛЬНАЯ ВОДА РАЗЛИТА НА ИСТОЧНИКЕ ПЕРЬЕ, ФРАНЦИЯ. О,75 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/3179730110833.html> a food:Food ;
-    food:ingredientsListAsText "Минерализацию, состав и условия хранения см. на обороте этикетки"@ru ;
-    food_not_implemented:netto_mass "0,33 л"@ru ;
-    food_not_implemented:pack_type "Бутылка стеклянная"@ru ;
-    food_not_implemented:standart "32105876 СРС"@ru ;
-    gr:hasEAN_UCC-13 "3179730110833"@ru ;
-    gr:name "PERRIER, ПРИРОДНАЯ, СТОЛОВАЯ, ГАЗИРОВАННАЯ МИНЕРАЛЬНАЯ ВОДА РАЗЛИТА НА ИСТОЧНИКЕ ПЕРЬЕ, ФРАНЦИЯ. О,33Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4600494000058.html> a food:Food ;
-    food:ingredientsListAsText "Очищенная питьевая вода, двуокись углерода"@ru ;
-    food_not_implemented:netto_mass "0,60 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "0131-001-17998155-00"@ru ;
-    gr:hasEAN_UCC-13 "4600494000058"@ru ;
-    gr:name "AQUA MINERALE (0,6 Л)"@ru .
-
-<http://www.goodsmatrix.ru/goods/4600494000188.html> a food:Food ;
-    food:ingredientsListAsText "очищенная артезианская вода скважин №1, 2, 3, 6"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-001-17998155"@ru ;
-    gr:description "питьевая газированная вода первой категории. Номинальный объем 2,0 л"@ru ;
-    gr:hasEAN_UCC-13 "4600494000188"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ \"АКВА МИНЕРАЛЕ\". 2 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4600494506048.html> a food:Food ;
-    food:ingredientsListAsText "Артезианская очищенная вода скважин № 1,2,3,6."@ru ;
-    food_not_implemented:netto_mass "0,25 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-001-17998155"@ru ;
-    gr:description "Общая минерализация не более 500 мг/л."@ru ;
-    gr:hasEAN_UCC-13 "4600494506048"@ru ;
-    gr:name "ГАЗИРОВАННАЯ ПИТЬЕВАЯ ВОДА \"AQUA MINERALE\", 0,25 Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/4600536130002.html> a food:Food ;
-    food:ingredientsListAsText "Вода артезианская первой категории."@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "1,00 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "52109-2003"@ru ;
-    food_not_implemented:store_cond "при температуре от 2 градусов С до 20 градусов С"@ru ;
-    gr:description "Предназначена для питьевых целей."@ru ;
-    gr:hasEAN_UCC-13 "4600536130002"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ АРТЕЗИАНСКАЯ \"ЛЕДЯНАЯ ЖЕМЧУЖИНА\" ПЕРВОЙ КАТЕГОРИИ ГАЗИРОВАННАЯ 1 Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/4600682243052.html> a food:Food ;
-    food:ingredientsListAsText "Минерализация: 0,4-1,0 г/л . Химический состав, мг/л: кальций: 30-50; магний:20-40 ;калий: 90-150 ; гидрокарбонат: 150-220; сульфат: 800-1600; хлорид:100-180"@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ГОСТ 28188-89"@ru ;
-    gr:description "Очищена по новейшей технологии с использованием серебра. Рекомендуется для ежедневного применения. Хранить в сухом прохладном месте при температуре от 0°С до +18°С. Беречь от воздействия прямого солнечного света."@ru ;
-    gr:hasEAN_UCC-13 "4600682243052"@ru ;
-    gr:name "ПИТЬЕВАЯ ГАЗИРОВАННАЯ ВОДА ХРУСТАЛЬНАЯ 1,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4600682498155.html> a food:Food ;
-    food:ingredientsListAsText "Вода артезианская первой категории."@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "0131-499-01824944-10"@ru ;
-    food_not_implemented:store_cond "при температуре от 2 градусов С до 25 градусов С в хорошо проветриваемых помещениях"@ru ;
-    gr:hasEAN_UCC-13 "4600682498155"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ АРТЕЗИАНСКАЯ \"ЖИВОЙ РУЧЕЙ\" ПЕРВОЙ КАТЕГОРИИ ГАЗИРОВАННАЯ 1,5 Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/4600685140020.html> a food:Food ;
-    food:ingredientsListAsText "Скважины:  1,2,3,4,5,6,7,8,9,10 (глубина 220 м)"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-007-00366250-07"@ru ;
-    gr:description "Хранить в проветренных затемненных складских помещениях при температуре от +2 до +20С и относительной влажности не выше 85%."@ru ;
-    gr:hasEAN_UCC-13 "4600685140020"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ АРТЕЗИАНСКАЯ ГАЗИРОВАННАЯ, \"ДЖЕЛА\", \"ОАО \"БАРНАУЛЬСКИЙ ПИВОВАРЕННЫЙ ЗАВОД\", 0,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4600685240010.html> a food:Food ;
-    food:ingredientsListAsText "Вода артезианская подготовленная, двуокись углерода"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-007-00366250-07"@ru ;
-    food_not_implemented:store_cond "от +2°С до +20°С"@ru ;
-    gr:description "«Джела» - натуральная природная вода. Мы добываем воду из 10 собственных артезианских скважин глубиной до 220м. Вода природная - не содержит химических добавок. Вода очищается только механическим путем, при котором не нарушается структура воды. Наше оборудование позволяет сохранить природное качество воды, ее минеральный состав. Вода содержит природный фтор, марганец, натрий, калий, кальций, магний, необходимые для каждого человека."@ru ;
-    gr:hasEAN_UCC-13 "4600685240010"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ АРТЕЗИАНСКАЯ \"ДЖЕЛА\" ГАЗИРОВАННАЯ 1 КАТЕГОРИИ, 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4600687000520.html> a food:Food ;
-    food:ingredientsListAsText "Химический состав, мг/л: Na + K 30-80; Ca?"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 9185-001-05126800"@ru ;
-    gr:description "Минеральная питьевая хлоридно-гидрокарбонатная натриевая столовая вода. Скважина N°36761. Для ежедневного использования. Рекомендована летям.  Хранить при температуре от +5°С до +20°С."@ru ;
-    gr:hasEAN_UCC-13 "4600687000520"@ru ;
-    gr:name "РОДНИКОВАЯ ГАЗИРОВАННАЯ ВОДА РОСИНКА, 2Л СОСТАВ, МГ/Л: КАЛЬЦИЙ: 80-160; МАГНИЙ:"@ru .
-
-<http://www.goodsmatrix.ru/goods/4600687000537.html> a food:Food ;
-    food:ingredientsListAsText "Вода питьевая доочищенная первой категории. Химический состав, мг/л: Na"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-004-05126800"@ru ;
-    gr:description "Хранить при температуре от +5°С до +20°С.  Общая жесткость, мг-экв/л - "@ru ;
-    gr:hasEAN_UCC-13 "4600687000537"@ru ;
-    gr:name "РОСИНКА ПИТЬЕВА ВОДА, ГАЗИРОВАННАЯ, 2Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4600687000865.html> a food:Food ;
-    food:ingredientsListAsText "Химический состав, мг/л: Na+ K^ 30-80; Ca:"@ru ;
-    food_not_implemented:netto_mass "0,70 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 9185-001-05126800"@ru ;
-    gr:description "Минеральная питьевая хлоридно-гидрокарбонатная натриевая столовая вода. Скважина N°36761. Для ежедневного использования. Рекомендована детям.  Хранить при температуре от +5°С до +20°С."@ru ;
-    gr:hasEAN_UCC-13 "4600687000865"@ru ;
-    gr:name "РОДНИКОВАЯ ГАЗИРОВАННАЯ ВОДА РОСИНКА 0,7Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4600687001282.html> a food:Food ;
-    food:ingredientsListAsText "Вода питьевая доочищенная первой категории. Химический состав, мг/л: Na"@ru ;
-    food_not_implemented:netto_mass "0,70 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-004-05126800"@ru ;
-    gr:description "Хранить при температуре от +5°С до +20°С.  Общая жесткость, мг-экв/л - "@ru ;
-    gr:hasEAN_UCC-13 "4600687001282"@ru ;
-    gr:name "ПИТЬЕВАЯ ГАЗИРОВАННАЯ ВОДА РОСИНКА 0,7Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4601420002085.html> a food:Food ;
-    food:ingredientsListAsText "Содержание минералов и микроэлементов (мг./литр): Цинк (Zn) < 5 Селен (Se) < 0,01 Йод (I) < 0,125 Хром (Cr) < 0,05 Сульфат (SO4) < 150 Магний (Mg) < 65 Гидрокарбонат (HCO3) < 300 Кальций (Ca) < 120 рH 6,5 – 8,5"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "500,00 мл"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:store_cond "Хранить в проветриваемых затемненных помещениях при температуре от +5 до +20 градусов С и относительной влажности 85%."@ru ;
-    gr:description "«STELMAS» - это вода, для жителей мегаполисов. В ней содержатся микроэлементы цинк (Zn), селен (Se), йод (I), хром (Cr), которые крайне дефицитны у жителей мегаполисов. Наша пища бедна этими минералами (удобрение, термическая обработка, консервирование, и т.д.). Если Вы будете ежедневно пить 2-2,5 литра воды «STELMAS» то Вас удивит насколько меньше проблем со здоровьем может быть всего лишь употребляя правильную артезианскую воду."@ru ;
-    gr:hasEAN_UCC-13 "4601420002085"@ru ;
-    gr:name "ВОДА &QUOT;STELMAS&QUOT; ПИТЬЕВАЯ ГАЗИРОВАННАЯ ПЕРВОЙ КАТЕГОРИИ (ZN,SE) ПЭТ, 0,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4601420002108.html> a food:Food ;
-    food:ingredientsListAsText "Содержание минералов и микроэлементов (мг./литр): Цинк (Zn) < 5 Селен (Se) < 0,01 Йод (I) < 0,125 Хром (Cr) < 0,05 Сульфат (SO4) < 150 Магний (Mg) < 65 Гидрокарбонат (HCO3) < 300 Кальций (Ca) < 120 рH 6,5 – 8,5."@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "1500,00 мл"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:store_cond "Хранить в проветриваемых затемненных помещениях при температуре от +5 до +20 градусов С и относительной влажности 85%."@ru ;
-    gr:description "«STELMAS» - это вода, для жителей мегаполисов. В ней содержатся микроэлементы цинк (Zn), селен (Se), йод (I), хром (Cr), которые крайне дефицитны у жителей мегаполисов. Наша пища бедна этими минералами (удобрение, термическая обработка, консервирование, и т.д.). Если Вы будете ежедневно пить 2-2,5 литра воды «STELMAS» то Вас удивит насколько меньше проблем со здоровьем может быть всего лишь употребляя правильную артезианскую воду."@ru ;
-    gr:hasEAN_UCC-13 "4601420002108"@ru ;
-    gr:name "ВОДА &QUOT;STELMAS&QUOT; ПИТЬЕВАЯ ГАЗИРОВАННАЯ ПЕРВОЙ КАТЕГОРИИ (ZN,SE) ПЭТ, 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4601486000971.html> a food:Food ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-007-00341327-04"@ru ;
-    gr:description "Химический состав: не более кальций 90мг/дм3; натрий+калий 220мг/дм3; магний 30мг/дм3; железо 0,2мг/дм3; гидрокарбонаты 350мг/дм3; хлориды 250мг/дм3; сульфаты 220 мг/дм3"@ru ;
-    gr:hasEAN_UCC-13 "4601486000971"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ПРИРОДНАЯ ГАЗИРОВАННАЯ \"СУРСКИЕ ЗОРИ\" 1,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4601486001077.html> a food:Food ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-007-00341327-04"@ru ;
-    gr:description "Химический состав: не более кальций 90мг/дм3; натрий+калий 220мг/дм3; магний 30мг/дм3; железо 0,2мг/дм3; гидрокарбонаты 350мг/дм3; хлориды 250мг/дм3; сульфаты 220 мг/дм3"@ru ;
-    gr:hasEAN_UCC-13 "4601486001077"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ ЙОДИРОВАННАЯ \"СУРСКИЕ ЗОРИ\" 1,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4601556000047.html> a food:Food ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "13273-88"@ru ;
-    gr:description "Бутилировано из скважины \"Краинка\" № 70400992"@ru ;
-    gr:hasEAN_UCC-13 "4601556000047"@ru ;
-    gr:name "КРАИНСКАЯ (СУЛЬФАТНО-КАЛЬЦИЕВАЯ ГАЗИРОВАННАЯ ВОДА)"@ru .
-
-<http://www.goodsmatrix.ru/goods/4601593001977.html> a food:Food ;
-    food:ingredientsListAsText "Содержит растворенный кислород 10-11мг/дм6"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    gr:description "Вода питьевая очищенная предназначена для использования без ограничений в качестве : питьевой столовой воды; для приготовления пищи и напитков; для разбавления высокоминерализированных минеральных вод."@ru ;
-    gr:hasEAN_UCC-13 "4601593001977"@ru ;
-    gr:name "ПИТЬЕВАЯ ВОДА “АРХЫЗ” 0.5Л С ГАЗОМ"@ru .
-
-<http://www.goodsmatrix.ru/goods/4601642003662.html> a food:Food ;
-    food:ingredientsListAsText "Умягченная вода, прошедшая многоступенчатую систему очистки с использованием срециальных технологий фильтрации и обратного осмоса, из централизованной системы питьевого водоснабжения"@ru ;
-    food_not_implemented:best_before "270 сут."@ru ;
-    food_not_implemented:esl "{'fats': 0.0, 'proteins': 0.0, 'carbohydrates': 0.0, 'calories': 0.0}"@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ГОСТ 52109-2003"@ru ;
-    food_not_implemented:store_cond "при температуре от +2 до +20 градусов C и относительной влажности воздуха не более 85%. Избегать воздействия прямого солнечного света."@ru ;
-    gr:description "Чистая питьевая газированная вода утолит жажду и придаст новых сил. Пейте наслаждаясь!"@ru ;
-    gr:hasEAN_UCC-13 "4601642003662"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ТМ \"ЧИСТЫЙ ГЛОТОК\" ГАЗИРОВАННАЯ ПЕРВОЙ КАТЕГОРИИ, ПЭТ, 0,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4601642003679.html> a food:Food ;
-    food:ingredientsListAsText "Умягченная вода, прошедшая многоступенчатую систему очистки с использованием срециальных технологий фильтрации и обратного осмоса, из централизованной системы питьевого водоснабжения"@ru ;
-    food_not_implemented:best_before "270 сут."@ru ;
-    food_not_implemented:esl "{'fats': 0.0, 'proteins': 0.0, 'carbohydrates': 0.0, 'calories': 0.0}"@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ГОСТ 52109-2003"@ru ;
-    food_not_implemented:store_cond "при температуре от +2 до +20 градусов C и относительной влажности воздуха не более 85%. Избегать воздействия прямого солнечного света."@ru ;
-    gr:description "Чистая питьевая газированная вода утолит жажду и придаст новых сил. Пейте наслаждаясь!"@ru ;
-    gr:hasEAN_UCC-13 "4601642003679"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ТМ \"ЧИСТЫЙ ГЛОТОК\" ГАЗИРОВАННАЯ ПЕРВОЙ КАТЕГОРИИ, ПЭТ, 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4601642003686.html> a food:Food ;
-    food:ingredientsListAsText "Умягченная вода, прошедшая многоступенчатую систему очистки с использованием срециальных технологий фильтрации и обратного осмоса, из централизованной системы питьевого водоснабжения"@ru ;
-    food_not_implemented:best_before "270 сут."@ru ;
-    food_not_implemented:esl "{'fats': 0.0, 'proteins': 0.0, 'carbohydrates': 0.0, 'calories': 0.0}"@ru ;
-    food_not_implemented:netto_mass "2,00 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ГОСТ 52109-2003"@ru ;
-    food_not_implemented:store_cond "при температуре от +2 до +20 градусов C и относительной влажности воздуха не более 85%. Избегать воздействия прямого солнечного света."@ru ;
-    gr:description "Чистая питьевая газированная вода утолит жажду и придаст новых сил. Пейте наслаждаясь!"@ru ;
-    gr:hasEAN_UCC-13 "4601642003686"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ТМ \"ЧИСТЫЙ ГЛОТОК\" ГАЗИРОВАННАЯ ПЕРВОЙ КАТЕГОРИИ, ПЭТ, 2 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4601642008926.html> a food:Food ;
-    food:ingredientsListAsText "Умягченная вода, прошедшая многоступенчатую систему очистки с использованием срециальных технологий фильтрации и обратного осмоса, из централизованной системы питьевого водоснабжения"@ru ;
-    food_not_implemented:best_before "9 мес."@ru ;
-    food_not_implemented:esl "{'fats': 0.0, 'proteins': 0.0, 'carbohydrates': 0.0, 'calories': 0.0}"@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ГОСТ 52109-2003"@ru ;
-    food_not_implemented:store_cond "при температуре от +2 до +20 градусов C и относительной влажности воздуха не более 85%. Избегать воздействия прямого солнечного света."@ru ;
-    gr:description "Чистая питьевая газированная вода утолит жажду и придаст новых сил. Пейте наслаждаясь!"@ru ;
-    gr:hasEAN_UCC-13 "4601642008926"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ТМ \"ПОДЗЕМНЫЙ ДАР\" ГАЗИРОВАННАЯ ПЕРВОЙ КАТЕГОРИИ, ПЭТ, 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4601809910420.html> a food:Food ;
-    food:ingredientsListAsText "Хлориды 700-1300 мг/дм3; Кальций"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "28188-89"@ru ;
-    gr:description "Рекомендуется при лечении хронических гастритов с нормальными и пониженными секреторными функциями желудка, колитов, заболеваний печени и жулчевыводящих путей"@ru ;
-    gr:hasEAN_UCC-13 "4601809910420"@ru ;
-    gr:name "ВОДА СТОЛОВАЯ ГАЗИРОВАННАЯ \"МАРИИНСКАЯ\", 0.5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4601823001845.html> a food:Food ;
-    food:ingredientsListAsText "Вода питьевая газированная."@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка стеклянная"@ru ;
-    food_not_implemented:standart "0131-001-99982497-09"@ru ;
-    food_not_implemented:store_cond "хранить при температуре от +2 градусов С до +20 градусов С и относительной влажности воздуха не более 85%"@ru ;
-    gr:description "Первая категория. Шунгитовая фильтрация."@ru ;
-    gr:hasEAN_UCC-13 "4601823001845"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ \"ИНЗЕРА\" ИЗ АРТЕЗИАНСКИХ ИСТОЧНИКОВ ГАЗИРОВАННАЯ 0,5 Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/4601823002156.html> a food:Food ;
-    food:ingredientsListAsText "Вода питьевая первой категории."@ru ;
+<http://www.goodsmatrix.ru/goods/4607021721899.html> a food:Food ;
+    food:energyPer100gAsDouble 1.795e+02 ;
+    food:ingredientsListAsText "мясо птицы"@ru ;
     food_not_implemented:best_before "6 мес."@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "0131-001-39982497-09"@ru ;
-    gr:description "Вода питьевая первой категории \"Инзера\""@ru ;
-    gr:hasEAN_UCC-13 "4601823002156"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ \"ИНЗЕРА\" ГАЗИРОВАННАЯ ИЗ АРТЕЗИАНСКИХ ИСТОЧНИКОВ 0,5 Л."@ru .
+    food_not_implemented:esl "Белки: не менее 19,00 г Жиры: не более 11,50 г Энергетическая ценность:  179,50 ккал"@ru ;
+    food_not_implemented:netto_mass "1,00 кг"@ru ;
+    food_not_implemented:pack_type "Пакет пластиковый, металлизированный, многослойный"@ru ;
+    food_not_implemented:standart "14192-96, ТУ 9214-212-2347684-10"@ru ;
+    food_not_implemented:store_cond "Условия хранения от -18 градусов С"@ru ;
+    gr:description "кусочки мяса птицы на костях от разных частей тушки"@ru ;
+    gr:hasEAN_UCC-13 "4607021721899"@ru ;
+    gr:name "ПОЛУФАБРИКАТЫ ИЗ МЯСА ЦЫПЛЯТ-БРОЙЛЕРОВ НАТУРАЛЬНЫЕ. НАБОРЫ МЕЛКОКУСКОВЫЕ."@ru .
 
-<http://www.goodsmatrix.ru/goods/4601823002163.html> a food:Food ;
-    food:ingredientsListAsText "Вода питьевая первой категории."@ru ;
+<http://www.goodsmatrix.ru/goods/4607024859490.html> a food:Food ;
+    food:energyPer100gAsDouble 2.98e+02 ;
+    food:fatPer100gAsDouble 2.6e+01 ;
+    food:ingredientsListAsText "свинина 50%, говядина 50%, сыр 13%"@ru ;
+    food:proteinsPer100gAsDouble 1.6e+01 ;
+    food_not_implemented:esl "Белки:  16,00 г Жиры:  26,00 г Углеводы:  0,00 г Энергетическая ценность:  298,00 ккал"@ru ;
+    food_not_implemented:netto_mass "240,00 г"@ru ;
+    food_not_implemented:standart "ТУ 9214-009-53942794-07"@ru ;
+    gr:hasEAN_UCC-13 "4607024859490"@ru ;
+    gr:name "СТЕЙКИ РУБЛЕНЫЕ СВИНИНА С ГОВЯДИНОЙ «ВЕЛКОМ», 240Г"@ru .
+
+<http://www.goodsmatrix.ru/goods/4607029105721.html> a food:Food ;
+    food:ingredientsListAsText "изделие содержит трубчатую кость"@ru ;
+    food_not_implemented:standart "ТУ 9283-005-53974920-06"@ru ;
+    gr:hasEAN_UCC-13 "4607029105721"@ru ;
+    gr:name "ГОЛЕНЬ БАРАНЬЯ МАЛАЯ, TITBIT\", 1 УПАКОВКА"@ru .
+
+<http://www.goodsmatrix.ru/goods/4607042560095.html> a food:Food ;
+    food:carbohydratesPer100gAsDouble 2e+00 ;
+    food:energyPer100gAsDouble 3.92e+02 ;
+    food:fatPer100gAsDouble 4e+01 ;
+    food:ingredientsListAsText "свинина, лук репчатый свежий, белок соевый, соль, специи, вода"@ru ;
+    food:proteinsPer100gAsDouble 6e+00 ;
+    food_not_implemented:esl "Белки:  6,00 г Жиры:  40,00 г Углеводы:  2,00 г Энергетическая ценность:  392,00 ккал"@ru ;
+    food_not_implemented:standart "ТУ9214-456-00419779"@ru ;
+    gr:description "Удачное сочетание традиций и новых технологий, нежное, сочное мясо, быстрота и легкость в приготовлении делают эту продукцию незаменимым помощником для каждой хозяйки на кухне. Масса нетто 450г."@ru ;
+    gr:hasEAN_UCC-13 "4607042560095"@ru ;
+    gr:name "ЛЮЛЯ-КЕБАБ \"ЭКСТРА\""@ru .
+
+<http://www.goodsmatrix.ru/goods/4607058474256.html> a food:Food ;
+    food:carbohydratesPer100gAsDouble 3.6e+00 ;
+    food:energyPer100gAsDouble 1.88e+02 ;
+    food:ingredientsListAsText "Мясо говядины, рис, капуста, томат, крахмал, помидоры, лук, сахар, стабилизаторы Е412, Е401, соль, чеснок, специи, вода питьевая,"@ru ;
+    food:proteinsPer100gAsDouble 4.8e+00 ;
+    food_not_implemented:best_before "2 г."@ru ;
+    food_not_implemented:esl "Белки:  4,80 г Углеводы:  3,60 г Энергетическая ценность:  188,00 ккал"@ru ;
+    food_not_implemented:netto_mass "280,00 г"@ru ;
+    food_not_implemented:standart "ТУ 9161-110-44388488-2007"@ru ;
+    gr:description "Массова доля: мяса - не более 37,7%, растительных компонентов - не менее 46,5%, жире - не более 10%. Массовая доля соуса: не более 40%. Перед употреблением разогреть."@ru ;
+    gr:hasEAN_UCC-13 "4607058474256"@ru ;
+    gr:name "МЯСНЫЕ ГОЛУБЦЫ В ТОМАТНОМ СОУСЕ \"МАВР\", 280 Г."@ru .
+
+<http://www.goodsmatrix.ru/goods/4607071151073.html> a food:Food ;
+    food:ingredientsListAsText "набор для бульона из говядины первой категории."@ru ;
+    food_not_implemented:netto_mass "500,00 г"@ru ;
+    gr:description """ПИЩЕВАЯ ЦЕННОСТЬ 100 г ПРОДУКТА: \r
+               белок – 19 г, жир – 5 г.  \r
+ ЭНЕРГЕТИЧЕСКАЯ ЦЕННОСТЬ: 123 ккал.\r
+  \r
+ СРОК ХРАНЕНИЯ\r
+при температуре: \r
+ 10 oC – 25 суток,rn18 oC – 45 суток."""@ru ;
+    gr:hasEAN_UCC-13 "4607071151073"@ru ;
+    gr:name "НАБОР ДЛЯ БУЛЬОНА ГОВЯЖИЙ ЗАМОРОЖЕННЫЙ 500Г"@ru .
+
+<http://www.goodsmatrix.ru/goods/4607105862180.html> a food:Food ;
+    food:ingredientsListAsText "свинина (кусочки мякоти овально-продолговатой формы), сыр, соль."@ru ;
+    food_not_implemented:netto_mass "0,50 кг"@ru ;
+    gr:description "Пищевая и энергетическая ценность 100 г продукта: белок не менее 15,0 г, жир не более 29,0 г, 303,0 ккал."@ru ;
+    gr:hasEAN_UCC-13 "4607105862180"@ru ;
+    gr:name "ПОРЦИОННЫЕ ПОЛУФАБРИКАТЫ «СВИНИНА ПО-ФРАНЦУЗСКИ» В ПАНИРОВОЧНОМ ПОКРЫТИИ  0,5 КГ."@ru .
+
+<http://www.goodsmatrix.ru/goods/4607105862333.html> a food:Food ;
+    food:ingredientsListAsText "свинина (кусочки мякоти овально-продолговатой формы), сыр, сухарная крошка, соль."@ru ;
+    food_not_implemented:netto_mass "0,50 кг"@ru ;
+    gr:description "Пищевая и энергетическая ценность 100 г продукта: белок не менее 15,0 г, жир не более 27,0 г, 303,0 ккал."@ru ;
+    gr:hasEAN_UCC-13 "4607105862333"@ru ;
+    gr:name "ПОРЦИОННЫЕ ПОЛУФАБРИКАТЫ «СВИНИНА БАТТЕРФЛЯЙ» В ПАНИРОВОЧНОМ ПОКРЫТИИ  0,5 КГ."@ru .
+
+<http://www.goodsmatrix.ru/goods/4607105862357.html> a food:Food ;
+    food:ingredientsListAsText "свинина (кусок мясной мякоти длиннейшая мышца спины овально-продолговатой формы), соль."@ru ;
+    food_not_implemented:netto_mass "0,50 кг"@ru ;
+    gr:description "Пищевая и энергетическая ценность 100 г продукта: белок не менее 15,0 г, жир не более 29,0 г, 321,0 ккал."@ru ;
+    gr:hasEAN_UCC-13 "4607105862357"@ru ;
+    gr:name "ПОРЦИОННЫЕ ПОЛУФАБРИКАТЫ «СТЕЙК ИЗ СВИНИНЫ» 0,5 КГ"@ru .
+
+<http://www.goodsmatrix.ru/goods/4607147010761.html> a food:Food ;
+    food:energyPer100gAsDouble 1.3e+02 ;
+    food:fatPer100gAsDouble 7e+00 ;
+    food:ingredientsListAsText "говядина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
+    food:proteinsPer100gAsDouble 1.2e+01 ;
+    food_not_implemented:esl "Белки:  12,00 г Жиры:  7,00 г Энергетическая ценность:  130,00 ккал"@ru ;
+    gr:description "полуфабрикат мясной, порционный, бескостный, фасованный, замороженный, категории Б"@ru ;
+    gr:hasEAN_UCC-13 "4607147010761"@ru ;
+    gr:name "СТЕЙК ГОВЯЖИЙ ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
+
+<http://www.goodsmatrix.ru/goods/4607147010778.html> a food:Food ;
+    food:energyPer100gAsDouble 1.268e+02 ;
+    food:fatPer100gAsDouble 7.2e+00 ;
+    food:ingredientsListAsText "говядина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
+    food:proteinsPer100gAsDouble 1.75e+01 ;
+    food_not_implemented:esl "Белки:  17,50 г Жиры:  7,20 г Энергетическая ценность:  126,80 ккал"@ru ;
+    gr:description "полуфабрикат мясной, бескостный, фасованный, замороженный, категории А"@ru ;
+    gr:hasEAN_UCC-13 "4607147010778"@ru ;
+    gr:name "АНТРЕКОТ ГОВЯЖИЙ ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
+
+<http://www.goodsmatrix.ru/goods/4607147010785.html> a food:Food ;
+    food:energyPer100gAsDouble 1.46e+02 ;
+    food:fatPer100gAsDouble 1e+01 ;
+    food:ingredientsListAsText "говядина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
+    food:proteinsPer100gAsDouble 1.3e+01 ;
+    food_not_implemented:esl "Белки:  13,00 г Жиры:  10,00 г Энергетическая ценность:  146,00 ккал"@ru ;
+    gr:description "полуфабрикат мясной порционный, бескостный, фасованный, замороженный, категории Б"@ru ;
+    gr:hasEAN_UCC-13 "4607147010785"@ru ;
+    gr:name "ГОВЯДИНА ДУХОВАЯ ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
+
+<http://www.goodsmatrix.ru/goods/4607147010792.html> a food:Food ;
+    food:energyPer100gAsDouble 1.887e+02 ;
+    food:fatPer100gAsDouble 1.43e+01 ;
+    food:ingredientsListAsText "свинина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
+    food:proteinsPer100gAsDouble 1.3e+01 ;
+    food_not_implemented:esl "Белки:  13,00 г Жиры:  14,30 г Энергетическая ценность:  188,70 ккал"@ru ;
+    gr:description "полуфабрикат мясной, порционный, бескостный, фасованный, замороженный, категории А"@ru ;
+    gr:hasEAN_UCC-13 "4607147010792"@ru ;
+    gr:name "ЭСКАЛОП СВИНОЙ ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
+
+<http://www.goodsmatrix.ru/goods/4607147010808.html> a food:Food ;
+    food:energyPer100gAsDouble 3.135e+02 ;
+    food:fatPer100gAsDouble 2.95e+01 ;
+    food:ingredientsListAsText "свинина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
+    food:proteinsPer100gAsDouble 1e+01 ;
+    food_not_implemented:esl "Белки:  10,00 г Жиры:  29,50 г Энергетическая ценность:  313,50 ккал"@ru ;
+    gr:description "полуфабрикат мясной, порционный, бескостный, фасованный, замороженный, категории Б"@ru ;
+    gr:hasEAN_UCC-13 "4607147010808"@ru ;
+    gr:name "СТЕЙК ИЗ СВИНИНЫ  ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
+
+<http://www.goodsmatrix.ru/goods/4607147010815.html> a food:Food ;
+    food:energyPer100gAsDouble 3.135e+02 ;
+    food:fatPer100gAsDouble 2.95e+01 ;
+    food:ingredientsListAsText "свинина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
+    food:proteinsPer100gAsDouble 1e+01 ;
+    food_not_implemented:esl "Белки:  10,00 г Жиры:  29,50 г Энергетическая ценность:  313,50 ккал"@ru ;
+    gr:description "полуфабрикат мясной порционный, бескостный, фасованный, замороженный, категории В"@ru ;
+    gr:hasEAN_UCC-13 "4607147010815"@ru ;
+    gr:name "СВИНИНА ДУХОВАЯ  ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
+
+<http://www.goodsmatrix.ru/goods/4607147010839.html> a food:Food ;
+    food:carbohydratesPer100gAsDouble 2e+00 ;
+    food:energyPer100gAsDouble 1.256e+02 ;
+    food:fatPer100gAsDouble 7.9e+00 ;
+    food:ingredientsListAsText "говядина филе, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
+    food:proteinsPer100gAsDouble 1.75e+01 ;
+    food_not_implemented:esl "Белки:  17,50 г Жиры:  7,90 г Углеводы:  2,00 г Энергетическая ценность:  125,60 ккал"@ru ;
+    gr:description "полуфабрикат мясной, крупнокусковой, бескостный, фасованный, замороженный, категории А"@ru ;
+    gr:hasEAN_UCC-13 "4607147010839"@ru ;
+    gr:name "ФИЛЕЙ ГОВЯЖИЙ  ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
+
+<http://www.goodsmatrix.ru/goods/4607147010846.html> a food:Food ;
+    food:energyPer100gAsDouble 1.23e+02 ;
+    food:fatPer100gAsDouble 7e+00 ;
+    food:ingredientsListAsText "говядина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
+    food:proteinsPer100gAsDouble 1.3e+01 ;
+    food_not_implemented:esl "Белки:  13,00 г Жиры:  7,00 г Энергетическая ценность:  123,00 ккал"@ru ;
+    gr:description "полуфабрикат мясной, крупнокусковой, бескостный, фасованный, замороженный, категории Б"@ru ;
+    gr:hasEAN_UCC-13 "4607147010846"@ru ;
+    gr:name "ГОВЯДИНА ДЛЯ ЗАПЕКАНИЯ  ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
+
+<http://www.goodsmatrix.ru/goods/4607147010853.html> a food:Food ;
+    food:energyPer100gAsDouble 1.271e+02 ;
+    food:fatPer100gAsDouble 7.9e+00 ;
+    food:ingredientsListAsText "говядина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
+    food:proteinsPer100gAsDouble 1.2e+01 ;
+    food_not_implemented:esl "Белки:  12,00 г Жиры:  7,90 г Энергетическая ценность:  127,10 ккал"@ru ;
+    gr:description "полуфабрикат мясной крупнокусковой, бескостный, фасованный, замороженный, категории Б"@ru ;
+    gr:hasEAN_UCC-13 "4607147010853"@ru ;
+    gr:name "ГОВЯДИНА ПО-ДОМАШНЕМУ ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
+
+<http://www.goodsmatrix.ru/goods/4607147010877.html> a food:Food ;
+    food:energyPer100gAsDouble 3.498e+02 ;
+    food:fatPer100gAsDouble 3.22e+01 ;
+    food:ingredientsListAsText "свинина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
+    food:proteinsPer100gAsDouble 1.3e+01 ;
+    food_not_implemented:esl "Белки:  13,00 г Жиры:  32,20 г Энергетическая ценность:  349,80 ккал"@ru ;
+    gr:description "полуфабрикат мясной крупнокусковой, бескостный, фасованный, замороженный, категории А"@ru ;
+    gr:hasEAN_UCC-13 "4607147010877"@ru ;
+    gr:name "ФИЛЕЙ СВИНОЙ ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
+
+<http://www.goodsmatrix.ru/goods/4607147010884.html> a food:Food ;
+    food:energyPer100gAsDouble 3.696e+02 ;
+    food:fatPer100gAsDouble 3.44e+01 ;
+    food:ingredientsListAsText "свинина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
+    food:proteinsPer100gAsDouble 1.3e+01 ;
+    food_not_implemented:esl "Белки:  13,00 г Жиры:  34,40 г Энергетическая ценность:  369,60 ккал"@ru ;
+    gr:description "полуфабрикат мясной крупнокусковой, бескостный, фасованный, замороженный, категории А"@ru ;
+    gr:hasEAN_UCC-13 "4607147010884"@ru ;
+    gr:name "СВИНИНА ДЛЯ ЗАПЕКАНИЯ  ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
+
+<http://www.goodsmatrix.ru/goods/4607147010891.html> a food:Food ;
+    food:energyPer100gAsDouble 5.233e+02 ;
+    food:fatPer100gAsDouble 5.37e+01 ;
+    food:ingredientsListAsText "свинина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
+    food:proteinsPer100gAsDouble 8.9e+00 ;
+    food_not_implemented:esl "Белки:  8,90 г Жиры:  53,70 г Энергетическая ценность:  523,30 ккал"@ru ;
+    gr:description "полуфабрикат мясной крупнокусковой, бескостный, фасованный, замороженный, категории В"@ru ;
+    gr:hasEAN_UCC-13 "4607147010891"@ru ;
+    gr:name "ГРУДИНКА ЛЮБИТЕЛЬСКАЯ ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
+
+<http://www.goodsmatrix.ru/goods/4620001270248.html> a food:Food ;
+    food:ingredientsListAsText "свинина (окорок б/к), соль, пищевые добавки: стабилизатор (Е450-452, Е407, Е331), консервант (Е262)."@ru ;
+    food_not_implemented:standart "ТУ 9211-001-58293228-04"@ru ;
+    gr:description "Содержание в 100 продукта: жир - 15 г, белок - 13 г, калорийность - 190 ккал."@ru ;
+    gr:hasEAN_UCC-13 "4620001270248"@ru ;
+    gr:name "СВИНИНА (ОКОРОК Б/К) ДЛЯ ЗАПЕКАНИЯ \"КЛИНСКАЯ\". ПОЛУФАБРИКАТ МЯСНОЙ ЗАМОРОЖЕННЫЙ В ВАКУУМНОЙ УПАКОВКЕ. 1 КГ"@ru .
+
+<http://www.goodsmatrix.ru/goods/4620001280262.html> a food:Food ;
+    food:ingredientsListAsText "свинина (шейка б/к), соль, стабилизатор (Е450-452, Е407, Е331), консервант (Е262)."@ru ;
+    food_not_implemented:standart "ТУ 9214-001-58250724-04"@ru ;
+    gr:description "Содержание в 100 продукта: жир - 30 г, белок - 11 г, калорийность - 314 ккал."@ru ;
+    gr:hasEAN_UCC-13 "4620001280262"@ru ;
+    gr:name "ШЕЙКА ДЛЯ ЗАПЕКАНИЯ \"КЛИНСКАЯ\". ПОЛУФАБРИКАТ МЯСНОЙ ЗАМОРОЖЕННЫЙ В ВАКУУМНОЙ УПАКОВКЕ. 1 КГ"@ru .
+
+<http://www.goodsmatrix.ru/goods/4650057072381.html> a food:Food ;
+    food:carbohydratesPer100gAsDouble 4.5e+00 ;
+    food:energyPer100gAsDouble 2.44e+02 ;
+    food:fatPer100gAsDouble 2.2e+01 ;
+    food:ingredientsListAsText "Капуста белокочанная свежая, говядина, лук репчатый свежий, вода питьевая, фарш куриный, шпик свиной, крупа рисовая, зелень петрушки свежая, паста томатная, перец болгарский, мука ячменная, соль, морковь сухая, мята сушеная, перец черный молотый"@ru ;
+    food:proteinsPer100gAsDouble 7e+00 ;
     food_not_implemented:best_before "6 мес."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "0131-001-39982497-09"@ru ;
-    food_not_implemented:store_cond "при температуре от 2 градусов С до 20 градусов С и относительной влажности не выше 85%"@ru ;
-    gr:description "Шунгитовая фильтрация."@ru ;
-    gr:hasEAN_UCC-13 "4601823002163"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ \"ИНЗЕРА\" ГАЗИРОВАННАЯ ИЗ АРТЕЗИАНСКИХ ИСТОЧНИКОВ 1,5 Л."@ru .
+    food_not_implemented:esl "Белки:  7,00 г Жиры:  22,00 г Углеводы:  4,50 г Энергетическая ценность:  244,00 ккал"@ru ;
+    food_not_implemented:netto_mass "1,00 кг"@ru ;
+    food_not_implemented:standart "ТУ 9214-001-70458226-08"@ru ;
+    food_not_implemented:store_cond "Хранить при t -18?С? свежая, говядина, ормованный фаршированный категории \"Г"@ru ;
+    gr:description "Полуфабрикат мясосодержащий рубленный формованный фаршированный категории \"Г\" замороженный"@ru ;
+    gr:hasEAN_UCC-13 "4650057072381"@ru ;
+    gr:name "ПОЛУФАБРИКАТ \"ГОЛУБЦЫ \"СЕЛЬСКИЕ\", 1КГ"@ru .
 
-<http://www.goodsmatrix.ru/goods/4602158004556.html> a food:Food ;
-    food:ingredientsListAsText "Общая минерализация 0,1-0,5 г/дм^3, хлориды 100 мг/л, сульфаты 250 мг/л, гидрокарбонаты 400 мг/л, кальций 40 мг/л, магний 10 мг/л,  калий 10 мг/л, натрий 200 мг/л, фторид-ион 1,5 мг/л, йодид-ион 0,125 мг/л"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-018-00342344-2008"@ru ;
-    food_not_implemented:store_cond "Хранить при t от +2 градусов С до +20 градусов С"@ru ;
-    gr:description "Рекомендуется для ежедневного употребления"@ru ;
-    gr:hasEAN_UCC-13 "4602158004556"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ \"СЕРЕБРЯНЫЕ КЛЮЧИ\", 0,5Л"@ru .
+<http://www.goodsmatrix.ru/goods/4670002941906.html> a food:Food ;
+    food:energyPer100gAsDouble 3.63e+02 ;
+    food:fatPer100gAsDouble 3.5e+01 ;
+    food:ingredientsListAsText "свинина, вода, соль поваренная пищевая, стабилизаторы Е450, Е451, Е621, уксус пищевой, специи."@ru ;
+    food:proteinsPer100gAsDouble 1.2e+01 ;
+    food_not_implemented:best_before "12 сут."@ru ;
+    food_not_implemented:esl "Белки:  12,00 г Жиры:  35,00 г Углеводы:  0,00 г Энергетическая ценность:  363,00 ккал"@ru ;
+    food_not_implemented:netto_mass "2,00 кг"@ru ;
+    food_not_implemented:standart "ТУ 9214-010-18903582-09"@ru ;
+    food_not_implemented:store_cond "при Т от 0 до +4 градусов С"@ru ;
+    gr:description "Полуфабрикат мясной из свинины мелкокусковой бескостный категории Б. Рекомендации по приготовлению: запекать, тушить, жарить до готовности."@ru ;
+    gr:hasEAN_UCC-13 "4670002941906"@ru ;
+    gr:name "ШАШЛЫК ДЕЛИКАТЕСНЫЙ МИРАТОРГ ИЗ СВИНИНЫ, ОХЛАЖДЕННЫЙ, 2 КГ"@ru .
 
-<http://www.goodsmatrix.ru/goods/4602441003815.html> a food:Food ;
-    food:ingredientsListAsText "Гидрокарбонаты 180-400 мг/л, кальций 30-70 мг/л, магний 10-40 мг/л,  сульфаты <25 мг/л, хлориды <10 мг/л, натрий-калий <25 мг/л"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 9185-005-45720714-05"@ru ;
-    food_not_implemented:store_cond "Хранить при температуре от 0 градусов С до +20 градусов С и относительной влажности воздуха не более 85%"@ru ;
-    gr:description "вода минеральная питьевая артезианская столовая гидрокарбонатная магниево-кальциевая газированная"@ru ;
-    gr:hasEAN_UCC-13 "4602441003815"@ru ;
-    gr:name "ВОДА МИНЕРАЛЬНАЯ ПИТЬЕВАЯ АРТЕЗИАНСКАЯ СТОЛОВАЯ &QUOT;ЧЕРНОГОЛОВСКАЯ&QUOT; ГАЗИРОВАННАЯ, 0,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4602983004486.html> a food:Food ;
-    food:ingredientsListAsText "Кальций 25-80мг/л , магний 5-30мг/л, гидрокарбонат 30-350мг/л. Общая минерализация 0,2-0,5 г/л."@ru ;
-    food_not_implemented:best_before "10 мес."@ru ;
-    food_not_implemented:netto_mass "500,00 мл"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-003-45755411-05"@ru ;
-    food_not_implemented:store_cond "от 0 градусов С до +18 градусов С"@ru ;
-    gr:description "Вода питьевая артезианская «Arctic» Высшей категории качества. Добыта из артезианских скважин №№ 3, 4, 5, 667 Московской области, г. Видное. Проходит многоступенчатую систему очистки. Вода для для  активных и амбициозных девушек и молодых людей, которые следят за своим здоровьем и заботятся о своем имидже."@ru ;
-    gr:hasEAN_UCC-13 "4602983004486"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ «ARCTIC», 500 МЛ"@ru .
-
-<http://www.goodsmatrix.ru/goods/4602983004646.html> a food:Food ;
-    food:ingredientsListAsText "Кальций 25-80мг/л , магний 5-30мг/л, гидрокарбонат 30-350мг/л. Общая минерализация 0,2-0,5 г/л."@ru ;
-    food_not_implemented:best_before "10 мес."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-003-45755411-05"@ru ;
-    food_not_implemented:store_cond "от 0 градусов С до +18 градусов С"@ru ;
-    gr:description "Вода питьевая артезианская «Arctic» Высшей категории качества. Добыта из артезианских скважин №№ 3, 4, 5, 667 Московской области, г. Видное. Проходит многоступенчатую систему очистки. Вода для для  активных и амбициозных девушек и молодых людей, которые следят за своим здоровьем и заботятся о своем имидже."@ru ;
-    gr:hasEAN_UCC-13 "4602983004646"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ «ARCTIC», 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4603319008208.html> a food:Food ;
-    food:ingredientsListAsText "Общая минерализация не более 500 мг/л; кальций 30; магний 20 мг/л, гидрокарбонаты 200 мг/л, калий 10 мг/л, сульфаты 100 мг/л, хлориды 50 мг/л, серебро от 0,005 до 0,05 мг/л"@ru ;
-    food_not_implemented:netto_mass "2,00 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-005-47933377-2009"@ru ;
-    gr:description "Очищенная вода первой категории централизованного источника водоснабжения, содержащая ионы серебра"@ru ;
-    gr:hasEAN_UCC-13 "4603319008208"@ru ;
-    gr:name "ПИТЬЕВАЯ СИЛЬНОГАЗИРОВАННАЯ ВОДА \"СЕРЕБРЯНЫЙ ВОДОПАД\", 2Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4603476000015.html> a food:Food ;
-    food:ingredientsListAsText "Минерализация   мг/л       от 200 до 260 вкл.     Общая жесткость, 0Ж         от 2,4 до 3,1   вкл.     рН                                        от 6,5 до 8,5   вкл       Анионы, мг/л                                                  Гидрокарбонаты (НСО-3)     от  90  до 125 вкл.  Сульфаты (SО2-4)               от 90 до 125 вкл      Хлориды (Cl -)                     от 15 до 25  вкл.     Катионы, мг/ л                                       Натрий (Na +)                        не более 50  вкл.    Калий (К+)                               не более 5,0 вкл.    Кальций (Са2+)                       от 30 до 50  вкл. Магний (Mg2+)                        от 9 до 15  вкл."@ru ;
-    food_not_implemented:esl "{'fats': 0.0, 'proteins': 0.0, 'carbohydrates': 0.0, 'calories': 0.0}"@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "52109-2003"@ru ;
-    gr:description "Питьевая вода «Иверская» высшей категории качества сбалансирована по солевому составу, содержит биологически необходимые макроэлементы (кальций, магний, гидрокарбонаты) соответствующие необходимым уровням полноценной физиологической потребности организма."@ru ;
-    gr:hasEAN_UCC-13 "4603476000015"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ АРТЕЗИАНСКАЯ ВЫСШЕЙ КАТЕГОРИИ «ИВЕРСКАЯ» 0,5 Л ГАЗ"@ru .
-
-<http://www.goodsmatrix.ru/goods/4603476000039.html> a food:Food ;
-    food:ingredientsListAsText "Минерализация   мг/л       от 200 до 260 вкл.     Общая жесткость, 0Ж         от 2,4 до 3,1   вкл.     рН                                        от 6,5 до 8,5   вкл       Анионы, мг/л                                                  Гидрокарбонаты (НСО-3)     от  90  до 125 вкл.  Сульфаты (SО2-4)               от 90 до 125 вкл      Хлориды (Cl -)                     от 15 до 25  вкл.     Катионы, мг/ л                                       Натрий (Na +)                        не более 50  вкл.    Калий (К+)                               не более 5,0 вкл.    Кальций (Са2+)                       от 30 до 50  вкл. Магний (Mg2+)                        от 9 до 15  вкл."@ru ;
-    food_not_implemented:esl "{'fats': 0.0, 'proteins': 0.0, 'carbohydrates': 0.0, 'calories': 0.0}"@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "52109-2003"@ru ;
-    gr:description "Питьевая вода «Иверская» высшей категории качества сбалансирована по солевому составу, содержит биологически необходимые макроэлементы (кальций, магний, гидрокарбонаты) соответствующие необходимым уровням полноценной физиологической потребности организма."@ru ;
-    gr:hasEAN_UCC-13 "4603476000039"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ АРТЕЗИАНСКАЯ ВЫСШЕЙ КАТЕГОРИИ «ИВЕРСКАЯ» 1,5 Л ГАЗ"@ru .
-
-<http://www.goodsmatrix.ru/goods/4603476000138.html> a food:Food ;
-    food:ingredientsListAsText "Минерализация   мг/л       от 250 до 350 вкл.     Общая жесткость, 0Ж           от 3,2 до 4,1   вкл.     рН                                        от 6,5 до 8,5   вкл       Анионы, мг/л                                                  Гидрокарбонаты (НСО-3)     от 115 до 150 вкл.  Сульфаты (SО2-4)           от 115 до 150 вкл      Хлориды (Cl -)                  от 20 до 30  вкл.     Катионы, мг/ л                                       Натрий (Na +)                        от 40 до 60  вкл.    Калий (К+)                               до 1  вкл.        Кальций (Са2+)                       от 40 до 60  вкл. Магний (Mg2+)                        от 10 до 15  вкл."@ru ;
-    food_not_implemented:esl "{'fats': 0.0, 'proteins': 0.0, 'carbohydrates': 0.0, 'calories': 0.0}"@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "52109-2003"@ru ;
-    gr:description "Питьевая вода «Питьевая №1» в/к качества, разработана на основе минеральной воды «Аксинья».  Сбалансированный солевой состав имеет жизненно необходимые макро- и микроэлементы (кальций, калий, магний,  натрий, гидрокарбонаты, фтор). Вода соответствует высшей категории качества и отвечает всем  требованиям нормативов по содержанию основных биологически значимых элементов."@ru ;
-    gr:hasEAN_UCC-13 "4603476000138"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ВЫСШЕЙ КАТЕГОРИИ «ПИТЬЕВАЯ №1»  1,5 Л ГАЗ"@ru .
-
-<http://www.goodsmatrix.ru/goods/4603934000748.html> a food:Food ;
-    food:ingredientsListAsText "Общая минерализация не более 100-500 мг/л; катионы, мг/л: калий <20; кальций <80; магний <20; анионы, мг/л: гидрокарбонаты <250; хлориды <150; сульфаты <50"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-003-41645812-09"@ru ;
-    food_not_implemented:store_cond "хранить при температуре от +2 до +20 градусов С и относительной влажности воздуха не более 85%"@ru ;
-    gr:description "Вода природная артезианская газированная. Первая категория"@ru ;
-    gr:hasEAN_UCC-13 "4603934000748"@ru ;
-    gr:name "ВОДА ГАЗИРОВАННАЯ ПИТЬЕВАЯ &QUOT;СВЯТОЙ ИСТОЧНИК&QUOT;, 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4603934000762.html> a food:Food ;
-    food:ingredientsListAsText "Вода природная артезианская газированная."@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "0,33 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "0131-003-41645812-09"@ru ;
-    food_not_implemented:store_cond "хранить при температуре от +2 градусов С до +20 градусов С и относительной влажности воздуха не более 85%"@ru ;
-    gr:description "Первой категории. Скважина № № 341201043, 341201044, 341201380"@ru ;
-    gr:hasEAN_UCC-13 "4603934000762"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ \"СВЯТОЙ ИСТОЧНИК\" АРТЕЗИАНСКАЯ ПРИРОДНАЯ ГАЗИРОВАННАЯ 0,33 Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/4604145001142.html> a food:Food ;
-    food:ingredientsListAsText "вода первой категории"@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-001-12968089-2004"@ru ;
-    gr:description "вода питьевая природно-родниковая газированная. Номинальный объем 1,5 л"@ru ;
-    gr:hasEAN_UCC-13 "4604145001142"@ru ;
-    gr:name "КАЗАНЬ 1000-ЛЕТНЯЯ. ВОДА ПИТЬЕВАЯ ПРИРОДНО-РОДНИКОВАЯ ГАЗИРОВАННАЯ. 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4604488000079.html> a food:Food ;
-    food:ingredientsListAsText "вода системы скважин арбанского водозабора"@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    gr:description "газированная питьевая природная вода высшей категории. Объем 0,5 л"@ru ;
-    gr:hasEAN_UCC-13 "4604488000079"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ \"КРИСТАЛИЯ\". 0,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4604504000137.html> a food:Food ;
-    food:ingredientsListAsText "скважина № 1"@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-001-93078992-07"@ru ;
-    gr:description "вода питьевая артезианская газированная. Объем 1,5 л"@ru ;
-    gr:hasEAN_UCC-13 "4604504000137"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ АРТЕЗИАНСКАЯ ГАЗИРОВАННАЯ \"РАИФСКИЙ ИСТОЧНИК\". 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4605490000453.html> a food:Food ;
-    food:ingredientsListAsText "Минералы, вода дистиллированная"@ru ;
-    food_not_implemented:netto_mass "0,40 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 6131-0014-18551114-05"@ru ;
-    gr:description "Общая минерализация не более 500мг"@ru ;
-    gr:hasEAN_UCC-13 "4605490000453"@ru ;
-    gr:name "ВОДА ГАЗИРОВАННАЯ \"ШИШКИН ЛЕС\" 0,4Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4605490000590.html> a food:Food ;
-    food:ingredientsListAsText "Газированная питьевая вода."@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "1,75 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "0131-001-18551114"@ru ;
-    food_not_implemented:store_cond "при температуре от 2 градусов С до +20 градусов С"@ru ;
-    gr:description "Из артезианских скважин № 46246576 и № 46219973"@ru ;
-    gr:hasEAN_UCC-13 "4605490000590"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ \"ШИШКИН ЛЕС\" ГАЗИРОВАННАЯ ИЗ АРТЕЗИАНСКИХ СКВАЖИН 1,75 Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/4605490000637.html> a food:Food ;
-    food:ingredientsListAsText "Газированная питьевая вода."@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "1,00 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "0131-001-18551114"@ru ;
-    food_not_implemented:store_cond "при температуре от 2 градусов С до +20 градусов С"@ru ;
-    gr:description "Из артезианских скважин № 46246576 и № 46219973"@ru ;
-    gr:hasEAN_UCC-13 "4605490000637"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ \"ШИШКИН ЛЕС\" ГАЗИРОВАННАЯ ИЗ АРТЕЗИАНСКИХ СКВАЖИН 1 Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/4605732000081.html> a food:Food ;
-    food:ingredientsListAsText "Химический состав, не более мг/л: Катионы: Натрий - 200, Кальций - 130, Магний - 65; Анионы: Бикарбонаты - 400, Сульфаты - 250, Хлориды - 250. Общая минерализация: не более 1000 мг/л (сухой остаток). Общая жесткость: не более 7,0 мг-экв/л. Содержание диоксид углерода: не более 0,4%."@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-008-02586866-06"@ru ;
-    gr:description "Питьевая вода первой категории разливается непосредственно из природного источника, расположенного на территории особо охраняемой санаторно-курортной зоны. Предназначена для питья и приготовления пищи. Артезианская скважина №5. Глубина скважины - 90 м."@ru ;
-    gr:hasEAN_UCC-13 "4605732000081"@ru ;
-    gr:name "ПРИРОДНАЯ МИНЕРАЛЬНАЯ \"РОДНИКОВАЯ\" ВОДА ПИТЬЕВАЯ АРТЕЗИАНСКАЯ ГАЗИРОВАННАЯ 0,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4605732000098.html> a food:Food ;
-    food:ingredientsListAsText "Химический состав, не более мг/л: Катионы: Натрий - 200, Кальций - 130, Магний - 65; Анионы: Бикарбонаты - 400, Сульфаты - 250, Хлориды - 250. Общая минерализация: не более 1000 мг/л (сухой остаток). Общая жесткость: не более 7,0 мг-экв/л. Содержание диоксид углерода: не более 0,4%."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:standart "ТУ 0131-008-02586866-07"@ru ;
-    gr:description "Питьевая вода первой категории разливается непосредственно из природного источника, расположенного на территории особо охраняемой санаторно-курортной зоны. Предназначена для питья и приготовления пищи. Артезианская скважина №5. Глубина скважины - 90 м."@ru ;
-    gr:hasEAN_UCC-13 "4605732000098"@ru ;
-    gr:name "ПРИРОДНАЯ МИНЕРАЛЬНАЯ \"РОДНИКОВАЯ\" ВОДА ПИТЬЕВАЯ АРТЕЗИАНСКАЯ ГАЗИРОВАННАЯ 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4605818000028.html> a food:Food ;
-    food:ingredientsListAsText "Общая минерализация 1,6-3,2 г/дм^3, гидрокарбонаты 200-300 мг/л, кальций 400-600 мг/л, магний 20-120 мг/л,  сульфаты 1000-2000 мг/л, хлориды"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "0,60 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 9185-002-34015390-00"@ru ;
-    food_not_implemented:store_cond "Хранить при t от +5 градусов С до +20 градусов С"@ru ;
-    gr:description "Вода минеральная \"Кленовая гора\" относится к лечебно-столовымсульфатным кальциевым минеральным водам"@ru ;
-    gr:hasEAN_UCC-13 "4605818000028"@ru ;
-    gr:name "МИНЕРАЛЬНАЯ ПИТЬЕВАЯ ГАЗИРОВАННАЯ ВОДА \"КЛЕНОВАЯ ГОРА\", 0,6Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4606068017354.html> a food:Food ;
-    food:ingredientsListAsText "Инионы: не более: бикарбонаты 400 мг/л, хлориды 200 мг/л, сульфаты 150 мг/л, кальций 80 мг/л, магний 50 мг/л. Общая минерализация (сухой остаток): 50-1000 мг/л, общая жесткость: не более 7 мг-экв/л"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-007-46308068-06"@ru ;
-    food_not_implemented:store_cond "В сухом темном месте при температуре от +2 до +20 С и относительной влажности воздуха не более 85%."@ru ;
-    gr:description "Вода прекрасно утоляет жажду, подходит в качестве основы для приготовления напитков."@ru ;
-    gr:hasEAN_UCC-13 "4606068017354"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ, \"ЛЕДЬ\", 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4607003060039.html> a food:Food ;
-    gr:hasEAN_UCC-13 "4607003060039"@ru ;
-    gr:name "ВОДА АРТЕЗИАНСКАЯ \"ВЕЛИКИЙ ДАР\" ГАЗ ПЭТ 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4607007030069.html> a food:Food ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    gr:description "Природная лечебно-столовая минеральная вода из скважины №2/99"@ru ;
-    gr:hasEAN_UCC-13 "4607007030069"@ru ;
-    gr:name "ВОДА МИНЕРАЛЬНАЯ ПИТЬЕВАЯ ИСТОК ХРУСТАЛЬНЫЙ ПЛЮС. ГАЗИРОВАННАЯ 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4607017587676.html> a food:Food ;
-    food:ingredientsListAsText "вода артезианская, регулятор кислотности лимонная кислота, ароматизатор натуральный клубника, консерванты Е202 Е211, подсластитель сукралоза."@ru ;
+<http://www.goodsmatrix.ru/goods/4810168026905.html> a food:Food ;
+    food:carbohydratesPer100gAsDouble 2.8e+01 ;
+    food:energyPer100gAsDouble 2.799e+02 ;
+    food:fatPer100gAsDouble 1.51e+01 ;
+    food:ingredientsListAsText "Мука пшеничная в/с, свинина, лук, говядина, соль йодированная пищевая, соевая мука, волокно натуральное пищевое, масло подсолнечное, смесь специй, вода."@ru ;
+    food:proteinsPer100gAsDouble 8e+00 ;
     food_not_implemented:best_before "6 мес."@ru ;
-    food_not_implemented:esl "{'fats': 0.0, 'proteins': 0.0, 'carbohydrates': 0.0, 'calories': 0.4}"@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ГОСТ 28188-89"@ru ;
-    food_not_implemented:store_cond "при Т от 0 до +18 градусов С. Избегать воздействия прямого солнечного света"@ru ;
-    gr:hasEAN_UCC-13 "4607017587676"@ru ;
-    gr:name "БЕЗАЛКОГОЛЬНЫЙ ГАЗИРОВАННЫЙ НАПИТОК \"АКВАБАЛАНС+\" СО ВКУСОМ КЛУБНИКИ, 0,5 Л"@ru .
+    food_not_implemented:esl "Белки:  8,00 г Жиры:  15,10 г Углеводы:  28,00 г Энергетическая ценность:  279,90 ккал"@ru ;
+    food_not_implemented:netto_mass "1000,00 г"@ru ;
+    food_not_implemented:pack_type "Пакет пластиковый, металлизированный, многослойный"@ru ;
+    food_not_implemented:store_cond "при температуре хранения -10 градусов С"@ru ;
+    gr:description "Полуфабрикат в тесте с мясной начинкой категории В"@ru ;
+    gr:hasEAN_UCC-13 "4810168026905"@ru ;
+    gr:name "МЯСНЫЕ ОРЕХИ \"БАБУШКА АНЯ\" 1000 Г."@ru .
 
-<http://www.goodsmatrix.ru/goods/4607021590297.html> a food:Food ;
-    food_not_implemented:netto_mass "0,55 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ГОСТ Р 52109-2003"@ru ;
-    gr:description "«Сокольницкие ключи» -  артезианская питьевая вода из подземных источников Полужья - края уникальной природы, целебного воздуха хвойных лесов и обилия родников с кристально чистой водой. Вода первой категории. Глубина скважины 255 м."@ru ;
-    gr:hasEAN_UCC-13 "4607021590297"@ru ;
-    gr:name "АРТЕЗИАНСКАЯ ПИТЬЕВАЯ ВОДА ПИТЬЕВАЯ \"СОКОЛЬНИЦКИЕ КЛЮЧИ\", ГАЗИРОВАННАЯ, 0,55Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4607021590334.html> a food:Food ;
-    food:ingredientsListAsText "«Сокольницкие ключи» -  артезианская питьевая вода из подземных источников Полужья - края уникальной природы, целебного воздуха хвойных лесов и обилия родников с кристально чистой водой. Вода первой категории. Глубина скважины 255 м."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ГОСТ Р 52109-2003"@ru ;
-    gr:hasEAN_UCC-13 "4607021590334"@ru ;
-    gr:name "АРТЕЗИАНСКАЯ ПИТЬЕВАЯ ВОДА ПИТЬЕВАЯ \"СОКОЛЬНИЦКИЕ КЛЮЧИ\", ГАЗИРОВАННАЯ, 1,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4607024340219.html> a food:Food ;
-    food:ingredientsListAsText "Вода, газ, двуокись углерода, кислота - лимонная, ароматизатор идентичный натуральному \"Лимонад\", подсластители, консервант - бензоат натрия, краситель - Е 150d"@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "28188-89"@ru ;
-    gr:hasEAN_UCC-13 "4607024340219"@ru ;
-    gr:name "ВОДА ГАЗИРОВАННАЯ \"ЭСТЕЛЬ БУРАТИНО\", 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4607033010011.html> a food:Food ;
-    food:ingredientsListAsText "Общая минерализация"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "0,50 г"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ГОСТ Р 52109-03"@ru ;
-    food_not_implemented:store_cond "Хранить при t от +5 градусов С до +20 градусов С в защищенном от света месте"@ru ;
-    gr:description "Вода первой категории"@ru ;
-    gr:hasEAN_UCC-13 "4607033010011"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ \"КРАСНЫЙ КЛЮЧ\", 0,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4607038040136.html> a food:Food ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-002-52073824-2002"@ru ;
-    gr:description "вода первой категории качества, Скважина № Г 8/87, с. Кызыл-Озек, Республика Алтай"@ru ;
-    gr:hasEAN_UCC-13 "4607038040136"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ПРИРОДНАЯ АРТЕЗИАНСКАЯ ГАЗИРОВАННАЯ \"ГОРНЫЙ ИСТОЧНИК\", \"ТРИЕРА-АКВА\", 1,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4607045110051.html> a food:Food ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-006-46308068-06"@ru ;
-    gr:description "Скважина №1 с. ВЕРХ-КАТУНСКОЕ БИЙСКОГО РАЙОНА АЛТАЙСКОГО КРАЯ"@ru ;
-    gr:hasEAN_UCC-13 "4607045110051"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ПРИРОДНАЯ АРТЕЗИАНСКАЯ ПЕРВОЙ КАТЕГОРИИ ФИЗИОЛОГИЧЕСКИ ПОЛНОЦЕННАЯ, \"СТУДЕНАЯ\", ГАЗИРОВАННАЯ, \"ИЗГОРНОГО АЛТАЯ\", 0,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4607045310499.html> a food:Food ;
-    food_not_implemented:best_before "180 сут."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-001-90980002-04"@ru ;
-    food_not_implemented:store_cond "Хранить при температуре от 0 граудсов С до +20 градусов С и относительной влажности вохдуха не более 85%"@ru ;
-    gr:description "Скважина №50477."@ru ;
-    gr:hasEAN_UCC-13 "4607045310499"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ АРТЕЗИАНСКАЯ ГАРИЗОВАННАЯ \"ОЧЕРСКАЯ ВОДИЦА\", 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4607046722178.html> a food:Food ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-005-88774910-2003"@ru ;
-    gr:hasEAN_UCC-13 "4607046722178"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ АРТЕЗИАНСКАЯ СИЛЬНОГАЗИРОВАННАЯ \"СИБИРСКИЙ БОР\", 0,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4607046722208.html> a food:Food ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-005-88774910-2003"@ru ;
-    gr:hasEAN_UCC-13 "4607046722208"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ АРТЕЗИАНСКАЯ СИЛЬНОГАЗИРОВАННАЯ \"СИБИРСКИЙ БОР\", 1,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4607050691668.html> a food:Food ;
-    food:ingredientsListAsText "артезианская скважина \"№ Г 14-02"@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-011-23444952-06"@ru ;
-    gr:description "вода питьевая артезианская газированная 1 категории. Объем 1,5 л"@ru ;
-    gr:hasEAN_UCC-13 "4607050691668"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ \"SOCIETE MINERALE\". 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4607072641238.html> a food:Food ;
-    food:ingredientsListAsText "Вода искуственно минерализованная \"Тафельквель\" питьевая среднегазированная."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "28188-89"@ru ;
-    gr:description "Вода питьевая среднегазированная."@ru ;
-    gr:hasEAN_UCC-13 "4607072641238"@ru ;
-    gr:name "ВОДА АКВА ГАЗИРОВАННАЯ 1,5 Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/4607102800079.html> a food:Food ;
-    food:ingredientsListAsText "Гидрокарбонатная кальциево- магниевая вода"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "9185-001-14317195-03"@ru ;
-    food_not_implemented:store_cond "при температуре от 5 градусов С до 20 градусов С"@ru ;
-    gr:description "Допускается естественный осадок минеральных солей."@ru ;
-    gr:hasEAN_UCC-13 "4607102800079"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ \"КУВАКА\" СТОЛОВАЯ ГАЗИРОВАННАЯ 1,5 Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/4607125693610.html> a food:Food ;
-    food:ingredientsListAsText "Вода природная питьевая, газированная. Общая минерализация не более 2 г/дм^3, хлориды не более 350 мг/л, сульфаты не более 400 мг/л, гидрокарбонаты не более 400 мг/л, кальций не менее 50 мг/л, магний не менее 50 мг/л, натрий+калий не менее 100 мг/л."@ru ;
-    food_not_implemented:best_before "365 сут."@ru ;
-    food_not_implemented:esl "{'fats': 0.0, 'proteins': 0.0, 'carbohydrates': 0.0, 'calories': 0.0}"@ru ;
-    food_not_implemented:netto_mass "0,60 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 9185-002-39810577"@ru ;
-    food_not_implemented:store_cond "при температуре от 0 до +18 градусов C"@ru ;
-    gr:description "Вода из артезианских скважин глубокого залегания. Минерализованная минеральным рассолом из скважины №3/78  (глубина 600 м)"@ru ;
-    gr:hasEAN_UCC-13 "4607125693610"@ru ;
-    gr:name "ВОДА ПРИРОДНАЯ ПИТЬЕВАЯ ТМ \"УСЛАДА ДЛЯ ДУШИ\" ГАЗ. (БУТ), 0,6 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4607125693627.html> a food:Food ;
-    food:ingredientsListAsText "Вода природная питьевая, газированная. Общая минерализация не более 2 г/дм^3, хлориды не более 350 мг/л, сульфаты не более 400 мг/л, гидрокарбонаты не более 400 мг/л, кальций не менее 50 мг/л, магний не менее 50 мг/л, натрий+калий не менее 100 мг/л."@ru ;
-    food_not_implemented:best_before "365 сут."@ru ;
-    food_not_implemented:esl "{'fats': 0.0, 'proteins': 0.0, 'carbohydrates': 0.0, 'calories': 0.0}"@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 9185-002-39810577"@ru ;
-    food_not_implemented:store_cond "при температуре от 0 до +18 градусов C"@ru ;
-    gr:description "Вода из артезианских скважин глубокого залегания. Минерализованная минеральным рассолом из скважины №3/78  (глубина 600 м)"@ru ;
-    gr:hasEAN_UCC-13 "4607125693627"@ru ;
-    gr:name "ВОДА ПРИРОДНАЯ ПИТЬЕВАЯ ТМ \"УСЛАДА ДЛЯ ДУШИ\" ГАЗ. (БУТ), 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4607136720077.html> a food:Food ;
-    food:ingredientsListAsText "Общая минерализация: 200-250 мг/л; Жесткость: 2-3 мг-экв/л. Основной ионный состав:	гидрокарбонаты 150-180 мл/л, сульфаты < 100, хлориды 5-8, кальций 35-50, магний 5-50, Натрий 5-7."@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:store_cond "хранить при температуре от 2 до 20 градусов С"@ru ;
-    gr:description "рекомендуется ежедневное употребление"@ru ;
-    gr:hasEAN_UCC-13 "4607136720077"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ &QUOT;ДОНА&QUOT; ГАЗИРОВАННАЯ, 0,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4607136720091.html> a food:Food ;
-    food:ingredientsListAsText "Общая минерализация: 200-250 мг/л; Жесткость: 2-3 мг-экв/л. Основной ионный состав:	гидрокарбонаты 150-180 мл/л, сульфаты < 100, хлориды 5-8, кальций 35-50, магний 5-50, Натрий 5-7."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:store_cond "хранить при температуре от 2 до 20 градусов С"@ru ;
-    gr:description "рекомендуется ежедневное употребление"@ru ;
-    gr:hasEAN_UCC-13 "4607136720091"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ &QUOT;ДОНА&QUOT; ГАЗИРОВАННАЯ, 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4607137810012.html> a food:Food ;
-    food:ingredientsListAsText "Содержит растворенный кислород 10-11мг/дм5"@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    gr:description "«Аркаим» - природная питьевая вода из подземного источника заповедника Аркаим. Уникальная вода не имеет аналогов по сбалансированному содержанию солей и минералов"@ru ;
-    gr:hasEAN_UCC-13 "4607137810012"@ru ;
-    gr:name "ПИТЬЕВАЯ ВОДА \"АРКАИМ\" 1,5 Л. С ГАЗОМ."@ru .
-
-<http://www.goodsmatrix.ru/goods/4607152741834.html> a food:Food ;
-    food:ingredientsListAsText "вода артезианская,минеральные вещества."@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    gr:description "здоровье в вашей жизни подарит наша минеральная  вода"@ru ;
-    gr:hasEAN_UCC-13 "4607152741834"@ru ;
-    gr:name "ПИТЬЕВАЯ\" АРТЕЗИАНСКАЯ\"ВОДА ГАЗИРОВАННАЯ 2Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/4607152741858.html> a food:Food ;
-    food:ingredientsListAsText "вода артезианская,минеральные вещества."@ru ;
-    food_not_implemented:pack_type "Бутылка стеклянная"@ru ;
-    gr:description "здоровье в вашей жизни подарит наша минеральная  вода"@ru ;
-    gr:hasEAN_UCC-13 "4607152741858"@ru ;
-    gr:name "ПИТЬЕВАЯ\" АРТЕЗИАНСКАЯ\"ВОДА ГАЗИРОВАННАЯ 2Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/4607170460021.html> a food:Food ;
-    food:ingredientsListAsText "Общая минерализация 0,2-0,5 г/дм^3, хлориды менее 100 мг/л, сульфаты менее 100 мг/л, гидрокарбонаты не более 250 мг/л, кальций не более 100 мг/л, магний не более 60 мг/л,  калий не более 20 мг/л, натрий не более 130 мг/л, кремний не более 10 мг/л, фторид-ион не более 1,5 мг/л, йодид-ион не более 0,125 мг/л."@ru ;
+<http://www.goodsmatrix.ru/goods/4810168027704.html> a food:Food ;
+    food:carbohydratesPer100gAsDouble 2.81e+01 ;
+    food:energyPer100gAsDouble 2.694e+02 ;
+    food:fatPer100gAsDouble 1.38e+01 ;
+    food:ingredientsListAsText "Мука пшеничная в/с, свинина, лук, говядина, соль йодированная пищевая, соевая мука, волокно натуральное пищевое, смесь пряностей, масло подсолнечное, сахар, перец черный молотый, вода."@ru ;
+    food:proteinsPer100gAsDouble 8.2e+00 ;
     food_not_implemented:best_before "6 мес."@ru ;
-    food_not_implemented:netto_mass "1,00 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-003-98785044-07"@ru ;
-    gr:description "Вода газированная"@ru ;
-    gr:hasEAN_UCC-13 "4607170460021"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ \"СВЕТЛАЯ\", 1Л"@ru .
+    food_not_implemented:esl "Белки:  8,20 г Жиры:  13,80 г Углеводы:  28,10 г Энергетическая ценность:  269,40 ккал"@ru ;
+    food_not_implemented:netto_mass "1000,00 г"@ru ;
+    food_not_implemented:pack_type "Пакет пластиковый, металлизированный, многослойный"@ru ;
+    food_not_implemented:store_cond "при температуре хранения -10 градусов С"@ru ;
+    gr:description "Полуфабрикат в тесте с мясной начинкой категории В"@ru ;
+    gr:hasEAN_UCC-13 "4810168027704"@ru ;
+    gr:name "МЯСНЫЕ ОРЕШКИ \"БАБУШКА АНЯ\" 1000 Г."@ru .
 
-<http://www.goodsmatrix.ru/goods/4620001310036.html> a food:Food ;
-    food:ingredientsListAsText "вода питьевая газированная артезианская первой категории качества. Общая минерализация не более 200мг/л. Содержание анионов и катионов, мг/л, не более кальций 30, магний 10, калий 2, гидрокарбонаты 100."@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-002-97840155-09"@ru ;
-    gr:description "Вода питьевая артезианская первой категории качества. Высокотехнологичный способ очистки"@ru ;
-    gr:hasEAN_UCC-13 "4620001310036"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ \"HI-SKY\" ГАЗИРОВАННАЯ, 0,5Л"@ru .
+<http://www.goodsmatrix.ru/goods/4810168027728.html> a food:Food ;
+    food:carbohydratesPer100gAsDouble 2.81e+01 ;
+    food:energyPer100gAsDouble 2.803e+02 ;
+    food:fatPer100gAsDouble 1.51e+01 ;
+    food:ingredientsListAsText "Мука пшеничная в/с, свинина, лук, говядина, соль йодированная пищевая, соевая мука, волокно натуральное пищевое, комплексная пищевая добавка (олеорезины натуральных пряностей), масло подсолнечное, вода."@ru ;
+    food:proteinsPer100gAsDouble 8e+00 ;
+    food_not_implemented:best_before "6 мес."@ru ;
+    food_not_implemented:esl "Белки:  8,00 г Жиры:  15,10 г Углеводы:  28,10 г Энергетическая ценность:  280,30 ккал"@ru ;
+    food_not_implemented:netto_mass "1000,00 г"@ru ;
+    food_not_implemented:pack_type "Пакет пластиковый, металлизированный, многослойный"@ru ;
+    food_not_implemented:store_cond "при температуре хранения -10 градусов С"@ru ;
+    gr:description "Полуфабрикат в тесте с мясной начинкой категории В"@ru ;
+    gr:hasEAN_UCC-13 "4810168027728"@ru ;
+    gr:name "МЯСНЫЕ КОНВЕРТИКИ \"БАБУШКА АНЯ\" 1000 Г."@ru .
 
-<http://www.goodsmatrix.ru/goods/4620001310043.html> a food:Food ;
-    food:ingredientsListAsText "вода питьевая артезианская газированная."@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "0131-003-97840155-10"@ru ;
-    food_not_implemented:store_cond "при температуре от 5 градусов С до +20 градусов С и относительной влажности воздуха не более 85%"@ru ;
-    gr:description "Даже самая чистая питьевая вода из природных источников содержит тяжелые металлы, такие как ртуть, свинец, сурьма, уран. В процессе производства новой воды HI-SKY мы используем высокотехнологичный способ очистки. Хотите жить долго?"@ru ;
-    gr:hasEAN_UCC-13 "4620001310043"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ \"HI- SKY\" АРТЕЗИАНСКАЯ ГАЗИРОВАННАЯ 1,5 Л."@ru .
+<http://www.goodsmatrix.ru/goods/7893000004207.html> a food:Food ;
+    food:energyPer100gAsDouble 1.29e+02 ;
+    food:fatPer100gAsDouble 5e+00 ;
+    food:ingredientsListAsText "кальций - 5 мг; железо - 0,87 мг; натрий - 70 мг."@ru ;
+    food:proteinsPer100gAsDouble 2.1e+01 ;
+    food_not_implemented:esl "Белки:  21,00 г Жиры:  5,00 г Углеводы:  0,00 г Энергетическая ценность:  129,00 ккал"@ru ;
+    food_not_implemented:netto_mass "1000,00 г"@ru ;
+    gr:description "Пищевая ценность на 100 г продукта: белки - 21 г; жиры - 5 г; углеводы - 0 г; клетчатка - 0 г; кальций - 5 мг; железо - 0,87 мг; натрий - 70 мг. Энергетическая ценность - 129 ккал."@ru ;
+    gr:hasEAN_UCC-13 "7893000004207"@ru ;
+    gr:name "СВИНЫЕ РЕБРА ЗАМОРОЖЕННЫЕ, 1000 Г"@ru .
 
-<http://www.goodsmatrix.ru/goods/4620006270526.html> a food:Food ;
-    food:ingredientsListAsText "вода питьевая артезианская, первой категории. Идеальна для ежедневного употребления. Безопасна в эпидемиологическом и радиационном отношении. Общая минерализация не более 1000мг/л. Общая жесткость не более 7мг*экв./л. Химический состав (мг/л) не более: КАТИОНЫ: Натрий – 200, Кальций – 130, Магний – 65, Калий – 20; АНИОНЫ: Гидрокарбонат – 400, Хлорид – 250."@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:esl "{'fats': 0.0, 'proteins': 0.0, 'carbohydrates': 0.0, 'calories': 0.0}"@ru ;
-    food_not_implemented:netto_mass "500,00 мл"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-001-05144123-06"@ru ;
-    gr:description """вода питьевая артезианская, первой категории. Представляем "Pure AQUALIS" - российскую премьеру нового подхода к качеству \r
-бутылированной питьевой воды, являющаяся лидером продаж. Высокая чистота и защищенность водоносного горизонта. Вода «AQUALIS»  –  это экологически чистая питьевая артезианская вода,  богатая полезными микроэлементами, веками хранящаяся в недрах Вятской земли, теперь стала доступной для всех, кто заботится о своём здоровье. \r
-AQUALIS - экологически чистая природная питьевая вода из артезианской скважины более 100м, надежно защищенной от поверхности десятками метров водонепроницаемых глинистых слоев...."""@ru ;
-    gr:hasEAN_UCC-13 "4620006270526"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ PURE AQUALIS,  0.5Л"@ru .
+<http://www.goodsmatrix.ru/goods/7893000004221.html> a food:Food ;
+    food:energyPer100gAsDouble 1.16e+02 ;
+    food:fatPer100gAsDouble 3.5e+00 ;
+    food:ingredientsListAsText "кальций - 5 мг; железо - 1,23 мг; натрий - 60 мг."@ru ;
+    food:proteinsPer100gAsDouble 2.1e+01 ;
+    food_not_implemented:esl "Белки:  21,00 г Жиры:  3,50 г Углеводы:  0,00 г Энергетическая ценность:  116,00 ккал"@ru ;
+    food_not_implemented:netto_mass "1000,00 г"@ru ;
+    gr:description "Пищевая ценность на 100 г продукта: белки - 21 г; жиры - 3,5 г; углеводы - 0 г; клетчатка - 0 г; кальций - 5 мг; железо - 1,23 мг; натрий - 60 мг. Энергетическая ценность - 116 ккал."@ru ;
+    gr:hasEAN_UCC-13 "7893000004221"@ru ;
+    gr:name "СВИНАЯ ВЫРЕЗКА ЗАМОРОЖЕННАЯ, 1000 Г"@ru .
 
-<http://www.goodsmatrix.ru/goods/4620006270540.html> a food:Food ;
-    food:ingredientsListAsText "вода питьевая артезианская, первой категории. Идеальна для ежедневного употребления. Безопасна в эпидемиологическом и радиационном отношении. Общая минерализация не более 1000мг/л. Общая жесткость не более 7мг*экв./л. Химический состав (мг/л) не более: КАТИОНЫ: Натрий – 200, Кальций – 130, Магний – 65, Калий – 20; АНИОНЫ: Гидрокарбонат – 400, Хлорид – 250."@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:esl "{'fats': 0.0, 'proteins': 0.0, 'carbohydrates': 0.0, 'calories': 0.0}"@ru ;
-    food_not_implemented:netto_mass "1500,00 мл"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-001-05144123-06"@ru ;
-    gr:description """вода питьевая артезианская, первой категории. Представляем "Pure AQUALIS" - российскую премьеру нового подхода к качеству \r
-бутылированной питьевой воды, являющаяся лидером продаж. Высокая чистота и защищенность водоносного горизонта. Вода «AQUALIS»  –  это экологически чистая питьевая артезианская вода,  богатая полезными микроэлементами, веками хранящаяся в недрах Вятской земли, теперь стала доступной для всех, кто заботится о своём здоровье. AQUALIS - экологически чистая природная питьевая вода из артезианской скважины более 100м, надежно защищенной от поверхности десятками метров водонепроницаемых глинистых слоев...."""@ru ;
-    gr:hasEAN_UCC-13 "4620006270540"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ PURE AQUALIS,  1.5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4620765210139.html> a food:Food ;
-    food:ingredientsListAsText "Гидрокарбонатная магниево-кальциевая ( Кальций 40-70; Натрий +калий менее 10; Хлориды менее 25; Магний 10-40; Гидрокарбонаты 150-400;Сульфаты менее 50; ОБЩАЯ МИНЕРАЛИЗАЦИЯ (г/л) 0,2-0,4"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "0,60 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 9185-001-50114660-07"@ru ;
-    food_not_implemented:store_cond "от 2 градусов С +20 градусов С"@ru ;
-    gr:description "минеральная природная питьевая вода артезианского происхождения"@ru ;
-    gr:hasEAN_UCC-13 "4620765210139"@ru ;
-    gr:name "МИНЕРАЛЬНАЯ ГАЗИРОВАННАЯ ПРИРОДНАЯ ПИТЬЕВАЯ ВОДА NATURE LIFE SPARKLING, 0,6 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4620765210153.html> a food:Food ;
-    food:ingredientsListAsText "Гидрокарбонатная магниево-кальциевая ( Кальций 40-70; Натрий +калий менее 10; Хлориды менее 25; Магний 10-40; Гидрокарбонаты 150-400;Сульфаты менее 50; ОБЩАЯ МИНЕРАЛИЗАЦИЯ (г/л) 0,2-0,4"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 9185-001-50114660-07"@ru ;
-    food_not_implemented:store_cond "от 2 градусов С +20 градусов С"@ru ;
-    gr:description "минеральная природная питьевая вода артезианского происхождения"@ru ;
-    gr:hasEAN_UCC-13 "4620765210153"@ru ;
-    gr:name "МИНЕРАЛЬНАЯ ГАЗИРОВАННАЯ ПРИРОДНАЯ ПИТЬЕВАЯ ВОДА NATURE LIFE SPARKLING, 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4630001700010.html> a food:Food ;
-    food:ingredientsListAsText "Общая минерализация 300-700 мг/дм^3, гидрокарбонаты 250-450 мг/л, кальций 10-120 мг/л, магний менее 100 мг/л"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "0,60 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 9185-002-00437913-07"@ru ;
-    food_not_implemented:store_cond "Хранить при t от +5 градусов С до +25 градусов С в защищенном от света месте"@ru ;
-    gr:description "Содержит ионы серебра"@ru ;
-    gr:hasEAN_UCC-13 "4630001700010"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ПРИРОДНАЯ СТОЛОВАЯ \"АКВА АРГЕНТУМ\" ГАЗИРОВАННАЯ, 0,6Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4630009060017.html> a food:Food ;
-    food:ingredientsListAsText "Вода питьевая артезианская газированная, I категории, прошедшая дополнительную очистку."@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:esl "{'calories': 0.0}"@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-001-69792954-11"@ru ;
-    food_not_implemented:store_cond "от 2 градусов С до 20 градусов С"@ru ;
-    gr:description "вода природная артезианская, I категории качества"@ru ;
-    gr:hasEAN_UCC-13 "4630009060017"@ru ;
-    gr:name "FONTE CRISTALLINO ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ, 1,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4630009060055.html> a food:Food ;
-    food:ingredientsListAsText "Вода питьевая артезианская негазированная, I категории, прошедшая дополнительную очистку"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:esl "{'calories': 0.0}"@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-001-69792954-11"@ru ;
-    food_not_implemented:store_cond "от 2 до 20 °С"@ru ;
-    gr:description "вода природная артезианская, I категории качества"@ru ;
-    gr:hasEAN_UCC-13 "4630009060055"@ru ;
-    gr:name "FONTE CRISTALLINO ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ, 0,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4660009680038.html> a food:Food ;
-    food:ingredientsListAsText "гидрокарбонаты, хлориды, кальций, сульфаты, натрий, калий, магний"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:esl "{'fats': 0.0, 'proteins': 0.0, 'carbohydrates': 0.0, 'calories': 0.0}"@ru ;
-    food_not_implemented:netto_mass "1,25 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-001-68582806-2011"@ru ;
-    food_not_implemented:store_cond "хранить в прохладном защищённом от света месте при t от +2 до + 20 градусов С"@ru ;
-    gr:description "Вода с высоким содержанием природного кислорода. Содержание кислорода в холодной байкальской воде уникально (до 14 мг/л). Это в три раза больше, чем в обычной артезианской воде."@ru ;
-    gr:hasEAN_UCC-13 "4660009680038"@ru ;
-    gr:name "ГАЗИРОВАНАЯ ВОДА &QUOT;БАЙКАЛИКА&QUOT;, 1,25 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4660009680076.html> a food:Food ;
-    food:ingredientsListAsText "гидрокарбонаты, хлориды, кальций, сульфаты, натрий, калий, магний"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:esl "{'fats': 0.0, 'proteins': 0.0, 'carbohydrates': 0.0, 'calories': 0.0}"@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-001-68582806-2011"@ru ;
-    food_not_implemented:store_cond "хранить в прохладном защищённом от света месте при t от +2 до + 20 градусов С"@ru ;
-    gr:description "Вода с высоким содержанием природного кислорода. Содержание кислорода в холодной байкальской воде уникально (до 14 мг/л). Это в три раза больше, чем в обычной артезианской воде."@ru ;
-    gr:hasEAN_UCC-13 "4660009680076"@ru ;
-    gr:name "ГАЗИРОВАНАЯ ВОДА &QUOT;БАЙКАЛИКА&QUOT;, 0,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4660010751383.html> a food:Food ;
-    food:ingredientsListAsText "вода артезианская питьевая, двуокись углерода,"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 9185-006-68485693-2013"@ru ;
-    food_not_implemented:store_cond "Хранить в сухом месте при температуре от +2 градусов С до +35 градусов С"@ru ;
-    gr:description "Газированная питьева вода \"BonSifon\" — это единственный в России розлив в уникальную упаковку одноразового сифона, что позволяет сохранить степень газации воды."@ru ;
-    gr:hasEAN_UCC-13 "4660010751383"@ru ;
-    gr:name "ГАЗИРОВАННАЯ ПИТЬЕВА ВОДА &QUOT;BONSIFON&QUOT;, 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4660010751406.html> a food:Food ;
-    food:ingredientsListAsText "вода артезианская питьевая, двуокись углерода, ароматизатор натуральный \"Лайм\""@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 9185-006-68485693-2013"@ru ;
-    food_not_implemented:store_cond "Хранить в сухом месте при температуре от +2 градусов С до +35 градусов С"@ru ;
-    gr:description "Газированная питьева вода \"BonSifon\" — это единственный в России розлив в уникальную упаковку одноразового сифона, что позволяет сохранить степень газации воды."@ru ;
-    gr:hasEAN_UCC-13 "4660010751406"@ru ;
-    gr:name "ГАЗИРОВАННАЯ ПИТЬЕВА ВОДА &QUOT;BONSIFON&QUOT; С АРОМАТОМ ЛАЙМА, 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4660010751420.html> a food:Food ;
-    food:ingredientsListAsText "вода артезианская питьевая, двуокись углерода, ароматизатор натуральный \"Лимон\""@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 9185-006-68485693-2013"@ru ;
-    food_not_implemented:store_cond "Хранить в сухом месте при температуре от +2 градусов С до +35 градусов С"@ru ;
-    gr:description "Газированная питьева вода \"BonSifon\" — это единственный в России розлив в уникальную упаковку одноразового сифона, что позволяет сохранить степень газации воды."@ru ;
-    gr:hasEAN_UCC-13 "4660010751420"@ru ;
-    gr:name "ГАЗИРОВАННАЯ ПИТЬЕВА ВОДА &QUOT;BONSIFON&QUOT; С АРОМАТОМ ЛИМОНА, 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4660010751680.html> a food:Food ;
-    food:ingredientsListAsText "вода артезианская питьевая, двуокись углерода, ароматизатор натуральный \"Малина\""@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 9185-006-68485693-2013"@ru ;
-    food_not_implemented:store_cond "Хранить в сухом месте при температуре от +2 градусов С до +35 градусов С"@ru ;
-    gr:description "Газированная питьева вода \"BonSifon\" — это единственный в России розлив в уникальную упаковку одноразового сифона, что позволяет сохранить степень газации воды."@ru ;
-    gr:hasEAN_UCC-13 "4660010751680"@ru ;
-    gr:name "ГАЗИРОВАННАЯ ПИТЬЕВА ВОДА &QUOT;BONSIFON&QUOT; С АРОМАТОМ МАЛИНЫ, 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4670005370086.html> a food:Food ;
-    food:ingredientsListAsText "Вода питьевая артезианская."@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-001-01406336-10"@ru ;
-    food_not_implemented:store_cond "При температуре от +2 до +20 С при относительной влажности воздуха не более 85%. Беречь от воздействия солнечного света."@ru ;
-    gr:description "Общая минерализация "@ru ;
-    gr:hasEAN_UCC-13 "4670005370086"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ \"АРТИАКВА\" ПИТЬЕВАЯ АРТЕЗИАНСКАЯ ГАЗИРОВАННАЯ 1,5 Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/4680000234030.html> a food:Food ;
-    food:ingredientsListAsText "Общая минерализация"@ru ;
-    food_not_implemented:best_before "1 г."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-004-98514601-12"@ru ;
-    food_not_implemented:store_cond "Хранить при t от 0 градусов С до +35 градусов С и относительной влажности воздуха не более 85%"@ru ;
-    gr:description "Источник воды: артезианские скважины №1 и 2"@ru ;
-    gr:hasEAN_UCC-13 "4680000234030"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ПРИРОДНАЯ АРТЕЗИАНСКАЯ ГАЗИРОВАННАЯ \"КРАСНАЯ ЦЕНА\", 1,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4680000235068.html> a food:Food ;
-    food:ingredientsListAsText "Общая минерализация <700 мг/л, гидрокарбонаты <350 мг/л, кальций 90 мг/л, магний <50 мг/л,  сульфаты <50 мг/л, хлориды <50 мг/л, натрий-калий <50 мг/л."@ru ;
-    food_not_implemented:best_before "1 г."@ru ;
-    food_not_implemented:netto_mass "0,62 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-004-98514601-12"@ru ;
-    food_not_implemented:store_cond "Хранить при t от 0 градусов С до +35 градусов С и относительной влажности воздуха не более 85%"@ru ;
-    gr:description "Источник воды: артезианская скважина №0618, с.Саваслейка, ул.Родниковая 1/2, Кулебакского р-на"@ru ;
-    gr:hasEAN_UCC-13 "4680000235068"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ПРИРОДНАЯ ГАЗИРОВАННАЯ &QUOT;SOCIETE MINERALE&QUOT;, 0,618 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4680004790419.html> a food:Food ;
-    food:ingredientsListAsText "Вода минеральная питьевая столовая."@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "330,00 мл"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 9185-001-40214478-14"@ru ;
-    food_not_implemented:store_cond "при температуре от +2 до +20 градусов С"@ru ;
-    gr:description """Вода  минеральная питьевая столовая, • Сбалансированный минеральный состав:\r
-• Низкая кислотность\r
-• Бережная фильтрация серебром\r
-• Уникальные бутылки-«амфоры»\r
-• Международное признание качества."""@ru ;
-    gr:hasEAN_UCC-13 "4680004790419"@ru ;
-    gr:name "ВОДА МИНЕРАЛЬНАЯ ПИТЬЕВАЯ СТОЛОВАЯ ГАЗИРОВАННАЯ  «СЕЛИВАНОВСКАЯ» ТМ &QUOT;СЕРЯБЬ&QUOT; ПЭТ, 330 МЛ"@ru .
-
-<http://www.goodsmatrix.ru/goods/4680004790426.html> a food:Food ;
-    food:ingredientsListAsText "Вода минеральная питьевая столовая."@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "500,00 мл"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 9185-001-40214478-15"@ru ;
-    food_not_implemented:store_cond "при температуре от +2 до +20 градусов С"@ru ;
-    gr:description """Вода  минеральная питьевая столовая, • Сбалансированный минеральный состав:\r
-• Низкая кислотность\r
-• Бережная фильтрация серебром\r
-• Уникальные бутылки-«амфоры»\r
-• Международное признание качества."""@ru ;
-    gr:hasEAN_UCC-13 "4680004790426"@ru ;
-    gr:name "ВОДА МИНЕРАЛЬНАЯ ПИТЬЕВАЯ СТОЛОВАЯ ГАЗИРОВАННАЯ «СЕЛИВАНОВСКАЯ» ТМ &QUOT;СЕРЯБЬ&QUOT; ПЭТ, 500 МЛ"@ru .
-
-<http://www.goodsmatrix.ru/goods/4690363008285.html> a food:Food ;
-    food:ingredientsListAsText "Химический состав: анионы: мг/л, бикарбонаты 400, сульфаты 250, хлориды 250, фторид-ион 1,5, йодит-ион 125 мкг/л; катионы: кальций 130, магний 65, калий 20, общая минерализация не более 1000 мг/л. Общая жесткость: не более 7 мг-экв/л. Щелочность: не более 6,5 мг-экв/л"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-002-47674786-02"@ru ;
-    gr:description "Артезианская вода добывается из скважины №3 Арамильского филиала УПЗ"@ru ;
-    gr:hasEAN_UCC-13 "4690363008285"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ \"ГОРНЫЙ ИСТОЧНИК-1\" ДООЧИЩЕННАЯ ПЕРВОЙ КАТЕГОРИИ КАЧЕСТВА, ГАЗИРОВАННАЯ, 0,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4690363008292.html> a food:Food ;
-    food:ingredientsListAsText "Химический состав: анионы: мг/л, бикарбонаты 400, сульфаты 250, хлориды 250, фторид-ион 1,5, йодит-ион 125 мкг/л; катионы: кальций 130, магний 65, калий 20, общая минерализация не более 1000 мг/л. Общая жесткость: не более 7 мг-экв/л. Щелочность: не более 6,5 мг-экв/л"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "2,00 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-002-47674786-02"@ru ;
-    gr:description "Артезианская вода добывается из скважины №3 Арамильского филиала УПЗ"@ru ;
-    gr:hasEAN_UCC-13 "4690363008292"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ \"ГОРНЫЙ ИСТОЧНИК-1\" ДООЧИЩЕННАЯ ПЕРВОЙ КАТЕГОРИИ КАЧЕСТВА, ГАЗИРОВАННАЯ, 2Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4810014007362.html> a food:Food ;
-    food:ingredientsListAsText "Вода питьевая, двуокись углерода."@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ РБ 00966671.164-96РЦ BY 190239501.4.534-2009"@ru ;
-    gr:hasEAN_UCC-13 "4810014007362"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ \"АЛЕКСАНДРЫЯ\" АРТЕЗИАНСКАЯ ОЧИЩЕННАЯ, ФИЛЬТРОВАННАЯ, ПЕРВОЙ КАТЕГОРИИ, \"КРЫНИЦА\", 0,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4810112000494.html> a food:Food ;
-    food:ingredientsListAsText "Вода артезианская из скважины № 1/99 глубиной 266 м., расположенной на территории предприятия, природный йодный концентрат."@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ РБ 100162220.123"@ru ;
-    gr:description "Артезианская вода первой категории обработанная ультрафиолетом."@ru ;
-    gr:hasEAN_UCC-13 "4810112000494"@ru ;
-    gr:name "ГАЗИРОВАННАЯ ПИТЬЕВАЯ ВОДА \"ЙОДНАЯ ДАРИДА\", 1,5 Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/4810112001040.html> a food:Food ;
-    food:ingredientsListAsText "Вода артезианская, селенометионин. Массовая концентрация селена - 0,007-0,01 мг/л. Общая минерализация 0,3-0,6 г/л; общая жесткость 4-6 мг-экв/л"@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ РБ 100162220.129"@ru ;
-    gr:description "Вода артезианская из скважины №1/99 глубиной 266м, расположенной на территории предприятия. Обработана ультрофиолетом."@ru ;
-    gr:hasEAN_UCC-13 "4810112001040"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ ПЕРВОЙ КАТЕГОРИИ \"ДАРИДА\" С СЕЛЕНОМ, 1,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4810148000222.html> a food:Food ;
-    food:ingredientsListAsText "Вода питьевая из скважины №2/2002 глубиной 195м, расположенной на территории предприятия СП \"Фрост и К\" ООО, газ для насыщения двуокись углерода, пищевая добавка: концентрат йодоселеносодержащий \"йодис-С\" производства ОДО \"Олмар\"."@ru ;
-    food_not_implemented:netto_mass "0,50 г"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ РБ 100136976.010-2002 РЦ РБ 100136976.017-2008"@ru ;
-    gr:description """Вода первой категории артезианская очищенная безреагентным способом кондиционированная.\r
-Метод обеззараживания - бактерицидная обработка УФ-излучением.\r
-Продукт года 2008 - выбор потребителя.\r
-Лучшая продукция года 2006 и 2010.\r
-Общая минерализация: 100-885 мг/дм3\r
-Общая жесткость: 0,5-2,5 мг-экв/дм3"""@ru ;
-    gr:hasEAN_UCC-13 "4810148000222"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ \"ФРОСТ\" ЙОДОСЕЛЕНОСОДЕРЖАЩАЯ, 0,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4810148000888.html> a food:Food ;
-    food:ingredientsListAsText "Вода питьевая среднегазированная первой категории артезианская очищенная."@ru ;
-    food_not_implemented:best_before "180 дн."@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ РБ 00966671.164-96"@ru ;
-    food_not_implemented:store_cond "хранить при Т от 2 градусов С до 20 градусов С"@ru ;
-    gr:description "скважина №2/2002 глубиной 195 м."@ru ;
-    gr:hasEAN_UCC-13 "4810148000888"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ СРЕДНЕГАЗИРОВАННАЯ АРТЕЗИАНСКАЯ ОЧИЩЕННАЯ ПЕРВОЙ КАТЕГОРИИ 0,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4810148000932.html> a food:Food ;
-    food:ingredientsListAsText "Вода питьевая среднегазированная первой категории артезианская очищенная."@ru ;
-    food_not_implemented:best_before "180 дн."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ РБ 00966671.164-96"@ru ;
-    food_not_implemented:store_cond "хранить при Т от 2 градусов С до 20 градусов С"@ru ;
-    gr:description "скважина №2/2002 глубиной 195 м."@ru ;
-    gr:hasEAN_UCC-13 "4810148000932"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ СРЕДНЕГАЗИРОВАННАЯ АРТЕЗИАНСКАЯ ОЧИЩЕННАЯ ПЕРВОЙ КАТЕГОРИИ 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4810285004145.html> a food:Food ;
-    food:ingredientsListAsText "Вода подготовленная из  артезианской скважины, газ для насыщения - двуокись углерода."@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ РБ 00966671.164-96"@ru ;
-    gr:description "Первой категории, очищенная, обеззараженная ультрафиолетом."@ru ;
-    gr:hasEAN_UCC-13 "4810285004145"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ АРТЕЗИАНСКАЯ \"ЛИДСКАЯ\", 0,5 Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/4810285005883.html> a food:Food ;
-    food:ingredientsListAsText "Вода подготовленная из артезианской скважины, газ для насыщения - двуокись углерода."@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart """ТУ РБ 00966671.164-96
-РЦ BY 500022116.060-2010"""@ru ;
-    gr:description """Вода первой категории, очищенная, обеззараженная ультрафиолетом.
-Массовая доля двуокиси углерода не менее 0,4%
-Общая минерализация не более 1000мг/дм3
-Общая жесткость не более 7,0 мг-экв/дм3."""@ru ;
-    gr:hasEAN_UCC-13 "4810285005883"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ИЗ АРТЕЗИАНСКОЙ СКВАЖИНЫ \"AURA\" PREMIUM, ГАЗИРОВАННАЯ, 0,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4810285005890.html> a food:Food ;
-    food:ingredientsListAsText "Вода подготовленная из артезианской скважины, газ для насыщения - двуокись углерода."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart """ТУ РБ 00966671.164-96
-РЦ BY 500022116.060-2010"""@ru ;
-    gr:description """Вода первой категории, очищенная, обеззараженная ультрафиолетом.
-Массовая доля двуокиси углерода не менее 0,4%
-Общая минерализация не более 1000мг/дм3
-Общая жесткость не более 7,0 мг-экв/дм3."""@ru ;
-    gr:hasEAN_UCC-13 "4810285005890"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ИЗ АРТЕЗИАНСКОЙ СКВАЖИНЫ \"AURA\" PREMIUM, ГАЗИРОВАННАЯ, 1,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4810738007396.html> a food:Food ;
-    food:ingredientsListAsText "Вода питьевая артезианская сильногазированная очищенная первой категории, обеззараженная ультрафиолетовым излучением"@ru ;
-    food_not_implemented:best_before "4 мес."@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ BY 190130976.004"@ru ;
-    food_not_implemented:store_cond "От 5 градусов С до 25 градусов С, в затемненных, вентилируемых помещениях."@ru ;
-    gr:description """Источник: артезианские скважины 1-5 водозабора "северный", д.Вистычи, Брестского района.\r
-Химический состав: содержание массовой доли диоксида углерода, %-свыше 0,4. Минерализация, мг/дм3 - """@ru ;
-    gr:hasEAN_UCC-13 "4810738007396"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ АРТЕЗИАНСКАЯ \"СВАЯК\" СИЛЬНОГАЗИРОВАННАЯ ОЧИЩЕННАЯ, ПЕРВОЙ КАТЕГОРИИ, 0,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4811030001730.html> a food:Food ;
-    food:ingredientsListAsText "Вода питьевая артезианская очищенная, диоксид углерода (свыше 0,4%)."@ru ;
-    food_not_implemented:best_before "150 сут."@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ РБ 00966671.164-96РЦ BY 190239501.4.441-2008"@ru ;
-    food_not_implemented:store_cond "От 5С до 20С и относительной влажности воздуха 75%."@ru ;
-    gr:description "Общая минерализация- - "@ru ;
-    gr:hasEAN_UCC-13 "4811030001730"@ru ;
-    gr:name "ВОДА ЧИСТАЯ ПИТЬЕВАЯ \"ВЛАДИМИР\" АРТЕЗИАНСКАЯ СИЛЬНОГАЗИРОВАННАЯ, ПЕРВАЯ КАТЕГОРИЯ, 0,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4813393000047.html> a food:Food ;
-    food:ingredientsListAsText "Вода питьевая очищенная газированная."@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ РБ 00966671.164РЦ BY 190239501.4.499"@ru ;
-    gr:description "Первая категория. Метод обеззараживания воды - ультрафиолетовым излучением."@ru ;
-    gr:hasEAN_UCC-13 "4813393000047"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ \"БОБРУЙСКАЯ\" ГАЗИРОВАННАЯ, 1Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/4813393000061.html> a food:Food ;
-    food:ingredientsListAsText "Вода питьевая очищенная, двуокись углерода."@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ РБ 00966671.164-96"@ru ;
-    gr:description "Источник - артезианские скважины, водозабор №1. Первая категория."@ru ;
-    gr:hasEAN_UCC-13 "4813393000061"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ \"БОБРУЙСКАЯ\" ГАЗИРОВАННАЯ, 1,5Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/4813458000012.html> a food:Food ;
-    food:ingredientsListAsText "Вода артезианская, газ для насыщения - двуокись углерода."@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart """ТУ РБ 00966671.164-96
-РЦ BY 190239501.4.522-2008"""@ru ;
-    gr:description """Вода первой категории, очищенная и обеззараженная ультрафиолетовым излучением.
-Вода прошла современную систему очистки с применением блока братного осмоса.
-Общая минерализация, мг/дм3 10-312
-Общая жесткость, мг-экв/дм3 менее 7
-Массовая доля двуокиси углерода, %, не менее 0,4"""@ru ;
-    gr:hasEAN_UCC-13 "4813458000012"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ АРТЕЗИАНСКАЯ \"MAQUA\" ГАЗИРОВАННАЯ, 0,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4813458000142.html> a food:Food ;
-    food:ingredientsListAsText "Вода питьевая, газ для насыщения - двуокись углерода."@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart """ТУ BY 790297260.002-2009
-РЦ BY 790297260.005-2009"""@ru ;
-    gr:description """Вода первой категории, очищенная и обеззараженная ультрафиолетовым излучением.
-Вода прошла современную систему очистки с применением блока братного осмоса.
-Общая минерализация, мг/дм3 100-500
-Общая жесткость, мг-экв/дм3 менее 6
-Массовая доля двуокиси углерода, %, не менее 0,5-0,9"""@ru ;
-    gr:hasEAN_UCC-13 "4813458000142"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ АРТЕЗИАНСКАЯ \"MAQUA\" СИЛЬНОГАЗИРОВАННАЯ, 0,5Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4813458000166.html> a food:Food ;
-    food:ingredientsListAsText "Вода питьевая, газ для насыщения - двуокись углерода."@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart """ТУ BY 790297260.002-2009
-РЦ BY 790297260.005-2009"""@ru ;
-    gr:description """Вода первой категории, очищенная и обеззараженная ультрафиолетовым излучением.
-Вода прошла современную систему очистки с применением блока братного осмоса.
-Общая минерализация, мг/дм3 100-500
-Общая жесткость, мг-экв/дм3 менее 6
-Массовая доля двуокиси углерода, %, не менее 0,5-0,9"""@ru ;
-    gr:hasEAN_UCC-13 "4813458000166"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ АРТЕЗИАНСКАЯ \"MAQUA\" СИЛЬНОГАЗИРОВАННАЯ, 1Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4820010160107.html> a food:Food ;
-    food:ingredientsListAsText "Общая минерализация 0,5-1 г/дм^3, кальций 25 мг/л, магний 25 мг/л, калий+натрий 180-300 мг/л, хлориды 180-200 мг/л, сульфаты 100-200, гидрокарбонаты - 200-350 мг/л"@ru ;
-    food_not_implemented:best_before "90 сут."@ru ;
-    food_not_implemented:netto_mass "2,00 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ У 11.0-2214545-001-2013"@ru ;
-    food_not_implemented:store_cond "Хранить при температуре от +5 градусов С до +20 градусов С в защищенных от прямых солнечных лучей помещениях"@ru ;
-    gr:description "Сульфатно-хлоридно-гидрокарбонатно-натриевая вода с глубины 307 метров"@ru ;
-    gr:hasEAN_UCC-13 "4820010160107"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ПРИРОДНАЯ СИЛЬНОГАЗИРОВАННАЯ &QUOT;МИРНЕНСКАЯ&QUOT;, 2 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4820010161081.html> a food:Food ;
-    food:ingredientsListAsText "Общая минерализация 0,5-1 г/дм^3, кальций 25 мг/л, магний 25 мг/л, калий+натрий 180-300 мг/л, хлориды 180-200 мг/л, сульфаты 100-200, гидрокарбонаты - 200-350 мг/л"@ru ;
-    food_not_implemented:best_before "90 сут."@ru ;
-    food_not_implemented:netto_mass "0,60 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ У 11.0-2214545-001-2013"@ru ;
-    food_not_implemented:store_cond "Хранить при температуре от +5 градусов С до +20 градусов С в защищенных от прямых солнечных лучей помещениях"@ru ;
-    gr:description "Сульфатно-хлоридно-гидрокарбонатно-натриевая вода с глубины 307 метров"@ru ;
-    gr:hasEAN_UCC-13 "4820010161081"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ПРИРОДНАЯ СИЛЬНОГАЗИРОВАННАЯ &QUOT;МИРНЕНСКАЯ&QUOT;, 0,6 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4820015940971.html> a food:Food ;
-    food:ingredientsListAsText "сильногазированная питьевая вода"@ru ;
-    food_not_implemented:netto_mass "19,00 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    gr:description "Чистая природная вода."@ru ;
-    gr:hasEAN_UCC-13 "4820015940971"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ЕСТЕСТВЕННАЯ СМЯГЧЕННАЯ СИЛЬНОГАЗИРОВАННАЯ \"ИСТОЧНИК ЗДОРОВЬЯ\", 19 Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/4870031000241.html> a food:Food ;
-    food:ingredientsListAsText "Химический состав (мг/л): общая минерализация: 400-650, НСО3 - 130-155, SO4 - 60-125, CI - 65-170, Ca - 35-48, Mg - 15-30, Na+K - 40-125, Жесткость - 2,8-5,0 мг-экв/л"@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "КР СТ 1432-2005"@ru ;
-    gr:description "Вода из природных источников. Месторождения минеральных вод \"Кенетколь\" и \"Кулагер-Арасан\"."@ru ;
-    gr:hasEAN_UCC-13 "4870031000241"@ru ;
-    gr:name "АРТЕЗИАНСКАЯ ПИТЬЕВАЯ ВОДА, ГАЗИРОВАННАЯ, \"СВЕЖЕСТЬ\", 1,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/4870031001880.html> a food:Food ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:store_cond "Хранить в темном месте при температуре от +2 градусов С  до +20 градусов С"@ru ;
-    gr:description "Скважина №1643, месторождение \"Кенетколь\". Питьевая вода первой категории из природного источника. Рекомендована НИИ кардиологии и внутренних болезней МЗ РК для ежедневного употребления, а также для профилактики заболеваний органов пищеварения, обмена веществ, мочекаменной болезни."@ru ;
-    gr:hasEAN_UCC-13 "4870031001880"@ru ;
-    gr:name "ВОДА ПИТЬЕВАЯ ГАЗИРОВАННАЯ ПРИПОДНАЯ АРТЕЗИАНСКАЯ \"TURAN\", \"TURAN\", 0,5 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/5449000003041.html> a food:Food ;
-    food:ingredientsListAsText "Вода артезианская (скважины № 1,2,3,4 г. Минск, п/у Колядичи)."@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ РБ 100373962.006-2003"@ru ;
-    gr:description "Очищенная с использованием высокоэффективных реагентных методов обеззараживания кондиционирования, хлорид магния, хлорид кальция."@ru ;
-    gr:hasEAN_UCC-13 "5449000003041"@ru ;
-    gr:name "ЧИСТАЯ СРЕДНЕГАЗИРОВАННАЯ ПИТЬЕВАЯ ВОДА BONAQUA, 1 Л."@ru .
-
-<http://www.goodsmatrix.ru/goods/5449000003065.html> a food:Food ;
-    food:ingredientsListAsText "Подготовленная вода, диоксид углерода, хлорид магния, хлорид кальция."@ru ;
-    food_not_implemented:best_before "12 мес."@ru ;
-    food_not_implemented:netto_mass "2,00 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "0131-007-40227765-02"@ru ;
-    food_not_implemented:store_cond "при температуре от 5 градусов С до 20 граудсов  С"@ru ;
-    gr:description "Очищенная кондиционированная  вода централизованного  источника водоснабжения."@ru ;
-    gr:hasEAN_UCC-13 "5449000003065"@ru ;
-    gr:name "ЧИСТАЯ ПИТЬЕВАЯ ВОДА \"BON AQUA\" СРЕДНЕГАЗИРОВАННАЯ"@ru .
-
-<http://www.goodsmatrix.ru/goods/5449000022189.html> a food:Food ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-007-40227765-02"@ru ;
-    gr:description "Очищенная кондиционированная чистая питьевая вода первой категории. Скважины №№ 29487, 37392, 42509 г.Самара. Минерализация не более 250 мг/л"@ru ;
-    gr:hasEAN_UCC-13 "5449000022189"@ru ;
-    gr:name "ЧИСТАЯ ПИТЬЕВАЯ ВОДА BONAQUA СИЛЬНОГАЗИРОВАННАЯ 2 Л"@ru .
-
-<http://www.goodsmatrix.ru/goods/5449000026583.html> a food:Food ;
-    food:ingredientsListAsText "Вода 100%"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-007-40227765-02"@ru ;
-    gr:description "Жидкость"@ru ;
-    gr:hasEAN_UCC-13 "5449000026583"@ru ;
-    gr:name "СИЛЬНОГАЗИРОВАННАЯ ЧИСТАЯ ПИТЬЕВАЯ ВОДА"@ru .
-
-<http://www.goodsmatrix.ru/goods/8595030350796.html> a food:Food ;
-    food:ingredientsListAsText "Содержит растворенный кислород 10-11мг/дм8"@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    gr:description "Вода питьевая очищенная предназначена для использования без ограничений в качестве : питьевой столовой воды; для приготовления пищи и напитков; для разбавления высокоминерализированных минеральных вод."@ru ;
-    gr:hasEAN_UCC-13 "8595030350796"@ru ;
-    gr:name "ПИТЬЕВАЯ ВОДА \"АКВА МАРИЯ\",1,5Л., С ГАЗОМ."@ru .
-
-<http://www.goodsmatrix.ru/goods/8595030350857.html> a food:Food ;
-    food:ingredientsListAsText "Содержит растворенный кислород 10-11мг/дм5"@ru ;
-    food_not_implemented:netto_mass "1,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    gr:description "Вода питьевая очищенная предназначена для использования без ограничений в качестве : питьевой столовой воды; для приготовления пищи и напитков; для разбавления высокоминерализированных минеральных вод."@ru ;
-    gr:hasEAN_UCC-13 "8595030350857"@ru ;
-    gr:name "ПИТЬЕВАЯ ВОДА \"АКВА МАРИЯ\",1,5Л., С ГАЗОМ."@ru .
-
-<http://www.goodsmatrix.ru/goods/8595030351007.html> a food:Food ;
-    food:ingredientsListAsText "Содержит растворенный кислород 10-11мг/дм6"@ru ;
-    food_not_implemented:pack_type "Бутылка стеклянная"@ru ;
-    gr:description "Вода питьевая очищенная предназначена для использования без ограничений в качестве : питьевой столовой воды; для приготовления пищи и напитков; для разбавления высокоминерализированных минеральных вод."@ru ;
-    gr:hasEAN_UCC-13 "8595030351007"@ru ;
-    gr:name "ПИТЬЕВАЯ ВОДА \"АКВА МАРИЯ\",1Л., С ГАЗОМ."@ru .
-
-<http://www.goodsmatrix.ru/goods/90494406.html> a food:Food ;
-    food:ingredientsListAsText "Диоксид углерода (не менее 0,5%), очищенная кондиционированная вода централизованного источника водоснабжения. Минерализация , не более 650 мг/л. Общая жесткость не более 7 мг* экв/л. Катионы, мг/л: магний("@ru ;
-    food_not_implemented:netto_mass "0,50 л"@ru ;
-    food_not_implemented:pack_type "Бутылка пластиковая"@ru ;
-    food_not_implemented:standart "ТУ 0131-007-40227765-02"@ru ;
-    gr:description "Пейте охлаждённой. Использовать до указанной даты. Хранить в прохладном месте.Чистая питьевая вода первой категории сильногазированная."@ru ;
-    gr:hasEAN_UCC-13 "90494406"@ru ;
-    gr:name "ЧИСТАЯ ПИТЬЕВАЯ ВОДА BONAQUA СИЛЬНОГАЗИРОВАННАЯ 0,5Л"@ru .
+<http://www.goodsmatrix.ru/goods/7893000004573.html> a food:Food ;
+    food:energyPer100gAsDouble 2.14e+02 ;
+    food:fatPer100gAsDouble 1.6e+01 ;
+    food:ingredientsListAsText "кальций - 20 мг; железо - 1,12 мг; натрий - 60 мг."@ru ;
+    food:proteinsPer100gAsDouble 1.75e+01 ;
+    food_not_implemented:esl "Белки:  17,50 г Жиры:  16,00 г Углеводы:  0,00 г Энергетическая ценность:  214,00 ккал"@ru ;
+    food_not_implemented:netto_mass "1000,00 г"@ru ;
+    gr:description "Пищевая ценность на 100 г продукта: белки - 17,5 г; жиры - 16 г; углеводы - 0 г; клетчатка - 0 г; кальций - 20 мг; железо - 1,12 мг; натрий - 60 мг. Энергетическая ценность - 214 ккал."@ru ;
+    gr:hasEAN_UCC-13 "7893000004573"@ru ;
+    gr:name "ОТБИВНЫЕ ИЗ СВИНОЙ ШЕЙКИ ЗАМОРОЖЕННЫЕ, 1000 Г"@ru .
 

@@ -93,8 +93,7 @@ class TestGoodsMatrixSpider(TestCase):
 
 
     @patch('goodsmatrix.xpath_extractor.extract_goods_properties_dict')
-    @patch('goodsmatrix.esl_parser.parse_esl')
-    def test_parse_good_with_common_properties(self, mock_parsed_esl_dict, mock_extracted_dict):
+    def test_parse_good_with_common_properties(self, mock_extracted_dict):
         mock_extracted_dict.return_value = {
                 'name': 'ice cream',
                 'barcode': '2220066000747',
@@ -104,21 +103,14 @@ class TestGoodsMatrixSpider(TestCase):
                 'netto_weight': '1000,00 g',
                 'standart': 'TU 919191291',
                 'store_conditions': '+25',
-                'esl': '',
+                'esl': 'esl',
                 'pack_type': 'test',
-            }
-        mock_parsed_esl_dict.return_value = {
-                'proteins': 7.50,
-                'fats': 2.9,
-                'carbohydrates': 3.0,
-                'calories': 263.0
             }
         stub_response = HtmlResponse(url="http://goodsmatrix.ru")
 
         good = self.spider.parse_good(stub_response)
 
         self.assertTrue(mock_extracted_dict.called)
-        self.assertTrue(mock_parsed_esl_dict.called)
         self.assertEqual(good['url'], 'http://goodsmatrix.ru')
         self.assertEqual(good['name'], 'ice cream')
         self.assertEqual(good['barcode'], '2220066000747')
@@ -128,5 +120,25 @@ class TestGoodsMatrixSpider(TestCase):
         self.assertEqual(good['netto_weight'], '1000,00 g')
         self.assertEqual(good['standart'], 'TU 919191291')
         self.assertEqual(good['store_conditions'], '+25')
-        self.assertEqual(good['esl'], {'proteins': 7.50, 'fats': 2.9, 'carbohydrates': 3.0, 'calories': 263.0})
+        self.assertEqual(good['esl'], 'esl')
         self.assertEqual(good['pack_type'], 'test')
+
+    @patch('goodsmatrix.xpath_extractor.extract_goods_properties_dict')
+    @patch('goodsmatrix.esl_parser.parse_esl')
+    def test_parse_esl_without_fats(self, mock_parsed_esl_dict, mock_extracted_dict):
+        mock_extracted_dict.return_value = {'esl': ''}
+        mock_parsed_esl_dict.return_value = {
+                'proteins': 7.50,
+                'carbohydrates': 3.0,
+                'calories': 263.0
+            }
+        stub_response = HtmlResponse(url="http://goodsmatrix.ru")
+
+        good = self.spider.parse_good(stub_response)
+
+        self.assertTrue(mock_extracted_dict.called)
+        self.assertTrue(mock_parsed_esl_dict.called)
+        self.assertEqual(good['proteins_as_double'], 7.50)
+        self.assertEqual(good['carbohydrates_as_double'], 3.0)
+        self.assertEqual(good['calories_as_double'], 263.0)
+        self.assertEqual(good['fats_as_double'], None)

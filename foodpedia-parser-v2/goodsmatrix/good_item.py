@@ -12,3 +12,7 @@ class GoodItem(scrapy.Item):
     store_conditions = scrapy.Field()
     esl = scrapy.Field()
     pack_type = scrapy.Field()
+    proteins_as_double = scrapy.Field()
+    fats_as_double = scrapy.Field()
+    carbohydrates_as_double = scrapy.Field()
+    calories_as_double = scrapy.Field()

@@ -10,7 +10,7 @@ from goodsmatrix import esl_parser
 class GoodsMatrixSpider(CrawlSpider):
     name = 'goodsmatrix'
     allowed_domains = ['goodsmatrix.ru']
-    start_urls = ['http://www.goodsmatrix.ru/goods-catalogue/Sparkling-drinking-water.html']
+    start_urls = ['http://www.goodsmatrix.ru/goods-catalogue/Frozen-meat-natural-convenience-foods.html']
     #start_urls = ['http://www.goodsmatrix.ru/goods-catalogue/Goods/Foodstuffs.html']
 
     def parse(self, response):
@@ -38,6 +38,10 @@ class GoodsMatrixSpider(CrawlSpider):
 
     def parse_good(self, response):
         good = GoodItem(xpath_extractor.extract_goods_properties_dict(response))
-        good['esl'] = esl_parser.parse_esl(good['esl'])
+        esl_dict = esl_parser.parse_esl(good['esl'])
+        good['proteins_as_double'] = esl_dict.get('proteins', None)
+        good['fats_as_double'] = esl_dict.get('fats', None)
+        good['carbohydrates_as_double'] = esl_dict.get('carbohydrates', None)
+        good['calories_as_double'] = esl_dict.get('calories', None)
         good['url'] = response.url
         return good

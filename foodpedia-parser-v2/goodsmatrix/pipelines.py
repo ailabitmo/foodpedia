@@ -45,6 +45,10 @@ class RDFPipeline(object):
         self._add_current_items_property_as_predicate(self.FOOD_NOT_IMPLEMENTED.standart, 'standart')
         self._add_current_items_property_as_predicate(self.FOOD_NOT_IMPLEMENTED.store_cond, 'store_conditions')
         self._add_current_items_property_as_predicate(self.FOOD_NOT_IMPLEMENTED.esl, 'esl')
+        self._add_current_items_property_as_predicate(self.FOOD.proteinsPer100gAsDouble, 'proteins_as_double')
+        self._add_current_items_property_as_predicate(self.FOOD.fatPer100gAsDouble, 'fats_as_double')
+        self._add_current_items_property_as_predicate(self.FOOD.carbohydratesPer100gAsDouble, 'carbohydrates_as_double')
+        self._add_current_items_property_as_predicate(self.FOOD.energyPer100gAsDouble, 'calories_as_double')
         self._add_current_items_property_as_predicate(self.FOOD_NOT_IMPLEMENTED.pack_type, 'pack_type')
 
     def _get_current_items_resource_url(self):
@@ -61,7 +65,11 @@ class RDFPipeline(object):
             )
 
     def _items_property_to_literal(self, property_name):
-        return Literal(self.current_item[property_name], lang='ru')
+        property_value = self.current_item[property_name]
+        if isinstance(property_name, basestring):
+            return Literal(property_value, lang='ru')
+        else:
+            return Literal(property_value)
 
     def close_spider(self, spider):
         with open('dump.ttl', 'w') as output_file:
