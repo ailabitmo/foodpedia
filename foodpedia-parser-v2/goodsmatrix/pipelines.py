@@ -21,12 +21,12 @@ class JsonWithEncodingPipeline(object):
 
 class RDFPipeline(object):
     FOOD = Namespace("http://purl.org/foodontology#")
-    FOOD_NOT_IMPLEMENTED = Namespace("http://purl.org/foodontology/extention#")
+    FOODPEDIA = Namespace("http://foodpedia.tk/ontology#")
     GOODRELATIONS = Namespace("http://purl.org/goodrelations/v1#")
     def __init__(self):
         self.graph = Graph(store='default')
         self.graph.bind('food', self.FOOD)
-        self.graph.bind('food_not_implemented', self.FOOD_NOT_IMPLEMENTED)
+        self.graph.bind('foodpedia-owl', self.FOODPEDIA)
         self.graph.bind('gr', self.GOODRELATIONS)
         self.current_item = None
 
@@ -38,18 +38,18 @@ class RDFPipeline(object):
         self.graph.add((self._get_current_items_resource_url(), RDF.type, self.FOOD.Food))
         self._add_current_items_property_as_predicate(self.GOODRELATIONS.name, 'name')
         self._add_current_items_property_as_predicate(self.GOODRELATIONS['hasEAN_UCC-13'], 'barcode')
-        self._add_current_items_property_as_predicate(self.FOOD_NOT_IMPLEMENTED.best_before, 'best_before')
+        self._add_current_items_property_as_predicate(self.FOODPEDIA.best_before, 'best_before')
         self._add_current_items_property_as_predicate(self.GOODRELATIONS.description, 'comment')
         self._add_current_items_property_as_predicate(self.FOOD.ingredientsListAsText, 'ingredients')
-        self._add_current_items_property_as_predicate(self.FOOD_NOT_IMPLEMENTED.netto_mass, 'netto_weight')
-        self._add_current_items_property_as_predicate(self.FOOD_NOT_IMPLEMENTED.standart, 'standart')
-        self._add_current_items_property_as_predicate(self.FOOD_NOT_IMPLEMENTED.store_cond, 'store_conditions')
-        self._add_current_items_property_as_predicate(self.FOOD_NOT_IMPLEMENTED.esl, 'esl')
+        self._add_current_items_property_as_predicate(self.FOODPEDIA.netto_mass, 'netto_weight')
+        self._add_current_items_property_as_predicate(self.FOODPEDIA.standart, 'standart')
+        self._add_current_items_property_as_predicate(self.FOODPEDIA.store_cond, 'store_conditions')
+        self._add_current_items_property_as_predicate(self.FOODPEDIA.esl, 'esl')
         self._add_current_items_property_as_predicate(self.FOOD.proteinsPer100gAsDouble, 'proteins_as_double')
         self._add_current_items_property_as_predicate(self.FOOD.fatPer100gAsDouble, 'fats_as_double')
         self._add_current_items_property_as_predicate(self.FOOD.carbohydratesPer100gAsDouble, 'carbohydrates_as_double')
         self._add_current_items_property_as_predicate(self.FOOD.energyPer100gAsDouble, 'calories_as_double')
-        self._add_current_items_property_as_predicate(self.FOOD_NOT_IMPLEMENTED.pack_type, 'pack_type')
+        self._add_current_items_property_as_predicate(self.FOODPEDIA.pack_type, 'pack_type')
 
     def _get_current_items_resource_url(self):
         return URIRef(self.current_item['url'])
