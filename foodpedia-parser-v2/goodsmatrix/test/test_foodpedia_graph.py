@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from rdflib import Namespace, Graph, URIRef, Literal
+from rdflib import Namespace, Graph, URIRef, Literal, XSD
 from rdflib.namespace import RDF
 
 from goodsmatrix.foodpedia_graph import FoodpediaGraph
@@ -57,7 +57,7 @@ class TestFoodpediaGraph(TestCase):
             (
                 URIRef("http://foodpedia.tk/page/resource/1111"),
                 URIRef("http://purl.org/goodrelations/v1#hasEAN_UCC-13"),
-                Literal("1111", lang="ru")
+                Literal("1111")
             ),
             self.foodpedia_graph
         )
@@ -121,7 +121,7 @@ class TestFoodpediaGraph(TestCase):
             (
                 URIRef("http://foodpedia.tk/page/resource/1111"),
                 URIRef("http://purl.org/foodontology#proteinsPer100gAsDouble"),
-                Literal(123.4)
+                Literal(123.4, datatype=XSD.double)
             ),
             self.foodpedia_graph
         )
@@ -129,7 +129,7 @@ class TestFoodpediaGraph(TestCase):
             (
                 URIRef("http://foodpedia.tk/page/resource/1111"),
                 URIRef("http://purl.org/foodontology#fatPer100gAsDouble"),
-                Literal(56.7)
+                Literal(56.7, datatype=XSD.double)
             ),
             self.foodpedia_graph
         )
@@ -137,7 +137,7 @@ class TestFoodpediaGraph(TestCase):
             (
                 URIRef("http://foodpedia.tk/page/resource/1111"),
                 URIRef("http://purl.org/foodontology#carbohydratesPer100gAsDouble"),
-                Literal(8.9)
+                Literal(8.9, datatype=XSD.double)
             ),
             self.foodpedia_graph
         )
@@ -145,7 +145,7 @@ class TestFoodpediaGraph(TestCase):
             (
                 URIRef("http://foodpedia.tk/page/resource/1111"),
                 URIRef("http://purl.org/foodontology#energyPer100gAsDouble"),
-                Literal(0)
+                Literal(0, datatype=XSD.double)
             ),
             self.foodpedia_graph
         )
@@ -171,7 +171,7 @@ class TestFoodpediaGraph(TestCase):
             (
                 URIRef("http://foodpedia.tk/page/resource/1111"),
                 URIRef("http://purl.org/goodrelations/v1#hasEAN_UCC-13"),
-                Literal("1111", lang="ru")
+                Literal("1111")
             ),
             self.foodpedia_graph
         )
@@ -198,7 +198,7 @@ class TestFoodpediaGraph(TestCase):
             (
                 URIRef("http://foodpedia.tk/page/resource/1111"),
                 URIRef("http://purl.org/goodrelations/v1#hasEAN_UCC-13"),
-                Literal("1111", lang="ru")
+                Literal("1111")
             ),
             self.foodpedia_graph
         )
