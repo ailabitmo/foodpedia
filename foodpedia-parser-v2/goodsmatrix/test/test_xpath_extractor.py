@@ -154,7 +154,7 @@ class TestExtractGoodsProperties(unittest.TestCase):
                 'pack_type': 'test',
             })
 
-    def test_if_property_does_not_exist_then_it_is_empty(self):
+    def test_if_property_does_not_exist_then_it_is_not_added_to_dict(self):
         stub_response = HtmlResponse(
             url="",
             body=(
@@ -169,14 +169,6 @@ class TestExtractGoodsProperties(unittest.TestCase):
             {
                 'name': 'ice cream',
                 'barcode': '2220066000747',
-                'best_before': '',
-                'comment': '',
-                'ingredients': '',
-                'netto_weight': '',
-                'standart': '',
-                'store_conditions': '',
-                'esl': '',
-                'pack_type': '',
             })
 
     def test_no_goods_properties_in_response(self):
@@ -189,18 +181,8 @@ class TestExtractGoodsProperties(unittest.TestCase):
                 r"</html>"))
         self.assertEqual(
             xpath_extractor.extract_goods_properties_dict(stub_response),
-            {
-                'name': '',
-                'barcode': '',
-                'best_before': '',
-                'comment': '',
-                'ingredients': '',
-                'netto_weight': '',
-                'standart': '',
-                'store_conditions': '',
-                'esl': '',
-                'pack_type': '',
-            })
+            dict()
+            )
 
 
 if __name__ == "__main__":

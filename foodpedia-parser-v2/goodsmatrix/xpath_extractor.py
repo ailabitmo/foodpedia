@@ -7,16 +7,20 @@ def extract_goods_analogues_urls(response):
 
 
 def extract_goods_properties_dict(response):
-    return {property_name: _extract_goods_property(response, xpath_id)
-            for property_name, xpath_id
-            in GOODS_PROPERTIES_MAP_ON_XPATH_IDS.iteritems()}
+    result_dict = dict()
+    for property_name in GOODS_PROPERTIES_MAP_ON_XPATH_IDS:
+        xpath_id = GOODS_PROPERTIES_MAP_ON_XPATH_IDS[property_name]
+        extracted_value = _extract_goods_property(response, xpath_id)
+        if extracted_value is not None:
+            result_dict[property_name] = extracted_value
+    return result_dict
+
 
 def _extract_goods_property(response, xpath_id):
-    return ' '.join(
-                line.strip()
-                for line
-                in response.xpath("//span[@id='{0}']/text()".format(xpath_id)).extract()
-                )
+    xpath_pattern = "//span[@id='{0}']/text()".format(xpath_id)
+    extracted_list = response.xpath(xpath_pattern).extract()
+    extracted_list = list(string for string in extracted_list if string.strip())
+    return '\n'.join(extracted_list) if extracted_list else None
 
 GOODS_PROPERTIES_MAP_ON_XPATH_IDS = {
         'name': 'ctl00_ContentPH_GoodsName',

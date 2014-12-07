@@ -23,6 +23,7 @@
     foodpedia-owl:esl "Белки:  16,00 г Жиры:  26,00 г Углеводы:  0,00 г Энергетическая ценность:  298,00 ккал"@ru ;
     foodpedia-owl:netto_mass "240,00 г"@ru ;
     foodpedia-owl:standart "ТУ 9214-009-53942794-07"@ru ;
+    food:carbohydratesPer100gAsDouble 0e+00 ;
     food:energyPer100gAsDouble 2.98e+02 ;
     food:fatPer100gAsDouble 2.6e+01 ;
     food:ingredientsListAsText "свинина 50%, говядина 50%, сыр 13%"@ru ;
@@ -64,13 +65,7 @@
 <http://www.goodsmatrix.ru/goods/4607071151073.html> a food:Food ;
     foodpedia-owl:netto_mass "500,00 г"@ru ;
     food:ingredientsListAsText "набор для бульона из говядины первой категории."@ru ;
-    gr:description """ПИЩЕВАЯ ЦЕННОСТЬ 100 г ПРОДУКТА: \r
-               белок – 19 г, жир – 5 г.  \r
- ЭНЕРГЕТИЧЕСКАЯ ЦЕННОСТЬ: 123 ккал.\r
-  \r
- СРОК ХРАНЕНИЯ\r
-при температуре: \r
- 10 oC – 25 суток,rn18 oC – 45 суток."""@ru ;
+    gr:description "ПИЩЕВАЯ ЦЕННОСТЬ 100 г ПРОДУКТА: белок – 19 г, жир – 5 г. ЭНЕРГЕТИЧЕСКАЯ ЦЕННОСТЬ: 123 ккал.  СРОК ХРАНЕНИЯ при температуре: 10 oC – 25 суток,rn18 oC – 45 суток."@ru ;
     gr:hasEAN_UCC-13 "4607071151073"@ru ;
     gr:name "НАБОР ДЛЯ БУЛЬОНА ГОВЯЖИЙ ЗАМОРОЖЕННЫЙ 500Г"@ru .
 
@@ -251,6 +246,7 @@
     foodpedia-owl:netto_mass "2,00 кг"@ru ;
     foodpedia-owl:standart "ТУ 9214-010-18903582-09"@ru ;
     foodpedia-owl:store_cond "при Т от 0 до +4 градусов С"@ru ;
+    food:carbohydratesPer100gAsDouble 0e+00 ;
     food:energyPer100gAsDouble 3.63e+02 ;
     food:fatPer100gAsDouble 3.5e+01 ;
     food:ingredientsListAsText "свинина, вода, соль поваренная пищевая, стабилизаторы Е450, Е451, Е621, уксус пищевой, специи."@ru ;
@@ -307,6 +303,7 @@
 <http://www.goodsmatrix.ru/goods/7893000004207.html> a food:Food ;
     foodpedia-owl:esl "Белки:  21,00 г Жиры:  5,00 г Углеводы:  0,00 г Энергетическая ценность:  129,00 ккал"@ru ;
     foodpedia-owl:netto_mass "1000,00 г"@ru ;
+    food:carbohydratesPer100gAsDouble 0e+00 ;
     food:energyPer100gAsDouble 1.29e+02 ;
     food:fatPer100gAsDouble 5e+00 ;
     food:ingredientsListAsText "кальций - 5 мг; железо - 0,87 мг; натрий - 70 мг."@ru ;
@@ -318,6 +315,7 @@
 <http://www.goodsmatrix.ru/goods/7893000004221.html> a food:Food ;
     foodpedia-owl:esl "Белки:  21,00 г Жиры:  3,50 г Углеводы:  0,00 г Энергетическая ценность:  116,00 ккал"@ru ;
     foodpedia-owl:netto_mass "1000,00 г"@ru ;
+    food:carbohydratesPer100gAsDouble 0e+00 ;
     food:energyPer100gAsDouble 1.16e+02 ;
     food:fatPer100gAsDouble 3.5e+00 ;
     food:ingredientsListAsText "кальций - 5 мг; железо - 1,23 мг; натрий - 60 мг."@ru ;
@@ -329,6 +327,7 @@
 <http://www.goodsmatrix.ru/goods/7893000004573.html> a food:Food ;
     foodpedia-owl:esl "Белки:  17,50 г Жиры:  16,00 г Углеводы:  0,00 г Энергетическая ценность:  214,00 ккал"@ru ;
     foodpedia-owl:netto_mass "1000,00 г"@ru ;
+    food:carbohydratesPer100gAsDouble 0e+00 ;
     food:energyPer100gAsDouble 2.14e+02 ;
     food:fatPer100gAsDouble 1.6e+01 ;
     food:ingredientsListAsText "кальций - 20 мг; железо - 1,12 мг; натрий - 60 мг."@ru ;

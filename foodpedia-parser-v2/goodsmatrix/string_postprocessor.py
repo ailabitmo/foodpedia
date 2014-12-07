@@ -3,10 +3,10 @@ import re
 
 
 LIST_OF_POSSIBLE_ESL = {
-        'proteins': u'Белки|белки',
-        'fats': u'Жиры|жиры',
-        'carbohydrates': u'Углеводы|углеводы',
-        'calories': u'Энергетическая\ ценность|энергетическая\ ценность'}
+        'proteins_as_double': u'Белки|белки',
+        'fats_as_double': u'Жиры|жиры',
+        'carbohydrates_as_double': u'Углеводы|углеводы',
+        'calories_as_double': u'Энергетическая\ ценность|энергетическая\ ценность'}
 
 
 def parse_esl(string):
@@ -19,3 +19,7 @@ def parse_esl(string):
             number = float(m.group('weight').replace(u',', u'.'))
             parsed_dict[key] = number
     return parsed_dict
+
+
+def postprocess_extracted_property_string(string):
+    return ' '.join(line.strip() for line in string.split('\n'))

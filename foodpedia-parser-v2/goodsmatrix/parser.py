@@ -4,7 +4,7 @@ from scrapy.contrib.spiders import CrawlSpider
 from goodsmatrix import xpath_extractor
 from goodsmatrix import url_extractor
 from goodsmatrix.good_item import GoodItem
-from goodsmatrix import esl_parser
+from goodsmatrix import string_postprocessor
 
 
 class GoodsMatrixSpider(CrawlSpider):
@@ -38,10 +38,16 @@ class GoodsMatrixSpider(CrawlSpider):
 
     def parse_good(self, response):
         good = GoodItem(xpath_extractor.extract_goods_properties_dict(response))
-        esl_dict = esl_parser.parse_esl(good['esl'])
-        good['proteins_as_double'] = esl_dict.get('proteins', None)
-        good['fats_as_double'] = esl_dict.get('fats', None)
-        good['carbohydrates_as_double'] = esl_dict.get('carbohydrates', None)
-        good['calories_as_double'] = esl_dict.get('calories', None)
+        if 'esl' in good:
+            good.update(string_postprocessor.parse_esl(good['esl']))
         good['url'] = response.url
+        good = self._post_process_goods_properties(good)
+        return good
+
+    def _post_process_goods_properties(self, good):
+        for key in good:
+            try:
+                good[key] = string_postprocessor.postprocess_extracted_property_string(good[key])
+            except AttributeError:
+                pass
         return good
