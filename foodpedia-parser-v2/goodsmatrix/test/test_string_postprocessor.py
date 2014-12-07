@@ -49,6 +49,17 @@ class TestEslParser(unittest.TestCase):
             parse_esl(u"Белки:  7,50 г Жиры:  2,90 г Углеводы:  3,00 г Энергетическая ценность:  263,00 ккал"),
             {'proteins_as_double': 7.50, 'fats_as_double': 2.9, 'carbohydrates_as_double': 3.0, 'calories_as_double': 263.0})
 
+    def test_the_not_greater_special_word_matches_and_is_skipped(self):
+        self.assertEqual(parse_esl(u"Жиры: не более 11,50 г"), {'fats_as_double': 11.5})
+
+    def test_the_greater_special_word_does_not_match(self):
+        self.assertEqual(parse_esl(u"Жиры: более 11,50 г"), dict())
+
+    def test_the_not_less_special_word_matches_and_is_skipped(self):
+        self.assertEqual(parse_esl(u"Белки: не менее 19,00 г "), {'proteins_as_double': 19.0})
+
+    def test_the_less_special_word_does_not_match(self):
+        self.assertEqual(parse_esl(u"Белки: менее 19,00 г "), dict())
 
 
 class TestExtractedStringPostprocessing(unittest.TestCase):

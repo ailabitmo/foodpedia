@@ -12,7 +12,9 @@ LIST_OF_POSSIBLE_ESL = {
 def parse_esl(string):
     parsed_dict = dict()
     for key in LIST_OF_POSSIBLE_ESL:
-        m = re.search(ur"({0})\s*:\s*(?P<weight>\d*[,|\.]?\d+)\s*[г|ккал]?".format(LIST_OF_POSSIBLE_ESL[key]),
+        posible_esl_component_word = LIST_OF_POSSIBLE_ESL[key]
+        m = re.search(ur"({0})\s*:\s*(не более|не менее)?\s*(?P<weight>\d*[,|\.]?\d+)\s*[г|ккал]?".format(
+                          posible_esl_component_word),
                       string,
                       flags=re.IGNORECASE)
         if m:

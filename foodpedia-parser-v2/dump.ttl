@@ -14,7 +14,9 @@
     foodpedia-owl:standart "14192-96, ТУ 9214-212-2347684-10"@ru ;
     foodpedia-owl:store_cond "Условия хранения от -18 градусов С"@ru ;
     food:energyPer100gAsDouble "179.5"^^xsd:double ;
+    food:fatPer100gAsDouble "11.5"^^xsd:double ;
     food:ingredientsListAsText "мясо птицы"@ru ;
+    food:proteinsPer100gAsDouble "19.0"^^xsd:double ;
     gr:description "кусочки мяса птицы на костях от разных частей тушки"@ru ;
     gr:hasEAN_UCC-13 "4607021721899" ;
     gr:name "ПОЛУФАБРИКАТЫ ИЗ МЯСА ЦЫПЛЯТ-БРОЙЛЕРОВ НАТУРАЛЬНЫЕ. НАБОРЫ МЕЛКОКУСКОВЫЕ."@ru .
