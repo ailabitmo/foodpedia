@@ -5,6 +5,7 @@ class FoodpediaGraph(Graph):
     FOOD_NAMESPACE = Namespace("http://purl.org/foodontology#")
     FOODPEDIA_NAMESPACE = Namespace("http://foodpedia.tk/ontology#")
     GOODRELATIONS_NAMESPACE = Namespace("http://purl.org/goodrelations/v1#")
+    BASE_RESOURCE_URI = "http://foodpedia.tk/page/resource/{0}"
 
     def __init__(self, graph):
         self._graph = graph
@@ -24,7 +25,7 @@ class FoodpediaGraph(Graph):
         self._add_current_item_to_graph()
 
     def _add_current_item_to_graph(self):
-        self._add_current_items_url_as_predicate()
+        self._add_current_items_uri_as_predicate()
         self._add_current_items_property_as_predicate('name', self.GOODRELATIONS_NAMESPACE.name)
         self._add_current_items_property_as_predicate('barcode', self.GOODRELATIONS_NAMESPACE['hasEAN_UCC-13'])
         self._add_current_items_property_as_predicate('best_before', self.FOODPEDIA_NAMESPACE.best_before)
@@ -40,17 +41,17 @@ class FoodpediaGraph(Graph):
         self._add_current_items_property_as_predicate('calories_as_double', self.FOOD_NAMESPACE.energyPer100gAsDouble)
         self._add_current_items_property_as_predicate('pack_type', self.FOODPEDIA_NAMESPACE.pack_type)
 
-    def _add_current_items_url_as_predicate(self):
-        self._graph.add((self._get_current_items_resource_url(), RDF.type, self.FOOD_NAMESPACE.Food))
+    def _add_current_items_uri_as_predicate(self):
+        self._graph.add((self._get_current_items_resource_uri(), RDF.type, self.FOOD_NAMESPACE.Food))
 
-    def _get_current_items_resource_url(self):
-        return URIRef(self.current_item['url'])
+    def _get_current_items_resource_uri(self):
+        return URIRef(self.BASE_RESOURCE_URI.format(self.current_item['barcode']))
 
     def _add_current_items_property_as_predicate(self, property_name, predicate):
         if property_name in self.current_item:
             self._graph.add(
                 (
-                    self._get_current_items_resource_url(),
+                    self._get_current_items_resource_uri(),
                     predicate,
                     self._items_property_to_literal(property_name)
                 )

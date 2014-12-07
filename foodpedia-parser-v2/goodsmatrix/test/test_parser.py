@@ -111,7 +111,7 @@ class TestGoodsMatrixSpider(TestCase):
         good = self.spider.parse_good(stub_response)
 
         self.assertTrue(mock_extracted_dict.called)
-        self.assertEqual(good['url'], 'http://goodsmatrix.ru')
+        self.assertEqual(good['goodsmatrix_url'], 'http://goodsmatrix.ru')
         self.assertEqual(good['name'], 'ice cream')
         self.assertEqual(good['barcode'], '2220066000747')
         self.assertEqual(good['best_before'], '13')

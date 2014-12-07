@@ -1,7 +1,7 @@
 import scrapy
 
 class GoodItem(scrapy.Item):
-    url = scrapy.Field()
+    goodsmatrix_url = scrapy.Field()
     name = scrapy.Field()
     barcode = scrapy.Field()
     best_before = scrapy.Field()

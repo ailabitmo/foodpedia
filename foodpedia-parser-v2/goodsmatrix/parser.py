@@ -40,7 +40,7 @@ class GoodsMatrixSpider(CrawlSpider):
         good = GoodItem(xpath_extractor.extract_goods_properties_dict(response))
         if 'esl' in good:
             good.update(string_postprocessor.parse_esl(good['esl']))
-        good['url'] = response.url
+        good['goodsmatrix_url'] = response.url
         good = self._post_process_goods_properties(good)
         return good
 

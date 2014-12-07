@@ -6,7 +6,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.goodsmatrix.ru/goods/4607021721899.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607021721899> a food:Food ;
     foodpedia-owl:best_before "6 мес."@ru ;
     foodpedia-owl:esl "Белки: не менее 19,00 г Жиры: не более 11,50 г Энергетическая ценность:  179,50 ккал"@ru ;
     foodpedia-owl:netto_mass "1,00 кг"@ru ;
@@ -19,7 +19,7 @@
     gr:hasEAN_UCC-13 "4607021721899"@ru ;
     gr:name "ПОЛУФАБРИКАТЫ ИЗ МЯСА ЦЫПЛЯТ-БРОЙЛЕРОВ НАТУРАЛЬНЫЕ. НАБОРЫ МЕЛКОКУСКОВЫЕ."@ru .
 
-<http://www.goodsmatrix.ru/goods/4607024859490.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607024859490> a food:Food ;
     foodpedia-owl:esl "Белки:  16,00 г Жиры:  26,00 г Углеводы:  0,00 г Энергетическая ценность:  298,00 ккал"@ru ;
     foodpedia-owl:netto_mass "240,00 г"@ru ;
     foodpedia-owl:standart "ТУ 9214-009-53942794-07"@ru ;
@@ -31,13 +31,13 @@
     gr:hasEAN_UCC-13 "4607024859490"@ru ;
     gr:name "СТЕЙКИ РУБЛЕНЫЕ СВИНИНА С ГОВЯДИНОЙ «ВЕЛКОМ», 240Г"@ru .
 
-<http://www.goodsmatrix.ru/goods/4607029105721.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607029105721> a food:Food ;
     foodpedia-owl:standart "ТУ 9283-005-53974920-06"@ru ;
     food:ingredientsListAsText "изделие содержит трубчатую кость"@ru ;
     gr:hasEAN_UCC-13 "4607029105721"@ru ;
     gr:name "ГОЛЕНЬ БАРАНЬЯ МАЛАЯ, TITBIT\", 1 УПАКОВКА"@ru .
 
-<http://www.goodsmatrix.ru/goods/4607042560095.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607042560095> a food:Food ;
     foodpedia-owl:esl "Белки:  6,00 г Жиры:  40,00 г Углеводы:  2,00 г Энергетическая ценность:  392,00 ккал"@ru ;
     foodpedia-owl:standart "ТУ9214-456-00419779"@ru ;
     food:carbohydratesPer100gAsDouble 2e+00 ;
@@ -49,7 +49,7 @@
     gr:hasEAN_UCC-13 "4607042560095"@ru ;
     gr:name "ЛЮЛЯ-КЕБАБ \"ЭКСТРА\""@ru .
 
-<http://www.goodsmatrix.ru/goods/4607058474256.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607058474256> a food:Food ;
     foodpedia-owl:best_before "2 г."@ru ;
     foodpedia-owl:esl "Белки:  4,80 г Углеводы:  3,60 г Энергетическая ценность:  188,00 ккал"@ru ;
     foodpedia-owl:netto_mass "280,00 г"@ru ;
@@ -62,35 +62,35 @@
     gr:hasEAN_UCC-13 "4607058474256"@ru ;
     gr:name "МЯСНЫЕ ГОЛУБЦЫ В ТОМАТНОМ СОУСЕ \"МАВР\", 280 Г."@ru .
 
-<http://www.goodsmatrix.ru/goods/4607071151073.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607071151073> a food:Food ;
     foodpedia-owl:netto_mass "500,00 г"@ru ;
     food:ingredientsListAsText "набор для бульона из говядины первой категории."@ru ;
     gr:description "ПИЩЕВАЯ ЦЕННОСТЬ 100 г ПРОДУКТА: белок – 19 г, жир – 5 г. ЭНЕРГЕТИЧЕСКАЯ ЦЕННОСТЬ: 123 ккал.  СРОК ХРАНЕНИЯ при температуре: 10 oC – 25 суток,rn18 oC – 45 суток."@ru ;
     gr:hasEAN_UCC-13 "4607071151073"@ru ;
     gr:name "НАБОР ДЛЯ БУЛЬОНА ГОВЯЖИЙ ЗАМОРОЖЕННЫЙ 500Г"@ru .
 
-<http://www.goodsmatrix.ru/goods/4607105862180.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607105862180> a food:Food ;
     foodpedia-owl:netto_mass "0,50 кг"@ru ;
     food:ingredientsListAsText "свинина (кусочки мякоти овально-продолговатой формы), сыр, соль."@ru ;
     gr:description "Пищевая и энергетическая ценность 100 г продукта: белок не менее 15,0 г, жир не более 29,0 г, 303,0 ккал."@ru ;
     gr:hasEAN_UCC-13 "4607105862180"@ru ;
     gr:name "ПОРЦИОННЫЕ ПОЛУФАБРИКАТЫ «СВИНИНА ПО-ФРАНЦУЗСКИ» В ПАНИРОВОЧНОМ ПОКРЫТИИ  0,5 КГ."@ru .
 
-<http://www.goodsmatrix.ru/goods/4607105862333.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607105862333> a food:Food ;
     foodpedia-owl:netto_mass "0,50 кг"@ru ;
     food:ingredientsListAsText "свинина (кусочки мякоти овально-продолговатой формы), сыр, сухарная крошка, соль."@ru ;
     gr:description "Пищевая и энергетическая ценность 100 г продукта: белок не менее 15,0 г, жир не более 27,0 г, 303,0 ккал."@ru ;
     gr:hasEAN_UCC-13 "4607105862333"@ru ;
     gr:name "ПОРЦИОННЫЕ ПОЛУФАБРИКАТЫ «СВИНИНА БАТТЕРФЛЯЙ» В ПАНИРОВОЧНОМ ПОКРЫТИИ  0,5 КГ."@ru .
 
-<http://www.goodsmatrix.ru/goods/4607105862357.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607105862357> a food:Food ;
     foodpedia-owl:netto_mass "0,50 кг"@ru ;
     food:ingredientsListAsText "свинина (кусок мясной мякоти длиннейшая мышца спины овально-продолговатой формы), соль."@ru ;
     gr:description "Пищевая и энергетическая ценность 100 г продукта: белок не менее 15,0 г, жир не более 29,0 г, 321,0 ккал."@ru ;
     gr:hasEAN_UCC-13 "4607105862357"@ru ;
     gr:name "ПОРЦИОННЫЕ ПОЛУФАБРИКАТЫ «СТЕЙК ИЗ СВИНИНЫ» 0,5 КГ"@ru .
 
-<http://www.goodsmatrix.ru/goods/4607147010761.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607147010761> a food:Food ;
     foodpedia-owl:esl "Белки:  12,00 г Жиры:  7,00 г Энергетическая ценность:  130,00 ккал"@ru ;
     food:energyPer100gAsDouble 1.3e+02 ;
     food:fatPer100gAsDouble 7e+00 ;
@@ -100,7 +100,7 @@
     gr:hasEAN_UCC-13 "4607147010761"@ru ;
     gr:name "СТЕЙК ГОВЯЖИЙ ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
 
-<http://www.goodsmatrix.ru/goods/4607147010778.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607147010778> a food:Food ;
     foodpedia-owl:esl "Белки:  17,50 г Жиры:  7,20 г Энергетическая ценность:  126,80 ккал"@ru ;
     food:energyPer100gAsDouble 1.268e+02 ;
     food:fatPer100gAsDouble 7.2e+00 ;
@@ -110,7 +110,7 @@
     gr:hasEAN_UCC-13 "4607147010778"@ru ;
     gr:name "АНТРЕКОТ ГОВЯЖИЙ ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
 
-<http://www.goodsmatrix.ru/goods/4607147010785.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607147010785> a food:Food ;
     foodpedia-owl:esl "Белки:  13,00 г Жиры:  10,00 г Энергетическая ценность:  146,00 ккал"@ru ;
     food:energyPer100gAsDouble 1.46e+02 ;
     food:fatPer100gAsDouble 1e+01 ;
@@ -120,7 +120,7 @@
     gr:hasEAN_UCC-13 "4607147010785"@ru ;
     gr:name "ГОВЯДИНА ДУХОВАЯ ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
 
-<http://www.goodsmatrix.ru/goods/4607147010792.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607147010792> a food:Food ;
     foodpedia-owl:esl "Белки:  13,00 г Жиры:  14,30 г Энергетическая ценность:  188,70 ккал"@ru ;
     food:energyPer100gAsDouble 1.887e+02 ;
     food:fatPer100gAsDouble 1.43e+01 ;
@@ -130,7 +130,7 @@
     gr:hasEAN_UCC-13 "4607147010792"@ru ;
     gr:name "ЭСКАЛОП СВИНОЙ ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
 
-<http://www.goodsmatrix.ru/goods/4607147010808.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607147010808> a food:Food ;
     foodpedia-owl:esl "Белки:  10,00 г Жиры:  29,50 г Энергетическая ценность:  313,50 ккал"@ru ;
     food:energyPer100gAsDouble 3.135e+02 ;
     food:fatPer100gAsDouble 2.95e+01 ;
@@ -140,7 +140,7 @@
     gr:hasEAN_UCC-13 "4607147010808"@ru ;
     gr:name "СТЕЙК ИЗ СВИНИНЫ  ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
 
-<http://www.goodsmatrix.ru/goods/4607147010815.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607147010815> a food:Food ;
     foodpedia-owl:esl "Белки:  10,00 г Жиры:  29,50 г Энергетическая ценность:  313,50 ккал"@ru ;
     food:energyPer100gAsDouble 3.135e+02 ;
     food:fatPer100gAsDouble 2.95e+01 ;
@@ -150,7 +150,7 @@
     gr:hasEAN_UCC-13 "4607147010815"@ru ;
     gr:name "СВИНИНА ДУХОВАЯ  ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
 
-<http://www.goodsmatrix.ru/goods/4607147010839.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607147010839> a food:Food ;
     foodpedia-owl:esl "Белки:  17,50 г Жиры:  7,90 г Углеводы:  2,00 г Энергетическая ценность:  125,60 ккал"@ru ;
     food:carbohydratesPer100gAsDouble 2e+00 ;
     food:energyPer100gAsDouble 1.256e+02 ;
@@ -161,7 +161,7 @@
     gr:hasEAN_UCC-13 "4607147010839"@ru ;
     gr:name "ФИЛЕЙ ГОВЯЖИЙ  ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
 
-<http://www.goodsmatrix.ru/goods/4607147010846.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607147010846> a food:Food ;
     foodpedia-owl:esl "Белки:  13,00 г Жиры:  7,00 г Энергетическая ценность:  123,00 ккал"@ru ;
     food:energyPer100gAsDouble 1.23e+02 ;
     food:fatPer100gAsDouble 7e+00 ;
@@ -171,7 +171,7 @@
     gr:hasEAN_UCC-13 "4607147010846"@ru ;
     gr:name "ГОВЯДИНА ДЛЯ ЗАПЕКАНИЯ  ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
 
-<http://www.goodsmatrix.ru/goods/4607147010853.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607147010853> a food:Food ;
     foodpedia-owl:esl "Белки:  12,00 г Жиры:  7,90 г Энергетическая ценность:  127,10 ккал"@ru ;
     food:energyPer100gAsDouble 1.271e+02 ;
     food:fatPer100gAsDouble 7.9e+00 ;
@@ -181,7 +181,7 @@
     gr:hasEAN_UCC-13 "4607147010853"@ru ;
     gr:name "ГОВЯДИНА ПО-ДОМАШНЕМУ ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
 
-<http://www.goodsmatrix.ru/goods/4607147010877.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607147010877> a food:Food ;
     foodpedia-owl:esl "Белки:  13,00 г Жиры:  32,20 г Энергетическая ценность:  349,80 ккал"@ru ;
     food:energyPer100gAsDouble 3.498e+02 ;
     food:fatPer100gAsDouble 3.22e+01 ;
@@ -191,7 +191,7 @@
     gr:hasEAN_UCC-13 "4607147010877"@ru ;
     gr:name "ФИЛЕЙ СВИНОЙ ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
 
-<http://www.goodsmatrix.ru/goods/4607147010884.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607147010884> a food:Food ;
     foodpedia-owl:esl "Белки:  13,00 г Жиры:  34,40 г Энергетическая ценность:  369,60 ккал"@ru ;
     food:energyPer100gAsDouble 3.696e+02 ;
     food:fatPer100gAsDouble 3.44e+01 ;
@@ -201,7 +201,7 @@
     gr:hasEAN_UCC-13 "4607147010884"@ru ;
     gr:name "СВИНИНА ДЛЯ ЗАПЕКАНИЯ  ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
 
-<http://www.goodsmatrix.ru/goods/4607147010891.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4607147010891> a food:Food ;
     foodpedia-owl:esl "Белки:  8,90 г Жиры:  53,70 г Энергетическая ценность:  523,30 ккал"@ru ;
     food:energyPer100gAsDouble 5.233e+02 ;
     food:fatPer100gAsDouble 5.37e+01 ;
@@ -211,21 +211,21 @@
     gr:hasEAN_UCC-13 "4607147010891"@ru ;
     gr:name "ГРУДИНКА ЛЮБИТЕЛЬСКАЯ ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
 
-<http://www.goodsmatrix.ru/goods/4620001270248.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4620001270248> a food:Food ;
     foodpedia-owl:standart "ТУ 9211-001-58293228-04"@ru ;
     food:ingredientsListAsText "свинина (окорок б/к), соль, пищевые добавки: стабилизатор (Е450-452, Е407, Е331), консервант (Е262)."@ru ;
     gr:description "Содержание в 100 продукта: жир - 15 г, белок - 13 г, калорийность - 190 ккал."@ru ;
     gr:hasEAN_UCC-13 "4620001270248"@ru ;
     gr:name "СВИНИНА (ОКОРОК Б/К) ДЛЯ ЗАПЕКАНИЯ \"КЛИНСКАЯ\". ПОЛУФАБРИКАТ МЯСНОЙ ЗАМОРОЖЕННЫЙ В ВАКУУМНОЙ УПАКОВКЕ. 1 КГ"@ru .
 
-<http://www.goodsmatrix.ru/goods/4620001280262.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4620001280262> a food:Food ;
     foodpedia-owl:standart "ТУ 9214-001-58250724-04"@ru ;
     food:ingredientsListAsText "свинина (шейка б/к), соль, стабилизатор (Е450-452, Е407, Е331), консервант (Е262)."@ru ;
     gr:description "Содержание в 100 продукта: жир - 30 г, белок - 11 г, калорийность - 314 ккал."@ru ;
     gr:hasEAN_UCC-13 "4620001280262"@ru ;
     gr:name "ШЕЙКА ДЛЯ ЗАПЕКАНИЯ \"КЛИНСКАЯ\". ПОЛУФАБРИКАТ МЯСНОЙ ЗАМОРОЖЕННЫЙ В ВАКУУМНОЙ УПАКОВКЕ. 1 КГ"@ru .
 
-<http://www.goodsmatrix.ru/goods/4650057072381.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4650057072381> a food:Food ;
     foodpedia-owl:best_before "6 мес."@ru ;
     foodpedia-owl:esl "Белки:  7,00 г Жиры:  22,00 г Углеводы:  4,50 г Энергетическая ценность:  244,00 ккал"@ru ;
     foodpedia-owl:netto_mass "1,00 кг"@ru ;
@@ -240,7 +240,7 @@
     gr:hasEAN_UCC-13 "4650057072381"@ru ;
     gr:name "ПОЛУФАБРИКАТ \"ГОЛУБЦЫ \"СЕЛЬСКИЕ\", 1КГ"@ru .
 
-<http://www.goodsmatrix.ru/goods/4670002941906.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4670002941906> a food:Food ;
     foodpedia-owl:best_before "12 сут."@ru ;
     foodpedia-owl:esl "Белки:  12,00 г Жиры:  35,00 г Углеводы:  0,00 г Энергетическая ценность:  363,00 ккал"@ru ;
     foodpedia-owl:netto_mass "2,00 кг"@ru ;
@@ -255,7 +255,7 @@
     gr:hasEAN_UCC-13 "4670002941906"@ru ;
     gr:name "ШАШЛЫК ДЕЛИКАТЕСНЫЙ МИРАТОРГ ИЗ СВИНИНЫ, ОХЛАЖДЕННЫЙ, 2 КГ"@ru .
 
-<http://www.goodsmatrix.ru/goods/4810168026905.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4810168026905> a food:Food ;
     foodpedia-owl:best_before "6 мес."@ru ;
     foodpedia-owl:esl "Белки:  8,00 г Жиры:  15,10 г Углеводы:  28,00 г Энергетическая ценность:  279,90 ккал"@ru ;
     foodpedia-owl:netto_mass "1000,00 г"@ru ;
@@ -270,7 +270,7 @@
     gr:hasEAN_UCC-13 "4810168026905"@ru ;
     gr:name "МЯСНЫЕ ОРЕХИ \"БАБУШКА АНЯ\" 1000 Г."@ru .
 
-<http://www.goodsmatrix.ru/goods/4810168027704.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4810168027704> a food:Food ;
     foodpedia-owl:best_before "6 мес."@ru ;
     foodpedia-owl:esl "Белки:  8,20 г Жиры:  13,80 г Углеводы:  28,10 г Энергетическая ценность:  269,40 ккал"@ru ;
     foodpedia-owl:netto_mass "1000,00 г"@ru ;
@@ -285,7 +285,7 @@
     gr:hasEAN_UCC-13 "4810168027704"@ru ;
     gr:name "МЯСНЫЕ ОРЕШКИ \"БАБУШКА АНЯ\" 1000 Г."@ru .
 
-<http://www.goodsmatrix.ru/goods/4810168027728.html> a food:Food ;
+<http://foodpedia.tk/page/resource/4810168027728> a food:Food ;
     foodpedia-owl:best_before "6 мес."@ru ;
     foodpedia-owl:esl "Белки:  8,00 г Жиры:  15,10 г Углеводы:  28,10 г Энергетическая ценность:  280,30 ккал"@ru ;
     foodpedia-owl:netto_mass "1000,00 г"@ru ;
@@ -300,7 +300,7 @@
     gr:hasEAN_UCC-13 "4810168027728"@ru ;
     gr:name "МЯСНЫЕ КОНВЕРТИКИ \"БАБУШКА АНЯ\" 1000 Г."@ru .
 
-<http://www.goodsmatrix.ru/goods/7893000004207.html> a food:Food ;
+<http://foodpedia.tk/page/resource/7893000004207> a food:Food ;
     foodpedia-owl:esl "Белки:  21,00 г Жиры:  5,00 г Углеводы:  0,00 г Энергетическая ценность:  129,00 ккал"@ru ;
     foodpedia-owl:netto_mass "1000,00 г"@ru ;
     food:carbohydratesPer100gAsDouble 0e+00 ;
@@ -312,7 +312,7 @@
     gr:hasEAN_UCC-13 "7893000004207"@ru ;
     gr:name "СВИНЫЕ РЕБРА ЗАМОРОЖЕННЫЕ, 1000 Г"@ru .
 
-<http://www.goodsmatrix.ru/goods/7893000004221.html> a food:Food ;
+<http://foodpedia.tk/page/resource/7893000004221> a food:Food ;
     foodpedia-owl:esl "Белки:  21,00 г Жиры:  3,50 г Углеводы:  0,00 г Энергетическая ценность:  116,00 ккал"@ru ;
     foodpedia-owl:netto_mass "1000,00 г"@ru ;
     food:carbohydratesPer100gAsDouble 0e+00 ;
@@ -324,7 +324,7 @@
     gr:hasEAN_UCC-13 "7893000004221"@ru ;
     gr:name "СВИНАЯ ВЫРЕЗКА ЗАМОРОЖЕННАЯ, 1000 Г"@ru .
 
-<http://www.goodsmatrix.ru/goods/7893000004573.html> a food:Food ;
+<http://foodpedia.tk/page/resource/7893000004573> a food:Food ;
     foodpedia-owl:esl "Белки:  17,50 г Жиры:  16,00 г Углеводы:  0,00 г Энергетическая ценность:  214,00 ккал"@ru ;
     foodpedia-owl:netto_mass "1000,00 г"@ru ;
     food:carbohydratesPer100gAsDouble 0e+00 ;
