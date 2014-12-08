@@ -108,5 +108,9 @@ class TestParseEAdditives(unittest.TestCase):
     def test_additive_with_extra_digit(self):
         self.assertEqual(parse_e_additives(u"Е1525"), [u'E1525'])
 
+    def test_additive_with_hyphen(self):
+        self.assertEqual(parse_e_additives(u"е-100"), [u'E100'])
+
+
 if __name__ == "__main__":
     unittest.main()
