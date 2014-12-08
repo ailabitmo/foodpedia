@@ -10,8 +10,13 @@ from goodsmatrix import string_postprocessor
 class GoodsMatrixSpider(CrawlSpider):
     name = 'goodsmatrix'
     allowed_domains = ['goodsmatrix.ru']
-    start_urls = ['http://www.goodsmatrix.ru/goods-catalogue/Frozen-meat-natural-convenience-foods.html']
+    base_start_url = 'http://www.goodsmatrix.ru/goods-catalogue/{0}.html'
+    #start_urls = ['http://www.goodsmatrix.ru/goods-catalogue/Frozen-meat-natural-convenience-foods.html']
     #start_urls = ['http://www.goodsmatrix.ru/goods-catalogue/Goods/Foodstuffs.html']
+
+    def __init__(self, category="Foodstuffs", *args, **kwargs):
+        super(GoodsMatrixSpider, self).__init__(*args, **kwargs)
+        self.start_urls = [self.base_start_url.format(category)]
 
     def parse(self, response):
         return self.parse_catalog_node(response)
