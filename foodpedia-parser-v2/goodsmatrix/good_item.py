@@ -7,6 +7,7 @@ class GoodItem(scrapy.Item):
     best_before = scrapy.Field()
     comment = scrapy.Field()
     ingredients = scrapy.Field()
+    e_additives = scrapy.Field()
     netto_weight = scrapy.Field()
     standart = scrapy.Field()
     store_conditions = scrapy.Field()

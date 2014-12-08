@@ -16,7 +16,7 @@ def parse_esl(string):
         m = re.search(ur"({0})\s*:\s*(не более|не менее)?\s*(?P<weight>\d*[,|\.]?\d+)\s*[г|ккал]?".format(
                           posible_esl_component_word),
                       string,
-                      flags=re.IGNORECASE)
+                      flags=re.IGNORECASE|re.UNICODE)
         if m:
             number = float(m.group('weight').replace(u',', u'.'))
             parsed_dict[key] = number
@@ -25,3 +25,12 @@ def parse_esl(string):
 
 def postprocess_extracted_property_string(string):
     return ' '.join(line.strip() for line in string.split('\n'))
+
+
+def parse_e_additives(string):
+    found_additives_list = re.findall(ur"\b([Е|E]\d\d\d\w?)\b", string, flags=re.IGNORECASE|re.UNICODE)
+    return list(convert_to_asci(additive) for additive in found_additives_list)
+
+def convert_to_asci(extracted_additive_string):
+    extracted_additive_string = 'E' + extracted_additive_string[1:]
+    return extracted_additive_string.encode('ascii', 'ignore')

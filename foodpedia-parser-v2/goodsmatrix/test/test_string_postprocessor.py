@@ -2,7 +2,7 @@
 import unittest
 
 
-from goodsmatrix.string_postprocessor import parse_esl, postprocess_extracted_property_string
+from goodsmatrix.string_postprocessor import parse_esl, postprocess_extracted_property_string, parse_e_additives
 
 
 class TestEslParser(unittest.TestCase):
@@ -85,6 +85,28 @@ hihi"""
             "word"
         )
 
+
+class TestParseEAdditives(unittest.TestCase):
+    def test_one_additive_in_lowercase(self):
+        self.assertEqual(parse_e_additives(u"е100"), [u'E100'])
+
+    def test_one_additive_in_uppercase(self):
+        self.assertEqual(parse_e_additives(u"Е200"), [u'E200'])
+
+    def test_two_additives_in_lower_and_upper_cases(self):
+        self.assertEqual(parse_e_additives(u"е201, Е202"), [u'E201', u'E202'])
+
+    def test_no_additives(self):
+        self.assertEqual(parse_e_additives(u"a303"), [])
+
+    def test_no_additives_if_additive_is_not_separate_word(self):
+        self.assertEqual(parse_e_additives(u"abce304"), [])
+
+    def test_additive_with_extra_letter(self):
+        self.assertEqual(parse_e_additives(u"е201b"), [u'E201b'])
+
+    def test_additive_with_extra_digit(self):
+        self.assertEqual(parse_e_additives(u"Е1525"), [u'E1525'])
 
 if __name__ == "__main__":
     unittest.main()

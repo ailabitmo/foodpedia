@@ -53,6 +53,7 @@
 
 <http://foodpedia.tk/page/resource/4607058474256> a food:Food ;
     foodpedia-owl:best_before "2 г."@ru ;
+    foodpedia-owl:eadditives "['E412', 'E401']" ;
     foodpedia-owl:esl "Белки:  4,80 г Углеводы:  3,60 г Энергетическая ценность:  188,00 ккал"@ru ;
     foodpedia-owl:netto_mass "280,00 г"@ru ;
     foodpedia-owl:standart "ТУ 9161-110-44388488-2007"@ru ;
@@ -214,6 +215,7 @@
     gr:name "ГРУДИНКА ЛЮБИТЕЛЬСКАЯ ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
 
 <http://foodpedia.tk/page/resource/4620001270248> a food:Food ;
+    foodpedia-owl:eadditives "['E450', 'E407', 'E331', 'E262']" ;
     foodpedia-owl:standart "ТУ 9211-001-58293228-04"@ru ;
     food:ingredientsListAsText "свинина (окорок б/к), соль, пищевые добавки: стабилизатор (Е450-452, Е407, Е331), консервант (Е262)."@ru ;
     gr:description "Содержание в 100 продукта: жир - 15 г, белок - 13 г, калорийность - 190 ккал."@ru ;
@@ -221,6 +223,7 @@
     gr:name "СВИНИНА (ОКОРОК Б/К) ДЛЯ ЗАПЕКАНИЯ \"КЛИНСКАЯ\". ПОЛУФАБРИКАТ МЯСНОЙ ЗАМОРОЖЕННЫЙ В ВАКУУМНОЙ УПАКОВКЕ. 1 КГ"@ru .
 
 <http://foodpedia.tk/page/resource/4620001280262> a food:Food ;
+    foodpedia-owl:eadditives "['E450', 'E407', 'E331', 'E262']" ;
     foodpedia-owl:standart "ТУ 9214-001-58250724-04"@ru ;
     food:ingredientsListAsText "свинина (шейка б/к), соль, стабилизатор (Е450-452, Е407, Е331), консервант (Е262)."@ru ;
     gr:description "Содержание в 100 продукта: жир - 30 г, белок - 11 г, калорийность - 314 ккал."@ru ;
@@ -244,6 +247,7 @@
 
 <http://foodpedia.tk/page/resource/4670002941906> a food:Food ;
     foodpedia-owl:best_before "12 сут."@ru ;
+    foodpedia-owl:eadditives "['E450', 'E451', 'E621']" ;
     foodpedia-owl:esl "Белки:  12,00 г Жиры:  35,00 г Углеводы:  0,00 г Энергетическая ценность:  363,00 ккал"@ru ;
     foodpedia-owl:netto_mass "2,00 кг"@ru ;
     foodpedia-owl:standart "ТУ 9214-010-18903582-09"@ru ;

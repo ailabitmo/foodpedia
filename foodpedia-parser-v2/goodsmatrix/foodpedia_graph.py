@@ -47,6 +47,9 @@ class FoodpediaGraph(Graph):
         self._add_current_items_property_as_double_predicate('calories_as_double',
                                                              self.FOOD_NAMESPACE.energyPer100gAsDouble)
         self._add_current_items_property_as_string_predicate('pack_type', self.FOODPEDIA_NAMESPACE.pack_type)
+        self._add_current_items_property_as_string_predicate('e_additives',
+                                                             self.FOODPEDIA_NAMESPACE.eadditives,
+                                                             lang=None)
 
     def _add_current_items_uri_as_predicate(self):
         self._graph.add((self._get_current_items_resource_uri(), RDF.type, self.FOOD_NAMESPACE.Food))
