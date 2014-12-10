@@ -177,7 +177,7 @@ class TestFoodpediaGraph(TestCase):
         )
         self.assertEqual(len(self.foodpedia_graph), 2)
 
-    def test_add_good_item_throws_key_error_on_missed_url(self):
+    def test_add_good_item_throws_key_error_on_missed_barcode(self):
         good_item = GoodItem()
 
         with self.assertRaises(KeyError):
@@ -186,24 +186,11 @@ class TestFoodpediaGraph(TestCase):
     def test_add_good_item_does_not_add_not_correct_property(self):
         good_item = dict()
         good_item["barcode"] = "1111"
-        good_item["test"] = "test"
+        good_item["not_correct_property"] = "not_correct_property"
 
         self.foodpedia_graph.add_good_item(good_item)
 
-        self.assertIn(
-            (URIRef("http://foodpedia.tk/page/resource/1111"), RDF.type, URIRef("http://purl.org/foodontology#Food")),
-            self.foodpedia_graph
-        )
-        self.assertIn(
-            (
-                URIRef("http://foodpedia.tk/page/resource/1111"),
-                URIRef("http://purl.org/goodrelations/v1#hasEAN_UCC-13"),
-                Literal("1111")
-            ),
-            self.foodpedia_graph
-        )
-        self.assertEqual(len(self.foodpedia_graph), 2)
-
+        self.assertFalse(filter(lambda x: "not_correct_property" in x, self.foodpedia_graph.objects()))
 
     def tearDown(self):
         self.foodpedia_graph.close()
