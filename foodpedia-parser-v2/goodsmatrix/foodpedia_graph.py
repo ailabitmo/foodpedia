@@ -5,7 +5,7 @@ class FoodpediaGraph(Graph):
     FOOD_NAMESPACE = Namespace("http://purl.org/foodontology#")
     FOODPEDIA_NAMESPACE = Namespace("http://foodpedia.tk/ontology#")
     GOODRELATIONS_NAMESPACE = Namespace("http://purl.org/goodrelations/v1#")
-    BASE_RESOURCE_URI = "http://foodpedia.tk/page/resource/{0}"
+    BASE_RESOURCE_URI = "http://foodpedia.tk/resource/{0}"
     DEFAULT_LANG = 'ru'
 
     def __init__(self, graph):
