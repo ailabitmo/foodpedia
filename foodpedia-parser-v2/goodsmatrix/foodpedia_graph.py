@@ -6,6 +6,7 @@ class FoodpediaGraph(Graph):
     FOODPEDIA_NAMESPACE = Namespace("http://foodpedia.tk/ontology#")
     GOODRELATIONS_NAMESPACE = Namespace("http://purl.org/goodrelations/v1#")
     BASE_RESOURCE_URI = "http://foodpedia.tk/resource/{0}"
+    BASE_EADDITIVE_URI = str(FOOD_NAMESPACE) + "{0}"
     DEFAULT_LANG = 'ru'
 
     def __init__(self, graph):
@@ -47,15 +48,11 @@ class FoodpediaGraph(Graph):
         self._add_current_items_property_as_double_predicate('calories_as_double',
                                                              self.FOOD_NAMESPACE.energyPer100gAsDouble)
         self._add_current_items_property_as_string_predicate('pack_type', self.FOODPEDIA_NAMESPACE.pack_type)
-        self._add_current_items_property_as_string_predicate('e_additives',
-                                                             self.FOODPEDIA_NAMESPACE.eadditives,
-                                                             lang=None)
+
+        self._add_current_items_e_additives()
 
     def _add_current_items_uri_as_predicate(self):
         self._graph.add((self._get_current_items_resource_uri(), RDF.type, self.FOOD_NAMESPACE.Food))
-
-    def _get_current_items_resource_uri(self):
-        return URIRef(self.BASE_RESOURCE_URI.format(self.current_item['barcode']))
 
     def _add_current_items_property_as_string_predicate(self, property_name, predicate, lang=DEFAULT_LANG):
         self._add_current_items_property_as_predicate(property_name, predicate, datatype=XSD.string, lang=lang)
@@ -85,6 +82,22 @@ class FoodpediaGraph(Graph):
                 return PatchedLiteralToReturnFullDatatype(property_value)
         else:
             return PatchedLiteralToReturnFullDatatype(property_value, datatype=literal_datatype)
+
+    def _add_current_items_e_additives(self):
+        if 'e_additives' in self.current_item:
+            for eadditive in self.current_item['e_additives']:
+                self.add_eadditive_as_current_item_predicate(eadditive)
+
+    def add_eadditive_as_current_item_predicate(self, eadditive):
+        obj = self._get_current_items_resource_uri()
+        predicate = self.FOOD_NAMESPACE.containsIngredient
+        subj = self.FOOD_NAMESPACE[eadditive]
+        self._graph.add(
+            (obj, predicate, subj)
+        )
+
+    def _get_current_items_resource_uri(self):
+        return URIRef(self.BASE_RESOURCE_URI.format(self.current_item['barcode']))
 
 
 class PatchedLiteralToReturnFullDatatype(Literal):

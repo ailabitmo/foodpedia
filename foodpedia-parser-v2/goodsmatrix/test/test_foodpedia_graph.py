@@ -192,5 +192,29 @@ class TestFoodpediaGraph(TestCase):
 
         self.assertFalse(filter(lambda x: "not_correct_property" in x, self.foodpedia_graph.objects()))
 
+    def test_add_good_item_adds_eadditives_to_graph(self):
+        good_item = dict()
+        good_item["barcode"] = "1111"
+        good_item["e_additives"] = ["E100", "E101"]
+
+        self.foodpedia_graph.add_good_item(good_item)
+
+        self.assertIn(
+            (
+                URIRef("http://foodpedia.tk/resource/1111"),
+                URIRef("http://purl.org/foodontology#containsIngredient"),
+                URIRef("http://purl.org/foodontology#E100")
+            ),
+            self.foodpedia_graph
+        )
+        self.assertIn(
+            (
+                URIRef("http://foodpedia.tk/resource/1111"),
+                URIRef("http://purl.org/foodontology#containsIngredient"),
+                URIRef("http://purl.org/foodontology#E101")
+            ),
+            self.foodpedia_graph
+        )
+
     def tearDown(self):
         self.foodpedia_graph.close()
