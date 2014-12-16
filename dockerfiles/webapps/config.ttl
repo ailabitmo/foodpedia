@@ -4,6 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <> a conf:Configuration;
     conf:projectName "FOODpedia.tk";
@@ -13,7 +14,7 @@
     conf:usePrefixesFrom <>;
     conf:defaultLanguage "en";
     conf:indexResource <http://foodpedia.tk/resource/4607081352675>;
-    conf:labelProperty gr:name;
+    conf:labelProperty skos:prefLabel, rdfs:label, gr:name;
 
     conf:dataset [
         conf:sparqlEndpoint <http://foodpedia.tk/sparql>;
