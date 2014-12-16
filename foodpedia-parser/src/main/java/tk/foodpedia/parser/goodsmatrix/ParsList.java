@@ -1,8 +1,8 @@
-package com.mycompany.goodsmatrixparser;/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package tk.foodpedia.parser.goodsmatrix;/*
+* To change this license header, choose License Headers in Project Properties.
+* To change this template file, choose Tools | Templates
+* and open the template in the editor.
+*/
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
@@ -17,8 +17,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * @author валерий
- */
+* @author валерий
+*/
 public class ParsList {
     private static Model model;
     private static FileWriter out;
@@ -35,7 +35,7 @@ public class ParsList {
         model.setNsPrefix("gr", ProdProps.GR);
         model.setNsPrefix("foodpedia-owl", ProdProps.TODO);
         rc = model.createResource("http://purl.org/foodontology#Food");
-        out = new FileWriter("D:\\confectionary.dat");
+        out = new FileWriter("confectionary.dat");
 //        AddShutdownHookSample sample = new AddShutdownHookSample();
 //        sample.attachShutDownHook(model, out);
         //goPars("http://www.goodsmatrix.ru/goods-catalogue/Mustard/Dijon-mustard.html");

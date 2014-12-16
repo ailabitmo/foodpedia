@@ -1,4 +1,4 @@
-package com.mycompany.goodsmatrixparser;
+package tk.foodpedia.parser.goodsmatrix;
 
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.impl.PropertyImpl;

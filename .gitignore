@@ -1,3 +1,13 @@
 /target/
 /foodpedia-home/target/
 /foodpedia-parser/target
+
+#python specific
+*.pyc
+
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
