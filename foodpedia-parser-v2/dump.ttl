@@ -57,8 +57,8 @@
     foodpedia-owl:netto_mass "280,00 г"@ru ;
     foodpedia-owl:standart "ТУ 9161-110-44388488-2007"@ru ;
     food:carbohydratesPer100gAsDouble "3.6"^^xsd:double ;
-    food:containsIngredient food:E401,
-        food:E412 ;
+    food:containsIngredient <http://foodpedia.tk/resource/E401>,
+        <http://foodpedia.tk/resource/E412> ;
     food:energyPer100gAsDouble "188.0"^^xsd:double ;
     food:ingredientsListAsText "Мясо говядины, рис, капуста, томат, крахмал, помидоры, лук, сахар, стабилизаторы Е412, Е401, соль, чеснок, специи, вода питьевая,"@ru ;
     food:proteinsPer100gAsDouble "4.8"^^xsd:double ;
@@ -96,10 +96,10 @@
 
 <http://foodpedia.tk/resource/4607147010761> a food:Food ;
     foodpedia-owl:esl "Белки:  12,00 г Жиры:  7,00 г Энергетическая ценность:  130,00 ккал"@ru ;
-    food:containsIngredient food:E331,
-        food:E407,
-        food:E415,
-        food:E417 ;
+    food:containsIngredient <http://foodpedia.tk/resource/E331>,
+        <http://foodpedia.tk/resource/E407>,
+        <http://foodpedia.tk/resource/E415>,
+        <http://foodpedia.tk/resource/E417> ;
     food:energyPer100gAsDouble "130.0"^^xsd:double ;
     food:fatPer100gAsDouble "7.0"^^xsd:double ;
     food:ingredientsListAsText "говядина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
@@ -110,10 +110,10 @@
 
 <http://foodpedia.tk/resource/4607147010778> a food:Food ;
     foodpedia-owl:esl "Белки:  17,50 г Жиры:  7,20 г Энергетическая ценность:  126,80 ккал"@ru ;
-    food:containsIngredient food:E331,
-        food:E407,
-        food:E415,
-        food:E417 ;
+    food:containsIngredient <http://foodpedia.tk/resource/E331>,
+        <http://foodpedia.tk/resource/E407>,
+        <http://foodpedia.tk/resource/E415>,
+        <http://foodpedia.tk/resource/E417> ;
     food:energyPer100gAsDouble "126.8"^^xsd:double ;
     food:fatPer100gAsDouble "7.2"^^xsd:double ;
     food:ingredientsListAsText "говядина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
@@ -124,10 +124,10 @@
 
 <http://foodpedia.tk/resource/4607147010785> a food:Food ;
     foodpedia-owl:esl "Белки:  13,00 г Жиры:  10,00 г Энергетическая ценность:  146,00 ккал"@ru ;
-    food:containsIngredient food:E331,
-        food:E407,
-        food:E415,
-        food:E417 ;
+    food:containsIngredient <http://foodpedia.tk/resource/E331>,
+        <http://foodpedia.tk/resource/E407>,
+        <http://foodpedia.tk/resource/E415>,
+        <http://foodpedia.tk/resource/E417> ;
     food:energyPer100gAsDouble "146.0"^^xsd:double ;
     food:fatPer100gAsDouble "10.0"^^xsd:double ;
     food:ingredientsListAsText "говядина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
@@ -138,10 +138,10 @@
 
 <http://foodpedia.tk/resource/4607147010792> a food:Food ;
     foodpedia-owl:esl "Белки:  13,00 г Жиры:  14,30 г Энергетическая ценность:  188,70 ккал"@ru ;
-    food:containsIngredient food:E331,
-        food:E407,
-        food:E415,
-        food:E417 ;
+    food:containsIngredient <http://foodpedia.tk/resource/E331>,
+        <http://foodpedia.tk/resource/E407>,
+        <http://foodpedia.tk/resource/E415>,
+        <http://foodpedia.tk/resource/E417> ;
     food:energyPer100gAsDouble "188.7"^^xsd:double ;
     food:fatPer100gAsDouble "14.3"^^xsd:double ;
     food:ingredientsListAsText "свинина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
@@ -152,10 +152,10 @@
 
 <http://foodpedia.tk/resource/4607147010808> a food:Food ;
     foodpedia-owl:esl "Белки:  10,00 г Жиры:  29,50 г Энергетическая ценность:  313,50 ккал"@ru ;
-    food:containsIngredient food:E331,
-        food:E407,
-        food:E415,
-        food:E417 ;
+    food:containsIngredient <http://foodpedia.tk/resource/E331>,
+        <http://foodpedia.tk/resource/E407>,
+        <http://foodpedia.tk/resource/E415>,
+        <http://foodpedia.tk/resource/E417> ;
     food:energyPer100gAsDouble "313.5"^^xsd:double ;
     food:fatPer100gAsDouble "29.5"^^xsd:double ;
     food:ingredientsListAsText "свинина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
@@ -166,10 +166,10 @@
 
 <http://foodpedia.tk/resource/4607147010815> a food:Food ;
     foodpedia-owl:esl "Белки:  10,00 г Жиры:  29,50 г Энергетическая ценность:  313,50 ккал"@ru ;
-    food:containsIngredient food:E331,
-        food:E407,
-        food:E415,
-        food:E417 ;
+    food:containsIngredient <http://foodpedia.tk/resource/E331>,
+        <http://foodpedia.tk/resource/E407>,
+        <http://foodpedia.tk/resource/E415>,
+        <http://foodpedia.tk/resource/E417> ;
     food:energyPer100gAsDouble "313.5"^^xsd:double ;
     food:fatPer100gAsDouble "29.5"^^xsd:double ;
     food:ingredientsListAsText "свинина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
@@ -181,10 +181,10 @@
 <http://foodpedia.tk/resource/4607147010839> a food:Food ;
     foodpedia-owl:esl "Белки:  17,50 г Жиры:  7,90 г Углеводы:  2,00 г Энергетическая ценность:  125,60 ккал"@ru ;
     food:carbohydratesPer100gAsDouble "2.0"^^xsd:double ;
-    food:containsIngredient food:E331,
-        food:E407,
-        food:E415,
-        food:E417 ;
+    food:containsIngredient <http://foodpedia.tk/resource/E331>,
+        <http://foodpedia.tk/resource/E407>,
+        <http://foodpedia.tk/resource/E415>,
+        <http://foodpedia.tk/resource/E417> ;
     food:energyPer100gAsDouble "125.6"^^xsd:double ;
     food:fatPer100gAsDouble "7.9"^^xsd:double ;
     food:ingredientsListAsText "говядина филе, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
@@ -195,10 +195,10 @@
 
 <http://foodpedia.tk/resource/4607147010846> a food:Food ;
     foodpedia-owl:esl "Белки:  13,00 г Жиры:  7,00 г Энергетическая ценность:  123,00 ккал"@ru ;
-    food:containsIngredient food:E331,
-        food:E407,
-        food:E415,
-        food:E417 ;
+    food:containsIngredient <http://foodpedia.tk/resource/E331>,
+        <http://foodpedia.tk/resource/E407>,
+        <http://foodpedia.tk/resource/E415>,
+        <http://foodpedia.tk/resource/E417> ;
     food:energyPer100gAsDouble "123.0"^^xsd:double ;
     food:fatPer100gAsDouble "7.0"^^xsd:double ;
     food:ingredientsListAsText "говядина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
@@ -209,10 +209,10 @@
 
 <http://foodpedia.tk/resource/4607147010853> a food:Food ;
     foodpedia-owl:esl "Белки:  12,00 г Жиры:  7,90 г Энергетическая ценность:  127,10 ккал"@ru ;
-    food:containsIngredient food:E331,
-        food:E407,
-        food:E415,
-        food:E417 ;
+    food:containsIngredient <http://foodpedia.tk/resource/E331>,
+        <http://foodpedia.tk/resource/E407>,
+        <http://foodpedia.tk/resource/E415>,
+        <http://foodpedia.tk/resource/E417> ;
     food:energyPer100gAsDouble "127.1"^^xsd:double ;
     food:fatPer100gAsDouble "7.9"^^xsd:double ;
     food:ingredientsListAsText "говядина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
@@ -223,10 +223,10 @@
 
 <http://foodpedia.tk/resource/4607147010877> a food:Food ;
     foodpedia-owl:esl "Белки:  13,00 г Жиры:  32,20 г Энергетическая ценность:  349,80 ккал"@ru ;
-    food:containsIngredient food:E331,
-        food:E407,
-        food:E415,
-        food:E417 ;
+    food:containsIngredient <http://foodpedia.tk/resource/E331>,
+        <http://foodpedia.tk/resource/E407>,
+        <http://foodpedia.tk/resource/E415>,
+        <http://foodpedia.tk/resource/E417> ;
     food:energyPer100gAsDouble "349.8"^^xsd:double ;
     food:fatPer100gAsDouble "32.2"^^xsd:double ;
     food:ingredientsListAsText "свинина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
@@ -237,10 +237,10 @@
 
 <http://foodpedia.tk/resource/4607147010884> a food:Food ;
     foodpedia-owl:esl "Белки:  13,00 г Жиры:  34,40 г Энергетическая ценность:  369,60 ккал"@ru ;
-    food:containsIngredient food:E331,
-        food:E407,
-        food:E415,
-        food:E417 ;
+    food:containsIngredient <http://foodpedia.tk/resource/E331>,
+        <http://foodpedia.tk/resource/E407>,
+        <http://foodpedia.tk/resource/E415>,
+        <http://foodpedia.tk/resource/E417> ;
     food:energyPer100gAsDouble "369.6"^^xsd:double ;
     food:fatPer100gAsDouble "34.4"^^xsd:double ;
     food:ingredientsListAsText "свинина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
@@ -251,10 +251,10 @@
 
 <http://foodpedia.tk/resource/4607147010891> a food:Food ;
     foodpedia-owl:esl "Белки:  8,90 г Жиры:  53,70 г Энергетическая ценность:  523,30 ккал"@ru ;
-    food:containsIngredient food:E331,
-        food:E407,
-        food:E415,
-        food:E417 ;
+    food:containsIngredient <http://foodpedia.tk/resource/E331>,
+        <http://foodpedia.tk/resource/E407>,
+        <http://foodpedia.tk/resource/E415>,
+        <http://foodpedia.tk/resource/E417> ;
     food:energyPer100gAsDouble "523.3"^^xsd:double ;
     food:fatPer100gAsDouble "53.7"^^xsd:double ;
     food:ingredientsListAsText "свинина, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
@@ -265,10 +265,10 @@
 
 <http://foodpedia.tk/resource/4620001270248> a food:Food ;
     foodpedia-owl:standart "ТУ 9211-001-58293228-04"@ru ;
-    food:containsIngredient food:E262,
-        food:E331,
-        food:E407,
-        food:E450 ;
+    food:containsIngredient <http://foodpedia.tk/resource/E262>,
+        <http://foodpedia.tk/resource/E331>,
+        <http://foodpedia.tk/resource/E407>,
+        <http://foodpedia.tk/resource/E450> ;
     food:ingredientsListAsText "свинина (окорок б/к), соль, пищевые добавки: стабилизатор (Е450-452, Е407, Е331), консервант (Е262)."@ru ;
     gr:description "Содержание в 100 продукта: жир - 15 г, белок - 13 г, калорийность - 190 ккал."@ru ;
     gr:hasEAN_UCC-13 "4620001270248" ;
@@ -276,10 +276,10 @@
 
 <http://foodpedia.tk/resource/4620001280262> a food:Food ;
     foodpedia-owl:standart "ТУ 9214-001-58250724-04"@ru ;
-    food:containsIngredient food:E262,
-        food:E331,
-        food:E407,
-        food:E450 ;
+    food:containsIngredient <http://foodpedia.tk/resource/E262>,
+        <http://foodpedia.tk/resource/E331>,
+        <http://foodpedia.tk/resource/E407>,
+        <http://foodpedia.tk/resource/E450> ;
     food:ingredientsListAsText "свинина (шейка б/к), соль, стабилизатор (Е450-452, Е407, Е331), консервант (Е262)."@ru ;
     gr:description "Содержание в 100 продукта: жир - 30 г, белок - 11 г, калорийность - 314 ккал."@ru ;
     gr:hasEAN_UCC-13 "4620001280262" ;
@@ -307,9 +307,9 @@
     foodpedia-owl:standart "ТУ 9214-010-18903582-09"@ru ;
     foodpedia-owl:store_cond "при Т от 0 до +4 градусов С"@ru ;
     food:carbohydratesPer100gAsDouble "0.0"^^xsd:double ;
-    food:containsIngredient food:E450,
-        food:E451,
-        food:E621 ;
+    food:containsIngredient <http://foodpedia.tk/resource/E450>,
+        <http://foodpedia.tk/resource/E451>,
+        <http://foodpedia.tk/resource/E621> ;
     food:energyPer100gAsDouble "363.0"^^xsd:double ;
     food:fatPer100gAsDouble "35.0"^^xsd:double ;
     food:ingredientsListAsText "свинина, вода, соль поваренная пищевая, стабилизаторы Е450, Е451, Е621, уксус пищевой, специи."@ru ;

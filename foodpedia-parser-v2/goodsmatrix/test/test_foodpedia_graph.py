@@ -203,7 +203,7 @@ class TestFoodpediaGraph(TestCase):
             (
                 URIRef("http://foodpedia.tk/resource/1111"),
                 URIRef("http://purl.org/foodontology#containsIngredient"),
-                URIRef("http://purl.org/foodontology#E100")
+                URIRef("http://foodpedia.tk/resource/E100")
             ),
             self.foodpedia_graph
         )
@@ -211,7 +211,7 @@ class TestFoodpediaGraph(TestCase):
             (
                 URIRef("http://foodpedia.tk/resource/1111"),
                 URIRef("http://purl.org/foodontology#containsIngredient"),
-                URIRef("http://purl.org/foodontology#E101")
+                URIRef("http://foodpedia.tk/resource/E101")
             ),
             self.foodpedia_graph
         )

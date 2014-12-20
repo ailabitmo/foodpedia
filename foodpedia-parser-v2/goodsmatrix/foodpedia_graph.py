@@ -91,7 +91,7 @@ class FoodpediaGraph(Graph):
     def add_eadditive_as_current_item_predicate(self, eadditive):
         obj = self._get_current_items_resource_uri()
         predicate = self.FOOD_NAMESPACE.containsIngredient
-        subj = self.FOOD_NAMESPACE[eadditive]
+        subj = URIRef(self.BASE_RESOURCE_URI.format(eadditive))
         self._graph.add(
             (obj, predicate, subj)
         )
