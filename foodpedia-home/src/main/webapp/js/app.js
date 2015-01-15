@@ -22,10 +22,13 @@ var sparqlConfig = angular.module('ngSPARQL.config', []);
             PREFIXES: {
                 'rdf': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
                 'rdfs': 'http://www.w3.org/2000/01/rdf-schema#',
-                'xsd': 'http://www.w3.org/2001/XMLSchema#'
+                'xsd': 'http://www.w3.org/2001/XMLSchema#',
+                'food': 'http://purl.org/foodontology#',
+                'foodpedia-owl': 'http://foodpedia.tk/ontology#',
+                'gr': 'http://purl.org/goodrelations/v1#'
             },
             ENDPOINTS: {
-                ENDPOINT_1: "http://foodpedia.tk/sparql-cors"
+                ENDPOINT_1: "${endpoint.url}"
             }
         }
     );
