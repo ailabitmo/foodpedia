@@ -69,8 +69,8 @@
         <profile>
             <id>testing</id>
             <properties>
-                <pubby.url>http://109.234.34.200:8090/resource/</pubby.url>
-                <endpoint.url>http://109.234.34.200:8890/sparql</endpoint.url>
+                <pubby.url>http://109.234.34.200/resource/</pubby.url>
+                <endpoint.url>http://109.234.34.200/sparql</endpoint.url>
             </properties>
         </profile>
         <profile>
