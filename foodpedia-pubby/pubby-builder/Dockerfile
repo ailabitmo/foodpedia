@@ -10,6 +10,7 @@ RUN mkdir -p $CATALINA_HOME/webapps
 RUN mv /tmp/pubby-0.3.3/webapp $CATALINA_HOME/webapps/ROOT
 
 ADD prefixes.n3 $CATALINA_HOME/webapps/ROOT/WEB-INF/prefixes.n3
+ADD config.ttl $CATALINA_HOME/webapps/ROOT/WEB-INF/config.ttl
 ADD footer.vm $CATALINA_HOME/webapps/ROOT/WEB-INF/templates/footer.vm
 
 VOLUME ["/usr/local/tomcat/webapps/"]
