@@ -6,6 +6,8 @@ service virtuoso-opensource-6.1 start
 
 echo "allow Cross-Origin Resource Sharing for /sparql"
 isql-vt 1111 dba dba ./allow_cors_4_sparql.sql
+echo "upload dumps if exist"
+sh ./upload_dump.sh
 
 # start the php5-fpm service
 echo "starting php …"
