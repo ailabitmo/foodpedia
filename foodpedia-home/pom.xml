@@ -62,7 +62,7 @@
         <profile>
             <id>development</id>
             <properties>
-                <pubby.url>http://localhost:8080/resource/</pubby.url>
+                <pubby.url>http://localhost:8090/resource/</pubby.url>
                 <endpoint.url>http://localhost:8890/sparql</endpoint.url>
             </properties>
         </profile>
