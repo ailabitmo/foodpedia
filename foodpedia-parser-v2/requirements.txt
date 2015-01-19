@@ -1,0 +1,4 @@
+mock
+scrapy
+service_identity
+rdflib
