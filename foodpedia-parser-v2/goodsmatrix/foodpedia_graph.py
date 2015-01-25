@@ -1,7 +1,8 @@
-from rdflib import Graph, RDF, Namespace, Literal, URIRef, XSD
+from rdflib import RDF, Namespace, Literal, URIRef, XSD
+from scrapy import log
 
 
-class FoodpediaGraph(Graph):
+class FoodpediaGraph:
     FOOD_NAMESPACE = Namespace("http://purl.org/foodontology#")
     FOODPEDIA_NAMESPACE = Namespace("http://foodpedia.tk/ontology#")
     GOODRELATIONS_NAMESPACE = Namespace("http://purl.org/goodrelations/v1#")
@@ -11,12 +12,14 @@ class FoodpediaGraph(Graph):
 
     def __init__(self, graph):
         self._graph = graph
+
+    def __getattr__(self, attr_name):
+        return getattr(self._graph, attr_name)
+
+    def bind_default_namespaces(self):
         self._graph.bind('food', self.FOOD_NAMESPACE)
         self._graph.bind('foodpedia-owl', self.FOODPEDIA_NAMESPACE)
         self._graph.bind('gr', self.GOODRELATIONS_NAMESPACE)
-
-    def __getattr__(self, name):
-        return getattr(self._graph, name)
 
     def get_namespaces(self):
         return self._graph.namespace_manager.namespaces()
