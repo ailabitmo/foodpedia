@@ -51,6 +51,22 @@
     gr:hasEAN_UCC-13 "4607042560095" ;
     gr:name "ЛЮЛЯ-КЕБАБ \"ЭКСТРА\""@ru .
 
+<http://foodpedia.tk/resource/4607047730097> a food:Food ;
+    foodpedia-owl:best_before "6 мес."@ru ;
+    foodpedia-owl:esl "Белки:  12,00 г Жиры:  7,00 г Углеводы:  6,00 г Энергетическая ценность:  135,00 ккал"@ru ;
+    foodpedia-owl:netto_mass "350,00 г"@ru ;
+    foodpedia-owl:pack_type "Коробка картонная / пачка картонная"@ru ;
+    foodpedia-owl:standart "ТУ 9214-036-59377898-08."@ru ;
+    foodpedia-owl:store_cond "при температуре не выше -18 градусов C"@ru ;
+    food:carbohydratesPer100gAsDouble "6.0"^^xsd:double ;
+    food:energyPer100gAsDouble "135.0"^^xsd:double ;
+    food:fatPer100gAsDouble "7.0"^^xsd:double ;
+    food:ingredientsListAsText "Говядина, растительный белок, лук репчатый, крупа рисовая, сухари панировочные, соль, чеснок, перец черный, вода питьевая."@ru ;
+    food:proteinsPer100gAsDouble "12.0"^^xsd:double ;
+    gr:description "Сейчас, когда темп жизни значительно ускорился, нам все чаще хочется вернуться в то безмятежное время, когда о нашем обеде беспокоились мамы и бабушки. А как приятно было прибежать с улицы и сделать бутерброд с только что пожаренной котлетой, надкусить ее хрустящую корочку и почувствовать нежный сочный вкус. Именно такой привычный, знакомый каждому с детства вкус имеет продукция линейки Вкусная."@ru ;
+    gr:hasEAN_UCC-13 "4607047730097" ;
+    gr:name "ЕЖИКИ СЕРИЯ \"ВКУСНЫЕ\" ИЗ ГОВЯДИНЫ ТМ \"МЛМ КОТЛЕТЫ\", 350 Г"@ru .
+
 <http://foodpedia.tk/resource/4607058474256> a food:Food ;
     foodpedia-owl:best_before "2 г."@ru ;
     foodpedia-owl:esl "Белки:  4,80 г Углеводы:  3,60 г Энергетическая ценность:  188,00 ккал"@ru ;
@@ -177,21 +193,6 @@
     gr:description "полуфабрикат мясной порционный, бескостный, фасованный, замороженный, категории В"@ru ;
     gr:hasEAN_UCC-13 "4607147010815" ;
     gr:name "СВИНИНА ДУХОВАЯ  ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
-
-<http://foodpedia.tk/resource/4607147010839> a food:Food ;
-    foodpedia-owl:esl "Белки:  17,50 г Жиры:  7,90 г Углеводы:  2,00 г Энергетическая ценность:  125,60 ккал"@ru ;
-    food:carbohydratesPer100gAsDouble "2.0"^^xsd:double ;
-    food:containsIngredient <http://foodpedia.tk/resource/E331>,
-        <http://foodpedia.tk/resource/E407>,
-        <http://foodpedia.tk/resource/E415>,
-        <http://foodpedia.tk/resource/E417> ;
-    food:energyPer100gAsDouble "125.6"^^xsd:double ;
-    food:fatPer100gAsDouble "7.9"^^xsd:double ;
-    food:ingredientsListAsText "говядина филе, соль, стабилизаторы Е-407, Е-415, Е-417, Е-331"@ru ;
-    food:proteinsPer100gAsDouble "17.5"^^xsd:double ;
-    gr:description "полуфабрикат мясной, крупнокусковой, бескостный, фасованный, замороженный, категории А"@ru ;
-    gr:hasEAN_UCC-13 "4607147010839" ;
-    gr:name "ФИЛЕЙ ГОВЯЖИЙ  ЭЛЬРАНЧО (КОРОБКА 4-6 КГ)"@ru .
 
 <http://foodpedia.tk/resource/4607147010846> a food:Food ;
     foodpedia-owl:esl "Белки:  13,00 г Жиры:  7,00 г Энергетическая ценность:  123,00 ккал"@ru ;

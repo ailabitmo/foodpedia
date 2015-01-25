@@ -22,11 +22,12 @@ def main():
     })
     settings.set("OUTPUT_FILENAME", command_line_args.output_filename)
 
+
     crawler = Crawler(settings)
     crawler.configure()
     crawler.crawl(spider)
     crawler.start()
-    log.start()
+    log.start(loglevel='INFO')
     reactor.run() # the script will block here
 
 def parse_arguments():

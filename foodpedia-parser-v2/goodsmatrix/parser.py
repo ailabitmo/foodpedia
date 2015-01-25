@@ -7,6 +7,9 @@ from goodsmatrix.good_item import GoodItem
 from goodsmatrix import string_postprocessor
 
 
+from scrapy import log
+
+
 class GoodsMatrixSpider(CrawlSpider):
     name = 'goodsmatrix'
     allowed_domains = ['goodsmatrix.ru']
@@ -22,6 +25,7 @@ class GoodsMatrixSpider(CrawlSpider):
         return self.parse_catalog_node(response)
 
     def parse_catalog_node(self, response):
+        log.msg("PARSE CATALOG NODE: {0}".format(response.url), level=log.INFO)
         child_nodes_urls = url_extractor.extract_child_nodes_urls(response)
         if child_nodes_urls:
             for child_node_url in child_nodes_urls:
@@ -32,6 +36,7 @@ class GoodsMatrixSpider(CrawlSpider):
     def parse_catalog_end_node(self, response):
         """parse catalog node without children.
         return prepeared request to  parse the category's list of goods."""
+        log.msg("PARSE CATALOG END NODE: {0}".format(response.url), level=log.INFO)
         return scrapy.Request(
             url_extractor.extract_url_with_list_of_goods(response),
             callback=self.parse_list_of_goods
@@ -39,19 +44,30 @@ class GoodsMatrixSpider(CrawlSpider):
 
     def parse_list_of_goods(self, response):
         for goods_url in url_extractor.extract_goods_urls(response):
-            yield scrapy.Request(goods_url, callback=self.parse_good)
+            yield scrapy.Request(
+                goods_url,
+                meta={
+                        'dont_redirect': True,
+                        'handle_httpstatus_list': [302]
+                     },
+                callback=self.parse_good
+            )
 
     def parse_good(self, response):
+        log.msg("PARSE GOOD: {0}".format(response.url), level=log.DEBUG)
         good = GoodItem(xpath_extractor.extract_goods_properties_dict(response))
-        if 'esl' in good:
-            good.update(string_postprocessor.parse_esl(good['esl']))
-        if 'ingredients' in good:
-            extracted_e_additives = string_postprocessor.parse_e_additives(good['ingredients'])
-            if extracted_e_additives:
-                good['e_additives'] = extracted_e_additives
-        good['goodsmatrix_url'] = response.url
-        good = self._post_process_goods_properties(good)
-        return good
+        if good:
+            if 'esl_as_string' in good:
+                good.update(string_postprocessor.parse_esl(good['esl_as_string']))
+            if 'ingredients' in good:
+                extracted_e_additives = string_postprocessor.parse_e_additives(good['ingredients'])
+                if extracted_e_additives:
+                    good['e_additives'] = extracted_e_additives
+            good['goodsmatrix_url'] = response.url
+            good = self._post_process_goods_properties(good)
+            return good
+        else:
+            log.msg("can't parse {0}".format(response.url, level=log.ERROR))
 
     def _post_process_goods_properties(self, good):
         for key in good:
