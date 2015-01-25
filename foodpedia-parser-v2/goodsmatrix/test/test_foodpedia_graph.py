@@ -12,7 +12,9 @@ class TestFoodpediaGraph(TestCase):
     def setUp(self):
         self.foodpedia_graph = FoodpediaGraph(Graph())
 
-    def test_needed_namespaces_are_binded(self):
+    def test_bind_default_namespaces(self):
+        self.foodpedia_graph.bind_default_namespaces()
+
         self.assertIn(("food", Namespace("http://purl.org/foodontology#")), self.foodpedia_graph.get_namespaces())
         self.assertIn(("foodpedia-owl", Namespace("http://foodpedia.tk/ontology#")), self.foodpedia_graph.get_namespaces())
         self.assertIn(("gr", Namespace("http://purl.org/goodrelations/v1#")), self.foodpedia_graph.get_namespaces())
