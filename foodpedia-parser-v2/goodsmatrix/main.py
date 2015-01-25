@@ -21,8 +21,8 @@ def main():
         "goodsmatrix.pipelines.RDFPipeline": 0
     })
     settings.set("OUTPUT_FILENAME", command_line_args.output_filename)
-
-
+    settings.set("COOKIES_ENABLED", False)
+    settings.set("REDIRECT_ENABLED", False)
     crawler = Crawler(settings)
     crawler.configure()
     crawler.crawl(spider)
