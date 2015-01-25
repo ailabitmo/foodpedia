@@ -3,7 +3,7 @@ def transform_catalog_node_url_to_url_with_goods(catalog_node_url):
     """transofrm catalog's end node's url with pagination
     to a url with a single-page list of products for the category.
     """
-    return catalog_node_url.replace('goods-catalogue', 'map')
+    return catalog_node_url.replace("GroupsDescription", "MapGroupsDescription").replace('goods-catalogue', 'map')
 
 
 def transform_goods_analogues_url_to_goods_url(goods_analogues_url):

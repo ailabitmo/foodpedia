@@ -11,6 +11,13 @@ class TestUrlTransformers(unittest.TestCase):
                 "http://www.goodsmatrix.ru/goods-catalogue/Bread-sticks/Gorodskoy-bread-stics.html"),
             "http://www.goodsmatrix.ru/map/Bread-sticks/Gorodskoy-bread-stics.html")
 
+    def test_transform_catalog_node_url_with_GroupsDescription(self):
+        self.assertEqual(
+                url_transformer.transform_catalog_node_url_to_url_with_goods(
+                    "http://www.goodsmatrix.ru/GroupsDescription.aspx?g=1361"),
+                "http://www.goodsmatrix.ru/MapGroupsDescription.aspx?g=1361")
+
+
     def test_not_correct_catalog_node_url_is_not_changed(self):
         self.assertEqual(
             url_transformer.transform_catalog_node_url_to_url_with_goods(
