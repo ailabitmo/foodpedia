@@ -9,4 +9,4 @@ The idea is to provide to users ability to get data about a product by scanned b
 The idea is to provide to users a simple interface to fill in a data about food
 
 
-[For developers: how to deploy](deployment.md)
+[For devops: how to run](deployment.md)
