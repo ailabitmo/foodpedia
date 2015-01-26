@@ -1,90 +1,172 @@
-from rdflib import Graph, RDF, Namespace, Literal, URIRef, XSD
+from rdflib import RDF, Namespace, Literal, URIRef, XSD
+from scrapy import log
 
 
-class FoodpediaGraph(Graph):
+class FoodpediaGraph:
     FOOD_NAMESPACE = Namespace("http://purl.org/foodontology#")
     FOODPEDIA_NAMESPACE = Namespace("http://foodpedia.tk/ontology#")
     GOODRELATIONS_NAMESPACE = Namespace("http://purl.org/goodrelations/v1#")
-    BASE_RESOURCE_URI = "http://foodpedia.tk/page/resource/{0}"
+    BASE_RESOURCE_URI = "http://foodpedia.tk/resource/{0}"
+    BASE_EADDITIVE_URI = str(FOOD_NAMESPACE) + "{0}"
     DEFAULT_LANG = 'ru'
 
     def __init__(self, graph):
         self._graph = graph
+
+    def __getattr__(self, attr_name):
+        return getattr(self._graph, attr_name)
+
+    def bind_default_namespaces(self):
         self._graph.bind('food', self.FOOD_NAMESPACE)
         self._graph.bind('foodpedia-owl', self.FOODPEDIA_NAMESPACE)
         self._graph.bind('gr', self.GOODRELATIONS_NAMESPACE)
-        self.current_item = None
-
-    def __getattr__(self, name):
-        return getattr(self._graph, name)
 
     def get_namespaces(self):
         return self._graph.namespace_manager.namespaces()
 
     def add_good_item(self, item):
-        self.current_item = item
-        self._add_current_item_to_graph()
+        item_barcode = item['barcode']
+        self._init_good_item(item_barcode)
 
-    def _add_current_item_to_graph(self):
-        self._add_current_items_uri_as_predicate()
-        self._add_current_items_property_as_string_predicate('name', self.GOODRELATIONS_NAMESPACE.name)
-        self._add_current_items_property_as_string_predicate('barcode',
-                                                             self.GOODRELATIONS_NAMESPACE['hasEAN_UCC-13'],
-                                                             lang=None)
-        self._add_current_items_property_as_string_predicate('best_before', self.FOODPEDIA_NAMESPACE.best_before)
-        self._add_current_items_property_as_string_predicate('comment', self.GOODRELATIONS_NAMESPACE.description)
-        self._add_current_items_property_as_string_predicate('ingredients', self.FOOD_NAMESPACE.ingredientsListAsText)
-        self._add_current_items_property_as_string_predicate('netto_weight', self.FOODPEDIA_NAMESPACE.netto_mass)
-        self._add_current_items_property_as_string_predicate('standart', self.FOODPEDIA_NAMESPACE.standart)
-        self._add_current_items_property_as_string_predicate('store_conditions', self.FOODPEDIA_NAMESPACE.store_cond)
-        self._add_current_items_property_as_string_predicate('esl', self.FOODPEDIA_NAMESPACE.esl)
-        self._add_current_items_property_as_double_predicate('proteins_as_double',
-                                                             self.FOOD_NAMESPACE.proteinsPer100gAsDouble)
-        self._add_current_items_property_as_double_predicate('fats_as_double',
-                                                             self.FOOD_NAMESPACE.fatPer100gAsDouble)
-        self._add_current_items_property_as_double_predicate('carbohydrates_as_double',
-                                                             self.FOOD_NAMESPACE.carbohydratesPer100gAsDouble)
-        self._add_current_items_property_as_double_predicate('calories_as_double',
-                                                             self.FOOD_NAMESPACE.energyPer100gAsDouble)
-        self._add_current_items_property_as_string_predicate('pack_type', self.FOODPEDIA_NAMESPACE.pack_type)
-        self._add_current_items_property_as_string_predicate('e_additives',
-                                                             self.FOODPEDIA_NAMESPACE.eadditives,
-                                                             lang=None)
+        if 'name' in item:
+            self.add_name_to_good(item_barcode, item['name'])
 
-    def _add_current_items_uri_as_predicate(self):
-        self._graph.add((self._get_current_items_resource_uri(), RDF.type, self.FOOD_NAMESPACE.Food))
+        if 'best_before' in item:
+            self.add_best_before_to_good(item_barcode, item['best_before'])
 
-    def _get_current_items_resource_uri(self):
-        return URIRef(self.BASE_RESOURCE_URI.format(self.current_item['barcode']))
+        if 'comment' in item:
+            self.add_comment_to_good(item_barcode, item['comment'])
 
-    def _add_current_items_property_as_string_predicate(self, property_name, predicate, lang=DEFAULT_LANG):
-        self._add_current_items_property_as_predicate(property_name, predicate, datatype=XSD.string, lang=lang)
+        if 'ingredients' in item:
+            self.add_ingridients_to_good(item_barcode, item['ingredients'])
 
-    def _add_current_items_property_as_double_predicate(self, property_name, predicate):
-        self._add_current_items_property_as_predicate(property_name, predicate, datatype=XSD.double, lang=None)
+        if 'netto_weight' in item:
+            self.add_netto_weight_to_good(item_barcode, item['netto_weight'])
 
-    def _add_current_items_property_as_predicate(self,
-                                                 property_name,
-                                                 predicate,
-                                                 datatype,
-                                                 lang):
-        if property_name in self.current_item:
-            literal = self._current_items_property_to_literal(property_name, datatype, lang)
-            self._graph.add(
-                (self._get_current_items_resource_uri(),
-                 predicate,
-                 literal)
-            )
+        if 'standart' in item:
+            self.add_standart_to_good(item_barcode, item['standart'])
 
-    def _current_items_property_to_literal(self, property_name, literal_datatype, lang):
-        property_value = self.current_item[property_name]
-        if literal_datatype == XSD.string:
-            if lang:
-                return PatchedLiteralToReturnFullDatatype(property_value, lang=lang)
-            else:
-                return PatchedLiteralToReturnFullDatatype(property_value)
-        else:
-            return PatchedLiteralToReturnFullDatatype(property_value, datatype=literal_datatype)
+        if 'store_conditions' in item:
+            self.add_store_conditions_to_good(item_barcode, item['store_conditions'])
+
+        if 'esl_as_string' in item:
+            self.add_esl_as_string_to_good(item_barcode, item['esl_as_string'])
+
+        if 'pack_type' in item:
+            self.add_pack_type_to_good(item_barcode, item['pack_type'])
+
+        if 'proteins_as_double' in item:
+            self.add_proteins_as_double_to_good(item_barcode, item['proteins_as_double'])
+
+        if 'fats_as_double' in item:
+            self.add_fats_as_double_to_good(item_barcode, item['fats_as_double'])
+
+        if 'carbohydrates_as_double' in item:
+            self.add_carbohydrates_as_double_to_good(item_barcode, item['carbohydrates_as_double'])
+
+        if 'calories_as_double' in item:
+            self.add_calories_as_double_to_good(item_barcode, item['calories_as_double'])
+
+        if 'e_additives' in item:
+            for eadditive_name in item['e_additives']:
+                self.add_eadditive_to_good(item_barcode, eadditive_name)
+
+    def _init_good_item(self, barcode):
+        self._add_good_uri(barcode)
+        self._add_good_barcode(barcode)
+
+    def _add_good_uri(self, good_barcode):
+        good_item_uri = FoodpediaGraph.convert_barcode_to_uri(good_barcode)
+        self._graph.add((good_item_uri, RDF.type, self.FOOD_NAMESPACE.Food))
+
+    def _add_good_barcode(self, good_barcode):
+        good_item_uri = FoodpediaGraph.convert_barcode_to_uri(good_barcode)
+        self.add_string_object(good_item_uri, self.GOODRELATIONS_NAMESPACE['hasEAN_UCC-13'], good_barcode, lang=None)
+
+    def add_name_to_good(self, good_barcode, name, lang=DEFAULT_LANG):
+        good_item_uri = FoodpediaGraph.convert_barcode_to_uri(good_barcode)
+        self.add_string_object(good_item_uri, self.GOODRELATIONS_NAMESPACE.name, name, lang)
+
+    def add_best_before_to_good(self, good_barcode, best_before, lang=DEFAULT_LANG):
+        good_item_uri = FoodpediaGraph.convert_barcode_to_uri(good_barcode)
+        self.add_string_object(good_item_uri, self.FOODPEDIA_NAMESPACE.best_before, best_before, lang)
+
+    def add_comment_to_good(self, good_barcode, comment, lang=DEFAULT_LANG):
+        good_item_uri = FoodpediaGraph.convert_barcode_to_uri(good_barcode)
+        self.add_string_object(good_item_uri, self.GOODRELATIONS_NAMESPACE.description, comment, lang)
+
+    def add_ingridients_to_good(self, good_barcode, ingridients_list_as_text, lang=DEFAULT_LANG):
+        good_item_uri = FoodpediaGraph.convert_barcode_to_uri(good_barcode)
+        self.add_string_object(good_item_uri, self.FOOD_NAMESPACE.ingredientsListAsText, ingridients_list_as_text, lang)
+
+    def add_netto_weight_to_good(self, good_barcode, netto_weight, lang=DEFAULT_LANG):
+        good_item_uri = FoodpediaGraph.convert_barcode_to_uri(good_barcode)
+        self.add_string_object(good_item_uri, self.FOODPEDIA_NAMESPACE.netto_mass, netto_weight, lang)
+
+    def add_standart_to_good(self, good_barcode, standart, lang=DEFAULT_LANG):
+        good_item_uri = FoodpediaGraph.convert_barcode_to_uri(good_barcode)
+        self.add_string_object(good_item_uri, self.FOODPEDIA_NAMESPACE.standart, standart, lang)
+
+    def add_store_conditions_to_good(self, good_barcode, store_conditions, lang=DEFAULT_LANG):
+        good_item_uri = FoodpediaGraph.convert_barcode_to_uri(good_barcode)
+        self.add_string_object(good_item_uri, self.FOODPEDIA_NAMESPACE.store_cond, store_conditions, lang)
+
+    def add_esl_as_string_to_good(self, good_barcode, esl_as_string, lang=DEFAULT_LANG):
+        good_item_uri = FoodpediaGraph.convert_barcode_to_uri(good_barcode)
+        self.add_string_object(good_item_uri, self.FOODPEDIA_NAMESPACE.esl, esl_as_string, lang)
+
+    def add_pack_type_to_good(self, good_barcode, pack_type, lang=DEFAULT_LANG):
+        good_item_uri = FoodpediaGraph.convert_barcode_to_uri(good_barcode)
+        self.add_string_object(good_item_uri, self.FOODPEDIA_NAMESPACE.pack_type, pack_type, lang)
+
+    def add_string_object(self, subject_uri, predicate_uri, string_to_add, lang):
+        literal = PatchedLiteralToReturnFullDatatype(string_to_add, lang=lang)
+        self._graph.add(
+            (subject_uri,
+             predicate_uri,
+             literal)
+        )
+
+    def add_calories_as_double_to_good(self, good_barcode, calories_as_double):
+        good_item_uri = FoodpediaGraph.convert_barcode_to_uri(good_barcode)
+        self.add_double_object(good_item_uri, self.FOOD_NAMESPACE.energyPer100gAsDouble, calories_as_double)
+
+    def add_fats_as_double_to_good(self, good_barcode, fats_as_double):
+        good_item_uri = FoodpediaGraph.convert_barcode_to_uri(good_barcode)
+        self.add_double_object(good_item_uri, self.FOOD_NAMESPACE.fatPer100gAsDouble, fats_as_double)
+
+    def add_proteins_as_double_to_good(self, good_barcode, proteins_as_double):
+        good_item_uri = FoodpediaGraph.convert_barcode_to_uri(good_barcode)
+        self.add_double_object(good_item_uri, self.FOOD_NAMESPACE.proteinsPer100gAsDouble, proteins_as_double)
+
+    def add_carbohydrates_as_double_to_good(self, barcode, carbohydrates_as_double):
+        good_item_uri = FoodpediaGraph.convert_barcode_to_uri(barcode)
+        self.add_double_object(good_item_uri, self.FOOD_NAMESPACE.carbohydratesPer100gAsDouble, carbohydrates_as_double)
+
+    def add_double_object(self, subject_uri, predicate_uri, double_value):
+        literal = PatchedLiteralToReturnFullDatatype(double_value, datatype=XSD.double)
+        self._graph.add(
+            (subject_uri,
+             predicate_uri,
+             literal)
+        )
+
+    def add_eadditive_to_good(self, good_barcode, eadditive_name):
+        good_item_uri = FoodpediaGraph.convert_barcode_to_uri(good_barcode)
+        eadditive_uri = FoodpediaGraph.convert_eadditive_name_to_uri(eadditive_name)
+        self._graph.add(
+            (good_item_uri,
+             self.FOOD_NAMESPACE.containsIngredient,
+             eadditive_uri)
+        )
+
+    @staticmethod
+    def convert_barcode_to_uri(barcode):
+        return URIRef(FoodpediaGraph.BASE_RESOURCE_URI.format(barcode))
+
+    @staticmethod
+    def convert_eadditive_name_to_uri(eadditive_name):
+        return URIRef(FoodpediaGraph.BASE_RESOURCE_URI.format(eadditive_name))
 
 
 class PatchedLiteralToReturnFullDatatype(Literal):

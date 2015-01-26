@@ -11,7 +11,7 @@ class GoodItem(scrapy.Item):
     netto_weight = scrapy.Field()
     standart = scrapy.Field()
     store_conditions = scrapy.Field()
-    esl = scrapy.Field()
+    esl_as_string = scrapy.Field()
     pack_type = scrapy.Field()
     proteins_as_double = scrapy.Field()
     fats_as_double = scrapy.Field()

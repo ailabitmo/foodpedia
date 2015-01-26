@@ -31,6 +31,6 @@ GOODS_PROPERTIES_MAP_ON_XPATH_IDS = {
         'netto_weight': 'ctl00_ContentPH_Net',
         'standart': 'ctl00_ContentPH_Gost',
         'store_conditions': 'ctl00_ContentPH_StoreCond',
-        'esl': 'ctl00_ContentPH_ESL',
+        'esl_as_string': 'ctl00_ContentPH_ESL',
         'pack_type': 'ctl00_ContentPH_PackingType',
     }

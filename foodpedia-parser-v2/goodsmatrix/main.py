@@ -14,19 +14,29 @@ def stop_reactor():
 
 def main():
     command_line_args = parse_arguments()
+
     dispatcher.connect(stop_reactor, signal=signals.spider_closed)
+
     spider = goodsmatrix.parser.GoodsMatrixSpider(command_line_args.category)
+
     settings = get_project_settings()
-    settings.set("ITEM_PIPELINES", {
-        "goodsmatrix.pipelines.RDFPipeline": 0
-    })
+    if command_line_args.persistence:
+        settings.set("ITEM_PIPELINES", {
+            "goodsmatrix.pipelines.PersistentRDFPipeline": 0
+        })
+    else:
+        settings.set("ITEM_PIPELINES", {
+            "goodsmatrix.pipelines.InMemoryRDFPipeline": 0
+        })
     settings.set("OUTPUT_FILENAME", command_line_args.output_filename)
+    settings.set("COOKIES_ENABLED", False)
+    settings.set("REDIRECT_ENABLED", False)
 
     crawler = Crawler(settings)
     crawler.configure()
     crawler.crawl(spider)
     crawler.start()
-    log.start()
+    log.start(loglevel='INFO')
     reactor.run() # the script will block here
 
 def parse_arguments():
@@ -34,6 +44,7 @@ def parse_arguments():
     parser.add_argument('category', help=('goods category name from goodsmatrix.ru.'
                                           'See html filename in URL for needed category'))
     parser.add_argument('output_filename')
+    parser.add_argument('-p', '--persistence', help='use persistence store (SleepyCat) for parsed items', action='store_true')
     args = parser.parse_args()
     return args
 

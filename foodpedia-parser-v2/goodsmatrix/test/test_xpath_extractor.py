@@ -150,7 +150,7 @@ class TestExtractGoodsProperties(unittest.TestCase):
                 'netto_weight': '1000,00 g',
                 'standart': 'TU 919191291',
                 'store_conditions': '+25',
-                'esl': 'Proteins: 10,00 g',
+                'esl_as_string': 'Proteins: 10,00 g',
                 'pack_type': 'test',
             })
 
