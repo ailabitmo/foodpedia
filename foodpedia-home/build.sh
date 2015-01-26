@@ -14,8 +14,8 @@ RESULT_WAR_NAME=foodpedia-home-$profile_name.war
 
 if [ -z "$M2_REPO" ]
 then
-    docker run -it --rm --name home_builder -v $POM_DIRECTORY_PATH:/usr/src/mymaven -w /usr/src/mymaven maven:3.2-jdk-7 mvn clean package -P $profile_name
+    docker run --rm --name home_builder -v $POM_DIRECTORY_PATH:/usr/src/mymaven -w /usr/src/mymaven maven:3.2-jdk-7 mvn clean package -P $profile_name
 else
-    docker run -it --rm --name home_builder -v $POM_DIRECTORY_PATH:/usr/src/mymaven -v $M2_REPO:/root/.m2/repository/ -w /usr/src/mymaven maven:3.2-jdk-7 mvn clean package -P $profile_name
+    docker run --rm --name home_builder -v $POM_DIRECTORY_PATH:/usr/src/mymaven -v $M2_REPO:/root/.m2/repository/ -w /usr/src/mymaven maven:3.2-jdk-7 mvn clean package -P $profile_name
 fi
 cp $POM_DIRECTORY_PATH/target/foodpedia-home-1.0-SNAPSHOT.war $POM_DIRECTORY_PATH/$RESULT_WAR_NAME
