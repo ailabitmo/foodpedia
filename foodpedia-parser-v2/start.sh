@@ -6,5 +6,5 @@ then
   python -m unittest discover -s ./goodsmatrix/test/ -t ./goodsmatrix
 else
   echo "run parser for the category $1"
-  python -m goodsmatrix.main $1 /upload/dump.ttl
+  python -m goodsmatrix.main -p $1 /upload/dump.ttl
 fi
