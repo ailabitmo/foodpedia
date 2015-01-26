@@ -1,4 +1,10 @@
-FROM python:2
+FROM google/python
+
+RUN apt-get update && apt-get install -y \
+  libffi-dev\
+  libxml2-dev\
+  libxslt1-dev\
+  python-dev
 
 ADD requirements.txt requirements.txt
 RUN pip install -r requirements.txt
