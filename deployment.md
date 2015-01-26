@@ -22,11 +22,11 @@ sudo docker run --name home \
 #go to http://localhost:9090/
 ```
 #### Run with local backend
-[Run endpoint](### How to run virtuoso endpoint)
+[Run endpoint](#how-to-run-virtuoso-endpoint)
 
-[Upload a data to the endpoint](#### How to upload data dump to the local endpoint)
+[Upload a data to the endpoint](#how-to-upload-data-dump-to-the-local-endpoint)
 
-[Run pubby](### How to run pubby localy)
+[Run pubby](#how-to-run-pubby-localy)
 ##### Build .war file for the home application
 ```
 # use the 'development' maven profile.
