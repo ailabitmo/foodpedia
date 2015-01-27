@@ -6,8 +6,7 @@ class FoodpediaGraph:
     FOOD_NAMESPACE = Namespace("http://purl.org/foodontology#")
     FOODPEDIA_NAMESPACE = Namespace("http://foodpedia.tk/ontology#")
     GOODRELATIONS_NAMESPACE = Namespace("http://purl.org/goodrelations/v1#")
-    BASE_RESOURCE_URI = "http://foodpedia.tk/resource/{0}"
-    BASE_EADDITIVE_URI = str(FOOD_NAMESPACE) + "{0}"
+    FOODPEDIA_RESOURCE_NAMESPACE = Namespace("http://foodpedia.tk/resource/")
     DEFAULT_LANG = 'ru'
 
     def __init__(self, graph):
@@ -162,11 +161,11 @@ class FoodpediaGraph:
 
     @staticmethod
     def convert_barcode_to_uri(barcode):
-        return URIRef(FoodpediaGraph.BASE_RESOURCE_URI.format(barcode))
+        return FoodpediaGraph.FOODPEDIA_RESOURCE_NAMESPACE[str(barcode)]
 
     @staticmethod
     def convert_eadditive_name_to_uri(eadditive_name):
-        return URIRef(FoodpediaGraph.BASE_RESOURCE_URI.format(eadditive_name))
+        return FoodpediaGraph.FOODPEDIA_RESOURCE_NAMESPACE[eadditive_name]
 
 
 class PatchedLiteralToReturnFullDatatype(Literal):
