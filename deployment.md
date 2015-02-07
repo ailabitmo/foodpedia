@@ -1,112 +1,87 @@
 # How to develop and deploy foodpedia.tk
 ## Web applications
-### How to run the home application
-#### Run with production backend
+### How to deploy foodpedia on production server
+#### How to deploy from scratch
 ```
-git clone git@github.com:ailabitmo/foodpedia.git && cd ./foodpedia
-
-sudo docker pull chistyakov/foodpedia_home_production
-sudo docker run --name home \
--d -p 9090:8080 chistyakov/foodpedia_home_production
-
-#go to http://localhost:9090/
+# get fig.yml and ./upload directory from sources
+git clone https://github.com/ailabitmo/foodpedia.git
+cd ./foodpedia
+# put the latest data dump to the ./upload directory e.g. with the command
+wget --directory-prefix=upload \
+http://109.234.34.200:8080/job/foodpedia_parser_run/lastSuccessfulBuild/artifact/upload/Foodstuffs.ttl
+# pull latest docker images from dockerhub
+sudo fig pull
+# up whole application
+sudo fig up -d
+sudo fig logs -f
+# test foodpedia.tk
+curl http://foodpedia.tk
 ```
-#### Run with testing backend 
+#### How to update one component
 ```
-git clone git@github.com:ailabitmo/foodpedia.git && cd ./foodpedia
-
-sudo docker pull chistyakov/foodpedia_home_testing
-sudo docker run --name home \
--d -p 9090:8080 chistyakov/foodpedia_home_testing
-
-#go to http://localhost:9090/
-```
-#### Run with local backend
-[Run endpoint](#how-to-run-virtuoso-endpoint)
-
-[Upload a data to the endpoint](#how-to-upload-data-dump-to-the-local-endpoint)
-
-[Run pubby](#how-to-run-pubby-localy)
-##### Build .war file for the home application
-```
-# use the 'development' maven profile.
-sudo ./foodpedia-home/build.sh development
-```
-##### Prepare context for the foodpedia-home image
-```
-mv ./foodpedia-home/foodpedia-home-development.war ./foodpedia-home/ROOT.war
+# update fig.yml
+cd ./foodpedia && git pull
+# pull latest containers:
+sudo fig pull
+# up only needed service
+# e.g. for home:
+sudo fig up -d --no-deps home 
 ```
 
-##### Build image and run the homepage container
-```
-sudo docker build -t foodpedia_home_development ./foodpedia-home/
+### How to deploy foodpedia localy
+#### Prerequirements
 
-sudo docker run --name home \
--d -p 9090:8080 foodpedia_home_development
-
-#go to http://localhost:9090/
-```
-
-### Development cycle for the homepage application
+You need to have [git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [docker](https://docs.docker.com/installation/#installation) and [fig](http://www.fig.sh/install.html) installed.
+#### Deployment
 ```
 #1. take the latest sources
 git clone git@github.com:ailabitmo/foodpedia.git && cd ./foodpedia
-#2. build foodpedia-home with maven
-sudo docker run -i -t --rm \
-  -v "$(pwd)"/foodpedia-home:/usr/src/mymaven \
-  -v $M2_REPO:/root/.m2/repository/ \
-  -w /usr/src/mymaven \
-  maven:3.2-jdk-7 \
-  mvn clean package -P development
-#3. run foodpedia-home from the image
-#mount the /usr/local/tomcat/webapps/ROOT/ directory to the built project's target directory
-sudo docker run -d \
-  -v "$(pwd)"/foodpedia-home/target/foodpedia-home-1.0-SNAPSHOT/:/usr/local/tomcat/webapps/ROOT/ --name home \
-  -p 9090:8080  chistyakov/foodpedia_home_testing
-#4. test application
-curl -i http://localhost:9090
+#2. build .war for home page
+export M2_HOME=~/.m2/repository/
+sudo -E ./foodpedia-home/build.sh development
+#3. up whole foodpedia
+sudo fig -f fig_development.yml pull
+sudo fig -f fig_development.yml up -d
+#4. test foodpedia.tk
+curl http://localhost
+```
+
+### Development cycle for the homepage application
+[Deploy foodpedia localy](#how-to-deploy-foodpedia-localy)
+```
 #5. make changes in sources
-#6. repeat the step 3 (build foodpedia-home with maven).
-#7. restart the home container
-sudo docker restart home
-#8. repeat steps 4 -- 7
-#9. commit changes
+#6. build .war for home page
+sudo -E ./foodpedia-home/build.sh development
+#7. rebuild the home image
+sudo fig -f fig_development.yml build
+#8. restart only home and pathrouther services
+sudo fig -f fig_development.yml up -d --no-deps home pathrouter
+#9. test changes
+curl http://localhost
+#10. repeat steps 5 -- 9
+#11. commit changes localy
 git commit -a -m "some changes"
-#10. wait until the build and deploy jobs for testing environment will be finished
-#11. test changes on the testing environment
-#12. if test passed -- deploy to production
+#12. wait until the build and deploy jobs for testing environment will be finished
+#13. test changes on the testing environment
+curl http://109.234.34.200/
+#14. if test passed -- deploy to production
 ```
+### How to upload a data dump to endpoint
+#### via docker (on container's start):
+place the dump to the directory ./foodpedia/upload/ before running the endpoint service
 
-
-### How to run virtuoso endpoint
-```
-sudo docker pull chistyakov/foodpedia_virtuoso_ontowiki
-sudo docker run --name endpoint -d -p 8008:80 -p 8890:8890 \
--v "$(pwd)"/upload/:/upload/ chistyakov/foodpedia_virtuoso_ontowiki
-#go to http://localhost:8890/sparql for sparql endpoint
-#go to http://localhost:8890/conductor for virtuoso web interface
-#go to http://localhost:80 for ontowiki
-```
-#### How to upload data dump to the local endpoint
-##### via docker (on container's start):
-place the dump to the "$(pwd)"/upload/ directory before runing the endpoint container
-##### via docker:
-after running the endpoint container place the dump to "$(pwd)"/upload/ directory
+#### via docker:
+after running the endpoint container place the dump to the directory ./foodpedia/upload/
 then execute:
 ```
-sudo docker exec endpoint sh ./upload_dump.sh
+sudo docker exec \
+"$(sudo fig -f fig_development.yml ps -q endpoint)" \
+sh ./upload_dump.sh
 ```
-##### via web virtuoso's web interface:
-go ot http://localhost:8890/conductor
-use the [Conductor "Quad Store Upload" tab](http://docs.openlinksw.com/virtuoso/htmlconductorbar.html#rdfadm) feature
 
-### How to run pubby localy
-```
-sudo docker pull chistyakov/foodpedia_pubby
-sudo docker run --name pubby -p 8090:8080 -d --link endpoint:endpoint chistyakov/foodpedia_pubby http://localhost:8090
-#check http://localhost:8090. Note, it will return 404 not found if there aren't uploaded to endpoint data.
-#the passed parameter (http://localhost:8090) will be used as homepage and webbase uri
-```
+#### via web virtuoso's web interface:
+go ot http://localhost/conductor
+use the [Conductor "Quad Store Upload" tab](http://docs.openlinksw.com/virtuoso/htmlconductorbar.html#rdfadm) feature
 
 ## Parser
 ### Parse www.goodsmatrix.ru
