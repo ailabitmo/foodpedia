@@ -77,7 +77,7 @@
             <id>production</id>
             <properties>
                 <pubby.url>http://foodpedia.tk/resource/</pubby.url>
-                <endpoint.url>http://foodpedia.tk/sparql-cors</endpoint.url>
+                <endpoint.url>http://foodpedia.tk/sparql</endpoint.url>
             </properties>
         </profile>
     </profiles>
