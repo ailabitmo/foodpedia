@@ -1,33 +1,5 @@
 # How to develop and deploy foodpedia.tk
 ## Web applications
-### How to deploy foodpedia on production server
-#### How to deploy from scratch
-```bash
-# get fig.yml and ./upload directory from sources
-git clone https://github.com/ailabitmo/foodpedia.git
-cd ./foodpedia
-# put the latest data dump to the ./upload directory e.g. with the command
-wget --directory-prefix=upload \
-http://109.234.34.200:8080/job/foodpedia_parser_run/lastSuccessfulBuild/artifact/upload/Foodstuffs.ttl
-# pull latest docker images from dockerhub
-sudo fig pull
-# up whole application
-sudo fig up -d
-sudo fig logs -f
-# test foodpedia.tk
-curl http://foodpedia.tk
-```
-#### How to update one component
-```bash
-# update fig.yml
-cd ./foodpedia && git pull
-# pull latest containers:
-sudo fig pull
-# up only needed service
-# e.g. for home:
-sudo fig up -d --no-deps home 
-```
-
 ### How to deploy foodpedia localy
 #### Prerequirements
 
@@ -37,7 +9,7 @@ You need to have [git](http://git-scm.com/book/en/v2/Getting-Started-Installing-
 #1. take the latest sources
 git clone git@github.com:ailabitmo/foodpedia.git && cd ./foodpedia
 #2. build .war for home page
-export M2_HOME=~/.m2/repository/
+export M2_REPO=~/.m2/repository/
 sudo -E ./foodpedia-home/build.sh development
 #3. up whole foodpedia
 sudo fig -f fig_development.yml pull
@@ -61,11 +33,41 @@ curl http://localhost
 #10. repeat steps 5 -- 9
 #11. commit changes localy
 git commit -a -m "some changes"
-#12. wait until the build and deploy jobs for testing environment will be finished
-#13. test changes on the testing environment
+#12. wait until jobs foodpedia_home_build_war, foodpedia_home_build_testing_docker_image and foodpedia_home_deploy_on_test_server will be finished
+#13. test changes on the test server
 curl http://109.234.34.200/
 #14. if test passed -- deploy to production
 ```
+
+### How to deploy foodpedia on production server
+#### How to deploy from scratch
+```bash
+# get fig.yml and ./upload directory from sources
+git clone https://github.com/ailabitmo/foodpedia.git
+cd ./foodpedia
+# put the latest data dump to the ./upload directory e.g. with the command
+wget --directory-prefix=upload \
+http://109.234.34.200:8080/job/foodpedia_parser_run/lastSuccessfulBuild/artifact/upload/Foodstuffs.ttl
+# pull latest docker images from dockerhub
+sudo fig pull
+# up whole application
+sudo fig up -d
+sudo fig logs
+# test foodpedia.tk
+curl http://foodpedia.tk
+```
+#### How to update one service
+```bash
+# update fig.yml
+cd ./foodpedia && git pull
+# pull latest containers:
+sudo fig pull
+# up only needed service
+# e.g. for home:
+sudo fig up -d --no-deps home pathrouter
+sudo fig logs
+```
+
 ### How to upload a data dump to endpoint
 #### via docker (on container's start):
 place the dump to the directory ./foodpedia/upload/ before running the endpoint service
@@ -84,7 +86,7 @@ go ot http://localhost/conductor
 use the [Conductor "Quad Store Upload" tab](http://docs.openlinksw.com/virtuoso/htmlconductorbar.html#rdfadm) feature
 
 ## Parser
-### Parse www.goodsmatrix.ru
+### Parser for www.goodsmatrix.ru
 #### How to run parser
 ```bash
 touch "$(pwd)"/result.ttl

@@ -1,4 +1,4 @@
-# [FOODpedia](foodpedia.tk) - a [DBpedia](http://dbpedia.org/) of Food Products
+# [FOODpedia](http://foodpedia.tk) - a [DBpedia](http://dbpedia.org/) of Food Products
 ## Web interface
 Search food by name or barcode: [http://foodpedia.tk/#/](http://foodpedia.tk/#/)
 ## SPARQL protocol endpoint
