@@ -2,7 +2,7 @@
 ## Web applications
 ### How to deploy foodpedia on production server
 #### How to deploy from scratch
-```
+```bash
 # get fig.yml and ./upload directory from sources
 git clone https://github.com/ailabitmo/foodpedia.git
 cd ./foodpedia
@@ -18,7 +18,7 @@ sudo fig logs -f
 curl http://foodpedia.tk
 ```
 #### How to update one component
-```
+```bash
 # update fig.yml
 cd ./foodpedia && git pull
 # pull latest containers:
@@ -33,7 +33,7 @@ sudo fig up -d --no-deps home
 
 You need to have [git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [docker](https://docs.docker.com/installation/#installation) and [fig](http://www.fig.sh/install.html) installed.
 #### Deployment
-```
+```bash
 #1. take the latest sources
 git clone git@github.com:ailabitmo/foodpedia.git && cd ./foodpedia
 #2. build .war for home page
@@ -48,7 +48,7 @@ curl http://localhost
 
 ### Development cycle for the homepage application
 [Deploy foodpedia localy](#how-to-deploy-foodpedia-localy)
-```
+```bash
 #5. make changes in sources
 #6. build .war for home page
 sudo -E ./foodpedia-home/build.sh development
@@ -73,7 +73,7 @@ place the dump to the directory ./foodpedia/upload/ before running the endpoint 
 #### via docker:
 after running the endpoint container place the dump to the directory ./foodpedia/upload/
 then execute:
-```
+```bash
 sudo docker exec \
 "$(sudo fig -f fig_development.yml ps -q endpoint)" \
 sh ./upload_dump.sh
@@ -86,7 +86,7 @@ use the [Conductor "Quad Store Upload" tab](http://docs.openlinksw.com/virtuoso/
 ## Parser
 ### Parse www.goodsmatrix.ru
 #### How to run parser
-```
+```bash
 touch "$(pwd)"/result.ttl
 sudo docker run --rm \
 -v "$(pwd)"/result.ttl:/upload/dump.ttl \
@@ -95,14 +95,14 @@ chistyakov/foodpedia_goodsmatrix_parser <category>
 Use category's name from goodsmatrix's URL.
 ##### example: how to parse the Milk category
 Milk products category's URL: http://goodsmatrix.ru/goods-catalogue/Milk.html
-```
+```bash
 touch milk.ttl
 sudo docker run --rm \
 -v "$(pwd)"/milk.ttl:/upload/dump.ttl \
 chistyakov/foodpedia_goodsmatrix_parser Milk
 ```
 #### Development cycle for parser
-```
+```bash
 #1. Take the latest sources
 git clone git@github.com:ailabitmo/foodpedia.git && cd ./foodpedia
 #2. Make your changes
