@@ -20,4 +20,5 @@ endpoint:
   image: chistyakov/foodpedia_virtuoso_ontowiki
   volumes:
     - ./upload:/upload
-
+  ports:
+    - "8008:80"
