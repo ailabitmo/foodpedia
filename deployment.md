@@ -62,6 +62,8 @@ curl http://foodpedia.tk
 cd ./foodpedia && git pull
 # pull latest containers:
 sudo fig pull
+# build containers which are not pulled from docker hub
+sudo fig build
 # up only needed service
 # e.g. for home:
 sudo fig up -d --no-deps home pathrouter
