@@ -6,7 +6,7 @@ import shutil
 
 
 PORT = 80
-REPOSITORY_NAME = 'chistyakov/food-ontology'
+REPOSITORY_NAME = 'ailabitmo/food-ontology'
 LATEST_FOOD_OWL_URI = 'https://raw.githubusercontent.com/{0}/master/food.owl'.format(REPOSITORY_NAME)
 GITHUB_URI = 'git@github.com:{0}.git'.format(REPOSITORY_NAME)
 COMMIT_MESSAGE = 'updated index.html automatically '
