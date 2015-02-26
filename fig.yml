@@ -20,3 +20,10 @@ endpoint:
   image: chistyakov/foodpedia_virtuoso_ontowiki
   volumes:
     - ./upload:/upload
+
+food_ontology_updater:
+  build: food-ontology-updater
+  ports:
+    - "8008:80"
+  volumes:
+    - ~/.ssh:/root/.ssh
