@@ -26,4 +26,3 @@ endpoint:
 
 foodontologycontentnegotiator:
   build: foodpedia-servlet
-  restart: always
