@@ -21,7 +21,7 @@ endpoint:
   volumes:
     - ./upload:/upload
 
-food_ontology_updater:
+foodontologyupdater:
   build: food-ontology-updater
   ports:
     - "8008:80"
