@@ -17,9 +17,9 @@ public class FoodPedia extends HttpServlet {
         request.getContentType();
         String accept = request.getHeader("Accept");
         if (accept != null && accept.indexOf("text/html") >= 0) {
-            response.sendRedirect("http://github.com");
+            response.sendRedirect("http://ailabitmo.github.io/food-ontology");
         } else if (accept != null && accept.indexOf("application/rdf+xml") >= 0) {
-            response.sendRedirect("http://purl.org/foodontology");
+            response.sendRedirect("https://raw.githubusercontent.com/ailabitmo/food-ontology/master/food.owl");
         }
     }
 

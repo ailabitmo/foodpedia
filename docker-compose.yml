@@ -6,6 +6,7 @@ pathrouter:
     - endpoint
     - pubby
     - home
+    - foodontologycontentnegotiator
   restart: always
 
 home:
@@ -31,4 +32,8 @@ foodontologyupdater:
     - "8008:80"
   volumes:
     - ~/.ssh:/root/.ssh
+  restart: always
+
+foodontologycontentnegotiator:
+  build: foodpedia-servlet
   restart: always

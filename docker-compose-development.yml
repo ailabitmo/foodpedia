@@ -6,6 +6,7 @@ pathrouter:
     - endpoint
     - pubby
     - home
+    - foodontologycontentnegotiator
 
 home:
   build: ./foodpedia-home
@@ -22,3 +23,7 @@ endpoint:
     - ./upload:/upload
   ports:
     - "8008:80"
+
+foodontologycontentnegotiator:
+  build: foodpedia-servlet
+  restart: always
