@@ -3,7 +3,7 @@
 ### How to deploy foodpedia localy
 #### Prerequirements
 
-You need to have [git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [docker](https://docs.docker.com/installation/#installation) and [fig](http://www.fig.sh/install.html) installed.
+You need to have [git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [docker](https://docs.docker.com/installation/#installation) and [docker compose](http://docs.docker.com/compose/install/) installed.
 #### Deployment
 ```bash
 #1. take the latest sources
@@ -12,8 +12,8 @@ git clone git@github.com:ailabitmo/foodpedia.git && cd ./foodpedia
 export M2_REPO=~/.m2/repository/
 sudo -E ./foodpedia-home/build.sh development
 #3. up whole foodpedia
-sudo fig -f fig_development.yml pull
-sudo fig -f fig_development.yml up -d
+sudo docker-compose -f docker-compose-development.yml pull
+sudo docker-compose -f docker-compose-development.yml up -d
 #4. test foodpedia.tk
 curl http://localhost
 ```
@@ -25,9 +25,9 @@ curl http://localhost
 #6. build .war for home page
 sudo -E ./foodpedia-home/build.sh development
 #7. rebuild the home image
-sudo fig -f fig_development.yml build
+sudo docker-compose -f docker-compose-development.yml build
 #8. restart only home and pathrouther services
-sudo fig -f fig_development.yml up -d --no-deps home pathrouter
+sudo docker-compose -f docker-compose-development.yml up -d --no-deps home pathrouter
 #9. test changes
 curl http://localhost
 #10. repeat steps 5 -- 9
@@ -42,32 +42,33 @@ curl http://109.234.34.200/
 ### How to deploy foodpedia on production server
 #### How to deploy from scratch
 ```bash
-# get fig.yml and ./upload directory from sources
+# get docker-compose.yml and ./upload directory from sources
 git clone https://github.com/ailabitmo/foodpedia.git
 cd ./foodpedia
 # put the latest data dump to the ./upload directory e.g. with the command
 wget --directory-prefix=upload \
 http://109.234.34.200:8080/job/foodpedia_parser_run/lastSuccessfulBuild/artifact/upload/Foodstuffs.ttl
 # pull latest docker images from dockerhub
-sudo fig pull
+sudo docker-compose pull
 # up whole application
-sudo fig up -d
-sudo fig logs
+sudo docker-compose up -d
+sudo docker-compose logs
 # test foodpedia.tk
 curl http://foodpedia.tk
 ```
 #### How to update one service
 ```bash
-# update fig.yml
+# update docker-compose.yml
 cd ./foodpedia && git pull
 # pull latest containers:
-sudo fig pull
-# build containers which are not pulled from docker hub
-sudo fig build
+sudo docker-compose pull
+# re-build containers which are not pulled from docker hub.
+# TODO: check if this step is really needed
+sudo docker-compose build
 # up only needed service
 # e.g. for home:
-sudo fig up -d --no-deps home pathrouter
-sudo fig logs
+sudo docker-compose up -d --no-deps home pathrouter
+sudo docker-compose logs
 ```
 
 ### How to upload a data dump to endpoint
@@ -79,7 +80,7 @@ after running the endpoint container place the dump to the directory ./foodpedia
 then execute:
 ```bash
 sudo docker exec \
-"$(sudo fig -f fig_development.yml ps -q endpoint)" \
+"$(sudo docker-compose -f docker-compose-development.yml ps -q endpoint)" \
 sh ./upload_dump.sh
 ```
 
