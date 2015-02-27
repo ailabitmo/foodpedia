@@ -6,20 +6,24 @@ pathrouter:
     - endpoint
     - pubby
     - home
+  restart: always
 
 home:
   image: chistyakov/foodpedia_home_production
+  restart: always
 
 pubby:
   image: chistyakov/foodpedia_pubby
   links:
     - endpoint
   command: http://foodpedia.tk http://endpoint:8890/sparql
+  restart: always
 
 endpoint:
   image: chistyakov/foodpedia_virtuoso_ontowiki
   volumes:
     - ./upload:/upload
+  restart: always
 
 foodontologyupdater:
   build: food-ontology-updater
@@ -27,3 +31,4 @@ foodontologyupdater:
     - "8008:80"
   volumes:
     - ~/.ssh:/root/.ssh
+  restart: always
