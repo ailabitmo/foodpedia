@@ -20,14 +20,17 @@ def main():
     spider = goodsmatrix.parser.GoodsMatrixSpider(command_line_args.category)
 
     settings = get_project_settings()
+    pipelines_order_dict = {
+            "goodsmatrix.pipelines.postprocessors.ExtractEslPipeline": 1,
+            "goodsmatrix.pipelines.postprocessors.ExtractEAdditives": 2,
+            "goodsmatrix.pipelines.postprocessors.StripMultilineStringProperties": 3
+        }
     if command_line_args.persistence:
-        settings.set("ITEM_PIPELINES", {
-            "goodsmatrix.pipelines.PersistentRDFPipeline": 0
-        })
+        pipelines_order_dict["goodsmatrix.pipelines.writers.PersistentRDFPipeline"] = 10
     else:
-        settings.set("ITEM_PIPELINES", {
-            "goodsmatrix.pipelines.InMemoryRDFPipeline": 0
-        })
+        pipelines_order_dict["goodsmatrix.pipelines.writers.InMemoryRDFPipeline"] = 10
+    settings.set("ITEM_PIPELINES", pipelines_order_dict)
+
     settings.set("OUTPUT_FILENAME", command_line_args.output_filename)
     settings.set("COOKIES_ENABLED", False)
     settings.set("REDIRECT_ENABLED", False)

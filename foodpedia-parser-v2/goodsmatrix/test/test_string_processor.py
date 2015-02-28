@@ -2,7 +2,7 @@
 import unittest
 
 
-from goodsmatrix.string_postprocessor import parse_esl, postprocess_extracted_property_string, parse_e_additives
+from goodsmatrix.string_processor import parse_esl, strip_multiline, parse_e_additives
 
 
 class TestEslParser(unittest.TestCase):
@@ -62,28 +62,50 @@ class TestEslParser(unittest.TestCase):
         self.assertEqual(parse_esl(u"Белки: менее 19,00 г "), dict())
 
 
-class TestExtractedStringPostprocessing(unittest.TestCase):
+class TestStripMutlilineString(unittest.TestCase):
     def test_one_line_word(self):
         self.assertEqual(
-            postprocess_extracted_property_string("word"),
+            strip_multiline("word"),
             "word"
         )
-    def test_two_lines(self):
+
+    def test_two_lines_are_converted_to_single_line(self):
         two_lines_string = (
 """hoho
 hihi"""
 )
 
         self.assertEqual(
-            postprocess_extracted_property_string(two_lines_string),
+            strip_multiline(two_lines_string),
             "hoho hihi"
         )
 
     def test_one_line_is_stripped(self):
         self.assertEqual(
-            postprocess_extracted_property_string("   word   "),
+            strip_multiline("   word   "),
             "word"
         )
+
+    def test_two_lines_with_spaces_are_stripped(self):
+        two_lines_string = (
+"""    hoho
+hihi    """
+)
+
+        self.assertEqual(
+            strip_multiline(two_lines_string),
+            "hoho hihi"
+        )
+
+
+    def test_attribute_error_for_double(self):
+        self.assertRaises(AttributeError, strip_multiline, 10.0)
+
+    def test_attribute_error_for_list(self):
+        self.assertRaises(AttributeError, strip_multiline, [u'E201', u'E202'])
+
+    def test_empty_string(self):
+        self.assertEqual(strip_multiline(""), "")
 
 
 class TestParseEAdditives(unittest.TestCase):

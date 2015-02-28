@@ -23,8 +23,8 @@ def parse_esl(string):
     return parsed_dict
 
 
-def postprocess_extracted_property_string(string):
-    return ' '.join(line.strip() for line in string.split('\n'))
+def strip_multiline(multiline_string):
+    return ' '.join(line.strip() for line in multiline_string.split('\n'))
 
 
 def parse_e_additives(string):

@@ -91,7 +91,6 @@ class TestGoodsMatrixSpider(TestCase):
         with self.assertRaises(StopIteration):
             requests.next()
 
-
     @patch('goodsmatrix.xpath_extractor.extract_goods_properties_dict')
     def test_parse_good_with_common_properties(self, mock_extracted_dict):
         mock_extracted_dict.return_value = {
@@ -122,23 +121,3 @@ class TestGoodsMatrixSpider(TestCase):
         self.assertEqual(good['store_conditions'], '+25')
         self.assertEqual(good['esl_as_string'], 'esl')
         self.assertEqual(good['pack_type'], 'test')
-
-    @patch('goodsmatrix.xpath_extractor.extract_goods_properties_dict')
-    @patch('goodsmatrix.string_postprocessor.parse_esl')
-    def test_parse_esl_without_fats(self, mock_parsed_esl_dict, mock_extracted_dict):
-        mock_extracted_dict.return_value = {'esl_as_string': ''}
-        mock_parsed_esl_dict.return_value = {
-                'proteins_as_double': 7.50,
-                'carbohydrates_as_double': 3.0,
-                'calories_as_double': 263.0
-            }
-        stub_response = HtmlResponse(url="http://goodsmatrix.ru")
-
-        good = self.spider.parse_good(stub_response)
-
-        self.assertTrue(mock_extracted_dict.called)
-        self.assertTrue(mock_parsed_esl_dict.called)
-        self.assertEqual(good['proteins_as_double'], 7.50)
-        self.assertEqual(good['carbohydrates_as_double'], 3.0)
-        self.assertEqual(good['calories_as_double'], 263.0)
-        self.assertNotIn('fats_as_double', good)
