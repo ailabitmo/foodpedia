@@ -21,7 +21,7 @@ def main():
 
     settings = get_project_settings()
     pipelines_order_dict = {
-            "goodsmatrix.pipelines.postprocessors.ExtractEslPipeline": 1,
+            "goodsmatrix.pipelines.postprocessors.ExtractEsl": 1,
             "goodsmatrix.pipelines.postprocessors.ExtractEAdditives": 2,
             "goodsmatrix.pipelines.postprocessors.StripMultilineStringProperties": 3
         }

@@ -1,7 +1,7 @@
 from goodsmatrix import string_processor
 
 
-class ExtractEslPipeline(object):
+class ExtractEsl(object):
     def process_item(self, good_item, spider):
         if 'esl_as_string' in good_item:
             esl_as_string = good_item['esl_as_string']

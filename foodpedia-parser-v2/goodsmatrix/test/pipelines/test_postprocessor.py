@@ -1,14 +1,14 @@
 from unittest import TestCase
 from mock import patch
 
-from goodsmatrix.pipelines.postprocessors import ExtractEslPipeline
+from goodsmatrix.pipelines.postprocessors import ExtractEsl
 from goodsmatrix.pipelines.postprocessors import ExtractEAdditives
 from goodsmatrix.pipelines.postprocessors import StripMultilineStringProperties
 
 
-class TestExtractEslPipeline(TestCase):
+class TestExtractEsl(TestCase):
     def setUp(self):
-        self.pipeline = ExtractEslPipeline()
+        self.pipeline = ExtractEsl()
 
     @patch('goodsmatrix.string_processor.parse_esl')
     def test_process_item_with_esl(self, mock_parsed_esl_dict):
