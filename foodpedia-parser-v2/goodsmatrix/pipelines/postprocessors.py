@@ -27,3 +27,19 @@ class StripMultilineStringProperties(object):
             except AttributeError:
                 pass
         return good_item
+
+
+class UnescapeSpecialHTMLEntities(object):
+    """
+    usual special html entities (e.g. &quot) are parsed on extracting,
+    but goodsmatrix.ru plays a dirty trick on some goods providing
+    special entities in upper case (e.g. &QUOt)
+    """
+    def process_item(self, good_item, spider):
+        for key in good_item:
+            try:
+                good_item[key] = string_processor.unescape_html_special_entities_case_insensitive(
+                    good_item[key])
+            except TypeError:
+                pass
+        return good_item

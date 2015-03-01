@@ -2,7 +2,7 @@
 import unittest
 
 
-from goodsmatrix.string_processor import parse_esl, strip_multiline, parse_e_additives
+from goodsmatrix.string_processor import parse_esl, strip_multiline, parse_e_additives, unescape_html_special_entities_case_insensitive
 
 
 class TestEslParser(unittest.TestCase):
@@ -132,6 +132,37 @@ class TestParseEAdditives(unittest.TestCase):
 
     def test_additive_with_hyphen(self):
         self.assertEqual(parse_e_additives(u"е-100"), [u'E100'])
+
+
+class TestUnescapeHTMLSpecialEntitiesCaseInsensitive(unittest.TestCase):
+    def test_strip_special_character(self):
+        name = u'Традиционное датское сдобное печенье &quot;BISCA&quot; ассорти 454 г'
+
+        name_in_plain_text = unescape_html_special_entities_case_insensitive(name)
+
+        self.assertEqual(
+            name_in_plain_text,
+            u'Традиционное датское сдобное печенье "BISCA" ассорти 454 г'
+        )
+
+    def test_strip_special_character_uppercase(self):
+        name = u'ТРАДИЦИОННОЕ ДАТСКОЕ СДОБНОЕ ПЕЧЕНЬЕ &QUOT;BISCA&QUOT; АССОРТИ 454 Г'
+
+        name_in_plain_text = unescape_html_special_entities_case_insensitive(name)
+
+        self.assertEqual(
+            name_in_plain_text,
+            u'ТРАДИЦИОННОЕ ДАТСКОЕ СДОБНОЕ ПЕЧЕНЬЕ "BISCA" АССОРТИ 454 Г'
+        )
+
+    def test_strip_special_character_on_not_string(self):
+        proteins_as_double = 12.3
+
+        self.assertRaises(
+            TypeError,
+            unescape_html_special_entities_case_insensitive,
+            proteins_as_double
+        )
 
 
 if __name__ == "__main__":

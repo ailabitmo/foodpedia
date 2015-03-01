@@ -154,6 +154,163 @@ class TestExtractGoodsProperties(unittest.TestCase):
                 'pack_type': 'test',
             })
 
+    def test_excract_special_charcter_decoded(self):
+        stub_response = HtmlResponse(
+            url="",
+            body=(
+                r"<html>"
+                r"<body>"
+                r"<span id='ctl00_ContentPH_GoodsName'>&lt;</span>"
+                r"</body>"
+                r"</html>")
+            )
+        self.assertEqual(
+            xpath_extractor.extract_goods_properties_dict(stub_response),
+            {
+                'name': '<',
+            })
+
+    def test_excract_html_tag_dropped(self):
+        stub_response = HtmlResponse(
+            url="",
+            body=(
+                r"<html>"
+                r"<body>"
+                r"<span id='ctl00_ContentPH_GoodsName'>te<br \>st</span>"
+                r"</body>"
+                r"</html>")
+            )
+        self.assertEqual(
+            xpath_extractor.extract_goods_properties_dict(stub_response),
+            {
+                'name': 'test',
+            })
+
+    def test_excract_paired_html_dropped_but_content_saved(self):
+        stub_response = HtmlResponse(
+            url="",
+            body=(
+                r"<html>"
+                r"<body>"
+                r"<span id='ctl00_ContentPH_GoodsName'>t<b>es</b>t</span>"
+                r"</body>"
+                r"</html>")
+            )
+        self.assertEqual(
+            xpath_extractor.extract_goods_properties_dict(stub_response),
+            {
+                'name': 'test',
+            })
+
+    def test_excract_only_first_occurance(self):
+        stub_response = HtmlResponse(
+            url="",
+            body=(
+                r"<html>"
+                r"<body>"
+                r"<span id='ctl00_ContentPH_GoodsName'>test1</span>"
+                r"<span id='ctl00_ContentPH_GoodsName'>test2</span>"
+                r"</body>"
+                r"</html>")
+            )
+        self.assertEqual(
+            xpath_extractor.extract_goods_properties_dict(stub_response),
+            {
+                'name': 'test1',
+            })
+
+    def test_excract_empty_value_is_skipped(self):
+        stub_response = HtmlResponse(
+            url="",
+            body=(
+                r"<html>"
+                r"<body>"
+                r"<span id='ctl00_ContentPH_GoodsName'></span>"
+                r"</body>"
+                r"</html>")
+            )
+        self.assertEqual(
+            xpath_extractor.extract_goods_properties_dict(stub_response),
+            dict())
+
+    def test_excract_value_with_html_tag_ontly(self):
+        stub_response = HtmlResponse(
+            url="",
+            body=(
+                r"<html>"
+                r"<body>"
+                r"<span id='ctl00_ContentPH_GoodsName'><br></span>"
+                r"</body>"
+                r"</html>")
+            )
+        self.assertEqual(
+            xpath_extractor.extract_goods_properties_dict(stub_response),
+            dict())
+
+    def test_excract_value_with_newline_only(self):
+        stub_response = HtmlResponse(
+            url="",
+            body=(
+                r"<html>"
+                r"<body>"
+                r"<span id='ctl00_ContentPH_GoodsName'>"
+                "\n"
+                r"</span>"
+                r"</body>"
+                r"</html>")
+            )
+        self.assertEqual(
+            xpath_extractor.extract_goods_properties_dict(stub_response),
+            dict())
+
+    def test_excract_esl_as_string_concatinated_with_semicolon(self):
+        stub_response = HtmlResponse(
+            url="",
+            body=(
+                r"<html>"
+                r"<body>"
+                r"<span id='ctl00_ContentPH_ESL'>Proteins:  11,20 g<br />Fats:  22,90 g<br />Carbohydrates:  25,90 g<br />Calories:  354,50 kkal<br /></span>"
+                r"</body>"
+                r"</html>")
+            )
+        self.assertEqual(
+            xpath_extractor.extract_goods_properties_dict(stub_response),
+            {
+                'esl_as_string': 'Proteins:  11,20 g; Fats:  22,90 g; Carbohydrates:  25,90 g; Calories:  354,50 kkal'
+            })
+
+    def test_excract_special_charcter_decoded(self):
+        stub_response = HtmlResponse(
+            url="",
+            body=(
+                r"<html>"
+                r"<body>"
+                r"<span id='ctl00_ContentPH_GoodsName'>&lt;</span>"
+                r"</body>"
+                r"</html>")
+            )
+        self.assertEqual(
+            xpath_extractor.extract_goods_properties_dict(stub_response),
+            {
+                'name': '<',
+            })
+
+
+    def test_excract_special_charcter_decoded(self):
+        stub_response = HtmlResponse(
+            url="",
+            body=(
+                r"<html>"
+                r"<body>"
+                r"<span id='ctl00_ContentPH_GoodsName'>&lt;</span>"
+                r"</body>"
+                r"</html>")
+            )
+        self.assertEqual(
+            xpath_extractor.extract_goods_properties_dict(stub_response),
+            {
+                'name': '<',
+            })
     def test_if_property_does_not_exist_then_it_is_not_added_to_dict(self):
         stub_response = HtmlResponse(
             url="",

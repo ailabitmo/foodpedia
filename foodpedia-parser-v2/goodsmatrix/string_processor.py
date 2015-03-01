@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
+import lxml
 import re
+import htmlentitydefs
+from HTMLParser import HTMLParser
 
 
 LIST_OF_POSSIBLE_ESL = {
@@ -31,7 +34,22 @@ def parse_e_additives(string):
     found_additives_list = re.findall(ur"\b([Е|E]-?\d\d\d\w?)\b", string, flags=re.IGNORECASE|re.UNICODE)
     return list(convert_to_asci_without_hyphen(additive) for additive in found_additives_list)
 
+
 def convert_to_asci_without_hyphen(extracted_additive_string):
     extracted_additive_string = 'E' + extracted_additive_string[1:]
     extracted_additive_string = re.sub('-', '', extracted_additive_string)
     return extracted_additive_string.encode('ascii', 'ignore')
+
+
+def unescape_html_special_entities_case_insensitive(s):
+    name2codepoint = htmlentitydefs.name2codepoint
+    name2codepoint_case_insensitive = htmlentitydefs.name2codepoint
+    name2codepoint_case_insensitive.update(
+            {name.upper(): name2codepoint[name] for name in name2codepoint})
+    htmlentitydefs.name2codepoint = name2codepoint_case_insensitive
+
+    unescaped_str = HTMLParser().unescape(s)
+
+    htmlentitydefs.name2codepoint = name2codepoint
+
+    return unescaped_str

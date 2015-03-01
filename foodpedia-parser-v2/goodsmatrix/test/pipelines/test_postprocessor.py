@@ -4,6 +4,7 @@ from mock import patch
 from goodsmatrix.pipelines.postprocessors import ExtractEsl
 from goodsmatrix.pipelines.postprocessors import ExtractEAdditives
 from goodsmatrix.pipelines.postprocessors import StripMultilineStringProperties
+from goodsmatrix.pipelines.postprocessors import UnescapeSpecialHTMLEntities
 
 
 class TestExtractEsl(TestCase):
@@ -79,4 +80,27 @@ class TestStripMultilineProperties(TestCase):
         good_item = self.pipeline.process_item({'proteins_as_double': 0.0, 'e_additives': [u'E100']}, None)
 
         self.assertTrue(mock_stripped_multiline.called)
+        self.assertEqual(good_item, {'proteins_as_double': 0.0, 'e_additives': [u'E100']})
+
+
+class TestUnescapeSpecialHTMLEntities(TestCase):
+    def setUp(self):
+        self.pipeline = UnescapeSpecialHTMLEntities()
+
+    @patch('goodsmatrix.string_processor.unescape_html_special_entities_case_insensitive')
+    def test_process_item_with_special_html_entity(self, mock_unescaped_string):
+        mock_unescaped_string.return_value = '&quote;'
+
+        good_item = self.pipeline.process_item({'name': 'mocked_value'}, None)
+
+        self.assertTrue(mock_unescaped_string.called)
+        self.assertEqual(good_item, {'name': '&quote;'})
+
+    @patch('goodsmatrix.string_processor.unescape_html_special_entities_case_insensitive')
+    def test_process_item_with_special_html_entity(self, mock_unescaped_string):
+        mock_unescaped_string.side_effect = TypeError()
+
+        good_item = self.pipeline.process_item({'proteins_as_double': 0.0, 'e_additives': [u'E100']}, None)
+
+        self.assertTrue(mock_unescaped_string.called)
         self.assertEqual(good_item, {'proteins_as_double': 0.0, 'e_additives': [u'E100']})
