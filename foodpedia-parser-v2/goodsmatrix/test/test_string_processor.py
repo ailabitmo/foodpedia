@@ -167,6 +167,13 @@ class TestParseEAdditives(unittest.TestCase):
         string_under_test = u"E160б"
         self.assertEqual(parse_e_additives(string_under_test), [u'E160'])
 
+    def test_additive_with_space(self):
+        string_under_test = (
+            u"влагоудерживающий агент E 452, регулятор кислотности E 451, "
+            u"специи, декстроза, загустители E 407, E 412; "
+        )
+        self.assertEqual(parse_e_additives(string_under_test), [u'E452', u'E451', u'E407', u'E412'])
+
 
 class TestUnescapeHTMLSpecialEntitiesCaseInsensitive(unittest.TestCase):
     def test_strip_special_character(self):
