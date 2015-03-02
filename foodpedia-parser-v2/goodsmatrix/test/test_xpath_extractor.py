@@ -154,7 +154,7 @@ class TestExtractGoodsProperties(unittest.TestCase):
                 'pack_type': 'test',
             })
 
-    def test_excract_special_charcter_decoded(self):
+    def test_extract_special_charcter_decoded(self):
         stub_response = HtmlResponse(
             url="",
             body=(
@@ -170,7 +170,7 @@ class TestExtractGoodsProperties(unittest.TestCase):
                 'name': '<',
             })
 
-    def test_excract_html_tag_dropped(self):
+    def test_extract_html_tag_dropped(self):
         stub_response = HtmlResponse(
             url="",
             body=(
@@ -186,7 +186,7 @@ class TestExtractGoodsProperties(unittest.TestCase):
                 'name': 'test',
             })
 
-    def test_excract_paired_html_dropped_but_content_saved(self):
+    def test_extract_paired_html_dropped_but_content_saved(self):
         stub_response = HtmlResponse(
             url="",
             body=(
@@ -202,7 +202,7 @@ class TestExtractGoodsProperties(unittest.TestCase):
                 'name': 'test',
             })
 
-    def test_excract_only_first_occurance(self):
+    def test_extract_only_first_occurance(self):
         stub_response = HtmlResponse(
             url="",
             body=(
@@ -219,7 +219,7 @@ class TestExtractGoodsProperties(unittest.TestCase):
                 'name': 'test1',
             })
 
-    def test_excract_empty_value_is_skipped(self):
+    def test_extract_empty_value_is_skipped(self):
         stub_response = HtmlResponse(
             url="",
             body=(
@@ -233,7 +233,7 @@ class TestExtractGoodsProperties(unittest.TestCase):
             xpath_extractor.extract_goods_properties_dict(stub_response),
             dict())
 
-    def test_excract_value_with_html_tag_ontly(self):
+    def test_extract_value_with_html_tag_ontly(self):
         stub_response = HtmlResponse(
             url="",
             body=(
@@ -247,7 +247,7 @@ class TestExtractGoodsProperties(unittest.TestCase):
             xpath_extractor.extract_goods_properties_dict(stub_response),
             dict())
 
-    def test_excract_value_with_newline_only(self):
+    def test_extract_value_with_newline_only(self):
         stub_response = HtmlResponse(
             url="",
             body=(
@@ -263,7 +263,7 @@ class TestExtractGoodsProperties(unittest.TestCase):
             xpath_extractor.extract_goods_properties_dict(stub_response),
             dict())
 
-    def test_excract_esl_as_string_concatinated_with_semicolon(self):
+    def test_extract_esl_as_string_concatinated_with_semicolon(self):
         stub_response = HtmlResponse(
             url="",
             body=(
@@ -279,38 +279,7 @@ class TestExtractGoodsProperties(unittest.TestCase):
                 'esl_as_string': 'Proteins:  11,20 g; Fats:  22,90 g; Carbohydrates:  25,90 g; Calories:  354,50 kkal'
             })
 
-    def test_excract_special_charcter_decoded(self):
-        stub_response = HtmlResponse(
-            url="",
-            body=(
-                r"<html>"
-                r"<body>"
-                r"<span id='ctl00_ContentPH_GoodsName'>&lt;</span>"
-                r"</body>"
-                r"</html>")
-            )
-        self.assertEqual(
-            xpath_extractor.extract_goods_properties_dict(stub_response),
-            {
-                'name': '<',
-            })
 
-
-    def test_excract_special_charcter_decoded(self):
-        stub_response = HtmlResponse(
-            url="",
-            body=(
-                r"<html>"
-                r"<body>"
-                r"<span id='ctl00_ContentPH_GoodsName'>&lt;</span>"
-                r"</body>"
-                r"</html>")
-            )
-        self.assertEqual(
-            xpath_extractor.extract_goods_properties_dict(stub_response),
-            {
-                'name': '<',
-            })
     def test_if_property_does_not_exist_then_it_is_not_added_to_dict(self):
         stub_response = HtmlResponse(
             url="",

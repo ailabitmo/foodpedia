@@ -31,9 +31,9 @@ class StripMultilineStringProperties(object):
 
 class UnescapeSpecialHTMLEntities(object):
     """
-    usual special html entities (e.g. &quot) are parsed on extracting,
+    usual special html entities (e.g. &quot;) are decoded on extracting,
     but goodsmatrix.ru plays a dirty trick on some goods providing
-    special entities in upper case (e.g. &QUOt)
+    special entities in upper case (e.g. &QUOT;)
     """
     def process_item(self, good_item, spider):
         for key in good_item:
