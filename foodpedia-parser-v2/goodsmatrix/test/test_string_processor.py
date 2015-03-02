@@ -156,6 +156,14 @@ class TestParseEAdditives(unittest.TestCase):
         string_under_test = u"E160е"
         self.assertEqual(parse_e_additives(string_under_test), [u'E160e'])
 
+    def test_additive_russian_tailing_russian_C_in_uppercase(self):
+        string_under_test = u"Е160С"
+        self.assertEqual(parse_e_additives(string_under_test), [u'E160c'])
+
+    def test_additive_russian_tailing_russian_c_in_lowercase(self):
+        string_under_test = u"E160с"
+        self.assertEqual(parse_e_additives(string_under_test), [u'E160c'])
+
     def test_additive_russian_leading_russian_E_in_uppercase(self):
         string_under_test = u"Е160"
         self.assertEqual(parse_e_additives(string_under_test), [u'E160'])

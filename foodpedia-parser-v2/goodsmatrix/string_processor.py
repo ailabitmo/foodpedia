@@ -41,6 +41,7 @@ def convert_to_asci_without_unnecessary_characters(extracted_additive_string):
         ' ': '',
         '-': '',
         u'Е': u'E',
+        u'С': u'c',
         u'А': u'a',
     }
     pattern = re.compile('|'.join(REPLACEMENT_DICT.keys()))
