@@ -2,8 +2,9 @@
 import unittest
 
 
-from goodsmatrix.string_processor import parse_esl, strip_multiline, parse_e_additives, unescape_html_special_entities_case_insensitive
-
+from goodsmatrix.string_processor import parse_esl, strip_multiline, parse_e_additives
+from goodsmatrix.string_processor import unescape_html_special_entities_case_insensitive
+from goodsmatrix.string_processor import lowercase_last_character
 
 class TestEslParser(unittest.TestCase):
     def test_signle_protein(self):
@@ -125,7 +126,7 @@ class TestParseEAdditives(unittest.TestCase):
         self.assertEqual(parse_e_additives(u"abce304"), [])
 
     def test_additive_with_extra_letter(self):
-        self.assertEqual(parse_e_additives(u"е201B"), [u'E201B'])
+        self.assertEqual(parse_e_additives(u"е201B"), [u'E201b'])
 
     def test_additive_with_extra_digit(self):
         self.assertEqual(parse_e_additives(u"Е1525"), [u'E1525'])
@@ -141,19 +142,19 @@ class TestParseEAdditives(unittest.TestCase):
             u"красители (Е100,Е120,Е133,Е153, Е160А), вещества "
             u"наносимые на поверхность(растительные масла, Е903). "
             u"Возможно незначительное содержание лесного ореха.")
-        self.assertEqual(parse_e_additives(string_under_test), [u'E100', u'E120', u'E133', u'E153', u'E160A', u'E903'])
+        self.assertEqual(parse_e_additives(string_under_test), [u'E100', u'E120', u'E133', u'E153', u'E160a', u'E903'])
 
     def test_additive_russian_tailing_russian_a_in_lowercase(self):
         string_under_test = u"Е160а"
-        self.assertEqual(parse_e_additives(string_under_test), [u'E160A'])
+        self.assertEqual(parse_e_additives(string_under_test), [u'E160a'])
 
     def test_additive_russian_tailing_russian_E_in_uppercase(self):
         string_under_test = u"Е160Е"
-        self.assertEqual(parse_e_additives(string_under_test), [u'E160E'])
+        self.assertEqual(parse_e_additives(string_under_test), [u'E160e'])
 
     def test_additive_russian_tailing_russian_e_in_lowercase(self):
         string_under_test = u"E160е"
-        self.assertEqual(parse_e_additives(string_under_test), [u'E160E'])
+        self.assertEqual(parse_e_additives(string_under_test), [u'E160e'])
 
     def test_additive_russian_leading_russian_E_in_uppercase(self):
         string_under_test = u"Е160"
@@ -173,6 +174,14 @@ class TestParseEAdditives(unittest.TestCase):
             u"специи, декстроза, загустители E 407, E 412; "
         )
         self.assertEqual(parse_e_additives(string_under_test), [u'E452', u'E451', u'E407', u'E412'])
+
+
+class TestLowercaseLastCharacter(unittest.TestCase):
+    def test_with_tailing_character(self):
+        self.assertEqual(lowercase_last_character('E160F'), 'E160f')
+
+    def test_with_tailing_number(self):
+        self.assertEqual(lowercase_last_character('E1234'), 'E1234')
 
 
 class TestUnescapeHTMLSpecialEntitiesCaseInsensitive(unittest.TestCase):

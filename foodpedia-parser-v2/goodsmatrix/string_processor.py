@@ -41,11 +41,16 @@ def convert_to_asci_without_unnecessary_characters(extracted_additive_string):
         ' ': '',
         '-': '',
         u'Е': u'E',
-        u'А': u'A',
+        u'А': u'a',
     }
     pattern = re.compile('|'.join(REPLACEMENT_DICT.keys()))
     result = pattern.sub(lambda x: REPLACEMENT_DICT[x.group()], extracted_additive_string)
+    result = lowercase_last_character(result)
     return result.encode('ascii', 'ignore')
+
+
+def lowercase_last_character(s):
+    return s[:-1] + s[-1].lower()
 
 
 def unescape_html_special_entities_case_insensitive(s):
