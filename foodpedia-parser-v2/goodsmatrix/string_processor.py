@@ -31,13 +31,16 @@ def strip_multiline(multiline_string):
 
 
 def parse_e_additives(string):
-    found_additives_list = re.findall(ur"\b([Е|E]-?\d\d\d\w?)\b", string, flags=re.IGNORECASE|re.UNICODE)
+    string = string.upper()
+    found_additives_list = re.findall(ur"\b([ЕE]-?\d\d\d[\wА]?)\b", string, flags=re.IGNORECASE|re.UNICODE)
     return list(convert_to_asci_without_hyphen(additive) for additive in found_additives_list)
 
 
 def convert_to_asci_without_hyphen(extracted_additive_string):
     extracted_additive_string = 'E' + extracted_additive_string[1:]
     extracted_additive_string = re.sub('-', '', extracted_additive_string)
+    extracted_additive_string = re.sub(u'А', u'A', extracted_additive_string)
+    extracted_additive_string = re.sub(u'Е', u'E', extracted_additive_string)
     return extracted_additive_string.encode('ascii', 'ignore')
 
 
