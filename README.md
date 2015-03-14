@@ -8,6 +8,12 @@ Also human and machines can use [SPARQL enpoint](http://foodpedia.tk/sparql) and
 
 [For devops: how to run](deployment.md)
 
+## Contributors
+
+* [Alexander Chistyakov](https://github.com/chistyakov)
+* [Maxim Lapaev](https://github.com/m-lapaev)
+* Rezeda Khaidarova
+
 ## Contacts
 
 [Maxim Kolchin](http://kolchinmax.ru), ITMO University, Russia
