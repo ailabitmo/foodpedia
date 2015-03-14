@@ -26,6 +26,10 @@ endpoint:
     - ./upload:/upload
   restart: always
 
+ldf:
+  image: foodpedia/foodpedia-ldf
+  restart: always
+
 foodontologyupdater:
   build: food-ontology-updater
   ports:
