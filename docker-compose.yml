@@ -38,6 +38,8 @@ foodontologyupdater:
     - ~/.ssh:/root/.ssh
   restart: always
 
-foodontologycontentnegotiator:
-  build: foodpedia-servlet
+ontologies:
+  image: foodpedia/ontologies
+  ports:
+    - "8080:80"
   restart: always
