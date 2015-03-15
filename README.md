@@ -6,9 +6,11 @@ Also human and machines can use [SPARQL enpoint](http://foodpedia.tk/sparql) and
 
 ## Useful notes
 
-[For devops: how to run](deployment.md)
+Take a look at our [wiki](https://github.com/ailabitmo/foodpedia/wiki).
 
 ## Contributors
+
+Thanks to these people FOODpedia is up, running and developed!
 
 * [Alexander Chistyakov](https://github.com/chistyakov)
 * [Maxim Lapaev](https://github.com/m-lapaev)
