@@ -1,6 +1,5 @@
-/target/
-/foodpedia-home/target/
-/foodpedia-parser/target
+*/target
+*/nb-*
 
 #python specific
 *.pyc

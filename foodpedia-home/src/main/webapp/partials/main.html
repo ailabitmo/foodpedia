@@ -7,19 +7,19 @@
             <form role="form" novalidate ng-submit="send()">
                 <div class="input-group">
                     <input type="text" class="form-control" 
-                           placeholder='"4607081352675" или "макаронные изделия"'
+                           placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"
                            ng-model="search" ng-disabled="loading">
                     <span class="input-group-btn">
                         <button class="btn btn-default" 
                                 type="button" ng-click="send()"
-                                ng-disabled="loading">Поиск</button>
+                                ng-disabled="loading">{{ 'BUTTON_SEARCH' | translate }}</button>
                     </span>
                 </div>
             </form>
         </div>
         <div class="search-results text-center" ng-show="products">
             <hr/>
-            <h2>Результаты поиска (всего {{products.length}}):</h2>
+            <h2>{{ 'HEADER_RESULTS' | translate:products }}</h2>
             <div class="list-group product-list">
                 <a class="list-group-item" href="{{product.pubbyURL}}" 
                    ng-repeat="product in products">

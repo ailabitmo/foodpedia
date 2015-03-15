@@ -96,13 +96,15 @@
         
         function bindingsToJson(bindings) {
             var results = [];
-            bindings.results.bindings.forEach(function(element){
-                var r = {};
-                Object.getOwnPropertyNames(element).forEach(function(name){
-                    r[name] = element[name].value;
+            if(bindings) {
+                bindings.results.bindings.forEach(function(element){
+                    var r = {};
+                    Object.getOwnPropertyNames(element).forEach(function(name){
+                        r[name] = element[name].value;
+                    });
+                    results.push(r);
                 });
-                results.push(r);
-            });
+            }
             return results;
         };
         

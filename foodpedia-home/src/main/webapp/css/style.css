@@ -31,3 +31,22 @@
     margin-top: 2em;
     list-style-type: none;
 }
+
+.header-block {
+    float: right;
+    padding: 1em 0 1em 0;
+}
+
+.header-block .lang-switch {
+    list-style-type: none;
+}
+
+.header-block .lang-switch li {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.header-block .lang-switch li img {
+    border: solid 1px grey;
+    width: 1.5em;
+}

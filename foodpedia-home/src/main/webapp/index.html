@@ -30,9 +30,10 @@
         <link rel="stylesheet" href="css/ngProgress.css">
         <link rel="stylesheet" href="css/style.css">
 
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.5/angular.min.js"></script>
-        <script type="text/javascript" src="https://code.angularjs.org/1.3.0-rc.5/angular-route.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script type="text/javascript" src="https://code.angularjs.org/1.3.14/angular-route.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/lib/angular-translate.min.js"></script>
         <script type="text/javascript" src="js/lib/ng-progress/ngProgress.min.js"></script>
         <script type="text/javascript" src="js/ng-sparql.js"></script>
         <script type="text/javascript" src="js/controllers.js"></script>
@@ -48,6 +49,13 @@
           ga('send', 'pageview');
         </script>
     </head>
-    <body class="container" ng-view>
+    <body class="container">
+        <div class="header-block" ng-controller="LangCtrl">
+            <ul class="lang-switch">
+                <li ng-click="changeLanguage('ru')"><img src="assets/ru.svg"/></li>
+                <li ng-click="changeLanguage('en')"><img src="assets/gb.svg"/></li>
+            </ul>
+        </div>
+        <div ng-view></div>
     </body>
 </html>
