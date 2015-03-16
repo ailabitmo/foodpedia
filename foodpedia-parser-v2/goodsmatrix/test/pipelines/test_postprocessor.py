@@ -5,6 +5,7 @@ from goodsmatrix.pipelines.postprocessors import ExtractEsl
 from goodsmatrix.pipelines.postprocessors import ExtractEAdditives
 from goodsmatrix.pipelines.postprocessors import StripMultilineStringProperties
 from goodsmatrix.pipelines.postprocessors import UnescapeSpecialHTMLEntities
+from goodsmatrix.pipelines.postprocessors import ExtractIngredients
 
 
 class TestExtractEsl(TestCase):
@@ -97,7 +98,7 @@ class TestUnescapeSpecialHTMLEntities(TestCase):
         self.assertEqual(good_item, {'name': '&quote;'})
 
     @patch('goodsmatrix.string_processor.unescape_html_special_entities_case_insensitive')
-    def test_process_item_with_special_html_entity(self, mock_unescaped_string):
+    def test_process_item_bypasses_non_string(self, mock_unescaped_string):
         mock_unescaped_string.side_effect = TypeError()
 
         good_item = self.pipeline.process_item({'proteins_as_double': 0.0, 'e_additives': [u'E100']}, None)

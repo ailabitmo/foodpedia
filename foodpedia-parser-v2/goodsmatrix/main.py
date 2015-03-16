@@ -24,7 +24,8 @@ def main():
             "goodsmatrix.pipelines.postprocessors.UnescapeSpecialHTMLEntities": 1,
             "goodsmatrix.pipelines.postprocessors.ExtractEsl": 2,
             "goodsmatrix.pipelines.postprocessors.ExtractEAdditives": 3,
-            "goodsmatrix.pipelines.postprocessors.StripMultilineStringProperties": 4
+            "goodsmatrix.pipelines.postprocessors.StripMultilineStringProperties": 4,
+            "goodsmatrix.pipelines.postprocessors.ExtractIngredients": 5,
         }
     if command_line_args.persistence:
         pipelines_order_dict["goodsmatrix.pipelines.writers.PersistentRDFPipeline"] = 10

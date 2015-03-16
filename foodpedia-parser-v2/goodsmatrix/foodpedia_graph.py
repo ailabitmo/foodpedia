@@ -70,6 +70,10 @@ class FoodpediaGraph:
             for eadditive_name in item['e_additives']:
                 self.add_eadditive_to_good(item_barcode, eadditive_name)
 
+        if 'agrovoc_ingredients' in item:
+            for ingredient_uri in item['agrovoc_ingredients']:
+                self.add_ingredient_uri(item_barcode, ingredient_uri)
+
     def _init_good_item(self, barcode):
         self._add_good_uri(barcode)
         self._add_good_barcode(barcode)
@@ -166,6 +170,16 @@ class FoodpediaGraph:
     @staticmethod
     def convert_eadditive_name_to_uri(eadditive_name):
         return FoodpediaGraph.FOODPEDIA_RESOURCE_NAMESPACE[eadditive_name]
+
+    def add_ingredient_uri(self, good_barcode, ingredient_uri):
+        good_item_uri = FoodpediaGraph.convert_barcode_to_uri(good_barcode)
+        log.msg("adding '{0}' to the graph".format(URIRef(ingredient_uri)))
+        self._graph.add(
+            (good_item_uri,
+             self.FOOD_NAMESPACE.containsIngredient,
+             URIRef(ingredient_uri))
+        )
+
 
 
 class PatchedLiteralToReturnFullDatatype(Literal):

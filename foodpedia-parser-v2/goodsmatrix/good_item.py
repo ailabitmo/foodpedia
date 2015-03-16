@@ -17,3 +17,4 @@ class GoodItem(scrapy.Item):
     fats_as_double = scrapy.Field()
     carbohydrates_as_double = scrapy.Field()
     calories_as_double = scrapy.Field()
+    agrovoc_ingredients = scrapy.Field()

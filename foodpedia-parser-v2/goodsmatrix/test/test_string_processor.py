@@ -5,6 +5,12 @@ import unittest
 from goodsmatrix.string_processor import parse_esl, strip_multiline, parse_e_additives
 from goodsmatrix.string_processor import unescape_html_special_entities_case_insensitive
 from goodsmatrix.string_processor import lowercase_last_character
+from goodsmatrix.string_processor import split_ingredients
+from goodsmatrix.string_processor import split_by_list_of_delemiters
+from goodsmatrix.string_processor import remove_substring_in_paranthesis
+from goodsmatrix.string_processor import remove_weight
+from goodsmatrix.string_processor import remove_percents
+
 
 class TestEslParser(unittest.TestCase):
     def test_signle_protein(self):
@@ -221,6 +227,135 @@ class TestUnescapeHTMLSpecialEntitiesCaseInsensitive(unittest.TestCase):
             unescape_html_special_entities_case_insensitive,
             proteins_as_double
         )
+
+
+class TestSplitIngridients(unittest.TestCase):
+    def test_one_element(self):
+        splitted = split_ingredients(u'сахар')
+        self.assertEqual(splitted, [u'сахар'])
+
+    def test_two_comma_separated_elements(self):
+        splitted = split_ingredients(u'сахар,мука')
+        self.assertEqual(splitted, [u'сахар', u'мука'])
+
+    def test_two_comma_separated_elements_with_space(self):
+        splitted = split_ingredients(u'сахар, мука')
+        self.assertEqual(splitted, [u'сахар', u'мука'])
+
+    def test_lowercase(self):
+        splitted = split_ingredients(u'Сахар, мука')
+        self.assertEqual(splitted, [u'сахар', u'мука'])
+
+    def test_empty_string(self):
+        splitted = split_ingredients(u'')
+        self.assertEqual(splitted, [])
+
+    def test_exception_on_non_string(self):
+        self.assertRaises(
+            AttributeError,
+            split_ingredients, 4
+        )
+
+    def test_splitted_by_dot(self):
+        splitted = split_ingredients(u'Сахар. Мука')
+        self.assertEqual(splitted, [u'сахар', u'мука'])
+
+    def test_double_word_fragments(self):
+        splitted = split_ingredients(u'пшеничная мука')
+        self.assertEqual(splitted, [u'пшеничная мука'])
+
+    def test_tralinging_space(self):
+        splitted = split_ingredients(u'соль, пшеничная мука ')
+        self.assertEqual(splitted, [u'соль', u'пшеничная мука'])
+
+    def test_real_string(self):
+        splitted = split_ingredients(u'Обезжиренное молоко, наполнитель ягодный - малина со злаками (овес), цельное молоко, сухое обезжиренное молоко, с использованием йогуртовой закваски. ')
+        self.assertEqual(splitted, [u'обезжиренное молоко', u'наполнитель ягодный - малина со злаками (овес)', u'цельное молоко', u'сухое обезжиренное молоко', u'с использованием йогуртовой закваски'])
+
+
+class TestSplitByListOfDelimeters(unittest.TestCase):
+    def test_one_delimeter(self):
+        splitted = split_by_list_of_delemiters('a,b,c', ',')
+        self.assertEqual(splitted, ['a', 'b', 'c'])
+
+    def test_two_delimeters(self):
+        splitted = split_by_list_of_delemiters('a!b_c', '!_')
+        self.assertEqual(splitted, ['a', 'b', 'c'])
+
+    def test_no_delimeters(self):
+        splitted = split_by_list_of_delemiters('a!b_c', '')
+        self.assertEqual(splitted, ['a!b_c'])
+
+    def test_empty_string(self):
+        splitted = split_by_list_of_delemiters('', ',')
+        self.assertEqual(splitted, [''])
+
+    def test_no_delimeters_in_string(self):
+        splitted = split_by_list_of_delemiters('a!b_c', ',')
+        self.assertEqual(splitted, ['a!b_c'])
+
+    def test_trailing_delelimeter(self):
+        splitted = split_by_list_of_delemiters('a!b_c', 'c')
+        self.assertEqual(splitted, ['a!b_', ''])
+
+    def test_starting_delelimeter(self):
+        splitted = split_by_list_of_delemiters('a!b_c', 'a')
+        self.assertEqual(splitted, ['a!b_c'])
+
+    def test_two_delimeters_one_by_one(self):
+        splitted = split_by_list_of_delemiters('a.,c', ',.')
+        self.assertEqual(splitted, ['a', 'c'])
+
+    def test_two_same_delimeters_one_by_one(self):
+        splitted = split_by_list_of_delemiters('a..c', ',.')
+        self.assertEqual(splitted, ['a', 'c'])
+
+
+class TestRemoveSubstingInParanthesis(unittest.TestCase):
+    def test_one_paranthesis(self):
+        no_substring_in_paranthesis = remove_substring_in_paranthesis("abc(ddd)")
+        self.assertEqual(no_substring_in_paranthesis, "abc")
+
+    def test_not_closed_paranthesis(self):
+        no_substring_in_paranthesis = remove_substring_in_paranthesis("abc(ddd")
+        self.assertEqual(no_substring_in_paranthesis, "abc(ddd")
+
+    def test_not_oppened_paranthesis(self):
+        no_substring_in_paranthesis = remove_substring_in_paranthesis("abcdd)d")
+        self.assertEqual(no_substring_in_paranthesis, "abcdd)d")
+
+    def test_brakets(self):
+        no_substring_in_paranthesis = remove_substring_in_paranthesis("abc[ddd]")
+        self.assertEqual(no_substring_in_paranthesis, "abc[ddd]")
+
+    def test_nested_paranthesis(self):
+        no_substring_in_paranthesis = remove_substring_in_paranthesis("abc(d(e)f)")
+        self.assertEqual(no_substring_in_paranthesis, "abcf)")
+
+
+class TestRemoveWeigth(unittest.TestCase):
+    def test_weigth_with_mg(self):
+        no_weight = remove_weight(u"кальций - 5 мг")
+        self.assertEqual(no_weight, u"кальций")
+
+    def test_weigth_no_mg(self):
+        no_weight = remove_weight(u"кальций - 5")
+        self.assertEqual(no_weight, u"кальций")
+
+    def test_no_spaces(self):
+        no_weight = remove_weight(u"кальций-5 мг")
+        self.assertEqual(no_weight, u"кальций")
+
+
+class TestRemovePercents(unittest.TestCase):
+    def test_trailing_percents(self):
+        no_percents = remove_percents(u"сыр 13%")
+        self.assertEqual(no_percents, u"сыр ")
+
+    def test_space_before_percent_sign(self):
+        no_percents = remove_percents(u"сыр 13 %")
+        self.assertEqual(no_percents, u"сыр ")
+
 
 
 if __name__ == "__main__":
