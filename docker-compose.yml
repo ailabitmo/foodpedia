@@ -6,7 +6,8 @@ pathrouter:
     - endpoint
     - pubby
     - home
-    - foodontologycontentnegotiator
+    - ontologies
+    - ldf
   restart: always
 
 home:
