@@ -1,5 +1,5 @@
 pathrouter:
-  image: chistyakov/foodpedia_pathrouter
+  image: foodpedia/pathrouter
   ports:
     - "80:80"
   links:
@@ -12,13 +12,13 @@ home:
   build: ./foodpedia-home
 
 pubby:
-  image: chistyakov/foodpedia_pubby
+  image: foodpedia/pubby
   links:
     - endpoint
   command: http://localhost http://endpoint:8890/sparql
 
 endpoint:
-  image: chistyakov/foodpedia_virtuoso_ontowiki
+  image: foodpedia/virtuoso_ontowiki
   volumes:
     - ./upload:/upload
   ports:
