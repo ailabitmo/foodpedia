@@ -2,6 +2,7 @@ from scrapy import log
 
 from goodsmatrix import string_processor
 from goodsmatrix.agrovoc_graph import agrovoc_graph_factory
+from goodsmatrix.translator import YandexTranslator
 
 
 class ExtractEsl(object):
@@ -76,3 +77,14 @@ class ExtractIngredients(object):
     def close_spider(self, spider):
         self.agrovoc_graph.clean_up()
         log.msg(self.not_parsed_fragments)
+
+class Translator(object):
+    def open_spider(self, spider):
+        api_key = spider.settings.get("YANDEX_TRANSLATE_API_URI")
+        self.translator = YandexTranslator(api_key)
+
+    def process_item(self, good_item, spider):
+        good_item['name_en'] = self.translator.translate_ru_to_en(good_item['name'])
+        if 'comment' in good_item:
+            good_item['comment_en'] = self.translator.translate_ru_to_en(good_item['comment'])
+        return good_item

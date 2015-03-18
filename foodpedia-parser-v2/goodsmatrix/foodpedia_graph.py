@@ -30,11 +30,17 @@ class FoodpediaGraph:
         if 'name' in item:
             self.add_name_to_good(item_barcode, item['name'])
 
+        if 'name_en' in item:
+            self.add_name_to_good(item_barcode, item['name_en'], lang='en')
+
         if 'best_before' in item:
             self.add_best_before_to_good(item_barcode, item['best_before'])
 
         if 'comment' in item:
             self.add_comment_to_good(item_barcode, item['comment'])
+
+        if 'comment_en' in item:
+            self.add_comment_to_good(item_barcode, item['comment_en'], lang='en')
 
         if 'ingredients' in item:
             self.add_ingridients_to_good(item_barcode, item['ingredients'])

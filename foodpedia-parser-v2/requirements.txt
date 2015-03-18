@@ -1,4 +1,5 @@
 mock
 scrapy
 service_identity
+requests[security]
 rdflib

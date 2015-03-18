@@ -3,9 +3,11 @@ import scrapy
 class GoodItem(scrapy.Item):
     goodsmatrix_url = scrapy.Field()
     name = scrapy.Field()
+    name_en = scrapy.Field()
     barcode = scrapy.Field()
     best_before = scrapy.Field()
     comment = scrapy.Field()
+    comment_en = scrapy.Field()
     ingredients = scrapy.Field()
     e_additives = scrapy.Field()
     netto_weight = scrapy.Field()
