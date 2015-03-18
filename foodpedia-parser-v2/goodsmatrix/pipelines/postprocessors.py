@@ -85,6 +85,7 @@ class Translator(object):
 
     def process_item(self, good_item, spider):
         good_item['name_en'] = self.translator.translate_ru_to_en(good_item['name'])
-        if 'comment' in good_item:
-            good_item['comment_en'] = self.translator.translate_ru_to_en(good_item['comment'])
+        # do not translate description because Yandex.Translate API is limitted by number of chars
+        #if 'comment' in good_item:
+            #good_item['comment_en'] = self.translator.translate_ru_to_en(good_item['comment'])
         return good_item
