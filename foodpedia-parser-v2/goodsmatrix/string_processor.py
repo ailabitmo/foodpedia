@@ -3,6 +3,8 @@ import lxml
 import re
 import htmlentitydefs
 from HTMLParser import HTMLParser
+import string
+import fileinput
 
 
 LIST_OF_POSSIBLE_ESL = {
@@ -66,3 +68,49 @@ def unescape_html_special_entities_case_insensitive(s):
     htmlentitydefs.name2codepoint = name2codepoint
 
     return unescaped_str
+
+
+def remove_substring_in_paranthesis(s):
+    return re.sub(r'\([^)]*\)', '', s)
+
+
+def remove_weight(ingredients_as_string):
+    return re.sub(r'\s*-\s*\d.*', '', ingredients_as_string)
+
+
+def remove_percents(ingredients_as_string):
+    return re.sub(r'\d\d?\d?\s*\%', '', ingredients_as_string)
+
+
+def split_ingredients(s):
+    s = s.strip()
+    delimeters = '.,!?;'
+    if s:
+        fragments = [fragment.strip().lower()
+                     for fragment
+                     in split_by_list_of_delemiters(s, delimeters)]
+        fragments_without_blanks = [fragment for fragment in fragments if fragment]
+        return fragments_without_blanks
+    else:
+        return []
+
+def split_by_list_of_delemiters(s, delimeters=string.punctuation):
+    if delimeters:
+        delimeters_regexp = '[{0}]+'.format(
+            '|'.join('\\{0}'.format(d) for d in delimeters))
+        return re.split(delimeters_regexp, s, flags=re.IGNORECASE|re.UNICODE)
+    else:
+        return [s]
+
+
+def replace_in_file(filepath, old, new):
+    for line in fileinput.input(filepath, inplace=True):
+        print line.replace(old, new),
+
+
+def escape_special_chars_in_sparq_query_unicode(s):
+    return re.sub(r'([\.\\\+\*\?\[\^\]\$\(\)\{\}\!\<\>\|\:\-])', r'\\\\\1', s)
+
+
+if __name__ == "__main__":
+    replace_in_file("/tmp/tmpT2HJCp/agrovoc_2014-07-23_lod.nt", r"exactMatch >", r"exactMatch>")

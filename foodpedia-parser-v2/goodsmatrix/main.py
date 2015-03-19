@@ -24,12 +24,17 @@ def main():
             "goodsmatrix.pipelines.postprocessors.UnescapeSpecialHTMLEntities": 1,
             "goodsmatrix.pipelines.postprocessors.ExtractEsl": 2,
             "goodsmatrix.pipelines.postprocessors.ExtractEAdditives": 3,
-            "goodsmatrix.pipelines.postprocessors.StripMultilineStringProperties": 4
+            "goodsmatrix.pipelines.postprocessors.StripMultilineStringProperties": 4,
+            #"goodsmatrix.pipelines.postprocessors.ExtractIngredients": 5,
         }
     if command_line_args.persistence:
         pipelines_order_dict["goodsmatrix.pipelines.writers.PersistentRDFPipeline"] = 10
     else:
         pipelines_order_dict["goodsmatrix.pipelines.writers.InMemoryRDFPipeline"] = 10
+
+    if command_line_args.api_key:
+        pipelines_order_dict["goodsmatrix.pipelines.postprocessors.Translator"] = 6
+        settings.set("YANDEX_TRANSLATE_API_URI", command_line_args.api_key)
     settings.set("ITEM_PIPELINES", pipelines_order_dict)
 
     settings.set("OUTPUT_FILENAME", command_line_args.output_filename)
@@ -48,6 +53,7 @@ def parse_arguments():
     parser.add_argument('category', help=('goods category name from goodsmatrix.ru.'
                                           'See html filename in URL for needed category'))
     parser.add_argument('output_filename')
+    parser.add_argument('-k', '--api_key', help='yandex translator api key')
     parser.add_argument('-p', '--persistence', help='use persistence store (SleepyCat) for parsed items', action='store_true')
     args = parser.parse_args()
     return args

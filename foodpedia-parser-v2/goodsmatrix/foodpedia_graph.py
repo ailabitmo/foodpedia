@@ -30,11 +30,17 @@ class FoodpediaGraph:
         if 'name' in item:
             self.add_name_to_good(item_barcode, item['name'])
 
+        if 'name_en' in item:
+            self.add_name_to_good(item_barcode, item['name_en'], lang='en')
+
         if 'best_before' in item:
             self.add_best_before_to_good(item_barcode, item['best_before'])
 
         if 'comment' in item:
             self.add_comment_to_good(item_barcode, item['comment'])
+
+        if 'comment_en' in item:
+            self.add_comment_to_good(item_barcode, item['comment_en'], lang='en')
 
         if 'ingredients' in item:
             self.add_ingridients_to_good(item_barcode, item['ingredients'])
@@ -69,6 +75,10 @@ class FoodpediaGraph:
         if 'e_additives' in item:
             for eadditive_name in item['e_additives']:
                 self.add_eadditive_to_good(item_barcode, eadditive_name)
+
+        if 'agrovoc_ingredients' in item:
+            for ingredient_uri in item['agrovoc_ingredients']:
+                self.add_ingredient_uri(item_barcode, ingredient_uri)
 
     def _init_good_item(self, barcode):
         self._add_good_uri(barcode)
@@ -166,6 +176,16 @@ class FoodpediaGraph:
     @staticmethod
     def convert_eadditive_name_to_uri(eadditive_name):
         return FoodpediaGraph.FOODPEDIA_RESOURCE_NAMESPACE[eadditive_name]
+
+    def add_ingredient_uri(self, good_barcode, ingredient_uri):
+        good_item_uri = FoodpediaGraph.convert_barcode_to_uri(good_barcode)
+        log.msg("adding '{0}' to the graph".format(URIRef(ingredient_uri)))
+        self._graph.add(
+            (good_item_uri,
+             self.FOOD_NAMESPACE.containsIngredient,
+             URIRef(ingredient_uri))
+        )
+
 
 
 class PatchedLiteralToReturnFullDatatype(Literal):

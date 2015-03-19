@@ -3,6 +3,7 @@
 #if ($rdf_link)
       <a href="$rdf_link?output=ttl">As Turtle</a> |
       <a href="$rdf_link?output=xml">As RDF/XML</a>
+      <a href="http://translate.yandex.com/">Powered by Yandex.Translate</a>
 #end
     </div>
   </body>

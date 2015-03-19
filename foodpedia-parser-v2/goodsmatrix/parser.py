@@ -53,7 +53,7 @@ class GoodsMatrixSpider(CrawlSpider):
             )
 
     def parse_good(self, response):
-        log.msg("PARSE GOOD: {0}".format(response.url), level=log.DEBUG)
+        log.msg("PARSE GOOD: {0}".format(response.url), level=log.INFO)
         good = GoodItem(xpath_extractor.extract_goods_properties_dict(response))
         if good:
             good['goodsmatrix_url'] = response.url
