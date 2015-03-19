@@ -5,7 +5,7 @@
       "title": "FOODpedia (Virtuoso)",
       "type": "SparqlDatasource",
       "description": "FOODpedia with a Virtuoso back-end",
-      "settings": { "endpoint": "http://foodpedia.tk/sparql", "defaultGraph": "http://foodpedia.tk/" }
+      "settings": { "endpoint": "http://endpoint:8890/sparql", "defaultGraph": "http://foodpedia.tk/" }
     }
   }
 }

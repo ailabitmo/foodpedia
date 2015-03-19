@@ -29,6 +29,8 @@ endpoint:
 
 ldf:
   image: foodpedia/foodpedia-ldf
+  links:
+    - endpoint
   restart: always
 
 foodontologyupdater:
