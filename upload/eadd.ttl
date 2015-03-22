@@ -1,1124 +1,1557 @@
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix ns1:    <http://foodpedia.tk/resource/> .
-@prefix food:   <http://purl.org/foodontology#> .
-ns1:E1000   rdf:type    food:E-additive .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-ns1:E1000   rdfs:label  "E1000" .
-ns1:E1001   rdf:type    food:E-additive ;
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foodpedia:    	<http://foodpedia.tk/resource/> .
+@prefix food:   	<http://purl.org/foodontology#> .
+@prefix rdfs:   	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    	<http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: 		<http://www.w3.org/2004/02/skos/core#> .
+
+foodpedia:E1000   rdf:type    food:E-additive .
+foodpedia:E1000   rdfs:label  "E1000" .
+foodpedia:E1001   rdf:type    food:E-additive ;
     rdfs:label  "E1001" .
-ns1:E101    rdf:type    food:E-additive ;
+foodpedia:E101    rdf:type    food:E-additive ;
     rdfs:label  "E101" .
-@prefix ns4:    <xsd:> .
-ns1:E101    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Riboflavin"^^ns4:anyURI .
-ns1:E102    rdf:type    food:E-additive ;
+foodpedia:E101    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Riboflavin"^^xsd:anyURI .
+foodpedia:E102    rdf:type    food:E-additive ;
     rdfs:label  "E102" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E102"^^ns4:anyURI .
-ns1:E103    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E102"^^xsd:anyURI .
+foodpedia:E103    rdf:type    food:E-additive ;
     rdfs:label  "E103" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E103"^^ns4:anyURI .
-ns1:E104    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E103"^^xsd:anyURI .
+foodpedia:E104    rdf:type    food:E-additive ;
     rdfs:label  "E104" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E104"^^ns4:anyURI .
-ns1:E105    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E104"^^xsd:anyURI .
+foodpedia:E105    rdf:type    food:E-additive ;
     rdfs:label  "E105" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Fast_Yellow_AB"^^ns4:anyURI .
-ns1:E106    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Fast_Yellow_AB"^^xsd:anyURI .
+foodpedia:E106    rdf:type    food:E-additive ;
     rdfs:label  "E106" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E106"^^ns4:anyURI .
-ns1:E107    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E106"^^xsd:anyURI .
+foodpedia:E107    rdf:type    food:E-additive ;
     rdfs:label  "E107" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Yellow_2G"^^ns4:anyURI .
-ns1:E110    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Yellow_2G"^^xsd:anyURI .
+foodpedia:E110    rdf:type    food:E-additive ;
     rdfs:label  "E110" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Sunset_Yellow_FCF"^^ns4:anyURI .
-ns1:E1100   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Sunset_Yellow_FCF"^^xsd:anyURI .
+foodpedia:E1100   rdf:type    food:E-additive ;
     rdfs:label  "E1100" .
-ns1:E1101   rdf:type    food:E-additive ;
+foodpedia:E1101   rdf:type    food:E-additive ;
     rdfs:label  "E1101" .
-ns1:E1102   rdf:type    food:E-additive ;
+foodpedia:E1102   rdf:type    food:E-additive ;
     rdfs:label  "E1102" .
-ns1:E1103   rdf:type    food:E-additive ;
+foodpedia:E1103   rdf:type    food:E-additive ;
     rdfs:label  "E1103" .
-ns1:E1104   rdf:type    food:E-additive ;
+foodpedia:E1104   rdf:type    food:E-additive ;
     rdfs:label  "E1104" .
-ns1:E1105   rdf:type    food:E-additive ;
+foodpedia:E1105   rdf:type    food:E-additive ;
     rdfs:label  "E1105" .
-ns1:E111    rdf:type    food:E-additive ;
+foodpedia:E111    rdf:type    food:E-additive ;
     rdfs:label  "E111" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Orange_GGN"^^ns4:anyURI .
-ns1:E120    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Orange_GGN"^^xsd:anyURI .
+foodpedia:E120    rdf:type    food:E-additive ;
     rdfs:label  "E120" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Carmine"^^ns4:anyURI .
-ns1:E1200   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Carmine"^^xsd:anyURI .
+foodpedia:E1200   rdf:type    food:E-additive ;
     rdfs:label  "E1200" .
-ns1:E1201   rdf:type    food:E-additive ;
+foodpedia:E1201   rdf:type    food:E-additive ;
     rdfs:label  "E1201" .
-ns1:E1202   rdf:type    food:E-additive ;
+foodpedia:E1202   rdf:type    food:E-additive ;
     rdfs:label  "E1202" .
-ns1:E1203   rdf:type    food:E-additive ;
+foodpedia:E1203   rdf:type    food:E-additive ;
     rdfs:label  "E1203" .
-ns1:E1204   rdf:type    food:E-additive ;
+foodpedia:E1204   rdf:type    food:E-additive ;
     rdfs:label  "E1204" .
-ns1:E121    rdf:type    food:E-additive ;
+foodpedia:E121    rdf:type    food:E-additive ;
     rdfs:label  "E121" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E121"^^ns4:anyURI .
-ns1:E122    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E121"^^xsd:anyURI .
+foodpedia:E122    rdf:type    food:E-additive ;
     rdfs:label  "E122" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E122"^^ns4:anyURI .
-ns1:E123    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E122"^^xsd:anyURI .
+foodpedia:E123    rdf:type    food:E-additive ;
     rdfs:label  "E123" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Amaranth_%28dye%29"^^ns4:anyURI .
-ns1:E124    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Amaranth_%28dye%29"^^xsd:anyURI .
+foodpedia:E124    rdf:type    food:E-additive ;
     rdfs:label  "E124" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E124"^^ns4:anyURI .
-ns1:E125    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E124"^^xsd:anyURI .
+foodpedia:E125    rdf:type    food:E-additive ;
     rdfs:label  "E125" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E125"^^ns4:anyURI .
-ns1:E126    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E125"^^xsd:anyURI .
+foodpedia:E126    rdf:type    food:E-additive ;
     rdfs:label  "E126" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E126"^^ns4:anyURI .
-ns1:E127    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E126"^^xsd:anyURI .
+foodpedia:E127    rdf:type    food:E-additive ;
     rdfs:label  "E127" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Erythrosine"^^ns4:anyURI .
-ns1:E128    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Erythrosine"^^xsd:anyURI .
+foodpedia:E128    rdf:type    food:E-additive ;
     rdfs:label  "E128" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Red_2G"^^ns4:anyURI .
-ns1:E129    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Red_2G"^^xsd:anyURI .
+foodpedia:E129    rdf:type    food:E-additive ;
     rdfs:label  "E129" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E129"^^ns4:anyURI .
-ns1:E130    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E129"^^xsd:anyURI .
+foodpedia:E130    rdf:type    food:E-additive ;
     rdfs:label  "E130" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Indanthrene_blue_RS"^^ns4:anyURI .
-ns1:E131    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Indanthrene_blue_RS"^^xsd:anyURI .
+foodpedia:E131    rdf:type    food:E-additive ;
     rdfs:label  "E131" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E131"^^ns4:anyURI .
-ns1:E132    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E131"^^xsd:anyURI .
+foodpedia:E132    rdf:type    food:E-additive ;
     rdfs:label  "E132" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E132"^^ns4:anyURI .
-ns1:E133    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E132"^^xsd:anyURI .
+foodpedia:E133    rdf:type    food:E-additive ;
     rdfs:label  "E133" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E133"^^ns4:anyURI .
-ns1:E140    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E133"^^xsd:anyURI .
+foodpedia:E140    rdf:type    food:E-additive ;
     rdfs:label  "E140" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E140"^^ns4:anyURI .
-ns1:E1400   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E140"^^xsd:anyURI .
+foodpedia:E1400   rdf:type    food:E-additive ;
     rdfs:label  "E1400"@en .
-ns1:E1401   rdf:type    food:E-additive ;
+foodpedia:E1401   rdf:type    food:E-additive ;
     rdfs:label  "E1401" .
-ns1:E1402   rdf:type    food:E-additive ;
+foodpedia:E1402   rdf:type    food:E-additive ;
     rdfs:label  "E1402" .
-ns1:E1403   rdf:type    food:E-additive ;
+foodpedia:E1403   rdf:type    food:E-additive ;
     rdfs:label  "E1403" .
-ns1:E1405   rdf:type    food:E-additive ;
+foodpedia:E1405   rdf:type    food:E-additive ;
     rdfs:label  "E1405" .
-ns1:E141    rdf:type    food:E-additive ;
+foodpedia:E141    rdf:type    food:E-additive ;
     rdfs:label  "E141" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Chlorophyllin"^^ns4:anyURI .
-ns1:E1410   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Chlorophyllin"^^xsd:anyURI .
+foodpedia:E1410   rdf:type    food:E-additive ;
     rdfs:label  "E1410" .
-ns1:E1411   rdf:type    food:E-additive ;
+foodpedia:E1411   rdf:type    food:E-additive ;
     rdfs:label  "E1411" .
-ns1:E1412   rdf:type    food:E-additive ;
+foodpedia:E1412   rdf:type    food:E-additive ;
     rdfs:label  "E1412" .
-ns1:E1413   rdf:type    food:E-additive ;
+foodpedia:E1413   rdf:type    food:E-additive ;
     rdfs:label  "E1413" .
-ns1:E1414   rdf:type    food:E-additive ;
+foodpedia:E1414   rdf:type    food:E-additive ;
     rdfs:label  "E1414" .
-ns1:E142    rdf:type    food:E-additive ;
+foodpedia:E142    rdf:type    food:E-additive ;
     rdfs:label  "E142" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E142"^^ns4:anyURI .
-ns1:E1420   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E142"^^xsd:anyURI .
+foodpedia:E1420   rdf:type    food:E-additive ;
     rdfs:label  "E1420" .
-ns1:E1421   rdf:type    food:E-additive ;
+foodpedia:E1421   rdf:type    food:E-additive ;
     rdfs:label  "E1421" .
-ns1:E1422   rdf:type    food:E-additive ;
+foodpedia:E1422   rdf:type    food:E-additive ;
     rdfs:label  "E1422" .
-ns1:E1423   rdf:type    food:E-additive ;
+foodpedia:E1423   rdf:type    food:E-additive ;
     rdfs:label  "E1423" .
-ns1:E143    rdf:type    food:E-additive ;
+foodpedia:E143    rdf:type    food:E-additive ;
     rdfs:label  "E143" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E143"^^ns4:anyURI .
-ns1:E1430   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E143"^^xsd:anyURI .
+foodpedia:E1430   rdf:type    food:E-additive ;
     rdfs:label  "E1430" .
-ns1:E1440   rdf:type    food:E-additive ;
+foodpedia:E1440   rdf:type    food:E-additive ;
     rdfs:label  "E1440" .
-ns1:E1441   rdf:type    food:E-additive ;
+foodpedia:E1441   rdf:type    food:E-additive ;
     rdfs:label  "E1441" .
-ns1:E1442   rdf:type    food:E-additive ;
+foodpedia:E1442   rdf:type    food:E-additive ;
     rdfs:label  "E1442" .
-ns1:E1443   rdf:type    food:E-additive ;
+foodpedia:E1443   rdf:type    food:E-additive ;
     rdfs:label  "E1443" .
-ns1:E1450   rdf:type    food:E-additive ;
+foodpedia:E1450   rdf:type    food:E-additive ;
     rdfs:label  "E1450" .
-ns1:E1451   rdf:type    food:E-additive ;
+foodpedia:E1451   rdf:type    food:E-additive ;
     rdfs:label  "E1451" .
-ns1:E1452   rdf:type    food:E-additive ;
+foodpedia:E1452   rdf:type    food:E-additive ;
     rdfs:label  "E1452" .
-ns1:E1501   rdf:type    food:E-additive ;
+foodpedia:E1501   rdf:type    food:E-additive ;
     rdfs:label  "E1501" .
-ns1:E1502   rdf:type    food:E-additive ;
+foodpedia:E1502   rdf:type    food:E-additive ;
     rdfs:label  "E1502" .
-ns1:E1503   rdf:type    food:E-additive ;
+foodpedia:E1503   rdf:type    food:E-additive ;
     rdfs:label  "E1503" .
-ns1:E1504   rdf:type    food:E-additive ;
+foodpedia:E1504   rdf:type    food:E-additive ;
     rdfs:label  "E1504" .
-ns1:E1505   rdf:type    food:E-additive ;
+foodpedia:E1505   rdf:type    food:E-additive ;
     rdfs:label  "E1505" .
-ns1:E150a   rdf:type    food:E-additive ;
+foodpedia:E150a   rdf:type    food:E-additive ;
     rdfs:label  "E150a" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E150a"^^ns4:anyURI .
-ns1:E150b   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E150a"^^xsd:anyURI .
+foodpedia:E150b   rdf:type    food:E-additive ;
     rdfs:label  "E150b" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E150b"^^ns4:anyURI .
-ns1:E150c   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E150b"^^xsd:anyURI .
+foodpedia:E150c   rdf:type    food:E-additive ;
     rdfs:label  "E150c" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E150c"^^ns4:anyURI .
-ns1:E150d   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E150c"^^xsd:anyURI .
+foodpedia:E150d   rdf:type    food:E-additive ;
     rdfs:label  "E150d" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E150d"^^ns4:anyURI .
-ns1:E151    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E150d"^^xsd:anyURI .
+foodpedia:E151    rdf:type    food:E-additive ;
     rdfs:label  "E151" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E151"^^ns4:anyURI .
-ns1:E1510   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E151"^^xsd:anyURI .
+foodpedia:E1510   rdf:type    food:E-additive ;
     rdfs:label  "E1510" .
-ns1:E1516   rdf:type    food:E-additive ;
+foodpedia:E1516   rdf:type    food:E-additive ;
     rdfs:label  "E1516" .
-ns1:E1517   rdf:type    food:E-additive ;
+foodpedia:E1517   rdf:type    food:E-additive ;
     rdfs:label  "E1517" .
-ns1:E1518   rdf:type    food:E-additive ;
+foodpedia:E1518   rdf:type    food:E-additive ;
     rdfs:label  "E1518" .
-ns1:E1519   rdf:type    food:E-additive ;
+foodpedia:E1519   rdf:type    food:E-additive ;
     rdfs:label  "E1519" .
-ns1:E152    rdf:type    food:E-additive ;
+foodpedia:E152    rdf:type    food:E-additive ;
     rdfs:label  "E152" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E152"^^ns4:anyURI .
-ns1:E1520   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E152"^^xsd:anyURI .
+foodpedia:E1520   rdf:type    food:E-additive ;
     rdfs:label  "E1520" .
-ns1:E1521   rdf:type    food:E-additive ;
+foodpedia:E1521   rdf:type    food:E-additive ;
     rdfs:label  "E1521" .
-ns1:E1525   rdf:type    food:E-additive ;
+foodpedia:E1525   rdf:type    food:E-additive ;
     rdfs:label  "E1525" .
-ns1:E153    rdf:type    food:E-additive ;
+foodpedia:E153    rdf:type    food:E-additive ;
     rdfs:label  "E153" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E153"^^ns4:anyURI .
-ns1:E154    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E153"^^xsd:anyURI .
+foodpedia:E154    rdf:type    food:E-additive ;
     rdfs:label  "E154" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E154"^^ns4:anyURI .
-ns1:E155    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E154"^^xsd:anyURI .
+foodpedia:E155    rdf:type    food:E-additive ;
     rdfs:label  "E155" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E155"^^ns4:anyURI .
-ns1:E160a   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E155"^^xsd:anyURI .
+foodpedia:E160a   rdf:type    food:E-additive ;
     rdfs:label  "E160a" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E160a"^^ns4:anyURI .
-ns1:E160b   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E160a"^^xsd:anyURI .
+foodpedia:E160b   rdf:type    food:E-additive ;
     rdfs:label  "E160b" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Annatto"^^ns4:anyURI .
-ns1:E160c   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Annatto"^^xsd:anyURI .
+foodpedia:E160c   rdf:type    food:E-additive ;
     rdfs:label  "E160c" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E160c"^^ns4:anyURI .
-ns1:E160d   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E160c"^^xsd:anyURI .
+foodpedia:E160d   rdf:type    food:E-additive ;
     rdfs:label  "E160d" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E160d"^^ns4:anyURI .
-ns1:E160e   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E160d"^^xsd:anyURI .
+foodpedia:E160e   rdf:type    food:E-additive ;
     rdfs:label  "E160e" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E160e"^^ns4:anyURI .
-ns1:E160f   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E160e"^^xsd:anyURI .
+foodpedia:E160f   rdf:type    food:E-additive ;
     rdfs:label  "E160f" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E160f"^^ns4:anyURI .
-ns1:E161a   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E160f"^^xsd:anyURI .
+foodpedia:E161a   rdf:type    food:E-additive ;
     rdfs:label  "E161a" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161a"^^ns4:anyURI .
-ns1:E161b   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161a"^^xsd:anyURI .
+foodpedia:E161b   rdf:type    food:E-additive ;
     rdfs:label  "E161b" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161b"^^ns4:anyURI .
-ns1:E161c   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161b"^^xsd:anyURI .
+foodpedia:E161c   rdf:type    food:E-additive ;
     rdfs:label  "E161c" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161c"^^ns4:anyURI .
-ns1:E161d   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161c"^^xsd:anyURI .
+foodpedia:E161d   rdf:type    food:E-additive ;
     rdfs:label  "E161d" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161d"^^ns4:anyURI .
-ns1:E161e   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161d"^^xsd:anyURI .
+foodpedia:E161e   rdf:type    food:E-additive ;
     rdfs:label  "E161e" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161e"^^ns4:anyURI .
-ns1:E161f   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161e"^^xsd:anyURI .
+foodpedia:E161f   rdf:type    food:E-additive ;
     rdfs:label  "E161f" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161f"^^ns4:anyURI .
-ns1:E161g   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161f"^^xsd:anyURI .
+foodpedia:E161g   rdf:type    food:E-additive ;
     rdfs:label  "E161g" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161g"^^ns4:anyURI .
-ns1:E161h   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161g"^^xsd:anyURI .
+foodpedia:E161h   rdf:type    food:E-additive ;
     rdfs:label  "E161h" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161h"^^ns4:anyURI .
-ns1:E161i   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161h"^^xsd:anyURI .
+foodpedia:E161i   rdf:type    food:E-additive ;
     rdfs:label  "E161i" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161i"^^ns4:anyURI .
-ns1:E161j   rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161i"^^xsd:anyURI .
+foodpedia:E161j   rdf:type    food:E-additive ;
     rdfs:label  "E161j" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161j"^^ns4:anyURI .
-ns1:E162    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E161j"^^xsd:anyURI .
+foodpedia:E162    rdf:type    food:E-additive ;
     rdfs:label  "E162" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E162"^^ns4:anyURI .
-ns1:E163    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E162"^^xsd:anyURI .
+foodpedia:E163    rdf:type    food:E-additive ;
     rdfs:label  "E163" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E163"^^ns4:anyURI .
-ns1:E164    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E163"^^xsd:anyURI .
+foodpedia:E164    rdf:type    food:E-additive ;
     rdfs:label  "E164" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Saffron"^^ns4:anyURI .
-ns1:E170    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Saffron"^^xsd:anyURI .
+foodpedia:E170    rdf:type    food:E-additive ;
     rdfs:label  "E170" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Calcium_carbonate"^^ns4:anyURI .
-ns1:E171    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Calcium_carbonate"^^xsd:anyURI .
+foodpedia:E171    rdf:type    food:E-additive ;
     rdfs:label  "E171" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E171"^^ns4:anyURI .
-ns1:E172    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E171"^^xsd:anyURI .
+foodpedia:E172    rdf:type    food:E-additive ;
     rdfs:label  "E172" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E172"^^ns4:anyURI .
-ns1:E173    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E172"^^xsd:anyURI .
+foodpedia:E173    rdf:type    food:E-additive ;
     rdfs:label  "E173" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Aluminium"^^ns4:anyURI .
-ns1:E174    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Aluminium"^^xsd:anyURI .
+foodpedia:E174    rdf:type    food:E-additive ;
     rdfs:label  "E174" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E174"^^ns4:anyURI .
-ns1:E175    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E174"^^xsd:anyURI .
+foodpedia:E175    rdf:type    food:E-additive ;
     rdfs:label  "E175" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Gold"^^ns4:anyURI .
-ns1:E180    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Gold"^^xsd:anyURI .
+foodpedia:E180    rdf:type    food:E-additive ;
     rdfs:label  "E180" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E180"^^ns4:anyURI .
-ns1:E181    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E180"^^xsd:anyURI .
+foodpedia:E181    rdf:type    food:E-additive ;
     rdfs:label  "E181" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E181"^^ns4:anyURI .
-ns1:E182    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E181"^^xsd:anyURI .
+foodpedia:E182    rdf:type    food:E-additive ;
     rdfs:label  "E182" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E182"^^ns4:anyURI .
-ns1:E200    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E182"^^xsd:anyURI .
+foodpedia:E200    rdf:type    food:E-additive ;
     rdfs:label  "E200" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Sorbic_acid"^^ns4:anyURI .
-ns1:E201    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Sorbic_acid"^^xsd:anyURI .
+foodpedia:E201    rdf:type    food:E-additive ;
     rdfs:label  "E201" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Sodium_sorbate"^^ns4:anyURI .
-ns1:E202    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Sodium_sorbate"^^xsd:anyURI .
+foodpedia:E202    rdf:type    food:E-additive ;
     rdfs:label  "E202" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E202"^^ns4:anyURI .
-ns1:E203    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E202"^^xsd:anyURI .
+foodpedia:E203    rdf:type    food:E-additive ;
     rdfs:label  "E203" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E203"^^ns4:anyURI .
-ns1:E209    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E203"^^xsd:anyURI .
+foodpedia:E209    rdf:type    food:E-additive ;
     rdfs:label  "E209" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E209"^^ns4:anyURI .
-ns1:E210    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E209"^^xsd:anyURI .
+foodpedia:E210    rdf:type    food:E-additive ;
     rdfs:label  "E210" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E210"^^ns4:anyURI .
-ns1:E211    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E210"^^xsd:anyURI .
+foodpedia:E211    rdf:type    food:E-additive ;
     rdfs:label  "E211" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E211"^^ns4:anyURI .
-ns1:E212    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E211"^^xsd:anyURI .
+foodpedia:E212    rdf:type    food:E-additive ;
     rdfs:label  "E212" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E212"^^ns4:anyURI .
-ns1:E213    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E212"^^xsd:anyURI .
+foodpedia:E213    rdf:type    food:E-additive ;
     rdfs:label  "E213" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E213"^^ns4:anyURI .
-ns1:E214    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E213"^^xsd:anyURI .
+foodpedia:E214    rdf:type    food:E-additive ;
     rdfs:label  "E214" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E214"^^ns4:anyURI .
-ns1:E215    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E214"^^xsd:anyURI .
+foodpedia:E215    rdf:type    food:E-additive ;
     rdfs:label  "E215" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E215"^^ns4:anyURI .
-ns1:E216    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E215"^^xsd:anyURI .
+foodpedia:E216    rdf:type    food:E-additive ;
     rdfs:label  "E216" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E216"^^ns4:anyURI .
-ns1:E217    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E216"^^xsd:anyURI .
+foodpedia:E217    rdf:type    food:E-additive ;
     rdfs:label  "E217" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E217"^^ns4:anyURI .
-ns1:E218    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E217"^^xsd:anyURI .
+foodpedia:E218    rdf:type    food:E-additive ;
     rdfs:label  "E218" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E218"^^ns4:anyURI .
-ns1:E219    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E218"^^xsd:anyURI .
+foodpedia:E219    rdf:type    food:E-additive ;
     rdfs:label  "E219" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E219"^^ns4:anyURI .
-ns1:E220    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E219"^^xsd:anyURI .
+foodpedia:E220    rdf:type    food:E-additive ;
     rdfs:label  "E220" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Sulfur_dioxide"^^ns4:anyURI .
-ns1:E221    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Sulfur_dioxide"^^xsd:anyURI .
+foodpedia:E221    rdf:type    food:E-additive ;
     rdfs:label  "E221" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E221"^^ns4:anyURI .
-ns1:E222    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E221"^^xsd:anyURI .
+foodpedia:E222    rdf:type    food:E-additive ;
     rdfs:label  "E222" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E222"^^ns4:anyURI .
-ns1:E223    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E222"^^xsd:anyURI .
+foodpedia:E223    rdf:type    food:E-additive ;
     rdfs:label  "E223" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E223"^^ns4:anyURI .
-ns1:E224    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E223"^^xsd:anyURI .
+foodpedia:E224    rdf:type    food:E-additive ;
     rdfs:label  "E224" .
-ns1:E225    rdf:type    food:E-additive ;
+foodpedia:E225    rdf:type    food:E-additive ;
     rdfs:label  "E225" .
-ns1:E226    rdf:type    food:E-additive ;
+foodpedia:E226    rdf:type    food:E-additive ;
     rdfs:label  "E226" .
-ns1:E227    rdf:type    food:E-additive ;
+foodpedia:E227    rdf:type    food:E-additive ;
     rdfs:label  "E227" .
-ns1:E228    rdf:type    food:E-additive ;
+foodpedia:E228    rdf:type    food:E-additive ;
     rdfs:label  "E228" .
-ns1:E229    rdf:type    food:E-additive ;
+foodpedia:E229    rdf:type    food:E-additive ;
     rdfs:label  "E229" .
-ns1:E230    rdf:type    food:E-additive ;
+foodpedia:E230    rdf:type    food:E-additive ;
     rdfs:label  "E230" .
-ns1:E231    rdf:type    food:E-additive ;
+foodpedia:E231    rdf:type    food:E-additive ;
     rdfs:label  "E231" .
-ns1:E232    rdf:type    food:E-additive ;
+foodpedia:E232    rdf:type    food:E-additive ;
     rdfs:label  "E232" .
-ns1:E233    rdf:type    food:E-additive ;
+foodpedia:E233    rdf:type    food:E-additive ;
     rdfs:label  "E233" .
-ns1:E234    rdf:type    food:E-additive ;
+foodpedia:E234    rdf:type    food:E-additive ;
     rdfs:label  "E234" .
-ns1:E235    rdf:type    food:E-additive ;
+foodpedia:E235    rdf:type    food:E-additive ;
     rdfs:label  "E235" .
-ns1:E236    rdf:type    food:E-additive ;
+foodpedia:E236    rdf:type    food:E-additive ;
     rdfs:label  "E236" .
-ns1:E237    rdf:type    food:E-additive ;
+foodpedia:E237    rdf:type    food:E-additive ;
     rdfs:label  "E237" .
-ns1:E238    rdf:type    food:E-additive ;
+foodpedia:E238    rdf:type    food:E-additive ;
     rdfs:label  "E238" .
-ns1:E239    rdf:type    food:E-additive ;
+foodpedia:E239    rdf:type    food:E-additive ;
     rdfs:label  "E239" .
-ns1:E240    rdf:type    food:E-additive ;
+foodpedia:E240    rdf:type    food:E-additive ;
     rdfs:label  "E240" .
-ns1:E242    rdf:type    food:E-additive ;
+foodpedia:E242    rdf:type    food:E-additive ;
     rdfs:label  "E242" .
-ns1:E249    rdf:type    food:E-additive ;
+foodpedia:E249    rdf:type    food:E-additive ;
     rdfs:label  "E249" .
-ns1:E250    rdf:type    food:E-additive ;
+foodpedia:E250    rdf:type    food:E-additive ;
     rdfs:label  "E250" .
-ns1:E251    rdf:type    food:E-additive ;
+foodpedia:E251    rdf:type    food:E-additive ;
     rdfs:label  "E251" .
-ns1:E252    rdf:type    food:E-additive ;
+foodpedia:E252    rdf:type    food:E-additive ;
     rdfs:label  "E252" .
-ns1:E260    rdf:type    food:E-additive ;
+foodpedia:E260    rdf:type    food:E-additive ;
     rdfs:label  "E260" .
-ns1:E261    rdf:type    food:E-additive ;
+foodpedia:E261    rdf:type    food:E-additive ;
     rdfs:label  "E261" .
-ns1:E262    rdf:type    food:E-additive ;
+foodpedia:E262    rdf:type    food:E-additive ;
     rdfs:label  "E262" .
-ns1:E263    rdf:type    food:E-additive ;
+foodpedia:E263    rdf:type    food:E-additive ;
     rdfs:label  "E263" .
-ns1:E264    rdf:type    food:E-additive ;
+foodpedia:E264    rdf:type    food:E-additive ;
     rdfs:label  "E264" .
-ns1:E265    rdf:type    food:E-additive ;
+foodpedia:E265    rdf:type    food:E-additive ;
     rdfs:label  "E265" .
-ns1:E266    rdf:type    food:E-additive ;
+foodpedia:E266    rdf:type    food:E-additive ;
     rdfs:label  "E266" .
-ns1:E270    rdf:type    food:E-additive ;
+foodpedia:E270    rdf:type    food:E-additive ;
     rdfs:label  "E270" .
-ns1:E280    rdf:type    food:E-additive ;
+foodpedia:E280    rdf:type    food:E-additive ;
     rdfs:label  "E280" .
-ns1:E281    rdf:type    food:E-additive ;
+foodpedia:E281    rdf:type    food:E-additive ;
     rdfs:label  "E281" .
-ns1:E282    rdf:type    food:E-additive ;
+foodpedia:E282    rdf:type    food:E-additive ;
     rdfs:label  "E282" .
-ns1:E283    rdf:type    food:E-additive ;
+foodpedia:E283    rdf:type    food:E-additive ;
     rdfs:label  "E283" .
-ns1:E284    rdf:type    food:E-additive ;
+foodpedia:E284    rdf:type    food:E-additive ;
     rdfs:label  "E284" .
-ns1:E285    rdf:type    food:E-additive ;
+foodpedia:E285    rdf:type    food:E-additive ;
     rdfs:label  "E285" .
-ns1:E290    rdf:type    food:E-additive ;
+foodpedia:E290    rdf:type    food:E-additive ;
     rdfs:label  "E290" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E290"^^ns4:anyURI .
-ns1:E296    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E290"^^xsd:anyURI .
+foodpedia:E296    rdf:type    food:E-additive ;
     rdfs:label  "E296" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E296"^^ns4:anyURI .
-ns1:E297    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E296"^^xsd:anyURI .
+foodpedia:E297    rdf:type    food:E-additive ;
     rdfs:label  "E297" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E297"^^ns4:anyURI .
-ns1:E300    rdf:type    food:E-additive ;
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/E297"^^xsd:anyURI .
+foodpedia:E300    rdf:type    food:E-additive ;
     rdfs:label  "E300" .
-ns1:E301    rdf:type    food:E-additive ;
+foodpedia:E301    rdf:type    food:E-additive ;
     rdfs:label  "E301" .
-ns1:E302    rdf:type    food:E-additive ;
+foodpedia:E302    rdf:type    food:E-additive ;
     rdfs:label  "E302" .
-ns1:E303    rdf:type    food:E-additive ;
+foodpedia:E303    rdf:type    food:E-additive ;
     rdfs:label  "E303" .
-ns1:E304    rdf:type    food:E-additive ;
+foodpedia:E304    rdf:type    food:E-additive ;
     rdfs:label  "E304" .
-ns1:E305    rdf:type    food:E-additive ;
+foodpedia:E305    rdf:type    food:E-additive ;
     rdfs:label  "E305" .
-ns1:E306    rdf:type    food:E-additive ;
+foodpedia:E306    rdf:type    food:E-additive ;
     rdfs:label  "E306" .
-ns1:E307    rdf:type    food:E-additive ;
+foodpedia:E307    rdf:type    food:E-additive ;
     rdfs:label  "E307" .
-ns1:E308    rdf:type    food:E-additive ;
+foodpedia:E308    rdf:type    food:E-additive ;
     rdfs:label  "E308" .
-ns1:E309    rdf:type    food:E-additive ;
+foodpedia:E309    rdf:type    food:E-additive ;
     rdfs:label  "E309" .
-ns1:E310    rdf:type    food:E-additive ;
+foodpedia:E310    rdf:type    food:E-additive ;
     rdfs:label  "E310" .
-ns1:E311    rdf:type    food:E-additive ;
+foodpedia:E311    rdf:type    food:E-additive ;
     rdfs:label  "E311" .
-ns1:E312    rdf:type    food:E-additive ;
+foodpedia:E312    rdf:type    food:E-additive ;
     rdfs:label  "E312" .
-ns1:E313    rdf:type    food:E-additive ;
+foodpedia:E313    rdf:type    food:E-additive ;
     rdfs:label  "E313" .
-ns1:E314    rdf:type    food:E-additive ;
+foodpedia:E314    rdf:type    food:E-additive ;
     rdfs:label  "E314" .
-ns1:E315    rdf:type    food:E-additive ;
+foodpedia:E315    rdf:type    food:E-additive ;
     rdfs:label  "E315" .
-ns1:E316    rdf:type    food:E-additive ;
+foodpedia:E316    rdf:type    food:E-additive ;
     rdfs:label  "E316" .
-ns1:E317    rdf:type    food:E-additive ;
+foodpedia:E317    rdf:type    food:E-additive ;
     rdfs:label  "E317" .
-ns1:E318    rdf:type    food:E-additive ;
+foodpedia:E318    rdf:type    food:E-additive ;
     rdfs:label  "E318" .
-ns1:E319    rdf:type    food:E-additive ;
+foodpedia:E319    rdf:type    food:E-additive ;
     rdfs:label  "E319" .
-ns1:E320    rdf:type    food:E-additive ;
+foodpedia:E320    rdf:type    food:E-additive ;
     rdfs:label  "E320" .
-ns1:E321    rdf:type    food:E-additive ;
+foodpedia:E321    rdf:type    food:E-additive ;
     rdfs:label  "E321" .
-ns1:E322    rdf:type    food:E-additive ;
+foodpedia:E322    rdf:type    food:E-additive ;
     rdfs:label  "E322" .
-ns1:E323    rdf:type    food:E-additive ;
+foodpedia:E323    rdf:type    food:E-additive ;
     rdfs:label  "E323" .
-ns1:E324    rdf:type    food:E-additive ;
+foodpedia:E324    rdf:type    food:E-additive ;
     rdfs:label  "E324" .
-ns1:E325    rdf:type    food:E-additive ;
+foodpedia:E325    rdf:type    food:E-additive ;
     rdfs:label  "E325" .
-ns1:E326    rdf:type    food:E-additive ;
+foodpedia:E326    rdf:type    food:E-additive ;
     rdfs:label  "E326" .
-ns1:E327    rdf:type    food:E-additive ;
+foodpedia:E327    rdf:type    food:E-additive ;
     rdfs:label  "E327" .
-ns1:E328    rdf:type    food:E-additive ;
+foodpedia:E328    rdf:type    food:E-additive ;
     rdfs:label  "E328" .
-ns1:E329    rdf:type    food:E-additive ;
+foodpedia:E329    rdf:type    food:E-additive ;
     rdfs:label  "E329" .
-ns1:E330    rdf:type    food:E-additive ;
+foodpedia:E330    rdf:type    food:E-additive ;
     rdfs:label  "E330" .
-ns1:E331    rdf:type    food:E-additive ;
+foodpedia:E331    rdf:type    food:E-additive ;
     rdfs:label  "E331" .
-ns1:E332    rdf:type    food:E-additive ;
+foodpedia:E332    rdf:type    food:E-additive ;
     rdfs:label  "E332" .
-ns1:E333    rdf:type    food:E-additive ;
+foodpedia:E333    rdf:type    food:E-additive ;
     rdfs:label  "E333" .
-ns1:E334    rdf:type    food:E-additive ;
+foodpedia:E334    rdf:type    food:E-additive ;
     rdfs:label  "E334" .
-ns1:E335    rdf:type    food:E-additive ;
+foodpedia:E335    rdf:type    food:E-additive ;
     rdfs:label  "E335" .
-ns1:E336    rdf:type    food:E-additive ;
+foodpedia:E336    rdf:type    food:E-additive ;
     rdfs:label  "E336" .
-ns1:E337    rdf:type    food:E-additive ;
+foodpedia:E337    rdf:type    food:E-additive ;
     rdfs:label  "E337" .
-ns1:E338    rdf:type    food:E-additive ;
+foodpedia:E338    rdf:type    food:E-additive ;
     rdfs:label  "E338" .
-ns1:E339    rdf:type    food:E-additive ;
+foodpedia:E339    rdf:type    food:E-additive ;
     rdfs:label  "E339" .
-ns1:E340    rdf:type    food:E-additive ;
+foodpedia:E340    rdf:type    food:E-additive ;
     rdfs:label  "E340" .
-ns1:E341    rdf:type    food:E-additive ;
+foodpedia:E341    rdf:type    food:E-additive ;
     rdfs:label  "E341" .
-ns1:E342    rdf:type    food:E-additive ;
+foodpedia:E342    rdf:type    food:E-additive ;
     rdfs:label  "E342" .
-ns1:E343    rdf:type    food:E-additive ;
+foodpedia:E343    rdf:type    food:E-additive ;
     rdfs:label  "E343" .
-ns1:E344    rdf:type    food:E-additive ;
+foodpedia:E344    rdf:type    food:E-additive ;
     rdfs:label  "E344" .
-ns1:E345    rdf:type    food:E-additive ;
+foodpedia:E345    rdf:type    food:E-additive ;
     rdfs:label  "E345" .
-ns1:E349    rdf:type    food:E-additive ;
+foodpedia:E349    rdf:type    food:E-additive ;
     rdfs:label  "E349" .
-ns1:E350    rdf:type    food:E-additive ;
+foodpedia:E350    rdf:type    food:E-additive ;
     rdfs:label  "E350" .
-ns1:E351    rdf:type    food:E-additive ;
+foodpedia:E351    rdf:type    food:E-additive ;
     rdfs:label  "E351" .
-ns1:E352    rdf:type    food:E-additive ;
+foodpedia:E352    rdf:type    food:E-additive ;
     rdfs:label  "E352" .
-ns1:E353    rdf:type    food:E-additive ;
+foodpedia:E353    rdf:type    food:E-additive ;
     rdfs:label  "E353" .
-ns1:E354    rdf:type    food:E-additive ;
+foodpedia:E354    rdf:type    food:E-additive ;
     rdfs:label  "E354" .
-ns1:E355    rdf:type    food:E-additive ;
+foodpedia:E355    rdf:type    food:E-additive ;
     rdfs:label  "E355" .
-ns1:E356    rdf:type    food:E-additive ;
+foodpedia:E356    rdf:type    food:E-additive ;
     rdfs:label  "E356" .
-ns1:E357    rdf:type    food:E-additive ;
+foodpedia:E357    rdf:type    food:E-additive ;
     rdfs:label  "E357" .
-ns1:E359    rdf:type    food:E-additive ;
+foodpedia:E359    rdf:type    food:E-additive ;
     rdfs:label  "E359" .
-ns1:E363    rdf:type    food:E-additive ;
+foodpedia:E363    rdf:type    food:E-additive ;
     rdfs:label  "E363" .
-ns1:E365    rdf:type    food:E-additive ;
+foodpedia:E365    rdf:type    food:E-additive ;
     rdfs:label  "E365" .
-ns1:E366    rdf:type    food:E-additive ;
+foodpedia:E366    rdf:type    food:E-additive ;
     rdfs:label  "E366" .
-ns1:E367    rdf:type    food:E-additive ;
+foodpedia:E367    rdf:type    food:E-additive ;
     rdfs:label  "E367" .
-ns1:E368    rdf:type    food:E-additive ;
+foodpedia:E368    rdf:type    food:E-additive ;
     rdfs:label  "E368" .
-ns1:E370    rdf:type    food:E-additive ;
+foodpedia:E370    rdf:type    food:E-additive ;
     rdfs:label  "E370" .
-ns1:E380    rdf:type    food:E-additive ;
+foodpedia:E380    rdf:type    food:E-additive ;
     rdfs:label  "E380" .
-ns1:E381    rdf:type    food:E-additive ;
+foodpedia:E381    rdf:type    food:E-additive ;
     rdfs:label  "E381" .
-ns1:E383    rdf:type    food:E-additive ;
+foodpedia:E383    rdf:type    food:E-additive ;
     rdfs:label  "E383" .
-ns1:E384    rdf:type    food:E-additive ;
+foodpedia:E384    rdf:type    food:E-additive ;
     rdfs:label  "E384" .
-ns1:E385    rdf:type    food:E-additive ;
+foodpedia:E385    rdf:type    food:E-additive ;
     rdfs:label  "E385" .
-ns1:E386    rdf:type    food:E-additive ;
+foodpedia:E386    rdf:type    food:E-additive ;
     rdfs:label  "E386" .
-ns1:E387    rdf:type    food:E-additive ;
+foodpedia:E387    rdf:type    food:E-additive ;
     rdfs:label  "E387" .
-ns1:E388    rdf:type    food:E-additive ;
+foodpedia:E388    rdf:type    food:E-additive ;
     rdfs:label  "E388" .
-ns1:E389    rdf:type    food:E-additive ;
+foodpedia:E389    rdf:type    food:E-additive ;
     rdfs:label  "E389" .
-ns1:E390    rdf:type    food:E-additive ;
+foodpedia:E390    rdf:type    food:E-additive ;
     rdfs:label  "E390" .
-ns1:E391    rdf:type    food:E-additive ;
+foodpedia:E391    rdf:type    food:E-additive ;
     rdfs:label  "E391" .
-ns1:E392    rdf:type    food:E-additive ;
+foodpedia:E392    rdf:type    food:E-additive ;
     rdfs:label  "E392" .
-ns1:E399    rdf:type    food:E-additive ;
+foodpedia:E399    rdf:type    food:E-additive ;
     rdfs:label  "E399" .
-ns1:E400    rdf:type    food:E-additive ;
+foodpedia:E400    rdf:type    food:E-additive ;
     rdfs:label  "E400" .
-ns1:E401    rdf:type    food:E-additive ;
+foodpedia:E401    rdf:type    food:E-additive ;
     rdfs:label  "E401" .
-ns1:E402    rdf:type    food:E-additive ;
+foodpedia:E402    rdf:type    food:E-additive ;
     rdfs:label  "E402" .
-ns1:E403    rdf:type    food:E-additive ;
+foodpedia:E403    rdf:type    food:E-additive ;
     rdfs:label  "E403" .
-ns1:E404    rdf:type    food:E-additive ;
+foodpedia:E404    rdf:type    food:E-additive ;
     rdfs:label  "E404" .
-ns1:E405    rdf:type    food:E-additive ;
+foodpedia:E405    rdf:type    food:E-additive ;
     rdfs:label  "E405" .
-ns1:E406    rdf:type    food:E-additive ;
+foodpedia:E406    rdf:type    food:E-additive ;
     rdfs:label  "E406" .
-ns1:E407    rdf:type    food:E-additive ;
+foodpedia:E407    rdf:type    food:E-additive ;
     rdfs:label  "E407" .
-ns1:E407a   rdf:type    food:E-additive ;
+foodpedia:E407a   rdf:type    food:E-additive ;
     rdfs:label  "E407a" .
-ns1:E408    rdf:type    food:E-additive ;
+foodpedia:E408    rdf:type    food:E-additive ;
     rdfs:label  "E408" .
-ns1:E409    rdf:type    food:E-additive ;
+foodpedia:E409    rdf:type    food:E-additive ;
     rdfs:label  "E409" .
-ns1:E410    rdf:type    food:E-additive ;
+foodpedia:E410    rdf:type    food:E-additive ;
     rdfs:label  "E410" .
-ns1:E411    rdf:type    food:E-additive ;
+foodpedia:E411    rdf:type    food:E-additive ;
     rdfs:label  "E411" .
-ns1:E412    rdf:type    food:E-additive ;
+foodpedia:E412    rdf:type    food:E-additive ;
     rdfs:label  "E412" .
-ns1:E413    rdf:type    food:E-additive ;
+foodpedia:E413    rdf:type    food:E-additive ;
     rdfs:label  "E413" .
-ns1:E414    rdf:type    food:E-additive ;
+foodpedia:E414    rdf:type    food:E-additive ;
     rdfs:label  "E414" .
-ns1:E415    rdf:type    food:E-additive ;
+foodpedia:E415    rdf:type    food:E-additive ;
     rdfs:label  "E415" .
-ns1:E416    rdf:type    food:E-additive ;
+foodpedia:E416    rdf:type    food:E-additive ;
     rdfs:label  "E416" .
-ns1:E417    rdf:type    food:E-additive ;
+foodpedia:E417    rdf:type    food:E-additive ;
     rdfs:label  "E417" .
-ns1:E418    rdf:type    food:E-additive ;
+foodpedia:E418    rdf:type    food:E-additive ;
     rdfs:label  "E418" .
-ns1:E419    rdf:type    food:E-additive ;
+foodpedia:E419    rdf:type    food:E-additive ;
     rdfs:label  "E419" .
-ns1:E420    rdf:type    food:E-additive ;
+foodpedia:E420    rdf:type    food:E-additive ;
     rdfs:label  "E420" .
-ns1:E421    rdf:type    food:E-additive ;
+foodpedia:E421    rdf:type    food:E-additive ;
     rdfs:label  "E421" .
-ns1:E422    rdf:type    food:E-additive ;
+foodpedia:E422    rdf:type    food:E-additive ;
     rdfs:label  "E422" .
-ns1:E424    rdf:type    food:E-additive ;
+foodpedia:E424    rdf:type    food:E-additive ;
     rdfs:label  "E424" .
-ns1:E425    rdf:type    food:E-additive ;
+foodpedia:E425    rdf:type    food:E-additive ;
     rdfs:label  "E425" .
-ns1:E426    rdf:type    food:E-additive ;
+foodpedia:E426    rdf:type    food:E-additive ;
     rdfs:label  "E426" .
-ns1:E427    rdf:type    food:E-additive ;
+foodpedia:E427    rdf:type    food:E-additive ;
     rdfs:label  "E427" .
-ns1:E429    rdf:type    food:E-additive ;
+foodpedia:E429    rdf:type    food:E-additive ;
     rdfs:label  "E429" .
-ns1:E430    rdf:type    food:E-additive ;
+foodpedia:E430    rdf:type    food:E-additive ;
     rdfs:label  "E430" .
-ns1:E431    rdf:type    food:E-additive ;
+foodpedia:E431    rdf:type    food:E-additive ;
     rdfs:label  "E431" .
-ns1:E432    rdf:type    food:E-additive ;
+foodpedia:E432    rdf:type    food:E-additive ;
     rdfs:label  "E432" .
-ns1:E433    rdf:type    food:E-additive ;
+foodpedia:E433    rdf:type    food:E-additive ;
     rdfs:label  "E433" .
-ns1:E434    rdf:type    food:E-additive ;
+foodpedia:E434    rdf:type    food:E-additive ;
     rdfs:label  "E434" .
-ns1:E435    rdf:type    food:E-additive ;
+foodpedia:E435    rdf:type    food:E-additive ;
     rdfs:label  "E435" .
-ns1:E436    rdf:type    food:E-additive ;
+foodpedia:E436    rdf:type    food:E-additive ;
     rdfs:label  "E436" .
-ns1:E440    rdf:type    food:E-additive ;
+foodpedia:E440    rdf:type    food:E-additive ;
     rdfs:label  "E440" .
-ns1:E441    rdf:type    food:E-additive ;
+foodpedia:E441    rdf:type    food:E-additive ;
     rdfs:label  "E441" .
-ns1:E442    rdf:type    food:E-additive ;
+foodpedia:E442    rdf:type    food:E-additive ;
     rdfs:label  "E442" .
-ns1:E444    rdf:type    food:E-additive ;
+foodpedia:E444    rdf:type    food:E-additive ;
     rdfs:label  "E444" .
-ns1:E445    rdf:type    food:E-additive ;
+foodpedia:E445    rdf:type    food:E-additive ;
     rdfs:label  "E445" .
-ns1:E446    rdf:type    food:E-additive ;
+foodpedia:E446    rdf:type    food:E-additive ;
     rdfs:label  "E446" .
-ns1:E450    rdf:type    food:E-additive ;
+foodpedia:E450    rdf:type    food:E-additive ;
     rdfs:label  "E450" .
-ns1:E450a   rdf:type    food:E-additive ;
+foodpedia:E450a   rdf:type    food:E-additive ;
     rdfs:label  "E450a" .
-ns1:E451    rdf:type    food:E-additive ;
+foodpedia:E451    rdf:type    food:E-additive ;
     rdfs:label  "E451" .
-ns1:E452    rdf:type    food:E-additive ;
+foodpedia:E452    rdf:type    food:E-additive ;
     rdfs:label  "E452" .
-ns1:E459    rdf:type    food:E-additive ;
+foodpedia:E459    rdf:type    food:E-additive ;
     rdfs:label  "E459" .
-ns1:E460    rdf:type    food:E-additive ;
+foodpedia:E460    rdf:type    food:E-additive ;
     rdfs:label  "E460" .
-ns1:E461    rdf:type    food:E-additive ;
+foodpedia:E461    rdf:type    food:E-additive ;
     rdfs:label  "E461" .
-ns1:E462    rdf:type    food:E-additive ;
+foodpedia:E462    rdf:type    food:E-additive ;
     rdfs:label  "E462" .
-ns1:E463    rdf:type    food:E-additive ;
+foodpedia:E463    rdf:type    food:E-additive ;
     rdfs:label  "E463" .
-ns1:E464    rdf:type    food:E-additive ;
+foodpedia:E464    rdf:type    food:E-additive ;
     rdfs:label  "E464" .
-ns1:E465    rdf:type    food:E-additive ;
+foodpedia:E465    rdf:type    food:E-additive ;
     rdfs:label  "E465" .
-ns1:E466    rdf:type    food:E-additive ;
+foodpedia:E466    rdf:type    food:E-additive ;
     rdfs:label  "E466" .
-ns1:E467    rdf:type    food:E-additive ;
+foodpedia:E467    rdf:type    food:E-additive ;
     rdfs:label  "E467" .
-ns1:E468    rdf:type    food:E-additive ;
+foodpedia:E468    rdf:type    food:E-additive ;
     rdfs:label  "E468" .
-ns1:E469    rdf:type    food:E-additive ;
+foodpedia:E469    rdf:type    food:E-additive ;
     rdfs:label  "E469" .
-ns1:E470a   rdf:type    food:E-additive ;
+foodpedia:E470a   rdf:type    food:E-additive ;
     rdfs:label  "E470a" .
-ns1:E470b   rdf:type    food:E-additive ;
+foodpedia:E470b   rdf:type    food:E-additive ;
     rdfs:label  "E470b" .
-ns1:E471    rdf:type    food:E-additive ;
+foodpedia:E471    rdf:type    food:E-additive ;
     rdfs:label  "E471" .
-ns1:E472a   rdf:type    food:E-additive ;
+foodpedia:E472a   rdf:type    food:E-additive ;
     rdfs:label  "E472a" .
-ns1:E472b   rdf:type    food:E-additive ;
+foodpedia:E472b   rdf:type    food:E-additive ;
     rdfs:label  "E472b" .
-ns1:E472c   rdf:type    food:E-additive ;
+foodpedia:E472c   rdf:type    food:E-additive ;
     rdfs:label  "E472c" .
-ns1:E472d   rdf:type    food:E-additive ;
+foodpedia:E472d   rdf:type    food:E-additive ;
     rdfs:label  "E472d" .
-ns1:E472e   rdf:type    food:E-additive ;
+foodpedia:E472e   rdf:type    food:E-additive ;
     rdfs:label  "E472e" .
-ns1:E472f   rdf:type    food:E-additive ;
+foodpedia:E472f   rdf:type    food:E-additive ;
     rdfs:label  "E472f" .
-ns1:E472g   rdf:type    food:E-additive ;
+foodpedia:E472g   rdf:type    food:E-additive ;
     rdfs:label  "E472g" .
-ns1:E473    rdf:type    food:E-additive ;
+foodpedia:E473    rdf:type    food:E-additive ;
     rdfs:label  "E473" .
-ns1:E474    rdf:type    food:E-additive ;
+foodpedia:E474    rdf:type    food:E-additive ;
     rdfs:label  "E474" .
-ns1:E475    rdf:type    food:E-additive ;
+foodpedia:E475    rdf:type    food:E-additive ;
     rdfs:label  "E475" .
-ns1:E476    rdf:type    food:E-additive ;
+foodpedia:E476    rdf:type    food:E-additive ;
     rdfs:label  "E476" .
-ns1:E477    rdf:type    food:E-additive ;
+foodpedia:E477    rdf:type    food:E-additive ;
     rdfs:label  "E477" .
-ns1:E478    rdf:type    food:E-additive ;
+foodpedia:E478    rdf:type    food:E-additive ;
     rdfs:label  "E478" .
-ns1:E479b   rdf:type    food:E-additive ;
+foodpedia:E479b   rdf:type    food:E-additive ;
     rdfs:label  "E479b" .
-ns1:E480    rdf:type    food:E-additive ;
+foodpedia:E480    rdf:type    food:E-additive ;
     rdfs:label  "E480" .
-ns1:E481    rdf:type    food:E-additive ;
+foodpedia:E481    rdf:type    food:E-additive ;
     rdfs:label  "E481" .
-ns1:E482    rdf:type    food:E-additive ;
+foodpedia:E482    rdf:type    food:E-additive ;
     rdfs:label  "E482" .
-ns1:E483    rdf:type    food:E-additive ;
+foodpedia:E483    rdf:type    food:E-additive ;
     rdfs:label  "E483" .
-ns1:E484    rdf:type    food:E-additive ;
+foodpedia:E484    rdf:type    food:E-additive ;
     rdfs:label  "E484" .
-ns1:E485    rdf:type    food:E-additive ;
+foodpedia:E485    rdf:type    food:E-additive ;
     rdfs:label  "E485" .
-ns1:E486    rdf:type    food:E-additive ;
+foodpedia:E486    rdf:type    food:E-additive ;
     rdfs:label  "E486" .
-ns1:E487    rdf:type    food:E-additive ;
+foodpedia:E487    rdf:type    food:E-additive ;
     rdfs:label  "E487" .
-ns1:E488    rdf:type    food:E-additive ;
+foodpedia:E488    rdf:type    food:E-additive ;
     rdfs:label  "E488" .
-ns1:E489    rdf:type    food:E-additive ;
+foodpedia:E489    rdf:type    food:E-additive ;
     rdfs:label  "E489" .
-ns1:E490    rdf:type    food:E-additive ;
+foodpedia:E490    rdf:type    food:E-additive ;
     rdfs:label  "E490" .
-ns1:E491    rdf:type    food:E-additive ;
+foodpedia:E491    rdf:type    food:E-additive ;
     rdfs:label  "E491" .
-ns1:E492    rdf:type    food:E-additive ;
+foodpedia:E492    rdf:type    food:E-additive ;
     rdfs:label  "E492" .
-ns1:E493    rdf:type    food:E-additive ;
+foodpedia:E493    rdf:type    food:E-additive ;
     rdfs:label  "E493" .
-ns1:E494    rdf:type    food:E-additive ;
+foodpedia:E494    rdf:type    food:E-additive ;
     rdfs:label  "E494" .
-ns1:E495    rdf:type    food:E-additive ;
+foodpedia:E495    rdf:type    food:E-additive ;
     rdfs:label  "E495" .
-ns1:E496    rdf:type    food:E-additive ;
+foodpedia:E496    rdf:type    food:E-additive ;
     rdfs:label  "E496" .
-ns1:E497    rdf:type    food:E-additive ;
+foodpedia:E497    rdf:type    food:E-additive ;
     rdfs:label  "E497" .
-ns1:E498    rdf:type    food:E-additive ;
+foodpedia:E498    rdf:type    food:E-additive ;
     rdfs:label  "E498" .
-ns1:E500    rdf:type    food:E-additive ;
+foodpedia:E500    rdf:type    food:E-additive ;
     rdfs:label  "E500" .
-ns1:E501    rdf:type    food:E-additive ;
+foodpedia:E501    rdf:type    food:E-additive ;
     rdfs:label  "E501" .
-ns1:E503    rdf:type    food:E-additive ;
+foodpedia:E503    rdf:type    food:E-additive ;
     rdfs:label  "E503" .
-ns1:E504    rdf:type    food:E-additive ;
+foodpedia:E504    rdf:type    food:E-additive ;
     rdfs:label  "E504" .
-ns1:E505    rdf:type    food:E-additive ;
+foodpedia:E505    rdf:type    food:E-additive ;
     rdfs:label  "E505" .
-ns1:E507    rdf:type    food:E-additive ;
+foodpedia:E507    rdf:type    food:E-additive ;
     rdfs:label  "E507" .
-ns1:E508    rdf:type    food:E-additive ;
+foodpedia:E508    rdf:type    food:E-additive ;
     rdfs:label  "E508" .
-ns1:E509    rdf:type    food:E-additive ;
+foodpedia:E509    rdf:type    food:E-additive ;
     rdfs:label  "E509" .
-ns1:E510    rdf:type    food:E-additive ;
+foodpedia:E510    rdf:type    food:E-additive ;
     rdfs:label  "E510" .
-ns1:E511    rdf:type    food:E-additive ;
+foodpedia:E511    rdf:type    food:E-additive ;
     rdfs:label  "E511" .
-ns1:E512    rdf:type    food:E-additive ;
+foodpedia:E512    rdf:type    food:E-additive ;
     rdfs:label  "E512" .
-ns1:E513    rdf:type    food:E-additive ;
+foodpedia:E513    rdf:type    food:E-additive ;
     rdfs:label  "E513" .
-ns1:E514    rdf:type    food:E-additive ;
+foodpedia:E514    rdf:type    food:E-additive ;
     rdfs:label  "E514" .
-ns1:E515    rdf:type    food:E-additive ;
+foodpedia:E515    rdf:type    food:E-additive ;
     rdfs:label  "E515" .
-ns1:E516    rdf:type    food:E-additive ;
+foodpedia:E516    rdf:type    food:E-additive ;
     rdfs:label  "E516" .
-ns1:E517    rdf:type    food:E-additive ;
+foodpedia:E517    rdf:type    food:E-additive ;
     rdfs:label  "E517" .
-ns1:E518    rdf:type    food:E-additive ;
+foodpedia:E518    rdf:type    food:E-additive ;
     rdfs:label  "E518" .
-ns1:E519    rdf:type    food:E-additive ;
+foodpedia:E519    rdf:type    food:E-additive ;
     rdfs:label  "E519" .
-ns1:E520    rdf:type    food:E-additive ;
+foodpedia:E520    rdf:type    food:E-additive ;
     rdfs:label  "E520" .
-ns1:E521    rdf:type    food:E-additive ;
+foodpedia:E521    rdf:type    food:E-additive ;
     rdfs:label  "E521" .
-ns1:E522    rdf:type    food:E-additive ;
+foodpedia:E522    rdf:type    food:E-additive ;
     rdfs:label  "E522" .
-ns1:E523    rdf:type    food:E-additive ;
+foodpedia:E523    rdf:type    food:E-additive ;
     rdfs:label  "E523" .
-ns1:E524    rdf:type    food:E-additive ;
+foodpedia:E524    rdf:type    food:E-additive ;
     rdfs:label  "E524" .
-ns1:E525    rdf:type    food:E-additive ;
+foodpedia:E525    rdf:type    food:E-additive ;
     rdfs:label  "E525" .
-ns1:E526    rdf:type    food:E-additive ;
+foodpedia:E526    rdf:type    food:E-additive ;
     rdfs:label  "E526" .
-ns1:E527    rdf:type    food:E-additive ;
+foodpedia:E527    rdf:type    food:E-additive ;
     rdfs:label  "E527" .
-ns1:E528    rdf:type    food:E-additive ;
+foodpedia:E528    rdf:type    food:E-additive ;
     rdfs:label  "E528" .
-ns1:E529    rdf:type    food:E-additive ;
+foodpedia:E529    rdf:type    food:E-additive ;
     rdfs:label  "E529" .
-ns1:E530    rdf:type    food:E-additive ;
+foodpedia:E530    rdf:type    food:E-additive ;
     rdfs:label  "E530" .
-ns1:E535    rdf:type    food:E-additive ;
+foodpedia:E535    rdf:type    food:E-additive ;
     rdfs:label  "E535" .
-ns1:E536    rdf:type    food:E-additive ;
+foodpedia:E536    rdf:type    food:E-additive ;
     rdfs:label  "E536" .
-ns1:E537    rdf:type    food:E-additive ;
+foodpedia:E537    rdf:type    food:E-additive ;
     rdfs:label  "E537" .
-ns1:E538    rdf:type    food:E-additive ;
+foodpedia:E538    rdf:type    food:E-additive ;
     rdfs:label  "E538" .
-ns1:E539    rdf:type    food:E-additive ;
+foodpedia:E539    rdf:type    food:E-additive ;
     rdfs:label  "E539" .
-ns1:E540    rdf:type    food:E-additive ;
+foodpedia:E540    rdf:type    food:E-additive ;
     rdfs:label  "E540" .
-ns1:E541    rdf:type    food:E-additive ;
+foodpedia:E541    rdf:type    food:E-additive ;
     rdfs:label  "E541" .
-ns1:E542    rdf:type    food:E-additive ;
+foodpedia:E542    rdf:type    food:E-additive ;
     rdfs:label  "E542" .
-ns1:E543    rdf:type    food:E-additive ;
+foodpedia:E543    rdf:type    food:E-additive ;
     rdfs:label  "E543" .
-ns1:E544    rdf:type    food:E-additive ;
+foodpedia:E544    rdf:type    food:E-additive ;
     rdfs:label  "E544" .
-ns1:E545    rdf:type    food:E-additive ;
+foodpedia:E545    rdf:type    food:E-additive ;
     rdfs:label  "E545" .
-ns1:E550    rdf:type    food:E-additive ;
+foodpedia:E550    rdf:type    food:E-additive ;
     rdfs:label  "E550" .
-ns1:E551    rdf:type    food:E-additive ;
+foodpedia:E551    rdf:type    food:E-additive ;
     rdfs:label  "E551" .
-ns1:E552    rdf:type    food:E-additive ;
+foodpedia:E552    rdf:type    food:E-additive ;
     rdfs:label  "E552" .
-ns1:E553a   rdf:type    food:E-additive ;
+foodpedia:E553a   rdf:type    food:E-additive ;
     rdfs:label  "E553a" .
-ns1:E553b   rdf:type    food:E-additive ;
+foodpedia:E553b   rdf:type    food:E-additive ;
     rdfs:label  "E553b" .
-ns1:E554    rdf:type    food:E-additive ;
+foodpedia:E554    rdf:type    food:E-additive ;
     rdfs:label  "E554" .
-ns1:E555    rdf:type    food:E-additive ;
+foodpedia:E555    rdf:type    food:E-additive ;
     rdfs:label  "E555" .
-ns1:E556    rdf:type    food:E-additive ;
+foodpedia:E556    rdf:type    food:E-additive ;
     rdfs:label  "E556" .
-ns1:E557    rdf:type    food:E-additive ;
+foodpedia:E557    rdf:type    food:E-additive ;
     rdfs:label  "E557" .
-ns1:E558    rdf:type    food:E-additive ;
+foodpedia:E558    rdf:type    food:E-additive ;
     rdfs:label  "E558" .
-ns1:E559    rdf:type    food:E-additive ;
+foodpedia:E559    rdf:type    food:E-additive ;
     rdfs:label  "E559" .
-ns1:E560    rdf:type    food:E-additive ;
+foodpedia:E560    rdf:type    food:E-additive ;
     rdfs:label  "E560" .
-ns1:E561    rdf:type    food:E-additive ;
+foodpedia:E561    rdf:type    food:E-additive ;
     rdfs:label  "E561" .
-ns1:E562    rdf:type    food:E-additive ;
+foodpedia:E562    rdf:type    food:E-additive ;
     rdfs:label  "E562" .
-ns1:E563    rdf:type    food:E-additive ;
+foodpedia:E563    rdf:type    food:E-additive ;
     rdfs:label  "E563" .
-ns1:E565    rdf:type    food:E-additive ;
+foodpedia:E565    rdf:type    food:E-additive ;
     rdfs:label  "E565" .
-ns1:E566    rdf:type    food:E-additive ;
+foodpedia:E566    rdf:type    food:E-additive ;
     rdfs:label  "E566" .
-ns1:E570    rdf:type    food:E-additive ;
+foodpedia:E570    rdf:type    food:E-additive ;
     rdfs:label  "E570" .
-ns1:E572    rdf:type    food:E-additive ;
+foodpedia:E572    rdf:type    food:E-additive ;
     rdfs:label  "E572" .
-ns1:E574    rdf:type    food:E-additive ;
+foodpedia:E574    rdf:type    food:E-additive ;
     rdfs:label  "E574" .
-ns1:E575    rdf:type    food:E-additive ;
+foodpedia:E575    rdf:type    food:E-additive ;
     rdfs:label  "E575" .
-ns1:E576    rdf:type    food:E-additive ;
+foodpedia:E576    rdf:type    food:E-additive ;
     rdfs:label  "E576" .
-ns1:E577    rdf:type    food:E-additive ;
+foodpedia:E577    rdf:type    food:E-additive ;
     rdfs:label  "E577" .
-ns1:E578    rdf:type    food:E-additive ;
+foodpedia:E578    rdf:type    food:E-additive ;
     rdfs:label  "E578" .
-ns1:E579    rdf:type    food:E-additive ;
+foodpedia:E579    rdf:type    food:E-additive ;
     rdfs:label  "E579" .
-ns1:E580    rdf:type    food:E-additive ;
+foodpedia:E580    rdf:type    food:E-additive ;
     rdfs:label  "E580" .
-ns1:E585    rdf:type    food:E-additive ;
+foodpedia:E585    rdf:type    food:E-additive ;
     rdfs:label  "E585" .
-ns1:E586    rdf:type    food:E-additive ;
+foodpedia:E586    rdf:type    food:E-additive ;
     rdfs:label  "E586" .
-ns1:E598    rdf:type    food:E-additive ;
+foodpedia:E598    rdf:type    food:E-additive ;
     rdfs:label  "E598" .
-ns1:E599    rdf:type    food:E-additive ;
+foodpedia:E599    rdf:type    food:E-additive ;
     rdfs:label  "E599" .
-ns1:E620    rdf:type    food:E-additive ;
+foodpedia:E620    rdf:type    food:E-additive ;
     rdfs:label  "E620" .
-ns1:E621    rdf:type    food:E-additive ;
+foodpedia:E621    rdf:type    food:E-additive ;
     rdfs:label  "E621" .
-ns1:E622    rdf:type    food:E-additive ;
+foodpedia:E622    rdf:type    food:E-additive ;
     rdfs:label  "E622" .
-ns1:E623    rdf:type    food:E-additive ;
+foodpedia:E623    rdf:type    food:E-additive ;
     rdfs:label  "E623" .
-ns1:E624    rdf:type    food:E-additive ;
+foodpedia:E624    rdf:type    food:E-additive ;
     rdfs:label  "E624" .
-ns1:E625    rdf:type    food:E-additive ;
+foodpedia:E625    rdf:type    food:E-additive ;
     rdfs:label  "E625" .
-ns1:E626    rdf:type    food:E-additive ;
+foodpedia:E626    rdf:type    food:E-additive ;
     rdfs:label  "E626" .
-ns1:E627    rdf:type    food:E-additive ;
+foodpedia:E627    rdf:type    food:E-additive ;
     rdfs:label  "E627" .
-ns1:E628    rdf:type    food:E-additive ;
+foodpedia:E628    rdf:type    food:E-additive ;
     rdfs:label  "E628" .
-ns1:E629    rdf:type    food:E-additive ;
+foodpedia:E629    rdf:type    food:E-additive ;
     rdfs:label  "E629" .
-ns1:E630    rdf:type    food:E-additive ;
+foodpedia:E630    rdf:type    food:E-additive ;
     rdfs:label  "E630" .
-ns1:E631    rdf:type    food:E-additive ;
+foodpedia:E631    rdf:type    food:E-additive ;
     rdfs:label  "E631" .
-ns1:E632    rdf:type    food:E-additive ;
+foodpedia:E632    rdf:type    food:E-additive ;
     rdfs:label  "E632" .
-ns1:E633    rdf:type    food:E-additive ;
+foodpedia:E633    rdf:type    food:E-additive ;
     rdfs:label  "E633" .
-ns1:E634    rdf:type    food:E-additive ;
+foodpedia:E634    rdf:type    food:E-additive ;
     rdfs:label  "E634" .
-ns1:E635    rdf:type    food:E-additive ;
+foodpedia:E635    rdf:type    food:E-additive ;
     rdfs:label  "E635" .
-ns1:E636    rdf:type    food:E-additive ;
+foodpedia:E636    rdf:type    food:E-additive ;
     rdfs:label  "E636" .
-ns1:E637    rdf:type    food:E-additive ;
+foodpedia:E637    rdf:type    food:E-additive ;
     rdfs:label  "E637" .
-ns1:E638    rdf:type    food:E-additive ;
+foodpedia:E638    rdf:type    food:E-additive ;
     rdfs:label  "E638" .
-ns1:E639    rdf:type    food:E-additive ;
+foodpedia:E639    rdf:type    food:E-additive ;
     rdfs:label  "E639" .
-ns1:E640    rdf:type    food:E-additive ;
+foodpedia:E640    rdf:type    food:E-additive ;
     rdfs:label  "E640" .
-ns1:E641    rdf:type    food:E-additive ;
+foodpedia:E641    rdf:type    food:E-additive ;
     rdfs:label  "E641" .
-ns1:E642    rdf:type    food:E-additive ;
+foodpedia:E642    rdf:type    food:E-additive ;
     rdfs:label  "E642" .
-ns1:E650    rdf:type    food:E-additive ;
+foodpedia:E650    rdf:type    food:E-additive ;
     rdfs:label  "E650" .
-ns1:E700    rdf:type    food:E-additive ;
+foodpedia:E700    rdf:type    food:E-additive ;
     rdfs:label  "E700" .
-ns1:E701    rdf:type    food:E-additive ;
+foodpedia:E701    rdf:type    food:E-additive ;
     rdfs:label  "E701" .
-ns1:E702    rdf:type    food:E-additive ;
+foodpedia:E702    rdf:type    food:E-additive ;
     rdfs:label  "E702" .
-ns1:E703    rdf:type    food:E-additive ;
+foodpedia:E703    rdf:type    food:E-additive ;
     rdfs:label  "E703" .
-ns1:E704    rdf:type    food:E-additive ;
+foodpedia:E704    rdf:type    food:E-additive ;
     rdfs:label  "E704" .
-ns1:E705    rdf:type    food:E-additive ;
+foodpedia:E705    rdf:type    food:E-additive ;
     rdfs:label  "E705" .
-ns1:E706    rdf:type    food:E-additive ;
+foodpedia:E706    rdf:type    food:E-additive ;
     rdfs:label  "E706" .
-ns1:E707    rdf:type    food:E-additive ;
+foodpedia:E707    rdf:type    food:E-additive ;
     rdfs:label  "E707" .
-ns1:E708    rdf:type    food:E-additive ;
+foodpedia:E708    rdf:type    food:E-additive ;
     rdfs:label  "E708" .
-ns1:E710    rdf:type    food:E-additive ;
+foodpedia:E710    rdf:type    food:E-additive ;
     rdfs:label  "E710" .
-ns1:E711    rdf:type    food:E-additive ;
+foodpedia:E711    rdf:type    food:E-additive ;
     rdfs:label  "E711" .
-ns1:E712    rdf:type    food:E-additive ;
+foodpedia:E712    rdf:type    food:E-additive ;
     rdfs:label  "E712" .
-ns1:E713    rdf:type    food:E-additive ;
+foodpedia:E713    rdf:type    food:E-additive ;
     rdfs:label  "E713" .
-ns1:E714    rdf:type    food:E-additive ;
+foodpedia:E714    rdf:type    food:E-additive ;
     rdfs:label  "E714" .
-ns1:E715    rdf:type    food:E-additive ;
+foodpedia:E715    rdf:type    food:E-additive ;
     rdfs:label  "E715" .
-ns1:E716    rdf:type    food:E-additive ;
+foodpedia:E716    rdf:type    food:E-additive ;
     rdfs:label  "E716" .
-ns1:E717    rdf:type    food:E-additive ;
+foodpedia:E717    rdf:type    food:E-additive ;
     rdfs:label  "E717" .
-ns1:E900    rdf:type    food:E-additive ;
+foodpedia:E900    rdf:type    food:E-additive ;
     rdfs:label  "E900" .
-ns1:E901    rdf:type    food:E-additive ;
+foodpedia:E901    rdf:type    food:E-additive ;
     rdfs:label  "E901" .
-ns1:E902    rdf:type    food:E-additive ;
+foodpedia:E902    rdf:type    food:E-additive ;
     rdfs:label  "E902" .
-ns1:E903    rdf:type    food:E-additive ;
+foodpedia:E903    rdf:type    food:E-additive ;
     rdfs:label  "E903" .
-ns1:E904    rdf:type    food:E-additive ;
+foodpedia:E904    rdf:type    food:E-additive ;
     rdfs:label  "E904" .
-ns1:E905    rdf:type    food:E-additive ;
+foodpedia:E905    rdf:type    food:E-additive ;
     rdfs:label  "E905" .
-ns1:E905a   rdf:type    food:E-additive ;
+foodpedia:E905a   rdf:type    food:E-additive ;
     rdfs:label  "E905a" .
-ns1:E905b   rdf:type    food:E-additive ;
+foodpedia:E905b   rdf:type    food:E-additive ;
     rdfs:label  "E905b" .
-ns1:E905c   rdf:type    food:E-additive ;
+foodpedia:E905c   rdf:type    food:E-additive ;
     rdfs:label  "E905c" .
-ns1:E906    rdf:type    food:E-additive ;
+foodpedia:E906    rdf:type    food:E-additive ;
     rdfs:label  "E906" .
-ns1:E907    rdf:type    food:E-additive ;
+foodpedia:E907    rdf:type    food:E-additive ;
     rdfs:label  "E907" .
-ns1:E908    rdf:type    food:E-additive ;
+foodpedia:E908    rdf:type    food:E-additive ;
     rdfs:label  "E908" .
-ns1:E909    rdf:type    food:E-additive ;
+foodpedia:E909    rdf:type    food:E-additive ;
     rdfs:label  "E909" .
-ns1:E910    rdf:type    food:E-additive ;
+foodpedia:E910    rdf:type    food:E-additive ;
     rdfs:label  "E910" .
-ns1:E911    rdf:type    food:E-additive ;
+foodpedia:E911    rdf:type    food:E-additive ;
     rdfs:label  "E911" .
-ns1:E912    rdf:type    food:E-additive ;
+foodpedia:E912    rdf:type    food:E-additive ;
     rdfs:label  "E912" .
-ns1:E913    rdf:type    food:E-additive ;
+foodpedia:E913    rdf:type    food:E-additive ;
     rdfs:label  "E913" .
-ns1:E914    rdf:type    food:E-additive ;
+foodpedia:E914    rdf:type    food:E-additive ;
     rdfs:label  "E914" .
-ns1:E915    rdf:type    food:E-additive ;
+foodpedia:E915    rdf:type    food:E-additive ;
     rdfs:label  "E915" .
-ns1:E916    rdf:type    food:E-additive ;
+foodpedia:E916    rdf:type    food:E-additive ;
     rdfs:label  "E916" .
-ns1:E917    rdf:type    food:E-additive ;
+foodpedia:E917    rdf:type    food:E-additive ;
     rdfs:label  "E917" .
-ns1:E918    rdf:type    food:E-additive ;
+foodpedia:E918    rdf:type    food:E-additive ;
     rdfs:label  "E918" .
-ns1:E919    rdf:type    food:E-additive ;
+foodpedia:E919    rdf:type    food:E-additive ;
     rdfs:label  "E919" .
-ns1:E920    rdf:type    food:E-additive ;
+foodpedia:E920    rdf:type    food:E-additive ;
     rdfs:label  "E920" .
-ns1:E921    rdf:type    food:E-additive ;
+foodpedia:E921    rdf:type    food:E-additive ;
     rdfs:label  "E921" .
-ns1:E922    rdf:type    food:E-additive ;
+foodpedia:E922    rdf:type    food:E-additive ;
     rdfs:label  "E922" .
-ns1:E923    rdf:type    food:E-additive ;
+foodpedia:E923    rdf:type    food:E-additive ;
     rdfs:label  "E923" .
-ns1:E924    rdf:type    food:E-additive ;
+foodpedia:E924    rdf:type    food:E-additive ;
     rdfs:label  "E924" .
-ns1:E924b   rdf:type    food:E-additive ;
+foodpedia:E924b   rdf:type    food:E-additive ;
     rdfs:label  "E924b" .
-ns1:E925    rdf:type    food:E-additive ;
+foodpedia:E925    rdf:type    food:E-additive ;
     rdfs:label  "E925" .
-ns1:E926    rdf:type    food:E-additive ;
+foodpedia:E926    rdf:type    food:E-additive ;
     rdfs:label  "E926" .
-ns1:E927a   rdf:type    food:E-additive ;
+foodpedia:E927a   rdf:type    food:E-additive ;
     rdfs:label  "E927a" .
-ns1:E927b   rdf:type    food:E-additive ;
+foodpedia:E927b   rdf:type    food:E-additive ;
     rdfs:label  "E927b" .
-ns1:E928    rdf:type    food:E-additive ;
+foodpedia:E928    rdf:type    food:E-additive ;
     rdfs:label  "E928" .
-ns1:E929    rdf:type    food:E-additive ;
+foodpedia:E929    rdf:type    food:E-additive ;
     rdfs:label  "E929" .
-ns1:E930    rdf:type    food:E-additive ;
+foodpedia:E930    rdf:type    food:E-additive ;
     rdfs:label  "E930" .
-ns1:E938    rdf:type    food:E-additive ;
+foodpedia:E938    rdf:type    food:E-additive ;
     rdfs:label  "E938" .
-ns1:E939    rdf:type    food:E-additive ;
+foodpedia:E939    rdf:type    food:E-additive ;
     rdfs:label  "E939" .
-ns1:E940    rdf:type    food:E-additive ;
+foodpedia:E940    rdf:type    food:E-additive ;
     rdfs:label  "E940" .
-ns1:E941    rdf:type    food:E-additive ;
+foodpedia:E941    rdf:type    food:E-additive ;
     rdfs:label  "E941" .
-ns1:E942    rdf:type    food:E-additive ;
+foodpedia:E942    rdf:type    food:E-additive ;
     rdfs:label  "E942" .
-ns1:E943a   rdf:type    food:E-additive ;
+foodpedia:E943a   rdf:type    food:E-additive ;
     rdfs:label  "E943a" .
-ns1:E943b   rdf:type    food:E-additive ;
+foodpedia:E943b   rdf:type    food:E-additive ;
     rdfs:label  "E943b" .
-ns1:E944    rdf:type    food:E-additive ;
+foodpedia:E944    rdf:type    food:E-additive ;
     rdfs:label  "E944" .
-ns1:E945    rdf:type    food:E-additive ;
+foodpedia:E945    rdf:type    food:E-additive ;
     rdfs:label  "E945" .
-ns1:E946    rdf:type    food:E-additive ;
+foodpedia:E946    rdf:type    food:E-additive ;
     rdfs:label  "E946" .
-ns1:E948    rdf:type    food:E-additive ;
+foodpedia:E948    rdf:type    food:E-additive ;
     rdfs:label  "E948" .
-ns1:E949    rdf:type    food:E-additive ;
+foodpedia:E949    rdf:type    food:E-additive ;
     rdfs:label  "E949" .
-ns1:E950    rdf:type    food:E-additive ;
+foodpedia:E950    rdf:type    food:E-additive ;
     rdfs:label  "E950" .
-ns1:E951    rdf:type    food:E-additive ;
+foodpedia:E951    rdf:type    food:E-additive ;
     rdfs:label  "E951" .
-ns1:E952    rdf:type    food:E-additive ;
+foodpedia:E952    rdf:type    food:E-additive ;
     rdfs:label  "E952" .
-ns1:E953    rdf:type    food:E-additive ;
+foodpedia:E953    rdf:type    food:E-additive ;
     rdfs:label  "E953" .
-ns1:E954    rdf:type    food:E-additive ;
+foodpedia:E954    rdf:type    food:E-additive ;
     rdfs:label  "E954" .
-ns1:E955    rdf:type    food:E-additive ;
+foodpedia:E955    rdf:type    food:E-additive ;
     rdfs:label  "E955" .
-ns1:E956    rdf:type    food:E-additive ;
+foodpedia:E956    rdf:type    food:E-additive ;
     rdfs:label  "E956" .
-ns1:E957    rdf:type    food:E-additive ;
+foodpedia:E957    rdf:type    food:E-additive ;
     rdfs:label  "E957" .
-ns1:E958    rdf:type    food:E-additive ;
+foodpedia:E958    rdf:type    food:E-additive ;
     rdfs:label  "E958" .
-ns1:E959    rdf:type    food:E-additive ;
+foodpedia:E959    rdf:type    food:E-additive ;
     rdfs:label  "E959" .
-ns1:E960    rdf:type    food:E-additive ;
+foodpedia:E960    rdf:type    food:E-additive ;
     rdfs:label  "E960" .
-ns1:E961    rdf:type    food:E-additive ;
+foodpedia:E961    rdf:type    food:E-additive ;
     rdfs:label  "E961" .
-ns1:E962    rdf:type    food:E-additive ;
+foodpedia:E962    rdf:type    food:E-additive ;
     rdfs:label  "E962" .
-ns1:E965    rdf:type    food:E-additive ;
+foodpedia:E965    rdf:type    food:E-additive ;
     rdfs:label  "E965" .
-ns1:E966    rdf:type    food:E-additive ;
+foodpedia:E966    rdf:type    food:E-additive ;
     rdfs:label  "E966" .
-ns1:E967    rdf:type    food:E-additive ;
+foodpedia:E967    rdf:type    food:E-additive ;
     rdfs:label  "E967" .
-ns1:E968    rdf:type    food:E-additive ;
+foodpedia:E968    rdf:type    food:E-additive ;
     rdfs:label  "E968" .
-ns1:E999    rdf:type    food:E-additive ;
+foodpedia:E999    rdf:type    food:E-additive ;
     rdfs:label  "E999" .
-ns1:E100    rdf:type    food:E-additive ;
+foodpedia:E100    rdf:type    food:E-additive ;
     rdfs:label  "E100" ;
-    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Curcumin"^^ns4:anyURI .
+    rdfs:seeAlso    "http://en.wikipedia.org/wiki/Curcumin"^^xsd:anyURI .
+foodpedia:E100 skos:exactMatch <http://dbpedia.org/resource/Curcumin>.
+foodpedia:E1000 skos:exactMatch <http://dbpedia.org/page/Cholic_acid>.
+foodpedia:E1001 skos:exactMatch <http://dbpedia.org/page/Choline>.
+foodpedia:E101 skos:exactMatch <http://dbpedia.org/page/Riboflavin>.
+foodpedia:E102 skos:exactMatch <http://dbpedia.org/page/Tartrazine>.
+foodpedia:E103 skos:exactMatch <http://dbpedia.org/page/Alkanet>.
+foodpedia:E104 skos:exactMatch <http://dbpedia.org/page/Quinoline_Yellow_WS>.
+foodpedia:E105 skos:exactMatch <http://dbpedia.org/page/Fast_Yellow_AB>.
+foodpedia:E106 skos:exactMatch <http://dbpedia.org/page/Flavin_mononucleotide>.
+foodpedia:E101a skos:exactMatch <http://dbpedia.org/page/Flavin_mononucleotide>.
+foodpedia:E107 skos:exactMatch <http://dbpedia.org/page/Yellow_2G>.
+foodpedia:E110 skos:exactMatch <http://dbpedia.org/page/Sunset_Yellow_FCF>.
+foodpedia:E1100 skos:exactMatch <http://dbpedia.org/page/Amylase>.
+foodpedia:E1101 skos:exactMatch <http://dbpedia.org/page/Protease>.
+foodpedia:E1102 skos:exactMatch <http://dbpedia.org/page/Glucose_oxidase>.
+foodpedia:E1103 skos:exactMatch <http://dbpedia.org/page/Invertase>.
+foodpedia:E1104 skos:exactMatch <http://dbpedia.org/page/Lipase>.
+foodpedia:E1105 skos:exactMatch <http://dbpedia.org/page/Lysozyme>.
+foodpedia:E111 skos:exactMatch <http://dbpedia.org/page/Orange_GGN>.
+foodpedia:E120 skos:exactMatch <http://dbpedia.org/page/Carmine>.
+foodpedia:E1200 skos:exactMatch <http://dbpedia.org/page/Polydextrose>.
+foodpedia:E1201 skos:exactMatch <http://dbpedia.org/page/Polyvinylpyrrolidone>.
+foodpedia:E1202 skos:exactMatch <http://dbpedia.org/page/Polyvinylpolypyrrolidone>.
+foodpedia:E1203 skos:exactMatch <http://dbpedia.org/page/Polyvinyl_alcohol>.
+foodpedia:E1204 skos:exactMatch <http://dbpedia.org/page/Pullulan>.
+foodpedia:E121 skos:exactMatch <http://dbpedia.org/page/Citrus_Red_2>.
+foodpedia:E122 skos:exactMatch <http://dbpedia.org/page/Azorubine>.
+foodpedia:E123 skos:exactMatch <http://dbpedia.org/page/Amaranth_(dye)>.
+foodpedia:E124 skos:exactMatch <http://dbpedia.org/page/Ponceau_4R>.
+foodpedia:E125 skos:exactMatch <http://dbpedia.org/page/Scarlet_GN>.
+foodpedia:E126 skos:exactMatch <http://dbpedia.org/page/Ponceau_6R>.
+foodpedia:E127 skos:exactMatch <http://dbpedia.org/page/Erythrosine>.
+foodpedia:E128 skos:exactMatch <http://dbpedia.org/page/Red_2G>.
+foodpedia:E129 skos:exactMatch <http://dbpedia.org/page/Allura_Red_AC>.
+foodpedia:E130 skos:exactMatch <http://dbpedia.org/page/Indanthrone_blue>.
+foodpedia:E131 skos:exactMatch <http://dbpedia.org/page/Patent_Blue_V>.
+foodpedia:E132 skos:exactMatch <http://dbpedia.org/page/Indigo_carmine>.
+foodpedia:E133 skos:exactMatch <http://dbpedia.org/page/Brilliant_Blue_FCF>.
+foodpedia:E140 skos:exactMatch <http://dbpedia.org/page/Chlorophyll>.
+foodpedia:E1400 skos:exactMatch <http://dbpedia.org/page/Dextrin>.
+foodpedia:E1401 skos:exactMatch <http://dbpedia.org/page/Modified_starch>.
+foodpedia:E141 skos:exactMatch <http://dbpedia.org/page/Chlorophyllin>.
+foodpedia:E1413 skos:exactMatch <http://dbpedia.org/page/Phosphated_distarch_phosphate>.
+foodpedia:E142 skos:exactMatch <http://dbpedia.org/page/Green_S>.
+foodpedia:E1422 skos:exactMatch <http://dbpedia.org/page/Acetylated_distarch_adipate>.
+foodpedia:E143 skos:exactMatch <http://dbpedia.org/page/Fast_Green_FCF>.
+foodpedia:E1442 skos:exactMatch <http://dbpedia.org/page/Hydroxypropyl_distarch_phosphate>.
+foodpedia:E1502 skos:exactMatch <http://dbpedia.org/page/1,3-Butanediol>.
+foodpedia:E1503 skos:exactMatch <http://dbpedia.org/page/Castor_oil>.
+foodpedia:E1504 skos:exactMatch <http://dbpedia.org/page/Ethyl_acetate>.
+foodpedia:E1505 skos:exactMatch <http://dbpedia.org/page/Triethyl_citrate>.
+foodpedia:E150a skos:exactMatch <http://dbpedia.org/page/Caramel_color>.
+foodpedia:E150b skos:exactMatch <http://dbpedia.org/page/Caramel_color>.
+foodpedia:E150c skos:exactMatch <http://dbpedia.org/page/Caramel_color>.
+foodpedia:E150d skos:exactMatch <http://dbpedia.org/page/Caramel_color>.
+foodpedia:E151 skos:exactMatch <http://dbpedia.org/page/Brilliant_Black_BN>.
+foodpedia:E1510 skos:exactMatch <http://dbpedia.org/page/Ethanol>.
+foodpedia:E1518 skos:exactMatch <http://dbpedia.org/page/Triacetin>.
+foodpedia:E1519 skos:exactMatch <http://dbpedia.org/page/Benzyl_alcohol>.
+foodpedia:E152 skos:exactMatch <http://dbpedia.org/page/Black_7984>.
+foodpedia:E1520 skos:exactMatch <http://dbpedia.org/page/Propylene_glycol>.
+foodpedia:E1521 skos:exactMatch <http://dbpedia.org/page/Polyethylene_glycol>.
+foodpedia:E1525 skos:exactMatch <http://dbpedia.org/page/Hydroxyethyl_cellulose>.
+foodpedia:E153 skos:exactMatch <http://dbpedia.org/page/Carbon_black>.
+foodpedia:E154 skos:exactMatch <http://dbpedia.org/page/Brown_FK>.
+foodpedia:E155 skos:exactMatch <http://dbpedia.org/page/Brown_HT>.
+foodpedia:E160a skos:exactMatch <http://dbpedia.org/page/Carotene>.
+foodpedia:E160b skos:exactMatch <http://dbpedia.org/page/Annatto>.
+foodpedia:E160c skos:exactMatch <http://dbpedia.org/page/Paprika_oleoresin>.
+foodpedia:E160d skos:exactMatch <http://dbpedia.org/page/Lycopene>.
+foodpedia:E160e skos:exactMatch <http://dbpedia.org/page/Apocarotenal>.
+foodpedia:E160f skos:exactMatch <http://dbpedia.org/page/Food_orange_7>.
+foodpedia:E161a skos:exactMatch <http://dbpedia.org/page/Flavoxanthin>.
+foodpedia:E161b skos:exactMatch <http://dbpedia.org/page/Lutein>.
+foodpedia:E161c skos:exactMatch <http://dbpedia.org/page/Cryptoxanthin>.
+foodpedia:E161d skos:exactMatch <http://dbpedia.org/page/Rubixanthin>.
+foodpedia:E161e skos:exactMatch <http://dbpedia.org/page/Violaxanthin>.
+foodpedia:E161f skos:exactMatch <http://dbpedia.org/page/Rhodoxanthin>.
+foodpedia:E161g skos:exactMatch <http://dbpedia.org/page/Canthaxanthin>.
+foodpedia:E161h skos:exactMatch <http://dbpedia.org/page/Zeaxanthin>.
+foodpedia:E161i skos:exactMatch <http://dbpedia.org/page/Citranaxanthin>.
+foodpedia:E161j skos:exactMatch <http://dbpedia.org/page/Astaxanthin>.
+foodpedia:E162 skos:exactMatch <http://dbpedia.org/page/Betanin>.
+foodpedia:E163 skos:exactMatch <http://dbpedia.org/page/Anthocyanin>.
+foodpedia:E164 skos:exactMatch <http://dbpedia.org/page/Saffron>.
+foodpedia:E170 skos:exactMatch <http://dbpedia.org/page/Calcium_carbonate>.
+foodpedia:E171 skos:exactMatch <http://dbpedia.org/page/Titanium_dioxide>.
+foodpedia:E172 skos:exactMatch <http://dbpedia.org/page/Iron_oxide>.
+foodpedia:E173 skos:exactMatch <http://dbpedia.org/page/Aluminium>.
+foodpedia:E174 skos:exactMatch <http://dbpedia.org/page/Silver>.
+foodpedia:E175 skos:exactMatch <http://dbpedia.org/page/Gold>.
+foodpedia:E180 skos:exactMatch <http://dbpedia.org/page/Lithol_Rubine_BK>.
+foodpedia:E181 skos:exactMatch <http://dbpedia.org/page/Tannic_acid>.
+foodpedia:E182 skos:exactMatch <http://dbpedia.org/page/Orcein>.
+foodpedia:E200 skos:exactMatch <http://dbpedia.org/page/Sorbic_acid>.
+foodpedia:E201 skos:exactMatch <http://dbpedia.org/page/Sodium_sorbate>.
+foodpedia:E202 skos:exactMatch <http://dbpedia.org/page/Potassium_sorbate>.
+foodpedia:E203 skos:exactMatch <http://dbpedia.org/page/Calcium_sorbate>.
+foodpedia:E209 skos:exactMatch <http://dbpedia.org/page/Heptylparaben>.
+foodpedia:E210 skos:exactMatch <http://dbpedia.org/page/Benzoic_acid>.
+foodpedia:E211 skos:exactMatch <http://dbpedia.org/page/Sodium_benzoate>.
+foodpedia:E212 skos:exactMatch <http://dbpedia.org/page/Potassium_benzoate>.
+foodpedia:E213 skos:exactMatch <http://dbpedia.org/page/Calcium_benzoate>.
+foodpedia:E214 skos:exactMatch <http://dbpedia.org/page/Ethylparaben>.
+foodpedia:E215 skos:exactMatch <http://dbpedia.org/page/Ethylparaben>.
+foodpedia:E216 skos:exactMatch <http://dbpedia.org/page/Propylparaben>.
+foodpedia:E217 skos:exactMatch <http://dbpedia.org/page/E217_series>.
+foodpedia:E218 skos:exactMatch <http://dbpedia.org/page/Methylparaben>.
+foodpedia:E219 skos:exactMatch <http://dbpedia.org/page/Sodium_methylparaben>.
+foodpedia:E220 skos:exactMatch <http://dbpedia.org/page/Sulfur_dioxide>.
+foodpedia:E221 skos:exactMatch <http://dbpedia.org/page/Sodium_sulfite>.
+foodpedia:E222 skos:exactMatch <http://dbpedia.org/page/Sodium_bisulfite>.
+foodpedia:E223 skos:exactMatch <http://dbpedia.org/page/Sodium_metabisulfite>.
+foodpedia:E224 skos:exactMatch <http://dbpedia.org/page/Potassium_metabisulfite>.
+foodpedia:E225 skos:exactMatch <http://dbpedia.org/page/Potassium_sulfite>.
+foodpedia:E226 skos:exactMatch <http://dbpedia.org/page/Calcium_sulfite>.
+foodpedia:E227 skos:exactMatch <http://dbpedia.org/page/Calcium_bisulfite>.
+foodpedia:E228 skos:exactMatch <http://dbpedia.org/page/Potassium_bisulfite>.
+foodpedia:E230 skos:exactMatch <http://dbpedia.org/page/Biphenyl>.
+foodpedia:E231 skos:exactMatch <http://dbpedia.org/page/2-Phenylphenol>.
+foodpedia:E232 skos:exactMatch <http://dbpedia.org/page/Sodium_orthophenyl_phenol>.
+foodpedia:E233 skos:exactMatch <http://dbpedia.org/page/Tiabendazole>.
+foodpedia:E234 skos:exactMatch <http://dbpedia.org/page/Nisin>.
+foodpedia:E235 skos:exactMatch <http://dbpedia.org/page/Natamycin>.
+foodpedia:E236 skos:exactMatch <http://dbpedia.org/page/Formic_acid>.
+foodpedia:E237 skos:exactMatch <http://dbpedia.org/page/Sodium_formate>.
+foodpedia:E238 skos:exactMatch <http://dbpedia.org/page/Calcium_formate>.
+foodpedia:E239 skos:exactMatch <http://dbpedia.org/page/Hexamethylenetetramine>.
+foodpedia:E240 skos:exactMatch <http://dbpedia.org/page/Formaldehyde>.
+foodpedia:E242 skos:exactMatch <http://dbpedia.org/page/Dimethyl_dicarbonate>.
+foodpedia:E249 skos:exactMatch <http://dbpedia.org/page/Potassium_nitrite>.
+foodpedia:E250 skos:exactMatch <http://dbpedia.org/page/Sodium_nitrite>.
+foodpedia:E251 skos:exactMatch <http://dbpedia.org/page/Sodium_nitrate>.
+foodpedia:E252 skos:exactMatch <http://dbpedia.org/page/Potassium_nitrate>.
+foodpedia:E260 skos:exactMatch <http://dbpedia.org/page/Acetic_acid>.
+foodpedia:E261 skos:exactMatch <http://dbpedia.org/page/Potassium_acetate>.
+foodpedia:E262 skos:exactMatch <http://dbpedia.org/page/Sodium_acetate>.
+foodpedia:E263 skos:exactMatch <http://dbpedia.org/page/Calcium_acetate>.
+foodpedia:E264 skos:exactMatch <http://dbpedia.org/page/Ammonium_acetate>.
+foodpedia:E265 skos:exactMatch <http://dbpedia.org/page/Dehydroacetic_acid>.
+foodpedia:E266 skos:exactMatch <http://dbpedia.org/page/Dehydroacetic_acid>.
+foodpedia:E270 skos:exactMatch <http://dbpedia.org/page/Lactic_acid>.
+foodpedia:E280 skos:exactMatch <http://dbpedia.org/page/Propanoic_acid>.
+foodpedia:E281 skos:exactMatch <http://dbpedia.org/page/Sodium_propionate>.
+foodpedia:E282 skos:exactMatch <http://dbpedia.org/page/Calcium_propanoate>.
+foodpedia:E283 skos:exactMatch <http://dbpedia.org/page/Potassium_propanoate>.
+foodpedia:E284 skos:exactMatch <http://dbpedia.org/page/Boric_acid>.
+foodpedia:E285 skos:exactMatch <http://dbpedia.org/page/Borax>.
+foodpedia:E290 skos:exactMatch <http://dbpedia.org/page/Carbon_dioxide>.
+foodpedia:E296 skos:exactMatch <http://dbpedia.org/page/Malic_acid>.
+foodpedia:E297 skos:exactMatch <http://dbpedia.org/page/Fumaric_acid>.
+foodpedia:E300 skos:exactMatch <http://dbpedia.org/page/Ascorbic_acid>.
+foodpedia:E301 skos:exactMatch <http://dbpedia.org/page/Sodium_ascorbate>.
+foodpedia:E302 skos:exactMatch <http://dbpedia.org/page/Calcium_ascorbate>.
+foodpedia:E303 skos:exactMatch <http://dbpedia.org/page/Potassium_ascorbate>.
+foodpedia:E304 skos:exactMatch <http://dbpedia.org/page/Ascorbyl_palmitate>.
+foodpedia:E305 skos:exactMatch <http://dbpedia.org/page/Ascorbyl_stearate>.
+foodpedia:E306 skos:exactMatch <http://dbpedia.org/page/Tocopherol>.
+foodpedia:E307 skos:exactMatch <http://dbpedia.org/page/Tocopherol>.
+foodpedia:E308 skos:exactMatch <http://dbpedia.org/page/Gamma-Tocopherol>.
+foodpedia:E309 skos:exactMatch <http://dbpedia.org/page/Delta-Tocopherol>.
+foodpedia:E310 skos:exactMatch <http://dbpedia.org/page/Propyl_gallate>.
+foodpedia:E311 skos:exactMatch <http://dbpedia.org/page/Octyl_gallate>.
+foodpedia:E312 skos:exactMatch <http://dbpedia.org/page/Dodecyl_gallate>.
+foodpedia:E313 skos:exactMatch <http://dbpedia.org/page/Ethyl_gallate>.
+foodpedia:E314 skos:exactMatch <http://dbpedia.org/page/Guaiacum>.
+foodpedia:E315 skos:exactMatch <http://dbpedia.org/page/Erythorbic_acid>.
+foodpedia:E316 skos:exactMatch <http://dbpedia.org/page/Sodium_erythorbate>.
+foodpedia:E317 skos:exactMatch <http://dbpedia.org/page/Erythorbic_acid>.
+foodpedia:E319 skos:exactMatch <http://dbpedia.org/page/Tert-Butylhydroquinone>.
+foodpedia:E320 skos:exactMatch <http://dbpedia.org/page/Butylated_hydroxyanisole>.
+foodpedia:E321 skos:exactMatch <http://dbpedia.org/page/Butylated_hydroxytoluene>.
+foodpedia:E322 skos:exactMatch <http://dbpedia.org/page/Lecithin>.
+foodpedia:E323 skos:exactMatch <http://dbpedia.org/page/Anoxomer>.
+foodpedia:E324 skos:exactMatch <http://dbpedia.org/page/Ethoxyquin>.
+foodpedia:E325 skos:exactMatch <http://dbpedia.org/page/Sodium_lactate>.
+foodpedia:E326 skos:exactMatch <http://dbpedia.org/page/Potassium_lactate>.
+foodpedia:E327 skos:exactMatch <http://dbpedia.org/page/Calcium_lactate>.
+foodpedia:E328 skos:exactMatch <http://dbpedia.org/page/Lactic_acid>.
+foodpedia:E329 skos:exactMatch <http://dbpedia.org/page/Magnesium_lactate>.
+foodpedia:E330 skos:exactMatch <http://dbpedia.org/page/Citric_acid>.
+foodpedia:E331 skos:exactMatch <http://dbpedia.org/page/Sodium_citrate>.
+foodpedia:E332 skos:exactMatch <http://dbpedia.org/page/Potassium_citrate>.
+foodpedia:E333 skos:exactMatch <http://dbpedia.org/page/Calcium_citrate>.
+foodpedia:E334 skos:exactMatch <http://dbpedia.org/page/Tartaric_acid>.
+foodpedia:E335 skos:exactMatch <http://dbpedia.org/page/Sodium_tartrate>.
+foodpedia:E336 skos:exactMatch <http://dbpedia.org/page/Potassium_tartrate>.
+foodpedia:E337 skos:exactMatch <http://dbpedia.org/page/Potassium_sodium_tartrate>.
+foodpedia:E338 skos:exactMatch <http://dbpedia.org/page/Phosphoric_acid>.
+foodpedia:E339 skos:exactMatch <http://dbpedia.org/page/Trisodium_phosphate>.
+foodpedia:E340 skos:exactMatch <http://dbpedia.org/page/Potassium_phosphate>.
+foodpedia:E341 skos:exactMatch <http://dbpedia.org/page/Calcium_phosphate>.
+foodpedia:E342 skos:exactMatch <http://dbpedia.org/page/Ammonium_phosphate>.
+foodpedia:E343 skos:exactMatch <http://dbpedia.org/page/Magnesium_phosphate>.
+foodpedia:E344 skos:exactMatch <http://dbpedia.org/page/Lecithin>.
+foodpedia:E345 skos:exactMatch <http://dbpedia.org/page/Magnesium_citrate>.
+foodpedia:E349 skos:exactMatch <http://dbpedia.org/page/Ammonium_malate>.
+foodpedia:E350 skos:exactMatch <http://dbpedia.org/page/Sodium_malate>.
+foodpedia:E351 skos:exactMatch <http://dbpedia.org/page/Potassium_malate>.
+foodpedia:E352 skos:exactMatch <http://dbpedia.org/page/Calcium_malate>.
+foodpedia:E354 skos:exactMatch <http://dbpedia.org/page/Calcium_tartrate>.
+foodpedia:E355 skos:exactMatch <http://dbpedia.org/page/Adipic_acid>.
+foodpedia:E356 skos:exactMatch <http://dbpedia.org/page/Sodium_adipate>.
+foodpedia:E357 skos:exactMatch <http://dbpedia.org/page/Potassium_adipate>.
+foodpedia:E359 skos:exactMatch <http://dbpedia.org/page/Ammonium_adipate>.
+foodpedia:E363 skos:exactMatch <http://dbpedia.org/page/Succinic_acid>.
+foodpedia:E365 skos:exactMatch <http://dbpedia.org/page/Sodium_fumarate>.
+foodpedia:E366 skos:exactMatch <http://dbpedia.org/page/Potassium_fumarate>.
+foodpedia:E367 skos:exactMatch <http://dbpedia.org/page/Fumaric_acid>.
+foodpedia:E368 skos:exactMatch <http://dbpedia.org/page/Ammonium_fumarate>.
+foodpedia:E381 skos:exactMatch <http://dbpedia.org/page/Ammonium_ferric_citrate>.
+foodpedia:E383 skos:exactMatch <http://dbpedia.org/page/Calcium_glycerylphosphate>.
+foodpedia:E385 skos:exactMatch <http://dbpedia.org/page/Ethylenediaminetetraacetic_acid>.
+foodpedia:E386 skos:exactMatch <http://dbpedia.org/page/Sequestrant>.
+foodpedia:E391 skos:exactMatch <http://dbpedia.org/page/Phytic_acid>.
+foodpedia:E392 skos:exactMatch <http://dbpedia.org/page/Rosemary>.
+foodpedia:E399 skos:exactMatch <http://dbpedia.org/page/Lactobionic_acid>.
+foodpedia:E400 skos:exactMatch <http://dbpedia.org/page/Alginic_acid>.
+foodpedia:E401 skos:exactMatch <http://dbpedia.org/page/Alginic_acid>.
+foodpedia:E402 skos:exactMatch <http://dbpedia.org/page/Alginic_acid>.
+foodpedia:E404 skos:exactMatch <http://dbpedia.org/page/Calcium_alginate>.
+foodpedia:E405 skos:exactMatch <http://dbpedia.org/page/Propylene_glycol_alginate>.
+foodpedia:E406 skos:exactMatch <http://dbpedia.org/page/Agar>.
+foodpedia:E407 skos:exactMatch <http://dbpedia.org/page/Carrageenan>.
+foodpedia:E407a skos:exactMatch <http://dbpedia.org/page/Carrageenan>.
+foodpedia:E409 skos:exactMatch <http://dbpedia.org/page/Arabinogalactan>.
+foodpedia:E410 skos:exactMatch <http://dbpedia.org/page/Locust_bean_gum>.
+foodpedia:E412 skos:exactMatch <http://dbpedia.org/page/Guar_gum>.
+foodpedia:E413 skos:exactMatch <http://dbpedia.org/page/Tragacanth>.
+foodpedia:E414 skos:exactMatch <http://dbpedia.org/page/Gum_arabic>.
+foodpedia:E415 skos:exactMatch <http://dbpedia.org/page/Xanthan_gum>.
+foodpedia:E416 skos:exactMatch <http://dbpedia.org/page/Gum_karaya>.
+foodpedia:E417 skos:exactMatch <http://dbpedia.org/page/Caesalpinia_spinosa>.
+foodpedia:E418 skos:exactMatch <http://dbpedia.org/page/Gellan_gum>.
+foodpedia:E419 skos:exactMatch <http://dbpedia.org/page/Anogeissus_latifolia>.
+foodpedia:E420 skos:exactMatch <http://dbpedia.org/page/Sorbitol>.
+foodpedia:E421 skos:exactMatch <http://dbpedia.org/page/Mannitol>.
+foodpedia:E422 skos:exactMatch <http://dbpedia.org/page/Glycerol>.
+foodpedia:E424 skos:exactMatch <http://dbpedia.org/page/Curdlan>.
+foodpedia:E425 skos:exactMatch <http://dbpedia.org/page/Konjac>.
+foodpedia:E427 skos:exactMatch <http://dbpedia.org/page/Cassia_gum>.
+foodpedia:E429 skos:exactMatch <http://dbpedia.org/page/Peptide>.
+foodpedia:E432 skos:exactMatch <http://dbpedia.org/page/Polysorbate_20>.
+foodpedia:E433 skos:exactMatch <http://dbpedia.org/page/Polysorbate_80>.
+foodpedia:E440 skos:exactMatch <http://dbpedia.org/page/Pectin>.
+foodpedia:E441 skos:exactMatch <http://dbpedia.org/page/Gelatin>.
+foodpedia:E442 skos:exactMatch <http://dbpedia.org/page/Mixed_ammonium_salts_of_phosphorylated_glycerides>.
+foodpedia:E444 skos:exactMatch <http://dbpedia.org/page/Sucrose_acetate_isobutyrate>.
+foodpedia:E445 skos:exactMatch <http://dbpedia.org/page/Glycerol_ester_of_wood_rosin>.
+foodpedia:E450 skos:exactMatch <http://dbpedia.org/page/Pyrophosphate>.
+foodpedia:E451 skos:exactMatch <http://dbpedia.org/page/Sodium_triphosphate>.
+foodpedia:E452 skos:exactMatch <http://dbpedia.org/page/Polyphosphate>.
+foodpedia:E459 skos:exactMatch <http://dbpedia.org/page/Cyclodextrin>.
+foodpedia:E460 skos:exactMatch <http://dbpedia.org/page/Cellulose>.
+foodpedia:E461 skos:exactMatch <http://dbpedia.org/page/Methyl_cellulose>.
+foodpedia:E462 skos:exactMatch <http://dbpedia.org/page/Ethyl_cellulose>.
+foodpedia:E463 skos:exactMatch <http://dbpedia.org/page/Hydroxypropyl_cellulose>.
+foodpedia:E464 skos:exactMatch <http://dbpedia.org/page/Hypromellose>.
+foodpedia:E466 skos:exactMatch <http://dbpedia.org/page/Carboxymethyl_cellulose>.
+foodpedia:E467 skos:exactMatch <http://dbpedia.org/page/Ethulose>.
+foodpedia:E468 skos:exactMatch <http://dbpedia.org/page/Croscarmellose_sodium>.
+foodpedia:E470b skos:exactMatch <http://dbpedia.org/page/Magnesium_stearate>.
+foodpedia:E471 skos:exactMatch <http://dbpedia.org/page/Mono-_and_diglycerides_of_fatty_acids>.
+foodpedia:E472e skos:exactMatch <http://dbpedia.org/page/DATEM>.
+foodpedia:E476 skos:exactMatch <http://dbpedia.org/page/Polyglycerol_polyricinoleate>.
+foodpedia:E480 skos:exactMatch <http://dbpedia.org/page/Dioctyl_sodium_sulfosuccinate>.
+foodpedia:E481 skos:exactMatch <http://dbpedia.org/page/Sodium_stearoyl_lactylate>.
+foodpedia:E482 skos:exactMatch <http://dbpedia.org/page/Calcium_stearoyl-2-lactylate>.
+foodpedia:E483 skos:exactMatch <http://dbpedia.org/page/Stearyl_palmityl_tartrate>.
+foodpedia:E487 skos:exactMatch <http://dbpedia.org/page/Sodium_dodecyl_sulfate>.
+foodpedia:E490 skos:exactMatch <http://dbpedia.org/page/Propylene_glycol>.
+foodpedia:E491 skos:exactMatch <http://dbpedia.org/page/Sorbitan_monostearate>.
+foodpedia:E492 skos:exactMatch <http://dbpedia.org/page/Sorbitan_tristearate>.
+foodpedia:E493 skos:exactMatch <http://dbpedia.org/page/Sorbitan_monolaurate>.
+foodpedia:E500 skos:exactMatch <http://dbpedia.org/page/Sodium_bicarbonate>.
+foodpedia:E501 skos:exactMatch <http://dbpedia.org/page/Potassium_carbonate>.
+foodpedia:E503 skos:exactMatch <http://dbpedia.org/page/Ammonium_carbonate>.
+foodpedia:E504 skos:exactMatch <http://dbpedia.org/page/Magnesium_carbonate>.
+foodpedia:E505 skos:exactMatch <http://dbpedia.org/page/Siderite>.
+foodpedia:E507 skos:exactMatch <http://dbpedia.org/page/Hydrochloric_acid>.
+foodpedia:E508 skos:exactMatch <http://dbpedia.org/page/Potassium_chloride>.
+foodpedia:E509 skos:exactMatch <http://dbpedia.org/page/Calcium_chloride>.
+foodpedia:E510 skos:exactMatch <http://dbpedia.org/page/Ammonium_chloride>.
+foodpedia:E511 skos:exactMatch <http://dbpedia.org/page/Magnesium_chloride>.
+foodpedia:E512 skos:exactMatch <http://dbpedia.org/page/Tin(II)_chloride>.
+foodpedia:E513 skos:exactMatch <http://dbpedia.org/page/Sulfuric_acid>.
+foodpedia:E514 skos:exactMatch <http://dbpedia.org/page/Sodium_sulfate>.
+foodpedia:E515 skos:exactMatch <http://dbpedia.org/page/Potassium_sulfate>.
+foodpedia:E516 skos:exactMatch <http://dbpedia.org/page/Calcium_sulfate>.
+foodpedia:E517 skos:exactMatch <http://dbpedia.org/page/Ammonium_sulfate>.
+foodpedia:E518 skos:exactMatch <http://dbpedia.org/page/Magnesium_sulfate>.
+foodpedia:E519 skos:exactMatch <http://dbpedia.org/page/Copper(II)_sulfate>.
+foodpedia:E520 skos:exactMatch <http://dbpedia.org/page/Aluminium_sulfate>.
+foodpedia:E521 skos:exactMatch <http://dbpedia.org/page/Sodium_aluminium_sulfate>.
+foodpedia:E522 skos:exactMatch <http://dbpedia.org/page/Potassium_alum>.
+foodpedia:E523 skos:exactMatch <http://dbpedia.org/page/Ammonium_aluminium_sulfate>.
+foodpedia:E524 skos:exactMatch <http://dbpedia.org/page/Sodium_hydroxide>.
+foodpedia:E525 skos:exactMatch <http://dbpedia.org/page/Potassium_hydroxide>.
+foodpedia:E526 skos:exactMatch <http://dbpedia.org/page/Calcium_hydroxide>.
+foodpedia:E527 skos:exactMatch <http://dbpedia.org/page/Ammonium_hydroxide>.
+foodpedia:E528 skos:exactMatch <http://dbpedia.org/page/Magnesium_hydroxide>.
+foodpedia:E529 skos:exactMatch <http://dbpedia.org/page/Calcium_oxide>.
+foodpedia:E530 skos:exactMatch <http://dbpedia.org/page/Magnesium_oxide>.
+foodpedia:E535 skos:exactMatch <http://dbpedia.org/page/Sodium_ferrocyanide>.
+foodpedia:E536 skos:exactMatch <http://dbpedia.org/page/Potassium_ferrocyanide>.
+foodpedia:E539 skos:exactMatch <http://dbpedia.org/page/Sodium_thiosulfate>.
+foodpedia:E541 skos:exactMatch <http://dbpedia.org/page/Sodium_aluminium_phosphate>.
+foodpedia:E545 skos:exactMatch <http://dbpedia.org/page/Ammonium_polyphosphate>.
+foodpedia:E550 skos:exactMatch <http://dbpedia.org/page/Sodium_silicate>.
+foodpedia:E551 skos:exactMatch <http://dbpedia.org/page/Silicon_dioxide>.
+foodpedia:E552 skos:exactMatch <http://dbpedia.org/page/Calcium_silicate>.
+foodpedia:E553a skos:exactMatch <http://dbpedia.org/page/Magnesium_trisilicate>.
+foodpedia:E553b skos:exactMatch <http://dbpedia.org/page/Talc>.
+foodpedia:E554 skos:exactMatch <http://dbpedia.org/page/Sodium_aluminosilicate>.
+foodpedia:E555 skos:exactMatch <http://dbpedia.org/page/Microcline>.
+foodpedia:E556 skos:exactMatch <http://dbpedia.org/page/Calcium_aluminosilicate>.
+foodpedia:E557 skos:exactMatch <http://dbpedia.org/page/Hemimorphite>.
+foodpedia:E558 skos:exactMatch <http://dbpedia.org/page/Bentonite>.
+foodpedia:E559 skos:exactMatch <http://dbpedia.org/page/Aluminium_silicate>.
+foodpedia:E560 skos:exactMatch <http://dbpedia.org/page/Potassium_silicate>.
+foodpedia:E561 skos:exactMatch <http://dbpedia.org/page/Vermiculite>.
+foodpedia:E562 skos:exactMatch <http://dbpedia.org/page/Sepiolite>.
+foodpedia:E565 skos:exactMatch <http://dbpedia.org/page/Lignosulfonates>.
+foodpedia:E570 skos:exactMatch <http://dbpedia.org/page/Stearic_acid>.
+foodpedia:E572 skos:exactMatch <http://dbpedia.org/page/Magnesium_stearate>.
+foodpedia:E574 skos:exactMatch <http://dbpedia.org/page/Gluconic_acid>.
+foodpedia:E575 skos:exactMatch <http://dbpedia.org/page/Glucono_delta-lactone>.
+foodpedia:E576 skos:exactMatch <http://dbpedia.org/page/Sodium_gluconate>.
+foodpedia:E577 skos:exactMatch <http://dbpedia.org/page/Potassium_gluconate>.
+foodpedia:E578 skos:exactMatch <http://dbpedia.org/page/Calcium_lactate_gluconate>.
+foodpedia:E579 skos:exactMatch <http://dbpedia.org/page/Iron(II)_gluconate>.
+foodpedia:E580 skos:exactMatch <http://dbpedia.org/page/Gluconic_acid>.
+foodpedia:E585 skos:exactMatch <http://dbpedia.org/page/Iron(II)_lactate>.
+foodpedia:E586 skos:exactMatch <http://dbpedia.org/page/Hexylresorcinol>.
+foodpedia:E598 skos:exactMatch <http://dbpedia.org/page/Calcium_aluminates>.
+foodpedia:E599 skos:exactMatch <http://dbpedia.org/page/Perlite>.
+foodpedia:E620 skos:exactMatch <http://dbpedia.org/page/Glutamic_acid>.
+foodpedia:E621 skos:exactMatch <http://dbpedia.org/page/Monosodium_glutamate>.
+foodpedia:E622 skos:exactMatch <http://dbpedia.org/page/Monopotassium_glutamate>.
+foodpedia:E623 skos:exactMatch <http://dbpedia.org/page/Calcium_diglutamate>.
+foodpedia:E624 skos:exactMatch <http://dbpedia.org/page/Monoammonium_glutamate>.
+foodpedia:E625 skos:exactMatch <http://dbpedia.org/page/Magnesium_diglutamate>.
+foodpedia:E626 skos:exactMatch <http://dbpedia.org/page/Guanosine_monophosphate>.
+foodpedia:E627 skos:exactMatch <http://dbpedia.org/page/Disodium_guanylate>.
+foodpedia:E628 skos:exactMatch <http://dbpedia.org/page/Dipotassium_guanylate>.
+foodpedia:E629 skos:exactMatch <http://dbpedia.org/page/Calcium_guanylate>.
+foodpedia:E630 skos:exactMatch <http://dbpedia.org/page/Inosinic_acid>.
+foodpedia:E631 skos:exactMatch <http://dbpedia.org/page/Disodium_inosinate>.
+foodpedia:E633 skos:exactMatch <http://dbpedia.org/page/Calcium_inosinate>.
+foodpedia:E635 skos:exactMatch <http://dbpedia.org/page/Disodium_ribonucleotides>.
+foodpedia:E636 skos:exactMatch <http://dbpedia.org/page/Maltol>.
+foodpedia:E637 skos:exactMatch <http://dbpedia.org/page/Ethyl_maltol>.
+foodpedia:E639 skos:exactMatch <http://dbpedia.org/page/Alanine>.
+foodpedia:E640 skos:exactMatch <http://dbpedia.org/page/Glycine>.
+foodpedia:E641 skos:exactMatch <http://dbpedia.org/page/Leucine>.
+foodpedia:E642 skos:exactMatch <http://dbpedia.org/page/Lysine>.
+foodpedia:E650 skos:exactMatch <http://dbpedia.org/page/Zinc_acetate>.
+foodpedia:E700 skos:exactMatch <http://dbpedia.org/page/Bacitracin>.
+foodpedia:E701 skos:exactMatch <http://dbpedia.org/page/Tetracycline_antibiotics>.
+foodpedia:E702 skos:exactMatch <http://dbpedia.org/page/Chlortetracycline>.
+foodpedia:E703 skos:exactMatch <http://dbpedia.org/page/Oxytetracycline>.
+foodpedia:E704 skos:exactMatch <http://dbpedia.org/page/Oleandomycin>.
+foodpedia:E710 skos:exactMatch <http://dbpedia.org/page/Spiramycin>.
+foodpedia:E713 skos:exactMatch <http://dbpedia.org/page/Tylosin>.
+foodpedia:E714 skos:exactMatch <http://dbpedia.org/page/Monensin>.
+foodpedia:E715 skos:exactMatch <http://dbpedia.org/page/Avoparcin>.
+foodpedia:E716 skos:exactMatch <http://dbpedia.org/page/Salinomycin>.
+foodpedia:E900 skos:exactMatch <http://dbpedia.org/page/Polydimethylsiloxane>.
+foodpedia:E901 skos:exactMatch <http://dbpedia.org/page/Beeswax>.
+foodpedia:E902 skos:exactMatch <http://dbpedia.org/page/Candelilla_wax>.
+foodpedia:E903 skos:exactMatch <http://dbpedia.org/page/Carnauba_wax>.
+foodpedia:E904 skos:exactMatch <http://dbpedia.org/page/Shellac>.
+foodpedia:E905 skos:exactMatch <http://dbpedia.org/page/Paraffin_wax>.
+foodpedia:E905a skos:exactMatch <http://dbpedia.org/page/Mineral_oil>.
+foodpedia:E905b skos:exactMatch <http://dbpedia.org/page/Petroleum_jelly>.
+foodpedia:E905c skos:exactMatch <http://dbpedia.org/page/Microcrystalline_wax>.
+foodpedia:E906 skos:exactMatch <http://dbpedia.org/page/Benzoin_resin>.
+foodpedia:E907 skos:exactMatch <http://dbpedia.org/page/Paraffin_wax>.
+foodpedia:E908 skos:exactMatch <http://dbpedia.org/page/Rice_bran_wax>.
+foodpedia:E909 skos:exactMatch <http://dbpedia.org/page/Spermaceti>.
+foodpedia:E910 skos:exactMatch <http://dbpedia.org/page/Cysteine>.
+foodpedia:E912 skos:exactMatch <http://dbpedia.org/page/Montan_wax>.
+foodpedia:E913 skos:exactMatch <http://dbpedia.org/page/Lanolin>.
+foodpedia:E915 skos:exactMatch <http://dbpedia.org/page/Rosin>.
+foodpedia:E916 skos:exactMatch <http://dbpedia.org/page/Calcium_iodate>.
+foodpedia:E917 skos:exactMatch <http://dbpedia.org/page/Potassium_iodate>.
+foodpedia:E918 skos:exactMatch <http://dbpedia.org/page/Nitrogen_oxide>.
+foodpedia:E919 skos:exactMatch <http://dbpedia.org/page/Nitrosyl_chloride>.
+foodpedia:E920 skos:exactMatch <http://dbpedia.org/page/Cysteine>.
+foodpedia:E921 skos:exactMatch <http://dbpedia.org/page/Cystine>.
+foodpedia:E922 skos:exactMatch <http://dbpedia.org/page/Potassium_persulfate>.
+foodpedia:E923 skos:exactMatch <http://dbpedia.org/page/Ammonium_persulfate>.
+foodpedia:E924 skos:exactMatch <http://dbpedia.org/page/Potassium_bromate>.
+foodpedia:E924b skos:exactMatch <http://dbpedia.org/page/Calcium_bromate>.
+foodpedia:E925 skos:exactMatch <http://dbpedia.org/page/Chlorine>.
+foodpedia:E926 skos:exactMatch <http://dbpedia.org/page/Chlorine_dioxide>.
+foodpedia:E927a skos:exactMatch <http://dbpedia.org/page/Azodicarbonamide>.
+foodpedia:E927b skos:exactMatch <http://dbpedia.org/page/Urea>.
+foodpedia:E928 skos:exactMatch <http://dbpedia.org/page/Benzoyl_peroxide>.
+foodpedia:E929 skos:exactMatch <http://dbpedia.org/page/Acetone_peroxide>.
+foodpedia:E930 skos:exactMatch <http://dbpedia.org/page/Calcium_peroxide>.
+foodpedia:E938 skos:exactMatch <http://dbpedia.org/page/Argon>.
+foodpedia:E939 skos:exactMatch <http://dbpedia.org/page/Helium>.
+foodpedia:E940 skos:exactMatch <http://dbpedia.org/page/Dichlorodifluoromethane>.
+foodpedia:E941 skos:exactMatch <http://dbpedia.org/page/Nitrogen>.
+foodpedia:E942 skos:exactMatch <http://dbpedia.org/page/Nitrous_oxide>.
+foodpedia:E943a skos:exactMatch <http://dbpedia.org/page/Butane>.
+foodpedia:E943b skos:exactMatch <http://dbpedia.org/page/Isobutane>.
+foodpedia:E944 skos:exactMatch <http://dbpedia.org/page/Propane>.
+foodpedia:E945 skos:exactMatch <http://dbpedia.org/page/Chloropentafluoroethane>.
+foodpedia:E946 skos:exactMatch <http://dbpedia.org/page/Octafluorocyclobutane>.
+foodpedia:E948 skos:exactMatch <http://dbpedia.org/page/Oxygen>.
+foodpedia:E949 skos:exactMatch <http://dbpedia.org/page/Hydrogen>.
+foodpedia:E950 skos:exactMatch <http://dbpedia.org/page/Acesulfame_potassium>.
+foodpedia:E951 skos:exactMatch <http://dbpedia.org/page/Aspartame>.
+foodpedia:E952 skos:exactMatch <http://dbpedia.org/page/Sodium_cyclamate>.
+foodpedia:E953 skos:exactMatch <http://dbpedia.org/page/Isomalt>.
+foodpedia:E954 skos:exactMatch <http://dbpedia.org/page/Saccharin>.
+foodpedia:E955 skos:exactMatch <http://dbpedia.org/page/Sucralose>.
+foodpedia:E956 skos:exactMatch <http://dbpedia.org/page/Alitame>.
+foodpedia:E957 skos:exactMatch <http://dbpedia.org/page/Thaumatin>.
+foodpedia:E958 skos:exactMatch <http://dbpedia.org/page/Glycyrrhizin>.
+foodpedia:E959 skos:exactMatch <http://dbpedia.org/page/Neohesperidin_dihydrochalcone>.
+foodpedia:E960 skos:exactMatch <http://dbpedia.org/page/Steviol_glycoside>.
+foodpedia:E961 skos:exactMatch <http://dbpedia.org/page/Neotame>.
+foodpedia:E962 skos:exactMatch <http://dbpedia.org/page/Aspartame-acesulfame_salt>.
+foodpedia:E965 skos:exactMatch <http://dbpedia.org/page/Maltitol>.
+foodpedia:E966 skos:exactMatch <http://dbpedia.org/page/Lactitol>.
+foodpedia:E967 skos:exactMatch <http://dbpedia.org/page/Xylitol>.
+foodpedia:E968 skos:exactMatch <http://dbpedia.org/page/Erythritol>.
+foodpedia:E999 skos:exactMatch <http://dbpedia.org/page/Quillaia>.
