@@ -1,2 +1,21 @@
 :foodpedia a void:Dataset;
   foaf:homepage <http://foodpedia.tk/>;
+  dcterms:title "FOODpedia";
+  dcterms:description "Russian food products and ingredients as a Linked Open Dataset";
+  dcterms:creator :Maxim_Kolchin;
+  dcterms:publisher "";?
+  dcterms:contributor :Alexander_Chistyakov;
+  dcterms:contributor :Maxim_Lapaev;
+  dcterms:contributor :Rezeda_Khaydarova;
+  dcterms:source <http://www.goodsmatrix.ru/>;
+  date -не нужно включать
+  created-не нужно включать
+  modified- не нужно включать
+:Kolchin_Maxim a foaf:Person;
+  rdfs:label "Kolchin Maxim";
+  foaf:mbox <mailto:kolchinmax@niuitmo.ru>;
+:FOODpedia a void:Dataset;
+  void:feature <http://www.w3.org/ns/formats/RDF_XML>;
+  void:feature <http://www.w3.org/ns/formats/Turtle>;
+:FOODpedia a void:Dataset;
+  void:sparqlEndpoint <http://foodpedia.tk/sparql>;
