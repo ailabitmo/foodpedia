@@ -7,11 +7,11 @@ from tempfile import mkdtemp
 import urllib
 import zipfile
 
-from rdflib import ConjunctiveGraph
-from rdflib.namespace import SKOS
+from rdflib import Graph, ConjunctiveGraph
+from rdflib.namespace import SKOS, Namespace
 from scrapy import log
 #from rdflib.store import NO_STORE, VALID_STORE
-from SPARQLWrapper import SPARQLWrapper, JSON
+from SPARQLWrapper import SPARQLWrapper, JSON, XML
 
 from goodsmatrix.string_processor import replace_in_file
 from goodsmatrix.string_processor import escape_special_chars_in_sparq_query_unicode
@@ -21,40 +21,53 @@ LAST_VERSION_NAME = r"agrovoc_2014-07-23_lod"
 ZIP_FILENAME = "{0}.zip".format(LAST_VERSION_NAME)
 AGROVOC_GRAPH_URL = r"https://bitbucket.org/aims-fao/agrovoc/downloads/{0}".format(ZIP_FILENAME)
 EXACT_MATCH_CASE_INSENSITIVE_QUERY_STRING = u"""
+PREFIX skosxl: <http://www.w3.org/2008/05/skos-xl#>
+
 SELECT ?x
 WHERE 
 {{
-  ?x  a  skos:Concept .
-  ?x skos:prefLabel ?prefLabel.
-  ?x skos:altLabel ?altLabel.
-  FILTER (regex(?prefLabel, '^{0}$', 'i') || regex(?altLabel, '^{0}$', 'i')).
+  ?x skosxl:prefLabel ?prefLabel.
+  ?prefLabel skosxl:literalForm ?literalPrefLabel.
+  OPTIONAL
+    {{
+        ?x skosxl:altLabel ?altLabel.
+        ?altLabel skosxl:literalForm ?literalAltLabel.
+    }}
+    FILTER (regex(?literalPrefLabel, '^{0}$', 'i') || regex(?literalAltLabel, '^{0}$', 'i') )
 }}
-limit 1
+LIMIT 1
 """
 
 CONTAINS_CASE_INSENSITIVE_QUERY_STRING = u"""
+PREFIX skosxl: <http://www.w3.org/2008/05/skos-xl#>
+
 SELECT ?x
 WHERE 
 {{
-  ?x  a  skos:Concept .
-  ?x skos:altLabel ?altLabel.
-  FILTER (regex(?prefLabel, '{0}', 'i') || regex(?altLabel, '{0}', 'i')).
+  ?x skosxl:prefLabel ?prefLabel.
+  ?prefLabel skosxl:literalForm ?literalPrefLabel.
+  OPTIONAL
+    {{
+        ?x skosxl:altLabel ?altLabel.
+        ?altLabel skosxl:literalForm ?literalAltLabel.
+    }}
+    FILTER (regex(?literalPrefLabel, '{0}', 'i') || regex(?literalAltLabel, '{0}', 'i') )
 }}
-limit 1
+LIMIT 1
 """
 AGROVOC_ENDPOINT = "http://202.45.139.84:10035/catalogs/fao/repositories/agrovoc"
 
 
-def agrovoc_graph_factory(local=True, nt_dump_file_path=None):
+def agrovoc_graph_factory(local=True, nt_dump_file_path=None, endpoint_url=AGROVOC_ENDPOINT):
     if local:
         return LocalAGROVOCGraph(nt_dump_file_path)
     else:
-        return RemoteAGROVOCGraph()
+        return RemoteAGROVOCGraph(endpoint_url)
 
 
-class AGROVOCGraph(object):
+class AbstractAGROVOCGraph(object):
     def find_ingredient_by_name(self, ingredient_name):
-        log.msg(u"search '{0}'".format(ingredient_name))
+        #log.msg(u"search '{0}'".format(ingredient_name))
         exact_matched_ingredient = self.find_ingredient_by_exact_match(
             escape_special_chars_in_sparq_query_unicode(ingredient_name))
         # link only exact matches.
@@ -76,7 +89,11 @@ class AGROVOCGraph(object):
     def find_first_ingredients_which_contains_name(self, ingredient_name):
         pass
 
-class LocalAGROVOCGraph(AGROVOCGraph):
+    def clean_up(self):
+        pass
+
+
+class LocalAGROVOCGraph(AbstractAGROVOCGraph):
     def __init__(self, nt_dump_file_path=None):
         self.tempdir = mkdtemp()
         self.zip_file_path = os.path.join(self.tempdir, ZIP_FILENAME)
@@ -144,7 +161,9 @@ class LocalAGROVOCGraph(AGROVOCGraph):
             CONTAINS_CASE_INSENSITIVE_QUERY_STRING.format(ingredient_name))
 
     def _find_ingredient_by_sparql_query(self, query_string):
+        log.msg('query: {0}'.format(query_string))
         results = self.rdf_graph.query(query_string, initNs={"skos": SKOS})
+        log.msg('results: {0}'.format(results))
         if results:
             return results.bindings[0]['x']
         else:
@@ -161,9 +180,9 @@ class LocalAGROVOCGraph(AGROVOCGraph):
             shutil.rmtree(dir_path)
 
 
-class RemoteAGROVOCGraph(AGROVOCGraph):
-    def __init__(self):
-        self.sparql = SPARQLWrapper(AGROVOC_ENDPOINT)
+class RemoteAGROVOCGraph(AbstractAGROVOCGraph):
+    def __init__(self, endpoint_url=AGROVOC_ENDPOINT):
+        self.sparql = SPARQLWrapper(endpoint_url)
 
     def find_ingredient_by_exact_match(self, ingredient_name):
         return self._find_ingredient_by_sparql_query(
@@ -186,16 +205,92 @@ class RemoteAGROVOCGraph(AGROVOCGraph):
         results = self.sparql.query().convert()
         return results["results"]["bindings"]
 
-    def clean_up(self):
-        pass
+
+class ConstructedAGROVOCGraph(AbstractAGROVOCGraph):
+    CONSTRUCT_QUERY_STRING = """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        PREFIX skosxl: <http://www.w3.org/2008/05/skos-xl#>
+
+        CONSTRUCT
+        {
+          ?x  a  skos:Concept .
+          ?x skosxl:prefLabel ?prefLabel.
+          ?x skosxl:altLabel ?altLabel.
+          ?prefLabel skosxl:literalForm ?literalPrefLabel.
+          ?altLabel skosxl:literalForm ?literalAltLabel.
+        }
+        WHERE {
+          ?x  a  skos:Concept .
+          {
+            ?x skos:broader* <http://aims.fao.org/aos/agrovoc/c_6211>
+          }
+          UNION
+          {
+            ?x skos:broader* <http://aims.fao.org/aos/agrovoc/c_330705>
+          }.
+          ?x skosxl:prefLabel ?prefLabel.
+          ?prefLabel skosxl:literalForm ?literalPrefLabel.
+          OPTIONAL
+          {
+            ?x skosxl:altLabel ?altLabel.
+            ?altLabel skosxl:literalForm ?literalAltLabel.
+            FILTER((langMatches(lang(?literalPrefLabel), "EN") && langMatches(lang(?literalAltLabel), "EN")) ||
+              (langMatches(lang(?literalPrefLabel), "RU") && langMatches(lang(?literalAltLabel), "RU"))).
+          }
+          FILTER(langMatches(lang(?literalPrefLabel), "EN") || langMatches(lang(?literalPrefLabel), "RU")).
+        }
+    """
+    def __init__(self):
+        self.remote_endpoint = SPARQLWrapper(AGROVOC_ENDPOINT)
+        self.local_rdf_graph = self._constract_local_graph()
+
+    def _constract_local_graph(self):
+        log.msg('constructing local in-memory graph')
+        self.remote_endpoint.setReturnFormat(XML)
+        self.remote_endpoint.setQuery(ConstructedAGROVOCGraph.CONSTRUCT_QUERY_STRING)
+        response = self.remote_endpoint.query().response
+        g = Graph()
+        g.parse(response)
+        log.msg('constructed')
+        return g
+
+    def find_ingredient_by_exact_match(self, ingredient_name):
+        return self._find_ingredient_by_sparql_query(
+            EXACT_MATCH_CASE_INSENSITIVE_QUERY_STRING.format(ingredient_name))
+
+    def find_first_ingredients_which_contains_name(self, ingredient_name):
+        return self._find_ingredient_by_sparql_query(
+            CONTAINS_CASE_INSENSITIVE_QUERY_STRING.format(ingredient_name))
+
+    def _find_ingredient_by_sparql_query(self, query_string):
+        log.msg('query: {0}'.format(query_string))
+        results = self.local_rdf_graph.query(query_string, initNs={
+            "skos" : SKOS,
+            "skosxl": Namespace(r"http://www.w3.org/2008/05/skos-xl#")})
+        log.msg('results: {0}'.format(results))
+        log.msg('results: {0}'.format(str(results)))
+        for rr in results:
+            log.msg(rr)
+        log.msg(dir(results))
+        log.msg(results.bindings)
+        #log.msg(results.bindings)
+        #log.msg(list(results.bindings))
+        if results:
+            return results.bindings[0]['x']
+        else:
+            return None
 
 
 if __name__ == "__main__":
     logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG)
+    log.msg('startgin')
+    agrovoc_graph = RemoteAGROVOCGraph("http://192.168.126.137:3030/agrovoc/query")
     try:
-        agrovoc_graph = agrovoc_graph_factory(local=False)
+        #for row in agrovoc_graph.local_rdf_graph:
+            #log.msg(row)
+        log.msg('initialized. search sugar')
             #nt_dump_file_path=r'/tmp/tmpGvStE3/agrovoc_2014-07-23_lod.nt')
-        found = agrovoc_graph.find_ingredient_by_name(u'со(ль')
+        found = agrovoc_graph.find_ingredient_by_name(u'sugar')
         log.msg(found)
     finally:
         agrovoc_graph.clean_up()

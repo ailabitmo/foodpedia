@@ -51,7 +51,11 @@ class UnescapeSpecialHTMLEntities(object):
 
 class ExtractIngredients(object):
     def open_spider(self, spider):
-        self.agrovoc_graph = agrovoc_graph_factory(local=False)
+        agrovoc_endpoint_url = spider.settings.get("AGROVOC_ENDPOINT", None)
+        if agrovoc_endpoint_url:
+            self.agrovoc_graph = agrovoc_graph_factory(local=False, endpoint_url=agrovoc_endpoint_url)
+        else:
+            self.agrovoc_graph = agrovoc_graph_factory(local=False)
         self.not_parsed_fragments = dict()
 
     def process_item(self, good_item, spider):
@@ -59,14 +63,14 @@ class ExtractIngredients(object):
         ingredients_as_string = string_processor.remove_substring_in_paranthesis(
             ingredients_as_string)
         ingredients_fragments = string_processor.split_ingredients(ingredients_as_string)
-        log.msg("ingredients after splitting: {0}".format(ingredients_fragments))
+        #log.msg("ingredients after splitting: {0}".format(ingredients_fragments))
         for fragment in ingredients_fragments:
             if not string_processor.parse_e_additives(fragment):
                 fragment = string_processor.remove_weight(fragment)
                 fragment = string_processor.remove_percents(fragment)
                 agrovoc_match = self.agrovoc_graph.find_ingredient_by_name(fragment.strip())
                 if agrovoc_match:
-                    log.msg('found ingredient {0}'.format(agrovoc_match))
+                    #log.msg('found ingredient {0}'.format(agrovoc_match))
                     good_item['agrovoc_ingredients'] = (
                         good_item.get('agrovoc_ingredients', []) + [agrovoc_match])
                 else:

@@ -179,7 +179,7 @@ class FoodpediaGraph:
 
     def add_ingredient_uri(self, good_barcode, ingredient_uri):
         good_item_uri = FoodpediaGraph.convert_barcode_to_uri(good_barcode)
-        log.msg("adding '{0}' to the graph".format(URIRef(ingredient_uri)))
+        #log.msg("adding '{0}' to the graph".format(URIRef(ingredient_uri)))
         self._graph.add(
             (good_item_uri,
              self.FOOD_NAMESPACE.containsIngredient,

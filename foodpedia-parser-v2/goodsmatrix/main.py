@@ -25,12 +25,15 @@ def main():
             "goodsmatrix.pipelines.postprocessors.ExtractEsl": 2,
             "goodsmatrix.pipelines.postprocessors.ExtractEAdditives": 3,
             "goodsmatrix.pipelines.postprocessors.StripMultilineStringProperties": 4,
-            #"goodsmatrix.pipelines.postprocessors.ExtractIngredients": 5,
+            "goodsmatrix.pipelines.postprocessors.ExtractIngredients": 5,
         }
     if command_line_args.persistence:
         pipelines_order_dict["goodsmatrix.pipelines.writers.PersistentRDFPipeline"] = 10
     else:
         pipelines_order_dict["goodsmatrix.pipelines.writers.InMemoryRDFPipeline"] = 10
+
+    if command_line_args.agrovoc_endpoint:
+        settings.set("AGROVOC_ENDPOINT", command_line_args.agrovoc_endpoint)
 
     if command_line_args.api_key:
         pipelines_order_dict["goodsmatrix.pipelines.postprocessors.Translator"] = 6
@@ -55,6 +58,7 @@ def parse_arguments():
     parser.add_argument('output_filename')
     parser.add_argument('-k', '--api_key', help='yandex translator api key')
     parser.add_argument('-p', '--persistence', help='use persistence store (SleepyCat) for parsed items', action='store_true')
+    parser.add_argument('-a', '--agrovoc_endpoint', help='URI of agrovoc endpoint')
     args = parser.parse_args()
     return args
 
