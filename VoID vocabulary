@@ -1,21 +1,55 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
 :foodpedia a void:Dataset;
   foaf:homepage <http://foodpedia.tk/>;
   dcterms:title "FOODpedia";
   dcterms:description "Russian food products and ingredients as a Linked Open Dataset";
-  dcterms:creator :Maxim_Kolchin;
+  dcterms:creator :Maxim Kolchin;
   dcterms:publisher "";?
-  dcterms:contributor :Alexander_Chistyakov;
-  dcterms:contributor :Maxim_Lapaev;
-  dcterms:contributor :Rezeda_Khaydarova;
+  dcterms:contributor :Alexander Chistyakov;
+  dcterms:contributor :Maxim Lapaev;
+  dcterms:contributor :Rezeda Khaydarova;
   dcterms:source <http://www.goodsmatrix.ru/>;
-  date -не нужно включать
-  created-не нужно включать
-  modified- не нужно включать
+  dcterms:license <>
 :Kolchin_Maxim a foaf:Person;
-  rdfs:label "Kolchin Maxim";
+  rdfs:label "Kolchin Maxim,ITMO University";
   foaf:mbox <mailto:kolchinmax@niuitmo.ru>;
+  
 :FOODpedia a void:Dataset;
   void:feature <http://www.w3.org/ns/formats/RDF_XML>;
   void:feature <http://www.w3.org/ns/formats/Turtle>;
 :FOODpedia a void:Dataset;
   void:sparqlEndpoint <http://foodpedia.tk/sparql>;
+:FOODpedia a void:Dataset;
+  void:dataDump <>;
+  void:uriLookupEndpoint <http://owlapi.sourceforge.net>;
+  void:uriLookupEndpoint <https://api.yandex.com/translate/>;
+  
+# structural metadata
+
+:FOODpedia a void:Dataset;
+  void:exampleResource <http://foodpedia.tk/resource/4607065004378>;
+  void:exampleResource <http://foodpedia.tk/resource/4600384006160>;  
+  void:exampleResource <http://foodpedia.tk/resource/2220085000025>;
+  void:vocabulary <http://www.w3.org/2000/01/rdf-schema#>;
+  void:classPartition [ void:class ; ];
+  void:classPartition [ void:class ; ];
+  void:propertyPartition [ void:property ; ];
+#statistics
+DBpedia a void:Dataset;
+  void:triples ; 
+  void:entities ;
+  void:classPartition [
+  void:class ;
+  void:entities ;
+  ];
+  void:propertyPartition [ 
+  void:property ?;
+  void:triples ;
+  ];
+  .
+  
