@@ -40,7 +40,7 @@
   void:classPartition [ void:class ; ];
   void:propertyPartition [ void:property ; ];
 #statistics
-DBpedia a void:Dataset;
+:FOODpedia a void:Dataset;
   void:triples ; 
   void:entities ;
   void:classPartition [
