@@ -1,0 +1,63 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+:foodpedia a void:Dataset;
+  foaf:homepage <http://foodpedia.tk/>;
+  dcterms:title "FOODpedia";
+  dcterms:description "Russian food products and ingredients as a Linked Open Dataset";
+  dcterms:creator <http://lod.ifmo.ru/resource/Person145348>;
+  dcterms:publisher "Laboratory of Information Science and Semantic Technologies @ ITMO University, Russia";
+  dcterms:contributor :Alexander_Chistyakov;
+  dcterms:contributor :Maxim_Lapaev;
+  dcterms:contributor :Rezeda_Khaydarova;
+  dcterms:source <http://www.goodsmatrix.ru/>;
+  dcterms:source <http://dbpedia.org/>;
+  dcterms:source <http://aims.fao.org/>;
+  dcterms:license <http://opendefinition.org/licenses/cc-by/>;
+:Kolchin_Maxim a foaf:Person;
+  rdfs:label "Kolchin Maxim,ITMO University"; homepage?
+  foaf:mbox <mailto:kolchinmax@niuitmo.ru>;
+:FOODpedia a void:Dataset;
+  void:feature <http://www.w3.org/ns/formats/RDF_XML>;
+  void:feature <http://www.w3.org/ns/formats/Turtle>;
+  void:sparqlEndpoint <http://foodpedia.tk/sparql>;
+# structural metadata
+  void:exampleResource <http://foodpedia.tk/resource/4607065004378>;
+  void:exampleResource <http://foodpedia.tk/resource/4600384006160>;  
+  void:exampleResource <http://foodpedia.tk/resource/2220085000025>;
+  void:vocabulary <http://www.w3.org/2000/01/rdf-schema#>;
+  void:classPartition [ void:class foodontology:Food; ];
+  void:classPartition [ void:class foodontology:FoodAdditive; ];
+  void:classPartition [ void:class foodontology:Ingredient; ];
+#object properties
+  void:propertyPartition [ void:property foodontology:carbohydratesPer100g; ];
+  void:propertyPartition [ void:property foodontology:containsIngredient; ];
+  void:propertyPartition [ void:property foodontology:energyPer100g; ];
+  void:propertyPartition [ void:property foodontology:fatPer100g; ];
+  void:propertyPartition [ void:property foodontology:proteinsPer100g; ];
+#data properties
+  void:propertyPartition [ void:property foodontology:carbohydratesPer100gAsDouble; ];
+  void:propertyPartition [ void:property foodontology:containsGMO; ];
+  void:propertyPartition [ void:property foodontology:energyPer100gAsDouble; ];
+  void:propertyPartition [ void:property foodontology:fatPer100gAsDouble; ];
+  void:propertyPartition [ void:property foodontology:ingredientsListAsText; ];
+  void:propertyPartition [ void:property foodontology:proteinsPer100gAsDouble; ];
+#statistics
+  void:triples 329939; 
+  void:entities 24395 ;
+  void:classPartition [
+  void:class ;
+  void:entities ;
+  ];
+  void:propertyPartition [ 
+  void:property ?;
+  void:triples ;
+  ];
+  .
+:FOODpedia_DBpedia_Goodsmatrix a void:Linkset;
+    void:target :DBpedia;
+    void:target :Goodsmatrix;
+    .
