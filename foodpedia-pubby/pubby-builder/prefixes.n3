@@ -7,3 +7,4 @@
 @prefix food: <http://purl.org/foodontology#> .
 @prefix foodpedia-owl: <http://foodpedia.tk/ontology#> .
 @prefix foodpedia: <${homeURL}/resource/> .
+@prefix agrovoc: <http://aims.fao.org/aos/agrovoc/> .
