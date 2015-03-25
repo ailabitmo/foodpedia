@@ -52,4 +52,7 @@
   void:triples ;
   ];
   .
-  
+:FOODpedia_DBpedia_Goodsmatrix a void:Linkset;
+    void:target :DBpedia;
+    void:target :Goodsmatrix;
+    .
