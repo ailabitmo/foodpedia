@@ -43,7 +43,7 @@
 }
 
 .search-results {
-    margin-top: 5em;
+    margin-top: 20em;
 }
 
 .search-results h2 {
@@ -78,7 +78,7 @@
 }
 
 body {
-    background: url("../img/background.png") scroll;
+    background: url("../img/background.png") fixed;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
 }
@@ -116,7 +116,7 @@ body {
 .info_list{
     position: relative;
     margin: 0px;
-    top: 30em;
+    top: 26em;
     left:50%;
     float:left;
     display: inline;
@@ -131,4 +131,10 @@ body {
     position:relative;
     left:-50%;
     float:left;
+}
+
+.info_block{
+    width: 200px;
+    height: 200px;
+    position: relative;
 }

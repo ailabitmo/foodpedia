@@ -40,6 +40,19 @@
 
     <!-- Google Analytics -->
     <script>
+        function setBlocks() {
+            for (var i = 1; i < 4; i++) {
+                var block = document.getElementById("block_" + i);
+                block.style.backgroundImage = "url('img/block_" + i + ".png')";
+                block.onmouseover = function () {
+                    this.style.backgroundImage = "url('img/" + this.id + "_hover.png')";
+                }
+                block.onmouseout = function () {
+                    this.style.backgroundImage = "url('img/" + this.id + ".png')";
+                }
+            }
+        }
+
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
             i[r] = i[r] || function () {
@@ -56,7 +69,7 @@
         ga('send', 'pageview');
     </script>
 </head>
-<body class="container">
+<body class="container" onload="setBlocks();">
 <div class="panel">
     <div class="header-block" ng-controller="LangCtrl">
         <ul class="lang-switch">
@@ -70,9 +83,15 @@
 </div>
 <div>
     <ul class="info_list">
-        <li class="info_item"><img src="img/info.png"/></li>
-        <li class="info_item"><img src="img/stat.png"/></li>
-        <li class="info_item"><img src="img/contact.png"/></li>
+        <li class="info_item">
+            <div class="info_block" id="block_1"></div>
+        </li>
+        <li class="info_item">
+            <div class="info_block" id="block_2"></div>
+        </li>
+        <li class="info_item">
+            <div class="info_block" id="block_3"></div>
+        </li>
     </ul>
 </div>
 </body>
