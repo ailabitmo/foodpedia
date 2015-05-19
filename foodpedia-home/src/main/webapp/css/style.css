@@ -81,6 +81,10 @@ body {
     background: url("../img/background.png") fixed;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
 }
 
 .panel {
@@ -113,27 +117,27 @@ body {
     left: 25%;
 }
 
-.info_list{
+.info_list {
     position: relative;
     margin: 0px;
     top: 26em;
-    left:50%;
-    float:left;
+    left: 50%;
+    float: left;
     display: inline;
     list-style-type: none;
     padding: 0px 0px 0px 0px;
 }
 
-.info_item{
+.info_item {
     display: inline;
     margin-right: 5px;
     padding: 3px;
-    position:relative;
-    left:-50%;
-    float:left;
+    position: relative;
+    left: -50%;
+    float: left;
 }
 
-.info_block{
+.info_block {
     width: 200px;
     height: 200px;
     position: relative;
