@@ -21,7 +21,8 @@ app.config(function(ngProgressProvider, $translateProvider) {
         HEADER_RESULTS: 'Results (total {{length}}):',
         SEARCH_PLACEHOLDER: '"4607081352675" or "milk"',
         ALERT_EMPTY: 'Oh! You\'ve entered an empty query.',
-        ALERT_ERROR: 'Oops, an error occurred! Try again later.'
+        ALERT_ERROR: 'Oops, an error occurred! Try again later.',
+        INFO_PAGE: "pages/about_en.html"
     });
     
     $translateProvider.translations('ru', {
@@ -29,7 +30,8 @@ app.config(function(ngProgressProvider, $translateProvider) {
         HEADER_RESULTS: 'Результаты поиска (всего {{length}}):',
         SEARCH_PLACEHOLDER: '"4607081352675" или "макаронные изделия"',
         ALERT_EMPTY: 'Ой! Вы ввели пустой запрос.',
-        ALERT_ERROR: 'Упс, произошла ошибка! Попробуйте позже.'
+        ALERT_ERROR: 'Упс, произошла ошибка! Попробуйте позже.',
+        INFO_PAGE: "pages/about_ru.html"
     });
     
     $translateProvider.preferredLanguage('ru');

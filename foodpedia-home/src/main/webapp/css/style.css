@@ -95,6 +95,7 @@ body {
     padding: 0px 0px 0px 0px;
     background: url("../img/gradient.jpg") repeat-x;
     position: fixed;
+    z-index: 100;
 }
 
 .lang_icon {
@@ -141,4 +142,9 @@ body {
     width: 200px;
     height: 200px;
     position: relative;
+}
+
+.text_container p, li{
+    text-align: justify;
+    font-family: 'Ubuntu', sans-serif;
 }
