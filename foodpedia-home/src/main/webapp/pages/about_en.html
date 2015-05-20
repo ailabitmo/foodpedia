@@ -24,56 +24,50 @@
         About FOODpedia
     </h2>
 
-    <p>Возможность выведения логически обоснованных заключений, структурированный поиск и представление данных в строго
-        формализованном виде дают широкие возможности во многих сферах, оперирующих данными. Не исключением является и
-        настолько привычная и неотъемлемая часть жизни, как питание, а
-        именно, анализ данных о продуктах питания, их составе, как естественном, так и искусственном, составление меню и
-        диет, что, несомненно, оказывает огромное влияние на здоровье человека и его внешность. Структурной единицей
-        системы
-        питания является продукт, включающий в свой состав различные исходные ингредиенты, искусственные добавки,
-        обладающие
-        определёнными свойствами, которые так или иначе влияют на человека. Кроме того, продукт - единица, обладающая
-        определёнными метриками (наиболее распространённые из них - содержание белков, жиров и углеводов на единицу
-        массы и
-        энергетическая ценность). Таким образом, информация о продуктах питания может быть формализована и представлена
-        в
-        свете семантического графа - варианта базы знаний интеллектуальных систем, что позволит на основании свойств
-        продукта и его состава не только предоставлять данные пользователю, но и проводить автомтизированный экспертный
-        анализ с учётом предпочтений, противопоказаний и других требований, предъявляемых потребителем.</p>
+    <p>The ability to derive logically reasoned conclusions, opportunities of structured search and representation of
+        data in a strictly formalized way provide broad capabilities in many domain areas, operating data. Such a common
+        and integral area of life as food, and analysis of food information, its ingredients, both natural and
+        artificial, in particular, are no exception. Drawing up a carte du jour and diet plans based on data derived has
+        an undoubted impact on human health and appearance. The structural unit of food and nutrition system is
+        foodstuff which contains a number of raw ingredients, artificial additives, has certain properties that effect
+        human in some way. Moreover, each foodstuff is a unit having metrics. Content of proteins, fats, carbohydrates
+        per unit of mass and food value are the most common of them. Thus, the information on food can be formalized and
+        represented in the light of semantic graph, based on properties of foodstuffs and their contents, which is a
+        sort of knowledge base as a part of intellectual system. Not only allows the graph presenting data based on food
+        properties and contents to consumer, it also enables automated expert analysis with preferences,
+        contra-indications and other consumer requirements considered.</p>
 
-    <p>Проект FOODpedia - попытка извлечь данные о продуктах питания, встречающихся на полках российских супермаркетов
-        из
-        открытых источников данных (интернет-каталоги, главным образом, goodsmatrix.ru) с последующей организацией
-        семантического графа. Для представления и описания данных в более структурированном виде, а также для
-        предоставления
-        интерфейса графа применяется онтология.</p>
+    <p>FOODpedia project is an attempt to extract information on foodstuff seen on the territory of Russia from open
+        data sources such as on-line catalogues, mainly goodsmatrix.ru and organize a semantic graph afterwards.
+        Ontology is used to describe and represent data in a structured way and to provide an interface.</p>
 
     <p>
-        FoodOntology - расширенная версия онтологии GoodRelations, представляющая подробную информацию о продукте
-        питания в виде таких свойств, как название, описание продукта, состав, условия хранения, штрих-код, вес, срок
-        годности и т.д. Ниже представлена концептуальная модель онтологии FoodOntology, демонстрирующая
-        взаимосвязь классов и свойств. Наиболее важными элементами концептуальной модели являются:
+        FOODontology is an extended version on GoodsRelations ontology. FOODontology provides a detailed information on
+        foodstuff in terms of properties such as name, food description, ingredients, store conditions, bar-code,
+        weight, shelf life period etc. Conceptual model of FOODontology is presented below to demonstrate relations
+        between classes and properties. The most significant elements of the model are the followings:
     <ul>
-        <li>Food (продукт питания) - отдельный ингредиент (мука как готовый к реализации компонент), составной продукт
-            (макароны), напиток или готовое блюдо-полуфабрикат (замороженные овощи, пельмени). В онтологии Food является
-            подклассом класса ProductOrService, таким образом он наследует все свойства, присущие суперклассу.
+        <li>Food (foodstuff) are separate all-sufficient ingredients (e.g. flour as a good that can be sold), compound
+            foodstuffs (e.g. spaghetti), beverages or half-finished products (e.g. frozen vegetables). Food class of the
+            FOODontology is a subclass of ProductOrService, thus, Food inherits all superclass-specific properties.
         </li>
-        <li>Ingredient (Компонент состава) - совокупность ингредиентов, например (соль, сахар, мука и т.д). Ingredient
-            имеет несколько подклассов, описывающих различные типы ингредиентов, например, пищевые добавки.
+        <li>Ingredient (an element of contents) is a sum of ingredients such as salt, sugar, flour etc. Ingredient class
+            has several subclasses for various types of ingredients (e.g. food additives).
         </li>
     </ul>
     </p>
     <p style="text-align: center;">
-        <img src="../img/ontology.png" style="width: 50%;">
+        <img alt="Conceptual model of FOODontology" src="../img/ontology.png" style="width: 50%;">
     </p>
 
     <p style="text-align: center;">
-        Концептуальная модель онтологии
+        Conceptual model of FOODontology
     </p>
 
     <p>
-        В ходе данной работы заложены основы для построения нового ресурса связанных данных, организован семантический
-        граф, содержащий почти 60 тысяч продуктов питания, которые можно встретить на полках супермаркетов. Проведены
+        In the context of this project a basis for building new source of linked data is laid, the semantic graph
+        mentioned and described above is organised. It contains around 60 thousands of foodstuff items seen in
+        supermarkets on the territory of Russia. Проведены
         работы по частичному парсингу и связыванию с вершинанами графа - ингредиентами и химическими добавками. Для
         пользователей придоставлен интерфейс поиска по графу. Однако, на этом работа не закончена. Ведутся дальнейшие
         работы по кластеризации ингрдиентов, указанных в свободной форме, и обогащению графа, а также дальнейшая
