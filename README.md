@@ -14,7 +14,7 @@ Thanks to these people FOODpedia is up, running and developed!
 
 * [Alexander Chistyakov](https://github.com/chistyakov)
 * [Maxim Lapaev](https://github.com/m-lapaev)
-* Rezeda Khaidarova
+* [Rezeda Khaidarova](https://github.com/mignolowa)
 
 ## Contacts
 
