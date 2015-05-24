@@ -17,41 +17,32 @@ app.config(function(ngProgressProvider, $translateProvider) {
     ngProgressProvider.setHeight('2px');
     
     $translateProvider.translations('en', {
+        TITLE: 'FOODpedia - Food Products and ingredients as Linked Data Dataset',
         BUTTON_SEARCH: 'Search',
         HEADER_RESULTS: 'Results (total {{length}}):',
         SEARCH_PLACEHOLDER: '"4607081352675" or "milk"',
         ALERT_EMPTY: 'Oh! You\'ve entered an empty query.',
         ALERT_ERROR: 'Oops, an error occurred! Try again later.',
-        INFO_PAGE: "pages/about_en.html"
+        THUMB_EXPLORE: 'Explore',
+        THUMB_USE: 'Use',
+        THUMB_ABOUT: 'About',
+        THUMB_ABOUT_CONTENT: ''
     });
     
     $translateProvider.translations('ru', {
+        TITLE: 'FOODpedia - База связанных данных (Linked Data) о продуктах питания и ингредиентах',
         BUTTON_SEARCH: 'Поиск',
         HEADER_RESULTS: 'Результаты поиска (всего {{length}}):',
         SEARCH_PLACEHOLDER: '"4607081352675" или "макаронные изделия"',
         ALERT_EMPTY: 'Ой! Вы ввели пустой запрос.',
         ALERT_ERROR: 'Упс, произошла ошибка! Попробуйте позже.',
-        INFO_PAGE: "pages/about_ru.html"
+        THUMB_EXPLORE: 'Исследовать',
+        THUMB_USE: 'Использовать',
+        THUMB_ABOUT: 'О проекте',
+        THUMB_ABOUT_CONTENT: ''
     });
     
     $translateProvider.preferredLanguage('ru');
 });
-
-var sparqlConfig = angular.module('ngSPARQL.config', []);
-    sparqlConfig.constant(
-        'SPARQL_CONFIG', {
-            PREFIXES: {
-                'rdf': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
-                'rdfs': 'http://www.w3.org/2000/01/rdf-schema#',
-                'xsd': 'http://www.w3.org/2001/XMLSchema#',
-                'food': 'http://purl.org/foodontology#',
-                'foodpedia-owl': 'http://foodpedia.tk/ontology#',
-                'gr': 'http://purl.org/goodrelations/v1#'
-            },
-            ENDPOINTS: {
-                ENDPOINT_1: "${endpoint.url}"
-            }
-        }
-    );
 
 })(window.angular);

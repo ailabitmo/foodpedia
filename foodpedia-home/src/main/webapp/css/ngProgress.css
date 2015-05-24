@@ -3,8 +3,8 @@
     margin: 0;
     padding: 0;
     z-index: 99998;
-    background-color: #f1c232;
-    color: #f1c232;
+    background-color: green;
+    color: green;
     box-shadow: 0 0 10px 0; /* Inherits the font color */
     height: 2px;
     opacity: 0;
