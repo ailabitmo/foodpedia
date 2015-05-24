@@ -52,6 +52,15 @@ public class SearchServlet extends HttpServlet {
 
         super.destroy();
     }
+    
+    private String get(HttpServletRequest request, String name, String defaults) {
+        final String param = request.getParameter(name);
+        if(param != null && !param.isEmpty()) {
+            return param;
+        } else {
+            return defaults;
+        }
+    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -59,10 +68,11 @@ public class SearchServlet extends HttpServlet {
         if (request.getParameter(QUERY_PARAM) != null
                 && !request.getParameter(QUERY_PARAM).isEmpty()) {
             final String q = request.getParameter(QUERY_PARAM);
-            final String lang = request.getParameter(LANG_PARAM) == null ? 
-                    "ru" : request.getParameter(LANG_PARAM);
-            final String offset = request.getParameter(OFFSET_PARAM) == null ? 
-                    "0" : request.getParameter(OFFSET_PARAM);
+            request.setAttribute(QUERY_PARAM, q);
+            final String lang = get(request, LANG_PARAM, "ru");
+            request.setAttribute(LANG_PARAM, lang);
+            final String offset = get(request, OFFSET_PARAM, "0");
+            request.setAttribute(OFFSET_PARAM, offset);
             final AsyncContext context = request.startAsync();
             context.setTimeout(60000);
             context.addListener(new AsyncListener() {

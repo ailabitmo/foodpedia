@@ -8,13 +8,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>FOODpedia - a DBpedia of food products</title>
+        <title>${lang == "ru"? "FOODpedia - База связанных данных (Linked Data) о продуктах питания и ингредиентах"
+                 :"FOODpedia - Food Products and ingredients as Linked Data Dataset"}</title>
 
         <!-- Latest compiled and minified CSS -->
         <link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic'
               rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
+        
+        <!-- Google Analytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-57728144-1', 'auto');
+          ga('send', 'pageview');
+        </script>
     </head>
     <body class="container-fluid">
         <div class="row search-header">
@@ -29,9 +41,9 @@
                 <form class="search-form form-inline" action="/search" method="GET">
                     <div class="form-group col-xs-10">
                         <input type="text" class="form-control" name="q" 
-                               value='<%=request.getParameter("q")%>'/>
+                               value='${q}'/>
                     </div>
-                    <input type="hidden" name="lang" value="<%=request.getParameter("lang")%>"/>
+                    <input type="hidden" name="lang" value="${lang}"/>
                     <button type="submit" class="btn btn-default">
                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                     </button>
@@ -61,13 +73,13 @@
             <div class="col-md-12">
                 <nav style="text-align: center;">
                     <ul class="pagination pagination-lg">
-                        <li class="<%=Integer.parseInt(request.getParameter("offset")) <= 0 ? "disabled" : ""%>">
-                            <a href="/search?q=<%=request.getParameter("q")%>&lang=<%=request.getParameter("lang")%>&offset=<%=Integer.parseInt(request.getParameter("offset")) - 10%>" aria-label="Previous">
+                        <li class="${Integer.parseInt(offset) <= 0 ? "disabled" : ""}">
+                            <a href="/search?q=${q}&lang=${lang}&offset=${Integer.parseInt(offset) - 10}" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
                             </a>
                         </li>
                         <li class="${results.size() < 10 ? "disabled" : ""}">
-                            <a href="/search?q=<%=request.getParameter("q")%>&lang=<%=request.getParameter("lang")%>&offset=<%=Integer.parseInt(request.getParameter("offset")) + 10%>" aria-label="Next">
+                            <a href="/search?q=${q}&lang=${lang}&offset=${Integer.parseInt(offset) + 10}" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
                             </a>
                         </li>
