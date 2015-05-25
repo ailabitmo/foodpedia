@@ -17,11 +17,8 @@
     .logo.search { font-size: 4vw; }
 }
 
-.search-header > div:first-child {
-    margin-top: 1%;
-}
 .search-header > div:last-child {
-    margin-top: 2.4%;
+    margin-top: 2%;
 }
 .search-header .search-form input{
     width: 100%;
