@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="<c:url value="css/style.css"/>">
 
         <!-- Google Analytics -->
-<!--        <script>
+        <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -28,15 +28,9 @@
 
           ga('create', 'UA-57728144-1', 'auto');
           ga('send', 'pageview');
-        </script>-->
+        </script>
     </head>
     <body class="container">
-<!--        <div class="header-block">
-            <ul class="lang-switch">
-                <li ng-click="changeLanguage('ru')"><img src="assets/ru.svg" alt="Ru"/></li>
-                <li ng-click="changeLanguage('en')"><img src="assets/gb.svg" alt="En"/></li>
-            </ul>
-        </div>-->
         <jsp:doBody/>
     </body>
 </html>
