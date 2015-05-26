@@ -21,7 +21,7 @@ public class SearchServlet extends HttpServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(
             SearchServlet.class);
-    private static final String ENDPOINT = "http://foodpedia.tk/sparql";
+    private static final String ENDPOINT = "http://endpoint:8890/sparql";
     private static final String GRAPH = "http://foodpedia.tk/";
     private static final String QUERY = ""
             + "PREFIX gr: <http://purl.org/goodrelations/v1#>\n"

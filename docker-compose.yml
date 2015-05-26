@@ -12,6 +12,8 @@ pathrouter:
 
 home:
   image: foodpedia/home_production
+  links:
+    - endpoint
   restart: always
 
 pubby:
