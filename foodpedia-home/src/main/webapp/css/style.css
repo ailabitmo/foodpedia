@@ -23,6 +23,8 @@
 .search-header .search-form input{
     width: 100%;
 }
+
+.search-results-no { margin: 1em auto; }
 .search-results { font-family: 'Ubuntu', sans-serif; }
 .search-results li { margin-top: 1vw; margin-bottom: 1vw; list-style-type: none; }
 .search-results .search-results-name { display: block; }

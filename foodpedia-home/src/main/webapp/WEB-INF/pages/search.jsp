@@ -3,6 +3,10 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
+<c:set var="lang" value="${lang != null ? lang : param.lang != null ? param.lang : 'ru'}"></c:set>
+<fmt:setLocale value="${lang}"/>
+<fmt:setBundle basename="tk.foodpedia.home.messages"/>
+
 <t:default lang="${lang}">
     <div class="row">
         <div class="col-md-12">
@@ -40,18 +44,28 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <ul class="search-results">
-                <c:forEach var="result" items="${results}">
-                    <li>
-                        <span class="search-results-name">
-                            <a href="${result.uri}">${result.name}</a>
-                        </span>
-                        <span class="search-results-uri">
-                            ${result.uri}
-                        </span>
-                    </li>
-                </c:forEach>
-            </ul>
+            <c:choose>
+                <c:when test="${results.isEmpty()}">
+                    <div class="search-results-no">
+                        <fmt:message key="search.results.no"/>
+                    </div>
+                </c:when>
+
+                <c:otherwise>
+                    <ul class="search-results">
+                        <c:forEach var="result" items="${results}">
+                            <li>
+                                <span class="search-results-name">
+                                    <a href="${result.uri}">${result.name}</a>
+                                </span>
+                                <span class="search-results-uri">
+                                    ${result.uri}
+                                </span>
+                            </li>
+                        </c:forEach>
+                    </ul>
+                </c:otherwise>
+            </c:choose>
         </div>
     </div>
     <div class="row">
