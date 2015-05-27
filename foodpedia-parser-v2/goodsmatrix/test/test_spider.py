@@ -2,7 +2,7 @@ from unittest import TestCase
 from mock import patch
 from scrapy.http import HtmlResponse
 
-from goodsmatrix.parser import GoodsMatrixSpider
+from goodsmatrix.spider import GoodsMatrixSpider
 from goodsmatrix.good_item import GoodItem
 
 

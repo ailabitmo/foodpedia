@@ -6,7 +6,7 @@ from scrapy import log, signals
 from scrapy.utils.project import get_project_settings
 from scrapy.xlib.pydispatch import dispatcher
 
-import goodsmatrix.parser
+import goodsmatrix.spider
 
 
 def stop_reactor():
@@ -17,7 +17,7 @@ def main():
 
     dispatcher.connect(stop_reactor, signal=signals.spider_closed)
 
-    spider = goodsmatrix.parser.GoodsMatrixSpider(command_line_args.category)
+    spider = goodsmatrix.spider.GoodsMatrixSpider(command_line_args.category)
 
     settings = get_project_settings()
     pipelines_order_dict = {
