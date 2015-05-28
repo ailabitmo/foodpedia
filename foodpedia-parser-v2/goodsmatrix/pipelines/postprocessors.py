@@ -1,9 +1,9 @@
 from scrapy import log
-from scrapy.exceptions import DropItem
+from scrapy.exceptions import DropItem, CloseSpider
 
 from goodsmatrix import string_processor
 from goodsmatrix.agrovoc_graph import agrovoc_graph_factory
-from goodsmatrix.translator import YandexTranslator
+from goodsmatrix.translator import YandexTranslator, BadKeyException
 from goodsmatrix.foodpedia_graph import RemoteFoodpediaGraph
 
 
@@ -91,7 +91,12 @@ class Translator(object):
         self.translator = YandexTranslator(api_key)
 
     def process_item(self, good_item, spider):
-        good_item['name_en'] = self.translator.translate_ru_to_en(good_item['name'])
+        #TODO: add a command line option to continue parsing without
+        #      requests to yandex when limit is reached
+        try:
+            good_item['name_en'] = self.translator.translate_ru_to_en(good_item['name'])
+        except BadKeyException as e:
+            raise CloseSpider(str(e))
         # do not translate description because Yandex.Translate API is limitted by number of chars
         #if 'comment' in good_item:
             #good_item['comment_en'] = self.translator.translate_ru_to_en(good_item['comment'])
