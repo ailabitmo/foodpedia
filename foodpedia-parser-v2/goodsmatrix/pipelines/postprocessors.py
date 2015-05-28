@@ -1,8 +1,10 @@
 from scrapy import log
+from scrapy.exceptions import DropItem
 
 from goodsmatrix import string_processor
 from goodsmatrix.agrovoc_graph import agrovoc_graph_factory
 from goodsmatrix.translator import YandexTranslator
+from goodsmatrix.foodpedia_graph import RemoteFoodpediaGraph
 
 
 class ExtractEsl(object):
@@ -94,3 +96,17 @@ class Translator(object):
         #if 'comment' in good_item:
             #good_item['comment_en'] = self.translator.translate_ru_to_en(good_item['comment'])
         return good_item
+
+
+class SkipIfExistsInOldGraph(object):
+    def open_spider(self, spider):
+        old_endpoint_uri = spider.settings.get("OLD_ENDPOINT_URI", None)
+        if old_endpoint_uri:
+            self.old_graph = RemoteFoodpediaGraph(old_endpoint_uri)
+
+    def process_item(self, good_item, spider):
+        barcode = good_item['barcode']
+        if self.old_graph.good_exists_by_barcode(barcode):
+            raise DropItem('Skipping {0} (exists in previously parsed graph)'.format(barcode))
+        else:
+            return good_item

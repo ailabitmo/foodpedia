@@ -1,6 +1,8 @@
 from rdflib import RDF, Namespace, Literal, URIRef, XSD
 from scrapy import log
 
+from SPARQLWrapper import SPARQLWrapper, JSON
+
 
 class FoodpediaGraph:
     FOOD_NAMESPACE = Namespace("http://purl.org/foodontology#")
@@ -187,6 +189,25 @@ class FoodpediaGraph:
         )
 
 
+class RemoteFoodpediaGraph(object):
+    GOOD_IN_GRAPH_QUERY_STR = """
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX food: <http://purl.org/foodontology#>
+        PREFIX foodpedia:  <http://foodpedia.tk/resource/>
+
+        ASK
+        {{ foodpedia:{0} rdf:type food:Food }}
+    """
+    PRODUCTION_ENDPOINT_URI = r"http://foodpedia.tk/sparql"
+    def __init__(self, endpoint_url=PRODUCTION_ENDPOINT_URI):
+        self.sparql = SPARQLWrapper(endpoint_url)
+
+    def good_exists_by_barcode(self, barcode):
+        self.sparql.setReturnFormat(JSON)
+        self.sparql.setQuery(RemoteFoodpediaGraph.GOOD_IN_GRAPH_QUERY_STR.format(barcode))
+        results = self.sparql.query().convert()
+        return bool(results["boolean"])
+
 
 class PatchedLiteralToReturnFullDatatype(Literal):
     """Patch the rdflib.Literal class to ignore the use_plain option for n3 representation.
@@ -198,3 +219,9 @@ class PatchedLiteralToReturnFullDatatype(Literal):
     def _literal_n3(self, use_plain=False, qname_callback=None):
         return super(PatchedLiteralToReturnFullDatatype, self)._literal_n3(
                 use_plain=False, qname_callback=qname_callback)
+
+
+if __name__ == "__main__":
+    remote_foodpedia = RemoteFoodpediaGraph()
+    print remote_foodpedia.good_exists_by_barcode(1039687302045)
+    print remote_foodpedia.good_exists_by_barcode(1039687302046)

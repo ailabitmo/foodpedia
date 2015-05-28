@@ -1,12 +1,13 @@
 import scrapy
 from scrapy.contrib.spiders import CrawlSpider
 
+from scrapy import log
+from scrapy import logformatter
+
+
 from goodsmatrix import xpath_extractor
 from goodsmatrix import url_extractor
 from goodsmatrix.good_item import GoodItem
-
-
-from scrapy import log
 
 
 class GoodsMatrixSpider(CrawlSpider):
@@ -60,3 +61,14 @@ class GoodsMatrixSpider(CrawlSpider):
             return good
         else:
             log.msg("can't parse {0}".format(response.url, level=log.ERROR))
+
+
+#http://stackoverflow.com/questions/13527921/scrapy-silently-drop-an-item
+class PoliteLogFormatter(logformatter.LogFormatter):
+    def dropped(self, item, exception, response, spider):
+        return {
+            'level': log.DEBUG,
+            'format': logformatter.DROPPEDFMT,
+            'exception': exception,
+            'item': item,
+        }

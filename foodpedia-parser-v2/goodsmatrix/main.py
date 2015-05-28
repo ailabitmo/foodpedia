@@ -21,11 +21,11 @@ def main():
 
     settings = get_project_settings()
     pipelines_order_dict = {
-            "goodsmatrix.pipelines.postprocessors.UnescapeSpecialHTMLEntities": 1,
-            "goodsmatrix.pipelines.postprocessors.ExtractEsl": 2,
-            "goodsmatrix.pipelines.postprocessors.ExtractEAdditives": 3,
-            "goodsmatrix.pipelines.postprocessors.StripMultilineStringProperties": 4,
-            "goodsmatrix.pipelines.postprocessors.ExtractIngredients": 5,
+            "goodsmatrix.pipelines.postprocessors.UnescapeSpecialHTMLEntities": 2,
+            "goodsmatrix.pipelines.postprocessors.ExtractEsl": 3,
+            "goodsmatrix.pipelines.postprocessors.ExtractEAdditives": 4,
+            "goodsmatrix.pipelines.postprocessors.StripMultilineStringProperties": 5,
+            "goodsmatrix.pipelines.postprocessors.ExtractIngredients": 6,
         }
     if command_line_args.persistence:
         pipelines_order_dict["goodsmatrix.pipelines.writers.PersistentRDFPipeline"] = 10
@@ -36,13 +36,18 @@ def main():
         settings.set("AGROVOC_ENDPOINT", command_line_args.agrovoc_endpoint)
 
     if command_line_args.api_key:
-        pipelines_order_dict["goodsmatrix.pipelines.postprocessors.Translator"] = 6
+        pipelines_order_dict["goodsmatrix.pipelines.postprocessors.Translator"] = 7
         settings.set("YANDEX_TRANSLATE_API_URI", command_line_args.api_key)
     settings.set("ITEM_PIPELINES", pipelines_order_dict)
+
+    if command_line_args.old_endpoint:
+        pipelines_order_dict["goodsmatrix.pipelines.postprocessors.SkipIfExistsInOldGraph"] = 1
+        settings.set("OLD_ENDPOINT_URI", command_line_args.old_endpoint)
 
     settings.set("OUTPUT_FILENAME", command_line_args.output_filename)
     settings.set("COOKIES_ENABLED", False)
     settings.set("REDIRECT_ENABLED", False)
+    settings.set("LOG_FORMATTER", "goodsmatrix.spider.PoliteLogFormatter")
 
     crawler = Crawler(settings)
     crawler.configure()
@@ -59,6 +64,7 @@ def parse_arguments():
     parser.add_argument('-k', '--api_key', help='yandex translator api key')
     parser.add_argument('-p', '--persistence', help='use persistence store (SleepyCat) for parsed items', action='store_true')
     parser.add_argument('-a', '--agrovoc_endpoint', help='URI of agrovoc endpoint')
+    parser.add_argument('-o', '--old_endpoint', help='URI of an endpoint with old graph')
     args = parser.parse_args()
     return args
 

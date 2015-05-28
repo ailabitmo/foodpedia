@@ -21,10 +21,28 @@ else
   echo "save results to $destination_filname"
   if [ -z "$yandexapikey" ]
   then
-      echo "without translation. Set the env variable yandexapikey to translate results"
-      python -m goodsmatrix.main -p -a $agrovoc_endpoint $1 $destination_filname
+      echo "Parse without translation. Set the env variable yandexapikey to translate results"
+      if [ -z "$old_endpoint" ]
+      then
+          echo "Do not use previous results of parsing"
+          echo "Set the env variable old_endpoint to use them"
+          python -m goodsmatrix.main -p -a $agrovoc_endpoint $1 $destination_filname
+      else
+          echo "Parse only new items"
+          echo "Merge results with $old_endpoint to get the whole dump"
+          python -m goodsmatrix.main -p -a $agrovoc_endpoint -o $old_endpoint $1 $destination_filname
+      fi
   else
-      echo "translate results"
-      python -m goodsmatrix.main -p -a $agrovoc_endpoint -k $yandexapikey $1 $destination_filname
+      echo "Parse with translation of results"
+      if [ -z "$old_endpoint" ]
+      then
+          echo "Do not use previous results of parsing"
+          echo "Set the env variable old_endpoint to use them"
+          python -m goodsmatrix.main -p -a $agrovoc_endpoint -k $yandexapikey $1 $destination_filname
+      else
+          echo "Parse only new items"
+          echo "Merge results with $old_endpoint to get the whole dump"
+          python -m goodsmatrix.main -p -a $agrovoc_endpoint -k $yandexapikey -o $old_endpoint $1 $destination_filname
+      fi
   fi
 fi
