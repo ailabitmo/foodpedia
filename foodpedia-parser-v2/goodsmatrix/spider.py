@@ -1,5 +1,6 @@
 import scrapy
 from scrapy.contrib.spiders import CrawlSpider
+from scrapy.exceptions import CloseSpider
 
 from scrapy import log
 from scrapy import logformatter
@@ -20,6 +21,7 @@ class GoodsMatrixSpider(CrawlSpider):
     def __init__(self, category="Foodstuffs", *args, **kwargs):
         super(GoodsMatrixSpider, self).__init__(*args, **kwargs)
         self.start_urls = [self.base_start_url.format(category)]
+        self.close_down = False
 
     def parse(self, response):
         return self.parse_catalog_node(response)
@@ -55,6 +57,8 @@ class GoodsMatrixSpider(CrawlSpider):
 
     def parse_good(self, response):
         log.msg("PARSE GOOD: {0}".format(response.url), level=log.DEBUG)
+        if self.close_down:
+            raise CloseSpider(str(self.close_exception))
         good = GoodItem(xpath_extractor.extract_goods_properties_dict(response))
         if good:
             good['goodsmatrix_url'] = response.url

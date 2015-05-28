@@ -1,5 +1,5 @@
 from scrapy import log
-from scrapy.exceptions import DropItem, CloseSpider
+from scrapy.exceptions import DropItem
 
 from goodsmatrix import string_processor
 from goodsmatrix.agrovoc_graph import agrovoc_graph_factory
@@ -96,7 +96,9 @@ class Translator(object):
         try:
             good_item['name_en'] = self.translator.translate_ru_to_en(good_item['name'])
         except BadKeyException as e:
-            raise CloseSpider(str(e))
+            spider.close_down = True
+            spider.close_exception = e
+            raise
         # do not translate description because Yandex.Translate API is limitted by number of chars
         #if 'comment' in good_item:
             #good_item['comment_en'] = self.translator.translate_ru_to_en(good_item['comment'])
