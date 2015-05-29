@@ -68,6 +68,7 @@ def agrovoc_graph_factory(local=True, nt_dump_file_path=None, endpoint_url=AGROV
 class AbstractAGROVOCGraph(object):
     def find_ingredient_by_name(self, ingredient_name):
         #log.msg(u"search '{0}'".format(ingredient_name))
+        ingredient_name = ingredient_name.replace('\\', '\\\\')
         exact_matched_ingredient = self.find_ingredient_by_exact_match(
             escape_special_chars_in_sparq_query_unicode(ingredient_name))
         # link only exact matches.
@@ -280,17 +281,17 @@ class ConstructedAGROVOCGraph(AbstractAGROVOCGraph):
         else:
             return None
 
-
 if __name__ == "__main__":
     logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG)
-    log.msg('startgin')
-    agrovoc_graph = RemoteAGROVOCGraph("http://192.168.126.137:3030/agrovoc/query")
+    print('starting')
+    #agrovoc_graph = RemoteAGROVOCGraph("http://192.168.126.137:3030/agrovoc/query")
+    agrovoc_graph = RemoteAGROVOCGraph("http://192.168.126.139:3030/agrovoc/query")
     try:
         #for row in agrovoc_graph.local_rdf_graph:
             #log.msg(row)
-        log.msg('initialized. search sugar')
+        print('initialized. search sugar')
             #nt_dump_file_path=r'/tmp/tmpGvStE3/agrovoc_2014-07-23_lod.nt')
-        found = agrovoc_graph.find_ingredient_by_name(u'sugar')
-        log.msg(found)
+        found = agrovoc_graph.find_ingredient_by_name(ur'мука пшеничная в\с')
+        print(found)
     finally:
         agrovoc_graph.clean_up()
