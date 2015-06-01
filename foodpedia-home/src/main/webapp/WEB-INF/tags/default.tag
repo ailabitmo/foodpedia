@@ -2,8 +2,9 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
-<%@attribute name="lang" type="java.lang.String"%>
+<%@attribute name="lang" type="java.lang.String" required="true"%>
 <%@attribute name="subtitle" type="java.lang.String"%>
+<%@attribute name="head" fragment="true"%>
 
 <fmt:setLocale value="${lang}"/>
 <fmt:setBundle basename="tk.foodpedia.home.messages"/>
@@ -29,6 +30,8 @@
               rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="<c:url value="css/style.css"/>">
+        
+        <jsp:invoke fragment="head"/>
 
         <!-- Google Analytics -->
         <script>

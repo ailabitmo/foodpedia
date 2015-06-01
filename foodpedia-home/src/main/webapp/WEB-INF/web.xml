@@ -17,4 +17,12 @@
         <servlet-name>about</servlet-name>
         <url-pattern>/about</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>overview</servlet-name>
+        <jsp-file>/WEB-INF/pages/overview.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>overview</servlet-name>
+        <url-pattern>/overview</url-pattern>
+    </servlet-mapping>
 </web-app>
