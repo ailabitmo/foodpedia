@@ -22,7 +22,7 @@
                 Maxim Kolchin, Alexander Chistyakov, Maxim Lapaev, Rezeda Khaydarova: 
                 FOODpedia: Russian food products as a Linked Data Dataset. 
                 In: The Semantic Web: ESWC 2015 Satellite Events, 
-                Lecture Notes in Computer Science, 2015. <i>(to appear)</i>
+                Lecture Notes in Computer Science, 2015. <i>(to appear)</i>, (<a href="dx.doi.org/10.13140/RG.2.1.4527.3763">poster</a>).
             </li>
         </ul>
     </c:if>
